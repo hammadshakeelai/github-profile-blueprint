@@ -49,4 +49,5 @@ jobs:
           fi
 
           git commit -m "chore(profile): synchronize telemetry and autonomous SVGs [skip ci]"
+          git pull --rebase origin main
           git push origin main
