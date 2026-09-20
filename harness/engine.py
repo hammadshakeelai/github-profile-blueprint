@@ -394,6 +394,22 @@ def compile_readme(config: dict, metrics: dict) -> str:
     sync_time = metrics["updated_at"]
     commits = metrics["recent_commits"]
 
+    # Optional cross-link to the author's primary account. Rendered only when set,
+    # so the link survives every rebuild instead of being overwritten by it.
+    main_profile = profile.get("socials", {}).get("main_profile")
+    main_profile_md = ""
+    if main_profile:
+        main_handle = main_profile.rstrip("/").split("/")[-1]
+        main_profile_md = f"""
+---
+
+<p align="center">
+  <a href="{main_profile}">
+    <img src="https://img.shields.io/badge/Main_Profile-{main_handle}-38BDF8?style=for-the-badge&logo=github&logoColor=white" alt="Main profile: {main_handle}"/>
+  </a>
+</p>
+"""
+
     # 1. Hero Picture
     hero_md = f"""<p align="center">
   <picture>
@@ -589,7 +605,7 @@ Click below to sign my profile README! An automated GitHub Action will append yo
 * 🌌 [**Encyclopedia of Creativity (`docs/06`)**](./docs/06-the-encyclopedia-of-creativity.md)
 * 🎛️ [**ProfileHarness Engine Specification (`docs/07`)**](./docs/07-profile-harness-system.md)
 * 🔮 [**Frontier Abstract Architectures (`docs/08`)**](./docs/08-frontier-abstract-architectures.md)
-"""
+{main_profile_md}"""
     return full_readme.strip() + "\n"
 
 def lint_readme(content: str):
