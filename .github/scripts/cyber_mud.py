@@ -38,6 +38,22 @@ ROOMS = {
     }
 }
 
+import time
+
+COOLDOWN_SECONDS = 30  # Cooldown per user to prevent issue spam abuse
+
+def check_rate_limit(state, user: str) -> bool:
+    """Returns True if user is allowed to perform action, False if in cooldown."""
+    now = int(time.time())
+    cooldowns = state.setdefault("user_cooldowns", {})
+    last_act = cooldowns.get(user, 0)
+    if now - last_act < COOLDOWN_SECONDS:
+        return False
+    cooldowns[user] = now
+    # Prune old cooldowns > 1 hour
+    state["user_cooldowns"] = {u: ts for u, ts in cooldowns.items() if now - ts < 3600}
+    return True
+
 def load_state():
     if STATE_FILE.exists():
         try:
@@ -53,7 +69,9 @@ def load_state():
 
 def save_state(state):
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
+    tmp_file = STATE_FILE.with_suffix(".tmp")
+    tmp_file.write_text(json.dumps(state, indent=2), encoding="utf-8")
+    os.replace(tmp_file, STATE_FILE)
 
 def render_mud_markdown(state):
     loc_key = state.get("location_key", "mainframe")
@@ -90,6 +108,11 @@ def main():
 
     print(f"MUD Command Received: '{ISSUE_TITLE}' by @{ISSUE_USER}")
 
+    # Rate limiting guard against issue flooding abuse
+    if not check_rate_limit(state, ISSUE_USER):
+        print(f"Notice: User @{ISSUE_USER} is currently in rate-limit cooldown ({COOLDOWN_SECONDS}s). Action skipped.")
+        sys.exit(0)
+
     if "mud|move|engine_bay" in ISSUE_TITLE:
         state["location_key"] = "engine_bay"
         state["log"].append(f"[{today}] @{ISSUE_USER} traversed the airlock into the Engine Bay.")
@@ -118,8 +141,10 @@ def main():
         pattern = re.compile(r"<!--\s*MUD:START\s*-->.*?<!--\s*MUD:END\s*-->", re.DOTALL)
         mud_md = render_mud_markdown(state)
         if pattern.search(text):
-            updated = pattern.sub(mud_md, text)
-            README_FILE.write_text(updated, encoding="utf-8")
+            updated = pattern.sub(lambda _: mud_md, text)
+            tmp_readme = README_FILE.with_suffix(".tmp")
+            tmp_readme.write_text(updated, encoding="utf-8")
+            os.replace(tmp_readme, README_FILE)
             print("README.md MUD section updated successfully.")
 
 if __name__ == "__main__":

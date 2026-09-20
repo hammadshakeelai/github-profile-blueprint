@@ -32,12 +32,25 @@ def load_config():
         sys.exit(1)
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
+def get_previous_sync_state():
+    """Extracts previous telemetry metrics from README.md to preserve determinism."""
+    if not README_PATH.exists():
+        return None, None
+    try:
+        txt = README_PATH.read_text(encoding="utf-8")
+        commits_match = re.search(r"\|\s*Recent Git Commits\s*\|\s*(\d+)\s*\|", txt)
+        sync_match = re.search(r"\|\s*Last Engine Sync\s*\|\s*([^|]+?)\s*\|", txt)
+        prev_commits = int(commits_match.group(1)) if commits_match else None
+        prev_sync = sync_match.group(1).strip() if sync_match else None
+        return prev_commits, prev_sync
+    except Exception:
+        return None, None
+
 def fetch_github_metrics(username: str, token: str | None = None) -> dict:
     """Fetches real-time commit telemetry from GitHub's Public Event API."""
     metrics = {
         "recent_commits": 128,
         "ci_reliability": 99.8,
-        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
     }
 
     try:
@@ -55,6 +68,19 @@ def fetch_github_metrics(username: str, token: str | None = None) -> dict:
                 metrics["recent_commits"] = total_commits
     except Exception as e:
         print(f"Notice: Telemetry fallback engaged ({e})")
+
+    # Determine updated_at with strict idempotency guarantees:
+    # 1. Respect SOURCE_DATE_EPOCH (standard reproducible builds specification)
+    if "SOURCE_DATE_EPOCH" in os.environ:
+        epoch = int(os.environ["SOURCE_DATE_EPOCH"])
+        metrics["updated_at"] = datetime.fromtimestamp(epoch, tz=timezone.utc).strftime("%Y-%m-%d %H:%M")
+    else:
+        prev_commits, prev_sync = get_previous_sync_state()
+        # 2. If telemetry metrics did not change, preserve previous timestamp to guarantee byte-identical idempotency
+        if prev_commits is not None and prev_sync is not None and metrics["recent_commits"] == prev_commits:
+            metrics["updated_at"] = prev_sync
+        else:
+            metrics["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
 
     return metrics
 
@@ -629,7 +655,11 @@ def lint_readme(content: str):
         if line.strip().startswith("|") and line.count("|") > 4:
             warnings.append(f"Table with > 3 columns detected: '{line[:40]}...' may wrap on mobile screens.")
 
-    # Check that SVGs exist
+    # Check for forbidden URI schemes
+    if re.search(r"(?:href|src)\s*=\s*['\"]javascript:", content, re.IGNORECASE):
+        errors.append("Forbidden 'javascript:' URI detected! GitHub strips all script URIs.")
+
+    # Check that SVGs exist and validate SVG sanitizer hygiene
     expected_assets = [
         "banner-dark.svg",
         "banner-light.svg",
@@ -640,8 +670,17 @@ def lint_readme(content: str):
         "synaptic-network.svg"
     ]
     for asset in expected_assets:
-        if not (ASSETS_DIR / asset).exists():
+        svg_file = ASSETS_DIR / asset
+        if not svg_file.exists():
             errors.append(f"Missing required asset: assets/{asset}")
+        else:
+            svg_text = svg_file.read_text(encoding="utf-8")
+            if "<foreignObject" in svg_text:
+                errors.append(f"Sanitizer Error: <foreignObject> found in assets/{asset} (blocked by GitHub Camo / renderers)")
+            if "<script" in svg_text:
+                errors.append(f"Sanitizer Error: <script> found in assets/{asset} (forbidden in SVG)")
+            if svg_file.stat().st_size > 500 * 1024:
+                errors.append(f"Size Warning: assets/{asset} exceeds 500KB ceiling ({svg_file.stat().st_size} bytes)")
 
     if errors:
         print("❌ LINT ERRORS FOUND:")
