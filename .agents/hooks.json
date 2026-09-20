@@ -1,0 +1,19 @@
+{
+  "continuous-research-loop": {
+    "enabled": true,
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "python -c \"import sys, pathlib, subprocess; p = pathlib.Path('.agents/hook.py') if pathlib.Path('.agents/hook.py').exists() else pathlib.Path('hook.py'); sys.exit(subprocess.call([sys.executable, str(p), 'pre_invocation']))\"",
+        "timeout": 15
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "python -c \"import sys, pathlib, subprocess; p = pathlib.Path('.agents/hook.py') if pathlib.Path('.agents/hook.py').exists() else pathlib.Path('hook.py'); sys.exit(subprocess.call([sys.executable, str(p), 'stop']))\"",
+        "timeout": 15
+      }
+    ]
+  }
+}

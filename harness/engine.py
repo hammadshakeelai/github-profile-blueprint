@@ -679,16 +679,24 @@ def main():
         render_synaptic_network_svg(config, metrics)
         
         readme_content = compile_readme(config, metrics)
-        README_PATH.write_text(readme_content, encoding="utf-8")
-        print(f"✅ Successfully compiled {README_PATH}")
+        
+        # Fail-closed: validate sanitizer rules in memory BEFORE committing to disk
+        if not lint_readme(readme_content):
+            print("❌ FATAL: Sanitizer linter rejected generated markdown! Aborting build.", file=sys.stderr)
+            sys.exit(1)
 
-        lint_readme(readme_content)
+        # Atomic replacement: write to tempfile first, then atomic rename
+        tmp_readme = README_PATH.with_suffix(".tmp")
+        tmp_readme.write_text(readme_content, encoding="utf-8")
+        os.replace(tmp_readme, README_PATH)
+        print(f"✅ Successfully compiled {README_PATH}")
 
     elif args.command == "lint":
         if not README_PATH.exists():
             print("Error: README.md does not exist. Run 'build' first.", file=sys.stderr)
             sys.exit(1)
-        lint_readme(README_PATH.read_text(encoding="utf-8"))
+        if not lint_readme(README_PATH.read_text(encoding="utf-8")):
+            sys.exit(1)
 
 if __name__ == "__main__":
     main()

@@ -42,11 +42,13 @@ jobs:
         run: python .github/scripts/cyber_mud.py
 
       - name: Commit Updated Game & World State
+        env:
+          ACTOR_LOGIN: ${{ github.event.issue.user.login }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md data/
-          git commit -m "game: state mutated by @${{ github.event.issue.user.login }} [skip ci]" || exit 0
+          git commit -m "game: state mutated by @${ACTOR_LOGIN} [skip ci]" || exit 0
           git pull --rebase origin main
           git push origin main
 
