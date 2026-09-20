@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <style>
+      .pet-card { fill: #0d1117; stroke: #30363d; stroke-width: 1.5; rx: 8px; }
+      .pet-face { font-family: monospace; font-size: 20px; fill: #22c55e; font-weight: bold; }
+      .pet-name { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; font-weight: bold; fill: #f0f6fc; }
+      .pet-status { font-family: monospace; font-size: 10px; fill: #8b949e; }
+      .pet-pulse { fill: #22c55e; animation: pulse 1.5s infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    </style>
+  </defs>
+  <rect class="pet-card" x="1" y="1" width="318" height="78"/>
+  <text class="pet-face" x="20" y="48">(づ｡◕‿‿◕｡)づ</text>
+  <g transform="translate(140, 24)">
+    <text class="pet-name" x="0" y="0">PET: BYTE</text>
+    <circle class="pet-pulse" cx="95" cy="-4" r="3"/>
+    <text class="pet-status" x="0" y="20">Lvl 3 (Cyber Evolution)</text>
+    <text class="pet-status" x="0" y="38">STATUS: EUPHORIC & THRIVING!</text>
+  </g>
+</svg>

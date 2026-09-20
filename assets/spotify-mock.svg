@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="110" viewBox="0 0 400 110">
+  <defs>
+    <style>
+      .card { fill: #0d1117; stroke: #30363d; stroke-width: 1; rx: 8px; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace; font-size: 14px; font-weight: bold; fill: #58a6ff; }
+      .artist { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace; font-size: 12px; fill: #8b949e; }
+      .status { font-family: monospace; font-size: 10px; fill: #3fb950; text-transform: uppercase; letter-spacing: 1px; }
+      .bar-bg { fill: #21262d; rx: 3px; }
+      .bar-fill { fill: #1db954; rx: 3px; }
+      .eq-bar { fill: #1db954; transform-origin: bottom; }
+      @keyframes bounce1 { 0%, 100% { height: 4px; } 50% { height: 16px; } }
+      @keyframes bounce2 { 0%, 100% { height: 14px; } 50% { height: 6px; } }
+      @keyframes bounce3 { 0%, 100% { height: 8px; } 50% { height: 18px; } }
+      .eq1 { animation: bounce1 1.1s infinite ease-in-out; }
+      .eq2 { animation: bounce2 0.8s infinite ease-in-out; }
+      .eq3 { animation: bounce3 1.3s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <rect class="card" x="1" y="1" width="398" height="108"/>
+
+  <!-- Status & Equalizer Icon -->
+  <g transform="translate(20, 24)">
+    <text class="status" x="0" y="0">● LIVE SPOTIFY PLAYBACK</text>
+    <g transform="translate(180, -10)">
+      <rect class="eq-bar eq1" x="0" y="0" width="3" height="12"/>
+      <rect class="eq-bar eq2" x="5" y="0" width="3" height="12"/>
+      <rect class="eq-bar eq3" x="10" y="0" width="3" height="12"/>
+    </g>
+  </g>
+
+  <!-- Track Title & Artist -->
+  <text class="title" x="20" y="52">Solaris (Original Mix)</text>
+  <text class="artist" x="20" y="72">Carbon Based Lifeforms — Derelicts</text>
+
+  <!-- Progress Bar -->
+  <rect class="bar-bg" x="20" y="86" width="360" height="5"/>
+  <rect class="bar-fill" x="20" y="86" width="220" height="5"/>
+</svg>
