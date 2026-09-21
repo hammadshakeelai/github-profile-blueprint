@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220" role="img" aria-label="Glowing neon text">
+  <defs>
+    <filter id="glow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="220" rx="16" fill="#0d1117"/>
+  <text x="300" y="120" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="56" font-weight="800" fill="#39d0d8" filter="url(#glow)">NEON
+    <animate attributeName="opacity" values="1;0.55;1;1;0.8;1" keyTimes="0;0.04;0.08;0.6;0.63;1" dur="4s" repeatCount="indefinite"/>
+  </text>
+  <text x="300" y="190" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#8b949e">feGaussianBlur + feMerge</text>
+</svg>

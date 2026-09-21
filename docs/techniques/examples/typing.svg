@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220" role="img" aria-label="Text typed out character by character">
+  <!-- textLength forces the string to exactly 390 units whatever font the viewer
+       falls back to, so each step of 27.86 units reveals exactly one character. -->
+  <defs>
+    <clipPath id="typed"><rect x="40" y="60" height="70" width="0">
+      <animate attributeName="width" dur="5s" repeatCount="indefinite" calcMode="discrete"
+        values="0.0;27.9;55.7;83.6;111.4;139.3;167.1;195.0;222.9;250.7;278.6;306.4;334.3;362.1;390.0;390;0"
+        keyTimes="0.0;0.032;0.064;0.096;0.129;0.161;0.193;0.225;0.257;0.289;0.321;0.354;0.386;0.418;0.45;0.9;1"/>
+    </rect></clipPath>
+  </defs>
+  <rect width="600" height="220" rx="16" fill="#0d1117"/>
+  <g clip-path="url(#typed)">
+    <text x="40" y="112" textLength="390" lengthAdjust="spacingAndGlyphs"
+          font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="44" fill="#3fb950">hello, profile</text>
+  </g>
+  <rect y="74" width="4" height="48" fill="#3fb950">
+    <animate attributeName="x" dur="5s" repeatCount="indefinite" calcMode="discrete"
+      values="42.0;69.9;97.7;125.6;153.4;181.3;209.1;237.0;264.9;292.7;320.6;348.4;376.3;404.1;432.0;432;42"
+      keyTimes="0.0;0.032;0.064;0.096;0.129;0.161;0.193;0.225;0.257;0.289;0.321;0.354;0.386;0.418;0.45;0.9;1"/>
+    <animate attributeName="opacity" values="1;0" dur="0.8s" repeatCount="indefinite" calcMode="discrete"/>
+  </rect>
+  <text x="40" y="185" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#8b949e">textLength keeps it font-proof</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160" role="img" aria-label="Boundary test: does an imported web font load?">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=block');
+    .pixel { font-family: 'Press Start 2P', serif; }
+  </style>
+  <rect width="600" height="160" rx="16" fill="#0d1117" stroke="#30363d"/>
+  <text class="pixel" x="40" y="82" font-size="30" fill="#f0f6fc">PIXEL FONT?</text>
+  <text x="40" y="126" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#8b949e">serif letters = import blocked</text>
+</svg>

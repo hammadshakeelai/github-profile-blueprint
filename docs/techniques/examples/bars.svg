@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220" role="img" aria-label="Bar chart rising into place">
+  <rect width="600" height="220" rx="16" fill="#0d1117"/>
+  <line x1="40" y1="170" x2="360" y2="170" stroke="#30363d" stroke-width="2"/>
+  <rect x="52" width="34" rx="4" fill="#58a6ff" y="170" height="0">
+    <animate attributeName="height" values="0;48;48;0" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.00s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+    <animate attributeName="y" values="170;122;122;170" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.00s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+  </rect>
+  <rect x="104" width="34" rx="4" fill="#58a6ff" y="170" height="0">
+    <animate attributeName="height" values="0;82;82;0" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.12s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+    <animate attributeName="y" values="170;88;88;170" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.12s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+  </rect>
+  <rect x="156" width="34" rx="4" fill="#58a6ff" y="170" height="0">
+    <animate attributeName="height" values="0;64;64;0" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.24s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+    <animate attributeName="y" values="170;106;106;170" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.24s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+  </rect>
+  <rect x="208" width="34" rx="4" fill="#58a6ff" y="170" height="0">
+    <animate attributeName="height" values="0;110;110;0" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.36s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+    <animate attributeName="y" values="170;60;60;170" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.36s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+  </rect>
+  <rect x="260" width="34" rx="4" fill="#58a6ff" y="170" height="0">
+    <animate attributeName="height" values="0;95;95;0" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.48s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+    <animate attributeName="y" values="170;75;75;170" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.48s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+  </rect>
+  <rect x="312" width="34" rx="4" fill="#58a6ff" y="170" height="0">
+    <animate attributeName="height" values="0;130;130;0" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.60s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+    <animate attributeName="y" values="170;40;40;170" keyTimes="0;0.25;0.9;1" dur="4s" begin="0.60s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1;0 0 1 1;0.6 0 1 1"/>
+  </rect>
+  <text x="390" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#f0f6fc">Bars</text>
+  <text x="390" y="148" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#8b949e">height + y,</text>
+  <text x="390" y="180" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#8b949e">staggered begin</text>
+</svg>

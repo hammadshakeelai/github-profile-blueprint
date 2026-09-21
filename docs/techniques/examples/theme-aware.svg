@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220" role="img" aria-label="A card that switches colours with the colour scheme">
+  <style>
+    .bg { fill: #0d1117; } .fg { fill: #f0f6fc; } .muted { fill: #8b949e; }
+    @media (prefers-color-scheme: light) { .bg { fill: #ffffff; } .fg { fill: #1f2328; } .muted { fill: #59636e; } }
+  </style>
+  <rect class="bg" width="600" height="220" rx="16" stroke="#8b949e" stroke-opacity="0.3"/>
+  <text class="fg" x="40" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800">Theme-aware SVG</text>
+  <text class="muted" x="40" y="165" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24">@media inside the image</text>
+</svg>

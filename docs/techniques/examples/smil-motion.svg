@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220" role="img" aria-label="A dot travelling along a curved path">
+  <rect width="600" height="220" rx="16" fill="#0d1117"/>
+  <path id="track" d="M50 160 C 190 30, 410 30, 550 160" fill="none" stroke="#30363d" stroke-width="3" stroke-linecap="round"/>
+  <circle r="11" fill="#58a6ff">
+    <animateMotion dur="3s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.45 0 0.55 1">
+      <mpath href="#track"/>
+    </animateMotion>
+  </circle>
+  <text x="50" y="200" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#8b949e">animateMotion + mpath</text>
+</svg>

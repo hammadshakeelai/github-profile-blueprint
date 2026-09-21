@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220" role="img" aria-label="A line drawing itself across the card">
+  <style>
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 3.5s ease-in-out infinite; }
+    @keyframes draw { 0% { stroke-dashoffset: 1; } 55%, 80% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1; } }
+  </style>
+  <rect width="600" height="220" rx="16" fill="#0d1117"/>
+  <path class="draw" pathLength="1" d="M40 130 Q 110 40 180 120 T 320 110 T 460 100 T 560 70"
+        fill="none" stroke="#3fb950" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="40" y="195" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#8b949e">pathLength="1" + dashoffset</text>
+</svg>

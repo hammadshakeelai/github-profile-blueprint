@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160" role="img" aria-label="light variant served by fragment switching">
+  <rect width="600" height="160" rx="16" fill="#ffffff" stroke="#59636e" stroke-opacity="0.35"/>
+  <rect x="40" y="46" width="14" height="68" rx="4" fill="#0969da"/>
+  <text x="74" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" fill="#1f2328">LIGHT variant</text>
+  <text x="74" y="118" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#59636e">served by #gh-*-mode-only</text>
+</svg>

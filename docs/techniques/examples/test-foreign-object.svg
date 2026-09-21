@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="600" height="160" role="img" aria-label="Boundary test: does HTML inside foreignObject render?">
+  <rect width="600" height="160" rx="16" fill="#0d1117" stroke="#30363d"/>
+  <foreignObject x="30" y="24" width="540" height="112">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font: 700 30px -apple-system, 'Segoe UI', sans-serif; color: #f0f6fc; display: flex; gap: 14px; align-items: center; height: 100%;">
+      <span style="background: #8957e5; border-radius: 10px; padding: 6px 14px;">HTML</span>
+      <span>inside SVG</span>
+    </div>
+  </foreignObject>
+  <text x="40" y="150" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" fill="#8b949e">blank card = foreignObject not rendered</text>
+</svg>
