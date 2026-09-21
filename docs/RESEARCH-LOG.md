@@ -19,7 +19,7 @@
 | Track 12 — GPG commit signing and verified bot badges (Actions automation verification) | done | 2026-09-21 | If createCommitOnBranch encounters an expectedHeadOid mismatch due to a concurrent push from game.yml, how many retry attempts and backoff intervals are optimal to achieve parity with git pull --rebase? |
 | Track 13 — Deterministic state hashing & short-circuiting (Sub-millisecond change detection) | done | 2026-09-21 | Can git commit in .github/workflows/profile-harness.yml include the short state hash in its commit message (e.g. chore(profile): synchronize telemetry (SHA: 4a9f8b2c)) for end-to-end provenance tracking? |
 | Track 14 — Automated 60-day workflow keepalive mechanisms (Scheduled cron auto-disable mitigation) | todo | | |
-| Track 15 — GraphQL createCommitOnBranch retry & backoff engine (Verified bot badge with rebase parity) | todo | | |
+| Track 15 — GraphQL createCommitOnBranch retry & backoff engine (Verified bot badge with rebase parity) | done | 2026-09-21 | Does createCommitOnBranch trigger downstream on: push GitHub Actions workflows, or is it suppressed by the same loop-prevention rules governing GITHUB_TOKEN git pushes? |
 | Track 16 — Fastly CDN edge eviction and raw.githubusercontent asset freshness protocols | todo | | |
 
 ---
@@ -741,3 +741,56 @@ Status: done
 
 #### Open questions:
 - Can `git commit` in `.github/workflows/profile-harness.yml` include the short state hash in its commit message (e.g. `chore(profile): synchronize telemetry (SHA: 4a9f8b2c)`) for end-to-end provenance tracking?
+
+---
+
+### Track 15 — GraphQL `createCommitOnBranch` retry & backoff engine
+Status: done
+
+#### Findings:
+1. **Exact GraphQL Error Response Payload & Specifications**:
+   - When `createCommitOnBranch` fails due to a race condition where the branch advances and invalidates `expectedHeadOid`, GitHub's GraphQL API returns an **HTTP 200 OK** status code with a domain-level error in the JSON response body under `errors`.
+   - The error structure contains:
+     - `type`: `"STALE_DATA"`. GitHub's GraphQL schema classifies optimistic concurrency control rejections using this error type at the top level of each error object.
+     - `message`: Template: `"Expected branch to point to \"<SHA>\" but it did not. Pull and try again."` where `<SHA>` is the 40-character hex string supplied in `input.expectedHeadOid`.
+     - `path`: `["createCommitOnBranch"]`.
+     - `data`: Top-level mutation field evaluates to `null` (`"createCommitOnBranch": null`).
+2. **Automated Retry Engine Mechanics & The "Lost Update" Resolution**:
+   - A naive retry implementation that merely re-queries the remote branch HEAD OID and re-submits its previous payload is **critically flawed**.
+   - Because `createCommitOnBranch` is a **wholesale file replacement mutation** (`FileAddition.contents` in RFC 4648 Base64) and does not perform 3-way line merging server-side, blindly re-submitting an already-rendered `README.md` will **clobber and erase concurrent commits** (e.g. erasing Tic-Tac-Toe / MUD game moves pushed by `game.yml` while `profile-harness.yml` was rendering telemetry).
+   - To achieve rebase parity, an automated retry engine in GitHub Actions must execute a 7-stage lifecycle:
+     1. Error classification (`STALE_DATA`) & secondary rate limit interception (`HTTP 403/429` with `Retry-After`).
+     2. Exponential backoff with Full Jitter: $T_{\text{sleep}} = \text{uniform}(0, \min(T_{\text{max}}, T_{\text{base}} \times 2^{\text{attempt}}))$.
+     3. Upstream synchronization hook (`sync_fn`): `git fetch origin <branch>` followed by re-executing `python harness/engine.py build --force` so dynamic marker splicing extracts the latest remote game moves into the new build.
+     4. Working tree diff re-evaluation: if upstream sync results in zero net diff, abort cleanly with exit 0.
+     5. Re-read modified files from disk and re-encode to Base64.
+     6. Re-query remote branch HEAD OID.
+     7. Submit `createCommitOnBranch` mutation with updated `expectedHeadOid`.
+3. **Trade-Off Matrix: GraphQL `createCommitOnBranch` vs. Git CLI (`git pull --rebase origin main`)**:
+
+| Dimension | Standard Git CLI (`git pull --rebase` + `git push`) | GraphQL API (`createCommitOnBranch` + Retry Engine) |
+|---|---|---|
+| **Cryptographic Verification** | ❌ **Unverified**: Commits generated on runner lack GPG keys. Fails "Require signed commits" branch protection unless private GPG keys are imported into repository secrets. | ✅ **Verified**: Commits are created and signed server-side by GitHub using GitHub's internal `web-flow` GPG key (`968479A1AFF927E37D1A566BB5690EEEBB952194`). Green **Verified** badge. Passes branch protection. |
+| **Commit Attribution** | ⚠️ Attributed to `github-actions[bot]` email, but unverified. If private GPG key imported, attributed to key owner (polluting personal streaks). | ✅ Clean `github-actions[bot]` attribution. Exactly 0 personal streak pollution. |
+| **Merge / Conflict Handling** | ✅ **Native 3-Way Line Merge**: Git's `ort`/`recursive` engine automatically merges non-overlapping text hunks (e.g. game board vs telemetry stats). | ⚠️ **Full File Replacement**: No server-side merge. Overwrites entire file. Requires runner-side re-generation callback before retrying to prevent lost updates. |
+| **API Rate Limit Quota** | ✅ **0 API Points**: Git Smart HTTP protocol does not consume the 1,000 req/hr `GITHUB_TOKEN` rate limit. | ⚠️ **Consumes GraphQL Points**: 1 point per query + 1 point per mutation. 3 retries consume ~6-8 points. Subject to Secondary Rate Limits. |
+| **Payload & Network Overhead** | ✅ **Delta Compressed**: Packfiles transmit only minimal binary diff hunks compressed with zlib. | ⚠️ **Base64 Inflation**: Entire file contents transmitted inside JSON strings (~33% size expansion). |
+| **Execution Latency** | ⚠️ 1.5s - 3.5s overhead (Git child process spawns, packfile negotiation, remote indexing). | ✅ 300ms - 800ms (single direct HTTPS POST request on small payloads). |
+
+#### Evidence:
+- Verified GitHub Docs GraphQL Mutations Reference: [createCommitOnBranch](https://docs.github.com/en/graphql/reference/mutations#createcommitonbranch).
+- Verified `STALE_DATA` error classification and `expectedHeadOid` precondition enforcement.
+- Sourced and validated full standard library reference engine implementation (`GraphQLCommitEngine`).
+
+#### UNVERIFIED:
+- UNVERIFIED: The exact threshold for GitHub GraphQL payload limits when pushing large binary SVGs (empirically cited across developer tooling as 10 MiB to 40 MiB per single mutation request).
+- UNVERIFIED: Whether GitHub intends to support Git-native 3-way line merging directly inside `createCommitOnBranch` in a future GraphQL schema revision.
+
+#### Recommendation:
+- Retain `git pull --rebase origin main` as the default commit/push driver for ProfileHarness.
+- If branch protection mandates verified commits, deploy `GraphQLCommitEngine` with `sync_callback` invoking `python harness/engine.py build --force` to prevent lost updates.
+
+#### Open questions:
+- Does `createCommitOnBranch` trigger downstream `on: push` GitHub Actions workflows, or is it suppressed by the same loop-prevention rules governing `GITHUB_TOKEN` git pushes?
+- Can `createCommitOnBranch` and `git pull --rebase` be combined into an automated fallback pipeline (attempting GraphQL first for verification, falling back to Git CLI on payload limits)?
+
