@@ -818,6 +818,24 @@ def lint_readme(content: str):
 
     return True
 
+def check_commit_age_exceeds_threshold(threshold_days: int = 45) -> bool:
+    """Returns True if the last repository commit is older than threshold_days (keepalive fallback)."""
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%ct"],
+            cwd=ROOT_DIR,
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=5,
+        )
+        commit_epoch = int(result.stdout.strip())
+        current_epoch = int(datetime.now(timezone.utc).timestamp())
+        return (current_epoch - commit_epoch) > (threshold_days * 86400)
+    except Exception:
+        return False
+
 def main():
     parser = argparse.ArgumentParser(description="ProfileHarness: Autonomous GitHub Profile Architecture Engine")
     parser.add_argument("command", choices=["build", "lint", "test"], default="build", nargs="?", help="Action to execute")
@@ -833,6 +851,10 @@ def main():
         state_sha = compute_state_hash(config, metrics)
         existing_sha = extract_state_hash_from_readme()
         force_rebuild = args.force or os.environ.get("FORCE_REBUILD") == "1"
+
+        if not force_rebuild and check_commit_age_exceeds_threshold(45):
+            print("🕒 Inactivity threshold reached (>45 days). Bypassing cache for keepalive refresh.")
+            force_rebuild = True
 
         if not force_rebuild and existing_sha == state_sha and verify_asset_integrity():
             print(f"⚡ Telemetry and configuration unchanged (SHA: {state_sha[:12]}). Build short-circuited.")

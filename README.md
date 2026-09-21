@@ -1,4 +1,4 @@
-<!-- HARNESS:STATE_SHA f88347d2b8d9d50e2ae11570b754e0e979d4d91e3d8e40fb65bfad27abef440a -->
+<!-- HARNESS:STATE_SHA 10bbc485e0b132b13954b32fefcc6fa539b84f98ac2b74f451762e018533692b -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
