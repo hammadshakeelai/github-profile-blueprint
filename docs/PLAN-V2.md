@@ -85,7 +85,18 @@ Build the library. Breadth first, judgement later.
 **Deliverable:** `docs/survey/PROFILES.md`, `docs/survey/GENERATORS.md`, plus a
 screenshot set. Data, not opinion.
 
-### Phase 2 — Technique catalogue
+### Phase 2 — Technique catalogue — **done**
+
+> **Outcome:** `docs/techniques/` — a catalogue of every technique with survey
+> usage counts and cited real files, 23 original examples, a gallery rendered by
+> GitHub, and `tools/techniques/verify.py`, which checks each example inside
+> GitHub's page at two widths and both schemes. All 14 animated examples were
+> seen animating; three theme mechanisms verified; scripts, web-font imports
+> and external images verified blocked; `<foreignObject>` verified rendering in
+> Chrome. One surprise: a blocked external image shows a broken-image icon.
+>
+> Deviation: one catalogue file rather than one per family — the entries are
+> short and cross-reference each other, so a single page reads better.
 
 > **Already banked from Phase 1:** `docs/survey/data/technique_exemplars.json`
 > holds up to eight real bespoke SVGs per technique, spread across profiles and
@@ -169,7 +180,7 @@ auth for that account.
 - [x] 25+ generators catalogued with liveness risk noted — 40+ services, 65 repos
 - [x] Every one checked at desktop and phone width — real layout measured for
       442 (phone) and 441 (desktop); the 20 shortlisted also screenshotted
-- [ ] Technique catalogue where each entry cites a real user and has a verified
+- [x] Technique catalogue where each entry cites a real user and has a verified
       minimal example
 - [ ] Capability matrix with every cell tested
 - [ ] Three rendered comps, one chosen with stated reasons

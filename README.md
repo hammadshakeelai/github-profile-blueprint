@@ -14,8 +14,8 @@ branch.
 | Phase | Status |
 |---|---|
 | 1 · Survey — 446 real profiles, their images, and the generators behind them | **done** |
-| 2 · Technique catalogue — each technique with real users and a verified example | next |
-| 3 · Capability matrix — desktop / mobile web / GitHub app × dark / light, tested | |
+| 2 · Technique catalogue — each technique with real users and a verified example | **done** |
+| 3 · Capability matrix — desktop / mobile web / GitHub app × dark / light, tested | next |
 | 4 · Design direction — three rendered concepts, one chosen | |
 | 5 · Build the profile | |
 | 6 · Fold everything back into the skill | |
@@ -40,6 +40,21 @@ Full detail with numbers in [docs/survey/FINDINGS.md](docs/survey/FINDINGS.md).
 
 The fifteen standout profiles, and what to take from each:
 [docs/survey/SHORTLIST.md](docs/survey/SHORTLIST.md).
+
+## What the technique catalogue verified
+
+Every technique found in the survey, rebuilt as an original minimal example and
+checked on GitHub's real renderer at desktop and phone width, dark and light:
+[docs/techniques/CATALOGUE.md](docs/techniques/CATALOGUE.md).
+
+- **All 14 animated examples run inside GitHub's page** — SMIL, CSS keyframes,
+  line drawing, masks, typing, textPath, gauges, charts — confirmed by
+  frame-differencing, not assumed.
+- **Theme switching works three ways**: `<picture>`, the legacy
+  `#gh-dark-mode-only` fragments, and media queries inside the SVG.
+- **Blocked:** scripts, `@import`ed web fonts, and external images — which
+  don't vanish quietly but show a broken-image icon.
+- **Renders (in Chrome):** HTML inside `<foreignObject>`.
 
 ## Layout
 
