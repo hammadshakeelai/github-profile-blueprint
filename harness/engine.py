@@ -6,6 +6,7 @@ Git-native SVGs, Bento Grid layouts, interactive issue RPCs, and GitHub-sanitize
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -28,11 +29,71 @@ CONFIG_PATH = Path(__file__).resolve().parent / "profile.config.json"
 ASSETS_DIR = ROOT_DIR / "assets"
 README_PATH = ROOT_DIR / "README.md"
 
+STATE_SHA_REGEX = re.compile(r"<!--\s*HARNESS:STATE_SHA\s+([a-f0-9]{64})\s*-->")
+EXPECTED_ASSETS = [
+    "banner-dark.svg",
+    "banner-light.svg",
+    "dashboard.svg",
+    "terminal-typing.svg",
+    "pet.svg",
+    "quantum-coherence.svg",
+    "synaptic-network.svg",
+]
+
 def load_config():
     if not CONFIG_PATH.exists():
         print(f"Error: Config file not found at {CONFIG_PATH}", file=sys.stderr)
         sys.exit(1)
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+
+def compute_state_hash(config: dict, metrics: dict) -> str:
+    """Computes a deterministic SHA-256 hash over compiler code, config, and raw telemetry."""
+    hasher = hashlib.sha256()
+    # 1. Compiler code identity (invalidates cache on code edits)
+    hasher.update(Path(__file__).read_bytes())
+    # 2. Canonicalized configuration
+    config_bytes = json.dumps(config, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    hasher.update(config_bytes)
+    # 3. Canonicalized dynamic telemetry inputs (strictly excluding updated_at)
+    telemetry_input = {
+        "recent_commits": metrics.get("recent_commits"),
+        "ci_reliability": metrics.get("ci_reliability"),
+    }
+    telemetry_bytes = json.dumps(telemetry_input, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    hasher.update(telemetry_bytes)
+    return hasher.hexdigest()
+
+def extract_state_hash_from_readme() -> str | None:
+    """Extracts the recorded state hash from line 1 of README.md without reading the full file."""
+    if not README_PATH.exists():
+        return None
+    try:
+        with open(README_PATH, "r", encoding="utf-8") as f:
+            header = f.read(1024)
+        match = STATE_SHA_REGEX.search(header)
+        return match.group(1) if match else None
+    except Exception:
+        return None
+
+def verify_asset_integrity() -> bool:
+    """Fast pre-flight check verifying all required assets exist and have non-zero size."""
+    for asset in EXPECTED_ASSETS:
+        p = ASSETS_DIR / asset
+        if not p.exists() or p.stat().st_size == 0:
+            return False
+    return True
+
+def extract_dynamic_section(tag: str) -> str | None:
+    """Extracts content within <!-- TAG:START --> and <!-- TAG:END --> from existing README.md."""
+    if not README_PATH.exists():
+        return None
+    try:
+        content = README_PATH.read_text(encoding="utf-8")
+        pattern = re.compile(rf"(<!--\s*{tag}:START\s*-->.*?<!--\s*{tag}:END\s*-->)", re.DOTALL)
+        match = pattern.search(content)
+        return match.group(1) if match else None
+    except Exception:
+        return None
 
 def get_previous_sync_state():
     """Extracts previous telemetry metrics from README.md to preserve determinism."""
@@ -423,7 +484,7 @@ def render_synaptic_network_svg(config: dict, metrics: dict):
     (ASSETS_DIR / "synaptic-network.svg").write_text(svg, encoding="utf-8")
     print("Generated: assets/synaptic-network.svg")
 
-def compile_readme(config: dict, metrics: dict) -> str:
+def compile_readme(config: dict, metrics: dict, state_sha: str = "") -> str:
     """Compiles the full Markdown README adhering to 2026 Bento Grid best practices."""
     profile = config["profile"]
     username = profile["username"]
@@ -540,8 +601,12 @@ flowchart LR
   class K3s,Ingress,eBPF,Raft,WAL,Shm darkNode;
 ```"""
 
-    # 8. Interactive Game & Guestbook
-    game_guestbook_md = f"""### 🎮 Community State Machine (Tic-Tac-Toe)
+    # 8. Interactive Game, MUD Dungeon & Guestbook (Section-Preserving Splicing)
+    existing_game = extract_dynamic_section("GAME")
+    if existing_game:
+        game_md = f"### 🎮 Community State Machine (Tic-Tac-Toe)\n\n{existing_game}"
+    else:
+        game_md = f"""### 🎮 Community State Machine (Tic-Tac-Toe)
 
 <!-- GAME:START -->
 **Current State**: Your turn! (Playing as **X**) — *Click an open tile to make your move via GitHub Issues:*
@@ -553,11 +618,40 @@ flowchart LR
 | [⬜ Play (2,0)](https://github.com/{username}/{username}/issues/new?title=ttt%7Cmove%7C6&body=Click+Submit+to+confirm+move.) | [⬜ Play (2,1)](https://github.com/{username}/{username}/issues/new?title=ttt%7Cmove%7C7&body=Click+Submit+to+confirm+move.) | ❌ |
 
 *(Powered by Minimax bot running inside GitHub Actions. State preserved in repository.)*
-<!-- GAME:END -->
+<!-- GAME:END -->"""
 
----
+    existing_mud = extract_dynamic_section("MUD")
+    if existing_mud:
+        mud_md = existing_mud
+    else:
+        mud_md = f"""<!-- MUD:START -->
+### 🕹️ Git-Native Cyberpunk Dungeon (Multi-User Adventure)
 
-### 📖 Community Guestbook
+**Current Location**: `Mainframe Core // Sector 7G`  
+**Last Adventurer**: [@octocat](https://github.com/octocat) • **System Ticks**: `42`
+
+> *A subterranean chamber housing three crystalline Raft consensus nodes. The air smells of ozone and liquid helium. Optical telemetry cables pulse with blue coherent light.*
+
+**Available Actions**:  
+[⚡ Ping Quorum Node](https://github.com/{username}/{username}/issues/new?title=mud%7Caction%7Cping&body=Click+Submit+new+issue+to+advance+the+dungeon.) • [🔍 Inspect Memory Ring Buffer](https://github.com/{username}/{username}/issues/new?title=mud%7Caction%7Cinspect&body=Click+Submit+new+issue+to+advance+the+dungeon.) • [🚪 Enter Engine Bay](https://github.com/{username}/{username}/issues/new?title=mud%7Cmove%7Cengine_bay&body=Click+Submit+new+issue+to+advance+the+dungeon.)
+
+**Recent World Log**:  
+> [2026-09-20] @octocat initialized the mainframe core.
+> [2026-09-20] Telemetry daemon loaded 14 eBPF probes successfully.
+<!-- MUD:END -->"""
+
+    existing_guestbook = extract_dynamic_section("GUESTBOOK")
+    if existing_guestbook:
+        guestbook_entries = existing_guestbook
+    else:
+        guestbook_entries = """<!-- GUESTBOOK:START -->
+| Date | Signer | Message |
+| :--- | :--- | :--- |
+| 2026-09-20 | [@octocat](https://github.com/octocat) | Welcome to GitHub Profile Architecture 2026! 🚀 |
+| 2026-09-18 | [@systems-dev](https://github.com/systems-dev) | Loving the zero-latency Git-native dashboard. |
+<!-- GUESTBOOK:END -->"""
+
+    guestbook_md = f"""### 📖 Community Guestbook
 
 Click below to sign my profile README! An automated GitHub Action will append your handle and message:
 
@@ -567,12 +661,7 @@ Click below to sign my profile README! An automated GitHub Action will append yo
   </a>
 </p>
 
-<!-- GUESTBOOK:START -->
-| Date | Signer | Message |
-| :--- | :--- | :--- |
-| 2026-09-20 | [@octocat](https://github.com/octocat) | Welcome to GitHub Profile Architecture 2026! 🚀 |
-| 2026-09-18 | [@systems-dev](https://github.com/systems-dev) | Loving the zero-latency Git-native dashboard. |
-<!-- GUESTBOOK:END -->"""
+{guestbook_entries}"""
 
     # 9. Abstract Frontier: Quantum Coherence & Synaptic Flow
     abstract_md = """---
@@ -592,7 +681,8 @@ Click below to sign my profile README! An automated GitHub Action will append yo
 </p>"""
 
     # 10. Assembly
-    full_readme = f"""{hero_md}
+    sha_header = f"<!-- HARNESS:STATE_SHA {state_sha} -->\n" if state_sha else ""
+    full_readme = f"""{sha_header}{hero_md}
 
 {typing_md}
 
@@ -626,7 +716,15 @@ Click below to sign my profile README! An automated GitHub Action will append yo
 
 ---
 
-{game_guestbook_md}
+{game_md}
+
+---
+
+{mud_md}
+
+---
+
+{guestbook_md}
 
 ---
 
@@ -723,6 +821,7 @@ def lint_readme(content: str):
 def main():
     parser = argparse.ArgumentParser(description="ProfileHarness: Autonomous GitHub Profile Architecture Engine")
     parser.add_argument("command", choices=["build", "lint", "test"], default="build", nargs="?", help="Action to execute")
+    parser.add_argument("--force", "-f", action="store_true", help="Force rebuild bypassing state hash match")
     args = parser.parse_args()
 
     config = load_config()
@@ -730,15 +829,23 @@ def main():
     token = os.environ.get("GITHUB_TOKEN")
 
     if args.command in ["build", "test"]:
-        print(f"🚀 Compiling ProfileHarness for @{username}...")
         metrics = fetch_github_metrics(username, token)
+        state_sha = compute_state_hash(config, metrics)
+        existing_sha = extract_state_hash_from_readme()
+        force_rebuild = args.force or os.environ.get("FORCE_REBUILD") == "1"
+
+        if not force_rebuild and existing_sha == state_sha and verify_asset_integrity():
+            print(f"⚡ Telemetry and configuration unchanged (SHA: {state_sha[:12]}). Build short-circuited.")
+            sys.exit(0)
+
+        print(f"🚀 Compiling ProfileHarness for @{username} (SHA: {state_sha[:12]})...")
         render_svg_banners(config)
         render_svg_dashboard(config, metrics)
         render_virtual_pet_svg(config, metrics)
         render_quantum_coherence_svg(config, metrics)
         render_synaptic_network_svg(config, metrics)
         
-        readme_content = compile_readme(config, metrics)
+        readme_content = compile_readme(config, metrics, state_sha)
         
         # Fail-closed: validate sanitizer rules in memory BEFORE committing to disk
         if not lint_readme(readme_content):

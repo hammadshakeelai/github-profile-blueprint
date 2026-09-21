@@ -1,3 +1,4 @@
+<!-- HARNESS:STATE_SHA f88347d2b8d9d50e2ae11570b754e0e979d4d91e3d8e40fb65bfad27abef440a -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
@@ -134,6 +135,24 @@ flowchart LR
 
 *(Powered by Minimax bot running inside GitHub Actions. State preserved in repository.)*
 <!-- GAME:END -->
+
+---
+
+<!-- MUD:START -->
+### 🕹️ Git-Native Cyberpunk Dungeon (Multi-User Adventure)
+
+**Current Location**: `Mainframe Core // Sector 7G`  
+**Last Adventurer**: [@octocat](https://github.com/octocat) • **System Ticks**: `42`
+
+> *A subterranean chamber housing three crystalline Raft consensus nodes. The air smells of ozone and liquid helium. Optical telemetry cables pulse with blue coherent light.*
+
+**Available Actions**:  
+[⚡ Ping Quorum Node](https://github.com/hammadshakeelAl/hammadshakeelAl/issues/new?title=mud%7Caction%7Cping&body=Click+Submit+new+issue+to+advance+the+dungeon.) • [🔍 Inspect Memory Ring Buffer](https://github.com/hammadshakeelAl/hammadshakeelAl/issues/new?title=mud%7Caction%7Cinspect&body=Click+Submit+new+issue+to+advance+the+dungeon.) • [🚪 Enter Engine Bay](https://github.com/hammadshakeelAl/hammadshakeelAl/issues/new?title=mud%7Cmove%7Cengine_bay&body=Click+Submit+new+issue+to+advance+the+dungeon.)
+
+**Recent World Log**:  
+> [2026-09-20] @octocat initialized the mainframe core.
+> [2026-09-20] Telemetry daemon loaded 14 eBPF probes successfully.
+<!-- MUD:END -->
 
 ---
 
