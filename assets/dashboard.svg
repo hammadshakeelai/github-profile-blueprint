@@ -2,9 +2,9 @@
   <defs>
     <style>
       .card { fill: #0b0f19; stroke: #1e293b; stroke-width: 1.5; rx: 10px; }
-      .header { font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #38bdf8; font-weight: bold; }
+      .header { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 13px; fill: #38bdf8; font-weight: bold; }
       .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11px; fill: #94a3b8; }
-      .value { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: bold; fill: #f8fafc; }
+      .value { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 18px; font-weight: bold; fill: #f8fafc; }
       .bar-bg { fill: #1e293b; rx: 3px; }
       .bar-fill { fill: #38bdf8; rx: 3px; }
       .status-dot { fill: #22c55e; }

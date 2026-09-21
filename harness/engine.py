@@ -29,6 +29,52 @@ CONFIG_PATH = Path(__file__).resolve().parent / "profile.config.json"
 ASSETS_DIR = ROOT_DIR / "assets"
 README_PATH = ROOT_DIR / "README.md"
 
+# GitHub's CSP blocks external font loading for SVGs referenced as images, so a
+# named web font (e.g. 'JetBrains Mono') silently renders as the generic
+# fallback. Only system-resident fonts actually arrive. These stacks resolve to
+# a real face on macOS, Windows and Linux rather than pretending otherwise.
+SANS_STACK = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+MONO_STACK = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+
+# Banner geometry, derived from the measured README container widths (846px
+# desktop / 309px mobile). See docs/RESEARCH-CLAUDE.md C2-C3.
+BANNER_W = 900
+BANNER_H = 300
+BANNER_MARGIN = 36                      # 4% safe margin
+BANNER_USABLE = BANNER_W - 2 * BANNER_MARGIN
+MOBILE_R = 309                          # measured mobile container width
+LEGIBILITY_FLOOR_PX = 11                # smallest px we treat as readable
+# Minimum units that still clear the floor once scaled: 11 * 900 / 309 = 32.04
+MIN_UNITS = LEGIBILITY_FLOOR_PX * BANNER_W / MOBILE_R
+
+# Mean advance width as a fraction of font-size. Monospace is exact by
+# definition; the sans figure is an empirical mean for mixed-case Latin.
+ADVANCE_MONO = 0.60
+ADVANCE_SANS = 0.52
+
+
+def fit_font_size(text: str, desired: float, advance: float,
+                  usable: float = BANNER_USABLE) -> tuple[float, bool]:
+    """Largest font size at or below `desired` that keeps `text` inside `usable`.
+
+    SVG has no text wrapping and no way to measure a glyph at render time, so an
+    over-long string silently runs past the edge of the banner. Raising type to
+    clear the mobile legibility floor makes that overflow far more likely — the
+    two constraints pull against each other, and the only honest resolution is
+    to fit the text and report when it cannot be fitted.
+
+    Returns (size, fits_above_floor). When the second value is False the string
+    is genuinely too long for the banner at a readable size, and the caller
+    should shorten it rather than ship unreadable or clipped text.
+    """
+    if not text:
+        return desired, True
+    max_size = usable / (len(text) * advance)
+    size = min(desired, max_size)
+    if size < MIN_UNITS:
+        return MIN_UNITS, False
+    return round(size, 1), True
+
 STATE_SHA_REGEX = re.compile(r"<!--\s*HARNESS:STATE_SHA\s+([a-f0-9]{64})\s*-->")
 EXPECTED_ASSETS = [
     "banner-dark.svg",
@@ -163,9 +209,9 @@ def render_svg_dashboard(config: dict, metrics: dict):
   <defs>
     <style>
       .card {{ fill: #0b0f19; stroke: #1e293b; stroke-width: 1.5; rx: 10px; }}
-      .header {{ font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #38bdf8; font-weight: bold; }}
+      .header {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 13px; fill: #38bdf8; font-weight: bold; }}
       .label {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11px; fill: #94a3b8; }}
-      .value {{ font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: bold; fill: #f8fafc; }}
+      .value {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 18px; font-weight: bold; fill: #f8fafc; }}
       .bar-bg {{ fill: #1e293b; rx: 3px; }}
       .bar-fill {{ fill: #38bdf8; rx: 3px; }}
       .status-dot {{ fill: #22c55e; }}
@@ -202,13 +248,50 @@ def render_svg_dashboard(config: dict, metrics: dict):
     print(f"Generated: {svg_path}")
 
 def render_svg_banners(config: dict):
-    """Renders responsive Dark and Light mode hero banner SVGs."""
+    """Renders responsive Dark and Light mode hero banner SVGs.
+
+    Geometry is driven by the measured README container widths: 846px on
+    desktop, 309px on a phone. Because an SVG scales as a unit, a glyph drawn at
+    F units in a viewBox of width W renders at F * (R / W) pixels. Keeping text
+    legible on mobile therefore constrains the type scale:
+
+        F_min = target_px * W / R      ->  11 * 900 / 309  =  32 units
+
+    A 900x300 (3:1) viewBox gives 103px of banner height on a phone, enough for
+    three lines, and needs only 32-unit type instead of the 43 a 1200-wide
+    viewBox would demand. All sizes below clear that floor.
+
+    Fonts are system stacks: GitHub's CSP blocks external font loading for SVGs
+    referenced as images, so a named web font silently renders as the generic
+    fallback. See skills/github-profile-readme/references/measured-constraints.md
+    """
     profile = config["profile"]
     name = xml_escape(profile["name"])
     headline_upper = xml_escape(profile["headline"].upper())
-    
+    tagline = xml_escape(profile.get(
+        "tagline",
+        "Rust · Go · Linux Kernel & eBPF Telemetry · Distributed State Machines"
+    ))
+
+    # Fit each line to the banner. Sizes are the design intent; fit_font_size
+    # reduces them only as far as the legibility floor, then reports failure
+    # rather than silently clipping or shrinking below readable.
+    name_size, name_fits = fit_font_size(profile["name"], 64, ADVANCE_SANS)
+    head_size, head_fits = fit_font_size(profile["headline"].upper(), 34, ADVANCE_MONO)
+    tag_size, tag_fits = fit_font_size(
+        profile.get("tagline", "Rust · Go · Linux Kernel & eBPF Telemetry · Distributed State Machines"),
+        33, ADVANCE_SANS)
+
+    for label, text, fits in (("name", profile["name"], name_fits),
+                              ("headline", profile["headline"], head_fits),
+                              ("tagline", profile.get("tagline", ""), tag_fits)):
+        if not fits:
+            print(f"  Warning: banner {label} is too long to render legibly "
+                  f"({len(text)} chars); it will be clipped. Shorten it in "
+                  f"profile.config.json.", file=sys.stderr)
+
     # Dark Banner
-    dark_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240">
+    dark_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" role="img" aria-label="{name} — {headline_upper}">
   <defs>
     <linearGradient id="dark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#090d16" />
@@ -223,20 +306,20 @@ def render_svg_banners(config: dict):
       <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.8" opacity="0.4"/>
     </pattern>
   </defs>
-  <rect width="1200" height="240" fill="url(#dark-grad)" rx="12"/>
-  <rect width="1200" height="240" fill="url(#grid)" rx="12"/>
-  <rect x="0" y="236" width="1200" height="4" fill="url(#accent)"/>
-  <circle cx="40" cy="35" r="6" fill="#ef4444" opacity="0.8"/>
-  <circle cx="60" cy="35" r="6" fill="#eab308" opacity="0.8"/>
-  <circle cx="80" cy="35" r="6" fill="#22c55e" opacity="0.8"/>
-  <text x="40" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="#f8fafc">{name}</text>
-  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#accent)">{headline_upper}</text>
-  <text x="40" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#94a3b8">Rust • Go • Linux Kernel &amp; eBPF Telemetry • High-Throughput Distributed State Machines</text>
+  <rect width="900" height="300" fill="url(#dark-grad)" rx="14"/>
+  <rect width="900" height="300" fill="url(#grid)" rx="14"/>
+  <rect x="0" y="292" width="900" height="8" fill="url(#accent)"/>
+  <circle cx="36" cy="40" r="7" fill="#ef4444" opacity="0.85"/>
+  <circle cx="60" cy="40" r="7" fill="#eab308" opacity="0.85"/>
+  <circle cx="84" cy="40" r="7" fill="#22c55e" opacity="0.85"/>
+  <text x="36" y="132" font-family="{SANS_STACK}" font-size="{name_size}" font-weight="800" fill="#f8fafc">{name}</text>
+  <text x="36" y="186" font-family="{MONO_STACK}" font-size="{head_size}" font-weight="600" fill="#38bdf8">{headline_upper}</text>
+  <text x="36" y="232" font-family="{SANS_STACK}" font-size="{tag_size}" fill="#94a3b8">{tagline}</text>
 </svg>"""
     (ASSETS_DIR / "banner-dark.svg").write_text(dark_svg, encoding="utf-8")
 
     # Light Banner
-    light_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240">
+    light_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300" role="img" aria-label="{name} — {headline_upper}">
   <defs>
     <linearGradient id="light-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f8fafc" />
@@ -251,15 +334,15 @@ def render_svg_banners(config: dict):
       <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#cbd5e1" stroke-width="0.8" opacity="0.6"/>
     </pattern>
   </defs>
-  <rect width="1200" height="240" fill="url(#light-grad)" rx="12"/>
-  <rect width="1200" height="240" fill="url(#light-grid)" rx="12"/>
-  <rect x="0" y="236" width="1200" height="4" fill="url(#light-accent)"/>
-  <circle cx="40" cy="35" r="6" fill="#ef4444" opacity="0.8"/>
-  <circle cx="60" cy="35" r="6" fill="#eab308" opacity="0.8"/>
-  <circle cx="80" cy="35" r="6" fill="#22c55e" opacity="0.8"/>
-  <text x="40" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="#0f172a">{name}</text>
-  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#light-accent)">{headline_upper}</text>
-  <text x="40" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#475569">Rust • Go • Linux Kernel &amp; eBPF Telemetry • High-Throughput Distributed State Machines</text>
+  <rect width="900" height="300" fill="url(#light-grad)" rx="14"/>
+  <rect width="900" height="300" fill="url(#light-grid)" rx="14"/>
+  <rect x="0" y="292" width="900" height="8" fill="url(#light-accent)"/>
+  <circle cx="36" cy="40" r="7" fill="#ef4444" opacity="0.85"/>
+  <circle cx="60" cy="40" r="7" fill="#eab308" opacity="0.85"/>
+  <circle cx="84" cy="40" r="7" fill="#22c55e" opacity="0.85"/>
+  <text x="36" y="132" font-family="{SANS_STACK}" font-size="{name_size}" font-weight="800" fill="#0f172a">{name}</text>
+  <text x="36" y="186" font-family="{MONO_STACK}" font-size="{head_size}" font-weight="600" fill="#0369a1">{headline_upper}</text>
+  <text x="36" y="232" font-family="{SANS_STACK}" font-size="{tag_size}" fill="#475569">{tagline}</text>
 </svg>"""
     (ASSETS_DIR / "banner-light.svg").write_text(light_svg, encoding="utf-8")
     print("Generated: assets/banner-dark.svg and assets/banner-light.svg")
@@ -324,9 +407,9 @@ def render_quantum_coherence_svg(config: dict, metrics: dict):
   <defs>
     <style>
       .holo-card {{ fill: #07090e; stroke: #1e293b; stroke-width: 1.5; rx: 12px; }}
-      .hud-title {{ font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #38bdf8; font-weight: bold; letter-spacing: 1px; }}
-      .hud-val {{ font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #f8fafc; font-weight: bold; }}
-      .hud-sub {{ font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #64748b; }}
+      .hud-title {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; fill: #38bdf8; font-weight: bold; letter-spacing: 1px; }}
+      .hud-val {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 15px; fill: #f8fafc; font-weight: bold; }}
+      .hud-sub {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 10px; fill: #64748b; }}
       
       .orbit-ring-1 {{
         transform-origin: 530px 100px;
@@ -404,8 +487,8 @@ def render_synaptic_network_svg(config: dict, metrics: dict):
   <defs>
     <style>
       .synapse-card {{ fill: #07090e; stroke: #1e293b; stroke-width: 1.5; rx: 12px; }}
-      .node-text {{ font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #94a3b8; font-weight: bold; }}
-      .title-text {{ font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #818cf8; font-weight: bold; letter-spacing: 1px; }}
+      .node-text {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 10px; fill: #94a3b8; font-weight: bold; }}
+      .title-text {{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; fill: #818cf8; font-weight: bold; letter-spacing: 1px; }}
       
       .synapse-wire {{
         stroke: #1e293b;

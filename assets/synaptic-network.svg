@@ -2,8 +2,8 @@
   <defs>
     <style>
       .synapse-card { fill: #07090e; stroke: #1e293b; stroke-width: 1.5; rx: 12px; }
-      .node-text { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #94a3b8; font-weight: bold; }
-      .title-text { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #818cf8; font-weight: bold; letter-spacing: 1px; }
+      .node-text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 10px; fill: #94a3b8; font-weight: bold; }
+      .title-text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; fill: #818cf8; font-weight: bold; letter-spacing: 1px; }
       
       .synapse-wire {
         stroke: #1e293b;

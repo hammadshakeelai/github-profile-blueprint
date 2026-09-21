@@ -4,7 +4,8 @@
   "profile": {
     "username": "hammadshakeelAl",
     "name": "Hammad Shakeel",
-    "headline": "Principal Systems Architect & Distributed Systems Engineer",
+    "headline": "Principal Systems Architect",
+    "tagline": "Distributed Systems · Rust · Go · eBPF",
     "location": "Global / Remote",
     "status": {
       "text": "ONLINE // COMPILING DISTRIBUTED ENGINES",

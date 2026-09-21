@@ -2,9 +2,9 @@
   <defs>
     <style>
       .holo-card { fill: #07090e; stroke: #1e293b; stroke-width: 1.5; rx: 12px; }
-      .hud-title { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #38bdf8; font-weight: bold; letter-spacing: 1px; }
-      .hud-val { font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #f8fafc; font-weight: bold; }
-      .hud-sub { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #64748b; }
+      .hud-title { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; fill: #38bdf8; font-weight: bold; letter-spacing: 1px; }
+      .hud-val { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 15px; fill: #f8fafc; font-weight: bold; }
+      .hud-sub { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 10px; fill: #64748b; }
       
       .orbit-ring-1 {
         transform-origin: 530px 100px;
