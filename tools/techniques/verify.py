@@ -7,8 +7,8 @@ Loads docs/techniques/GALLERY.md as rendered on github.com, at desktop (1280px)
 and phone (390px) width, in dark and light colour schemes, and for every image:
 
   * loaded      — did GitHub serve it and the browser decode it
-  * animates    — two frames captured 1.2s apart differ, i.e. the animation runs
-                  inside GitHub's page, not just when the file is opened alone
+  * animates    — of eight frames captured 0.73s apart, some differ: the animation
+                  runs inside GitHub's page, not just when the file is opened alone
   * boundary    — for the test images, the answer read from the pixels (script
                   ran? external image loaded? web font loaded? foreignObject
                   rendered?)
@@ -46,10 +46,13 @@ LIST_JS = r"""
       i.addEventListener('load', r, {once: true}); i.addEventListener('error', r, {once: true}); }))),
     new Promise(r => setTimeout(r, 15000))]);
   await new Promise(r => setTimeout(r, 1500));
+  // GitHub's desktop file view re-renders markdown client-side after load, replacing the <img> elements; measuring the first set would read detached nodes as zero-sized. So wait, then query afresh.
+  const live = document.querySelector('article.markdown-body');
+  const fresh = [...live.querySelectorAll('img')];
   const sx = window.scrollX, sy = window.scrollY;
   return {
-    container: Math.round(art.getBoundingClientRect().width),
-    images: imgs.map(i => { const b = i.getBoundingClientRect();
+    container: Math.round(live.getBoundingClientRect().width),
+    images: fresh.map(i => { const b = i.getBoundingClientRect();
       const src = i.currentSrc || i.src;
       return { alt: i.alt, src,
         file: (src.match(/examples\/([\w-]+\.svg)/) || [])[1] || null,
@@ -129,7 +132,9 @@ def boundary(file: str, img: Image.Image) -> dict:
     return {}
 
 
-FRAMES, FRAME_GAP = 8, 0.8     # ~6.4s of sampling covers every loop in the gallery
+# 0.73s rather than a round number: a gap that divides a loop's length evenly
+# revisits the same moments every cycle and can alias brief motion away.
+FRAMES, FRAME_GAP = 8, 0.73
 
 
 async def load(tab, url: str, width: int, scheme: str) -> dict:

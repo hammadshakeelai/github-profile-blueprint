@@ -1,0 +1,41 @@
+{
+  "_about": "Real projects from github.com/hammadshakeelai, grouped by what they share. One-liners are condensed from each repository's own description — no claims added. Used by the Phase 4 comps.",
+  "name": "Hammad Shakeel",
+  "handle": "hammadshakeelai",
+  "thesis": "Things that run in a browser tab — whole operating systems, games, and retrieval research.",
+  "groups": [
+    {
+      "title": "Operating systems in a tab",
+      "projects": [
+        {"name": "LinuxWeb", "line": "Real Alpine Linux in a browser tab, home folder saved automatically", "demo": "https://hammadshakeelai.github.io/LinuxWeb/", "repo": "https://github.com/hammadshakeelai/LinuxWeb"},
+        {"name": "archbtw", "line": "Arch Linux in v86, resumed from a snapshot at a shell full of toys", "demo": "https://hammadshakeelai.github.io/archbtw/", "repo": "https://github.com/hammadshakeelai/archbtw"},
+        {"name": "RetroMuseum", "line": "Real Linux and retro operating systems, client-side, on the v86 emulator", "demo": "https://hammadshakeelai.github.io/RetroMuseum/", "repo": "https://github.com/hammadshakeelai/RetroMuseum"},
+        {"name": "OpenVScode", "line": "VS Code for Android phones — Python, C++ with Clang, Jupyter", "demo": null, "repo": "https://github.com/hammadshakeelai/OpenVScode"}
+      ]
+    },
+    {
+      "title": "Games you can play right now",
+      "projects": [
+        {"name": "Tidebreaker", "line": "Golden-hour boat regatta on a procedural low-poly ocean, three.js", "demo": "https://hammadshakeelai.github.io/Tidebreaker/", "repo": "https://github.com/hammadshakeelai/Tidebreaker"},
+        {"name": "Boat-Chase", "line": "3D boat chase through island canals — outrun the Coast Guard", "demo": "https://hammadshakeelai.github.io/Boat-Chase/", "repo": "https://github.com/hammadshakeelai/Boat-Chase"},
+        {"name": "pacman", "line": "Pac-Man in vanilla JS with the original ghost targeting AI", "demo": "https://hammadshakeelai.github.io/pacman/", "repo": "https://github.com/hammadshakeelai/pacman"},
+        {"name": "retro-win32-arcade-web", "line": "Original C++ Win32 GUI games, playable in the browser", "demo": "https://hammadshakeelai.github.io/retro-win32-arcade-web/", "repo": "https://github.com/hammadshakeelai/retro-win32-arcade-web"}
+      ]
+    },
+    {
+      "title": "Close to the metal",
+      "projects": [
+        {"name": "Doomsday in 8086", "line": "Conway's Doomsday algorithm in hand-written 8086 assembly, running in DOSBox", "demo": "https://hammadshakeelai.github.io/Doomsday-Algorithm-In-Assembly-Language/", "repo": "https://github.com/hammadshakeelai/Doomsday-Algorithm-In-Assembly-Language"},
+        {"name": "Assembly dry-runner", "line": "Step through assembly code line by line", "demo": "https://hammadshakeelai.github.io/Assembly-Language-Dry-Running-Tool-Project/", "repo": "https://github.com/hammadshakeelai/Assembly-Language-Dry-Running-Tool-Project"}
+      ]
+    },
+    {
+      "title": "Retrieval and research",
+      "projects": [
+        {"name": "paklegalbench", "line": "Statute retrieval over Pakistani law, and the eval harness that measures it", "demo": null, "repo": "https://github.com/hammadshakeelai/paklegalbench"},
+        {"name": "PersonalRag", "line": "Chat with your PDFs in the browser — hybrid retrieval, page-level citations", "demo": "https://hammadshakeelai.github.io/PersonalRag/", "repo": "https://github.com/hammadshakeelai/PersonalRag"},
+        {"name": "isospectral-sort", "line": "Dynamical, Lie-algebraic and soliton sorting systems in Python", "demo": "https://hammadshakeelai.github.io/isospectral-sort/", "repo": "https://github.com/hammadshakeelai/isospectral-sort"}
+      ]
+    }
+  ]
+}

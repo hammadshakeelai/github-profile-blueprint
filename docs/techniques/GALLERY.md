@@ -29,7 +29,9 @@ stays at or above ~12px in the 309px phone column.
 
 <img src="examples/grain.svg" alt="Gradient card with film grain — feTurbulence">
 
-<img src="examples/gradient-shimmer.svg" alt="Text with a moving shimmer — animated gradientTransform">
+<img src="examples/gradient-shimmer.svg" alt="Text with a moving shimmer — animated gradient x1/x2">
+
+<img src="examples/gradient-transform.svg" alt="The same shimmer via gradientTransform — frozen in WebKit">
 
 ## Reveals and text
 
