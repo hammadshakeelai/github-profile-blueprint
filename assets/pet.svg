@@ -15,6 +15,6 @@
     <text class="pet-name" x="0" y="0">PET: BYTE</text>
     <circle class="pet-pulse" cx="95" cy="-4" r="3"/>
     <text class="pet-status" x="0" y="20">Lvl 3 (Cyber Evolution)</text>
-    <text class="pet-status" x="0" y="38">STATUS: EUPHORIC & THRIVING!</text>
+    <text class="pet-status" x="0" y="38">STATUS: EUPHORIC &amp; THRIVING!</text>
   </g>
 </svg>

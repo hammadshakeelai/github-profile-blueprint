@@ -2,8 +2,8 @@ name: ProfileHarness Autonomous Engine
 
 on:
   schedule:
-    # Run every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
-    - cron: '0 */6 * * *'
+    # Run every 6 hours at off-peak minute 23 (05:23, 11:23, 17:23, 23:23 UTC)
+    - cron: '23 */6 * * *'
   workflow_dispatch: # Enable manual trigger from GitHub web UI
   push:
     branches: [main]
@@ -17,6 +17,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   build-and-deploy:
@@ -25,7 +26,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
+
+      - name: Automated Workflow Keepalive (Zero-Phantom-Commit)
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow enable profile-harness.yml || true
 
       - name: Setup Python Runtime
         uses: actions/setup-python@v5
@@ -49,4 +57,11 @@ jobs:
           fi
 
           git commit -m "chore(profile): synchronize telemetry and autonomous SVGs [skip ci]"
+          git pull --rebase origin main
           git push origin main
+
+      - name: Rollback Dirty Workspace on Failure
+        if: failure()
+        run: |
+          git checkout -- .
+          git clean -fd

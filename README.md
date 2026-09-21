@@ -1,3 +1,4 @@
+<!-- HARNESS:STATE_SHA 10bbc485e0b132b13954b32fefcc6fa539b84f98ac2b74f451762e018533692b -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
@@ -27,7 +28,7 @@
 +---------------------------+-------------------+-----------------------------------+
 | Recent Git Commits        | 128               | ACTIVE                            |
 | Pipeline Reliability      | 99.8%             | OPTIMAL (Zero failures)           |
-| Last Engine Sync          | 2026-09-20 18:04  | UTC SYNCHRONIZED                  |
+| Last Engine Sync          | 2026-09-20 18:56  | UTC SYNCHRONIZED                  |
 +-----------------------------------------------------------------------------------+
 ```
 <!-- TELEMETRY:END -->
@@ -134,6 +135,24 @@ flowchart LR
 
 *(Powered by Minimax bot running inside GitHub Actions. State preserved in repository.)*
 <!-- GAME:END -->
+
+---
+
+<!-- MUD:START -->
+### 🕹️ Git-Native Cyberpunk Dungeon (Multi-User Adventure)
+
+**Current Location**: `Mainframe Core // Sector 7G`  
+**Last Adventurer**: [@octocat](https://github.com/octocat) • **System Ticks**: `42`
+
+> *A subterranean chamber housing three crystalline Raft consensus nodes. The air smells of ozone and liquid helium. Optical telemetry cables pulse with blue coherent light.*
+
+**Available Actions**:  
+[⚡ Ping Quorum Node](https://github.com/hammadshakeelAl/hammadshakeelAl/issues/new?title=mud%7Caction%7Cping&body=Click+Submit+new+issue+to+advance+the+dungeon.) • [🔍 Inspect Memory Ring Buffer](https://github.com/hammadshakeelAl/hammadshakeelAl/issues/new?title=mud%7Caction%7Cinspect&body=Click+Submit+new+issue+to+advance+the+dungeon.) • [🚪 Enter Engine Bay](https://github.com/hammadshakeelAl/hammadshakeelAl/issues/new?title=mud%7Cmove%7Cengine_bay&body=Click+Submit+new+issue+to+advance+the+dungeon.)
+
+**Recent World Log**:  
+> [2026-09-20] @octocat initialized the mainframe core.
+> [2026-09-20] Telemetry daemon loaded 14 eBPF probes successfully.
+<!-- MUD:END -->
 
 ---
 

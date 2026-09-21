@@ -32,7 +32,9 @@ def load_state():
 
 def save_state(state):
     STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
+    tmp_file = STATE_FILE.with_suffix(".tmp")
+    tmp_file.write_text(json.dumps(state, indent=2), encoding="utf-8")
+    os.replace(tmp_file, STATE_FILE)
 
 def check_winner(b):
     wins = [
@@ -130,8 +132,10 @@ def update_readme(new_board_content):
         print("Note: <!-- GAME:START --> marker not found in README.md; skipping README update.")
         return
 
-    updated = pattern.sub(rf"\g<1>\n{new_board_content}\n\g<3>", text)
-    README_FILE.write_text(updated, encoding="utf-8")
+    updated = pattern.sub(lambda m: f"{m.group(1)}\n{new_board_content}\n{m.group(3)}", text)
+    tmp_readme = README_FILE.with_suffix(".tmp")
+    tmp_readme.write_text(updated, encoding="utf-8")
+    os.replace(tmp_readme, README_FILE)
     print("README.md game board successfully updated.")
 
 def main():

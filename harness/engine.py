@@ -6,12 +6,15 @@ Git-native SVGs, Bento Grid layouts, interactive issue RPCs, and GitHub-sanitize
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
 import sys
 import urllib.request
 import urllib.parse
+import xml.etree.ElementTree as ET
+from xml.sax.saxutils import escape as xml_escape, quoteattr as xml_quoteattr
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -26,18 +29,91 @@ CONFIG_PATH = Path(__file__).resolve().parent / "profile.config.json"
 ASSETS_DIR = ROOT_DIR / "assets"
 README_PATH = ROOT_DIR / "README.md"
 
+STATE_SHA_REGEX = re.compile(r"<!--\s*HARNESS:STATE_SHA\s+([a-f0-9]{64})\s*-->")
+EXPECTED_ASSETS = [
+    "banner-dark.svg",
+    "banner-light.svg",
+    "dashboard.svg",
+    "terminal-typing.svg",
+    "pet.svg",
+    "quantum-coherence.svg",
+    "synaptic-network.svg",
+]
+
 def load_config():
     if not CONFIG_PATH.exists():
         print(f"Error: Config file not found at {CONFIG_PATH}", file=sys.stderr)
         sys.exit(1)
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
 
+def compute_state_hash(config: dict, metrics: dict) -> str:
+    """Computes a deterministic SHA-256 hash over compiler code, config, and raw telemetry."""
+    hasher = hashlib.sha256()
+    # 1. Compiler code identity (invalidates cache on code edits)
+    hasher.update(Path(__file__).read_bytes())
+    # 2. Canonicalized configuration
+    config_bytes = json.dumps(config, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    hasher.update(config_bytes)
+    # 3. Canonicalized dynamic telemetry inputs (strictly excluding updated_at)
+    telemetry_input = {
+        "recent_commits": metrics.get("recent_commits"),
+        "ci_reliability": metrics.get("ci_reliability"),
+    }
+    telemetry_bytes = json.dumps(telemetry_input, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    hasher.update(telemetry_bytes)
+    return hasher.hexdigest()
+
+def extract_state_hash_from_readme() -> str | None:
+    """Extracts the recorded state hash from line 1 of README.md without reading the full file."""
+    if not README_PATH.exists():
+        return None
+    try:
+        with open(README_PATH, "r", encoding="utf-8") as f:
+            header = f.read(1024)
+        match = STATE_SHA_REGEX.search(header)
+        return match.group(1) if match else None
+    except Exception:
+        return None
+
+def verify_asset_integrity() -> bool:
+    """Fast pre-flight check verifying all required assets exist and have non-zero size."""
+    for asset in EXPECTED_ASSETS:
+        p = ASSETS_DIR / asset
+        if not p.exists() or p.stat().st_size == 0:
+            return False
+    return True
+
+def extract_dynamic_section(tag: str) -> str | None:
+    """Extracts content within <!-- TAG:START --> and <!-- TAG:END --> from existing README.md."""
+    if not README_PATH.exists():
+        return None
+    try:
+        content = README_PATH.read_text(encoding="utf-8")
+        pattern = re.compile(rf"(<!--\s*{tag}:START\s*-->.*?<!--\s*{tag}:END\s*-->)", re.DOTALL)
+        match = pattern.search(content)
+        return match.group(1) if match else None
+    except Exception:
+        return None
+
+def get_previous_sync_state():
+    """Extracts previous telemetry metrics from README.md to preserve determinism."""
+    if not README_PATH.exists():
+        return None, None
+    try:
+        txt = README_PATH.read_text(encoding="utf-8")
+        commits_match = re.search(r"\|\s*Recent Git Commits\s*\|\s*(\d+)\s*\|", txt)
+        sync_match = re.search(r"\|\s*Last Engine Sync\s*\|\s*([^|]+?)\s*\|", txt)
+        prev_commits = int(commits_match.group(1)) if commits_match else None
+        prev_sync = sync_match.group(1).strip() if sync_match else None
+        return prev_commits, prev_sync
+    except Exception:
+        return None, None
+
 def fetch_github_metrics(username: str, token: str | None = None) -> dict:
     """Fetches real-time commit telemetry from GitHub's Public Event API."""
     metrics = {
         "recent_commits": 128,
         "ci_reliability": 99.8,
-        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
     }
 
     try:
@@ -56,6 +132,19 @@ def fetch_github_metrics(username: str, token: str | None = None) -> dict:
     except Exception as e:
         print(f"Notice: Telemetry fallback engaged ({e})")
 
+    # Determine updated_at with strict idempotency guarantees:
+    # 1. Respect SOURCE_DATE_EPOCH (standard reproducible builds specification)
+    if "SOURCE_DATE_EPOCH" in os.environ:
+        epoch = int(os.environ["SOURCE_DATE_EPOCH"])
+        metrics["updated_at"] = datetime.fromtimestamp(epoch, tz=timezone.utc).strftime("%Y-%m-%d %H:%M")
+    else:
+        prev_commits, prev_sync = get_previous_sync_state()
+        # 2. If telemetry metrics did not change, preserve previous timestamp to guarantee byte-identical idempotency
+        if prev_commits is not None and prev_sync is not None and metrics["recent_commits"] == prev_commits:
+            metrics["updated_at"] = prev_sync
+        else:
+            metrics["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
+
     return metrics
 
 def render_svg_dashboard(config: dict, metrics: dict):
@@ -66,6 +155,9 @@ def render_svg_dashboard(config: dict, metrics: dict):
     commits = metrics["recent_commits"]
     sync_time = metrics["updated_at"]
     labels = config["modules"]["git_native_dashboard"]["metric_labels"]
+    metric_1_label = xml_escape(str(labels.get("metric_1", "Recent Git Commits")))
+    metric_2_label = xml_escape(str(labels.get("metric_2", "CI Pipeline Reliability")))
+    metric_3_label = xml_escape(str(labels.get("metric_3", "Telemetry Status")))
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 140" width="650" height="140">
   <defs>
@@ -84,21 +176,21 @@ def render_svg_dashboard(config: dict, metrics: dict):
   <text class="header" x="38" y="28">SYSTEM TELEMETRY // PRODUCTION METRICS</text>
   
   <g transform="translate(24, 52)">
-    <text class="label" x="0" y="0">{labels['metric_1']}</text>
+    <text class="label" x="0" y="0">{metric_1_label}</text>
     <text class="value" x="0" y="22">{commits}</text>
     <rect class="bar-bg" x="0" y="32" width="180" height="5"/>
     <rect class="bar-fill" x="0" y="32" width="{min(180, commits * 2)}" height="5"/>
   </g>
   
   <g transform="translate(234, 52)">
-    <text class="label" x="0" y="0">{labels['metric_2']}</text>
+    <text class="label" x="0" y="0">{metric_2_label}</text>
     <text class="value" x="0" y="22">{metrics['ci_reliability']}%</text>
     <rect class="bar-bg" x="0" y="32" width="180" height="5"/>
     <rect class="bar-fill" x="0" y="32" width="176" height="5"/>
   </g>
 
   <g transform="translate(444, 52)">
-    <text class="label" x="0" y="0">{labels['metric_3']}</text>
+    <text class="label" x="0" y="0">{metric_3_label}</text>
     <text class="value" x="0" y="22">OPTIMAL</text>
     <rect class="bar-bg" x="0" y="32" width="180" height="5"/>
     <rect class="bar-fill" x="0" y="32" width="180" height="5"/>
@@ -112,8 +204,8 @@ def render_svg_dashboard(config: dict, metrics: dict):
 def render_svg_banners(config: dict):
     """Renders responsive Dark and Light mode hero banner SVGs."""
     profile = config["profile"]
-    name = profile["name"]
-    headline = profile["headline"]
+    name = xml_escape(profile["name"])
+    headline_upper = xml_escape(profile["headline"].upper())
     
     # Dark Banner
     dark_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240">
@@ -138,7 +230,7 @@ def render_svg_banners(config: dict):
   <circle cx="60" cy="35" r="6" fill="#eab308" opacity="0.8"/>
   <circle cx="80" cy="35" r="6" fill="#22c55e" opacity="0.8"/>
   <text x="40" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="#f8fafc">{name}</text>
-  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#accent)">{headline.upper()}</text>
+  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#accent)">{headline_upper}</text>
   <text x="40" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#94a3b8">Rust • Go • Linux Kernel &amp; eBPF Telemetry • High-Throughput Distributed State Machines</text>
 </svg>"""
     (ASSETS_DIR / "banner-dark.svg").write_text(dark_svg, encoding="utf-8")
@@ -166,7 +258,7 @@ def render_svg_banners(config: dict):
   <circle cx="60" cy="35" r="6" fill="#eab308" opacity="0.8"/>
   <circle cx="80" cy="35" r="6" fill="#22c55e" opacity="0.8"/>
   <text x="40" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="#0f172a">{name}</text>
-  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#light-accent)">{headline.upper()}</text>
+  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#light-accent)">{headline_upper}</text>
   <text x="40" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#475569">Rust • Go • Linux Kernel &amp; eBPF Telemetry • High-Throughput Distributed State Machines</text>
 </svg>"""
     (ASSETS_DIR / "banner-light.svg").write_text(light_svg, encoding="utf-8")
@@ -194,6 +286,11 @@ def render_virtual_pet_svg(config: dict, metrics: dict):
         level = "Lvl 1 (Starving)"
         color = "#f59e0b"
 
+    face_escaped = xml_escape(face)
+    name_upper = xml_escape(name.upper())
+    level_escaped = xml_escape(level)
+    mood_upper = xml_escape(mood.upper())
+
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
   <defs>
     <style>
@@ -206,12 +303,12 @@ def render_virtual_pet_svg(config: dict, metrics: dict):
     </style>
   </defs>
   <rect class="pet-card" x="1" y="1" width="318" height="78"/>
-  <text class="pet-face" x="20" y="48">{face}</text>
+  <text class="pet-face" x="20" y="48">{face_escaped}</text>
   <g transform="translate(140, 24)">
-    <text class="pet-name" x="0" y="0">PET: {name.upper()}</text>
+    <text class="pet-name" x="0" y="0">PET: {name_upper}</text>
     <circle class="pet-pulse" cx="95" cy="-4" r="3"/>
-    <text class="pet-status" x="0" y="20">{level}</text>
-    <text class="pet-status" x="0" y="38">STATUS: {mood.upper()}</text>
+    <text class="pet-status" x="0" y="20">{level_escaped}</text>
+    <text class="pet-status" x="0" y="38">STATUS: {mood_upper}</text>
   </g>
 </svg>"""
     (ASSETS_DIR / "pet.svg").write_text(svg, encoding="utf-8")
@@ -387,7 +484,7 @@ def render_synaptic_network_svg(config: dict, metrics: dict):
     (ASSETS_DIR / "synaptic-network.svg").write_text(svg, encoding="utf-8")
     print("Generated: assets/synaptic-network.svg")
 
-def compile_readme(config: dict, metrics: dict) -> str:
+def compile_readme(config: dict, metrics: dict, state_sha: str = "") -> str:
     """Compiles the full Markdown README adhering to 2026 Bento Grid best practices."""
     profile = config["profile"]
     username = profile["username"]
@@ -504,8 +601,12 @@ flowchart LR
   class K3s,Ingress,eBPF,Raft,WAL,Shm darkNode;
 ```"""
 
-    # 8. Interactive Game & Guestbook
-    game_guestbook_md = f"""### 🎮 Community State Machine (Tic-Tac-Toe)
+    # 8. Interactive Game, MUD Dungeon & Guestbook (Section-Preserving Splicing)
+    existing_game = extract_dynamic_section("GAME")
+    if existing_game:
+        game_md = f"### 🎮 Community State Machine (Tic-Tac-Toe)\n\n{existing_game}"
+    else:
+        game_md = f"""### 🎮 Community State Machine (Tic-Tac-Toe)
 
 <!-- GAME:START -->
 **Current State**: Your turn! (Playing as **X**) — *Click an open tile to make your move via GitHub Issues:*
@@ -517,11 +618,40 @@ flowchart LR
 | [⬜ Play (2,0)](https://github.com/{username}/{username}/issues/new?title=ttt%7Cmove%7C6&body=Click+Submit+to+confirm+move.) | [⬜ Play (2,1)](https://github.com/{username}/{username}/issues/new?title=ttt%7Cmove%7C7&body=Click+Submit+to+confirm+move.) | ❌ |
 
 *(Powered by Minimax bot running inside GitHub Actions. State preserved in repository.)*
-<!-- GAME:END -->
+<!-- GAME:END -->"""
 
----
+    existing_mud = extract_dynamic_section("MUD")
+    if existing_mud:
+        mud_md = existing_mud
+    else:
+        mud_md = f"""<!-- MUD:START -->
+### 🕹️ Git-Native Cyberpunk Dungeon (Multi-User Adventure)
 
-### 📖 Community Guestbook
+**Current Location**: `Mainframe Core // Sector 7G`  
+**Last Adventurer**: [@octocat](https://github.com/octocat) • **System Ticks**: `42`
+
+> *A subterranean chamber housing three crystalline Raft consensus nodes. The air smells of ozone and liquid helium. Optical telemetry cables pulse with blue coherent light.*
+
+**Available Actions**:  
+[⚡ Ping Quorum Node](https://github.com/{username}/{username}/issues/new?title=mud%7Caction%7Cping&body=Click+Submit+new+issue+to+advance+the+dungeon.) • [🔍 Inspect Memory Ring Buffer](https://github.com/{username}/{username}/issues/new?title=mud%7Caction%7Cinspect&body=Click+Submit+new+issue+to+advance+the+dungeon.) • [🚪 Enter Engine Bay](https://github.com/{username}/{username}/issues/new?title=mud%7Cmove%7Cengine_bay&body=Click+Submit+new+issue+to+advance+the+dungeon.)
+
+**Recent World Log**:  
+> [2026-09-20] @octocat initialized the mainframe core.
+> [2026-09-20] Telemetry daemon loaded 14 eBPF probes successfully.
+<!-- MUD:END -->"""
+
+    existing_guestbook = extract_dynamic_section("GUESTBOOK")
+    if existing_guestbook:
+        guestbook_entries = existing_guestbook
+    else:
+        guestbook_entries = """<!-- GUESTBOOK:START -->
+| Date | Signer | Message |
+| :--- | :--- | :--- |
+| 2026-09-20 | [@octocat](https://github.com/octocat) | Welcome to GitHub Profile Architecture 2026! 🚀 |
+| 2026-09-18 | [@systems-dev](https://github.com/systems-dev) | Loving the zero-latency Git-native dashboard. |
+<!-- GUESTBOOK:END -->"""
+
+    guestbook_md = f"""### 📖 Community Guestbook
 
 Click below to sign my profile README! An automated GitHub Action will append your handle and message:
 
@@ -531,12 +661,7 @@ Click below to sign my profile README! An automated GitHub Action will append yo
   </a>
 </p>
 
-<!-- GUESTBOOK:START -->
-| Date | Signer | Message |
-| :--- | :--- | :--- |
-| 2026-09-20 | [@octocat](https://github.com/octocat) | Welcome to GitHub Profile Architecture 2026! 🚀 |
-| 2026-09-18 | [@systems-dev](https://github.com/systems-dev) | Loving the zero-latency Git-native dashboard. |
-<!-- GUESTBOOK:END -->"""
+{guestbook_entries}"""
 
     # 9. Abstract Frontier: Quantum Coherence & Synaptic Flow
     abstract_md = """---
@@ -556,7 +681,8 @@ Click below to sign my profile README! An automated GitHub Action will append yo
 </p>"""
 
     # 10. Assembly
-    full_readme = f"""{hero_md}
+    sha_header = f"<!-- HARNESS:STATE_SHA {state_sha} -->\n" if state_sha else ""
+    full_readme = f"""{sha_header}{hero_md}
 
 {typing_md}
 
@@ -590,7 +716,15 @@ Click below to sign my profile README! An automated GitHub Action will append yo
 
 ---
 
-{game_guestbook_md}
+{game_md}
+
+---
+
+{mud_md}
+
+---
+
+{guestbook_md}
 
 ---
 
@@ -629,7 +763,11 @@ def lint_readme(content: str):
         if line.strip().startswith("|") and line.count("|") > 4:
             warnings.append(f"Table with > 3 columns detected: '{line[:40]}...' may wrap on mobile screens.")
 
-    # Check that SVGs exist
+    # Check for forbidden URI schemes
+    if re.search(r"(?:href|src)\s*=\s*['\"]javascript:", content, re.IGNORECASE):
+        errors.append("Forbidden 'javascript:' URI detected! GitHub strips all script URIs.")
+
+    # Check that SVGs exist and validate SVG sanitizer hygiene
     expected_assets = [
         "banner-dark.svg",
         "banner-light.svg",
@@ -640,8 +778,28 @@ def lint_readme(content: str):
         "synaptic-network.svg"
     ]
     for asset in expected_assets:
-        if not (ASSETS_DIR / asset).exists():
+        svg_file = ASSETS_DIR / asset
+        if not svg_file.exists():
             errors.append(f"Missing required asset: assets/{asset}")
+        else:
+            # C1: Validate XML well-formedness with stdlib ElementTree first
+            try:
+                tree = ET.parse(svg_file)
+                root = tree.getroot()
+                if not root.tag.endswith("svg"):
+                    errors.append(f"Malformed SVG in assets/{asset}: root tag is <{root.tag}>, expected <svg>")
+                if "viewBox" not in root.attrib:
+                    warnings.append(f"Accessibility Warning: assets/{asset} is missing 'viewBox' attribute")
+            except ET.ParseError as e:
+                errors.append(f"Malformed XML in assets/{asset}: {e}")
+
+            svg_text = svg_file.read_text(encoding="utf-8")
+            if "<foreignObject" in svg_text:
+                errors.append(f"Sanitizer Error: <foreignObject> found in assets/{asset} (blocked by GitHub Camo / renderers)")
+            if "<script" in svg_text:
+                errors.append(f"Sanitizer Error: <script> found in assets/{asset} (forbidden in SVG)")
+            if svg_file.stat().st_size > 500 * 1024:
+                errors.append(f"Size Warning: assets/{asset} exceeds 500KB ceiling ({svg_file.stat().st_size} bytes)")
 
     if errors:
         print("❌ LINT ERRORS FOUND:")
@@ -660,9 +818,28 @@ def lint_readme(content: str):
 
     return True
 
+def check_commit_age_exceeds_threshold(threshold_days: int = 45) -> bool:
+    """Returns True if the last repository commit is older than threshold_days (keepalive fallback)."""
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%ct"],
+            cwd=ROOT_DIR,
+            capture_output=True,
+            text=True,
+            check=True,
+            timeout=5,
+        )
+        commit_epoch = int(result.stdout.strip())
+        current_epoch = int(datetime.now(timezone.utc).timestamp())
+        return (current_epoch - commit_epoch) > (threshold_days * 86400)
+    except Exception:
+        return False
+
 def main():
     parser = argparse.ArgumentParser(description="ProfileHarness: Autonomous GitHub Profile Architecture Engine")
     parser.add_argument("command", choices=["build", "lint", "test"], default="build", nargs="?", help="Action to execute")
+    parser.add_argument("--force", "-f", action="store_true", help="Force rebuild bypassing state hash match")
     args = parser.parse_args()
 
     config = load_config()
@@ -670,25 +847,45 @@ def main():
     token = os.environ.get("GITHUB_TOKEN")
 
     if args.command in ["build", "test"]:
-        print(f"🚀 Compiling ProfileHarness for @{username}...")
         metrics = fetch_github_metrics(username, token)
+        state_sha = compute_state_hash(config, metrics)
+        existing_sha = extract_state_hash_from_readme()
+        force_rebuild = args.force or os.environ.get("FORCE_REBUILD") == "1"
+
+        if not force_rebuild and check_commit_age_exceeds_threshold(45):
+            print("🕒 Inactivity threshold reached (>45 days). Bypassing cache for keepalive refresh.")
+            force_rebuild = True
+
+        if not force_rebuild and existing_sha == state_sha and verify_asset_integrity():
+            print(f"⚡ Telemetry and configuration unchanged (SHA: {state_sha[:12]}). Build short-circuited.")
+            sys.exit(0)
+
+        print(f"🚀 Compiling ProfileHarness for @{username} (SHA: {state_sha[:12]})...")
         render_svg_banners(config)
         render_svg_dashboard(config, metrics)
         render_virtual_pet_svg(config, metrics)
         render_quantum_coherence_svg(config, metrics)
         render_synaptic_network_svg(config, metrics)
         
-        readme_content = compile_readme(config, metrics)
-        README_PATH.write_text(readme_content, encoding="utf-8")
-        print(f"✅ Successfully compiled {README_PATH}")
+        readme_content = compile_readme(config, metrics, state_sha)
+        
+        # Fail-closed: validate sanitizer rules in memory BEFORE committing to disk
+        if not lint_readme(readme_content):
+            print("❌ FATAL: Sanitizer linter rejected generated markdown! Aborting build.", file=sys.stderr)
+            sys.exit(1)
 
-        lint_readme(readme_content)
+        # Atomic replacement: write to tempfile first, then atomic rename
+        tmp_readme = README_PATH.with_suffix(".tmp")
+        tmp_readme.write_text(readme_content, encoding="utf-8")
+        os.replace(tmp_readme, README_PATH)
+        print(f"✅ Successfully compiled {README_PATH}")
 
     elif args.command == "lint":
         if not README_PATH.exists():
             print("Error: README.md does not exist. Run 'build' first.", file=sys.stderr)
             sys.exit(1)
-        lint_readme(README_PATH.read_text(encoding="utf-8"))
+        if not lint_readme(README_PATH.read_text(encoding="utf-8")):
+            sys.exit(1)
 
 if __name__ == "__main__":
     main()
