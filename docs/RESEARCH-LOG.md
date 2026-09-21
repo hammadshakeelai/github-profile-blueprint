@@ -22,7 +22,7 @@
 | Track 15 — GraphQL createCommitOnBranch retry & backoff engine (Verified bot badge with rebase parity) | done | 2026-09-21 | Does createCommitOnBranch trigger downstream on: push GitHub Actions workflows, or is it suppressed by the same loop-prevention rules governing GITHUB_TOKEN git pushes? |
 | Track 16 — Fastly CDN edge eviction and raw.githubusercontent asset freshness protocols | done | 2026-09-21 | Does the GitHub Mobile App (iOS / Android) cache raw.githubusercontent.com SVGs in a private SQLite/Disk cache that ignores Fastly max-age=300 and persists across app sessions until forced kill? |
 | Track 17 — Live GitHub Actions workflow run telemetry & dynamic CI gauge extraction | todo | | |
-| Track 18 — Hybrid commit dispatch architecture (Verified GraphQL-first with Git CLI rebase fallback) | todo | | |
+| Track 18 — Hybrid commit dispatch architecture (Verified GraphQL-first with Git CLI rebase fallback) | done | 2026-09-21 | If a repository enables Require signed commits branch protection, can a fallback Git CLI commit be signed dynamically on the runner using a transient, throwaway SSH commit signing key generated in-memory during the job and uploaded via GitHub API POST /user/keys? |
 | Track 19 — GitHub Mobile native client asset caching and SVG render engine profiling | todo | | |
 
 ---
@@ -886,4 +886,46 @@ Status: done
 
 #### Open questions:
 - Does the GitHub Mobile App (iOS / Android) cache `raw.githubusercontent.com` SVGs in a private SQLite/Disk cache that ignores Fastly `max-age=300` and persists across app sessions until forced kill?
+
+---
+
+### Track 18 — Hybrid commit dispatch architecture
+Status: done
+
+#### Findings:
+1. **Tiered Hybrid Dispatch Architecture (Verified-First, Resilient-Always)**:
+   - **Trade-Off Balance**:
+     - *GraphQL `createCommitOnBranch`*: Server-side signing with GitHub's internal `web-flow` key (`968479A1AFF927E37D1A566BB5690EEEBB952194`), rendering the green **Verified** bot badge without private keys in secrets. However, it lacks line-level 3-way merging, enforces a ~10 MB payload ceiling, and consumes REST/GraphQL rate limits.
+     - *Standard Git CLI (`git pull --rebase` + `git push`)*: Streams compressed packfiles, consumes zero API points, and automatically resolves line conflicts via Git's 3-way merge (`ort`). However, runner commits lack signing keys and show as unverified.
+   - **The 2-Tier State Machine**:
+     - *Tier 1 (Fast-Path / Verified)*: Attempt GraphQL `createCommitOnBranch` for small, routine telemetry updates (<10 MB), providing clean verified bot badges.
+     - *Tier 2 (Slow-Path / Resilient Fallback)*: If GraphQL encounters permanent failure (HTTP 413, rate limit depletion, or exhausted concurrency retries), immediately degrade to Git CLI (`git pull --rebase origin main` + `git push origin main`).
+2. **Error Taxonomy & Immediate Fallback Trigger Matrix**:
+   - *HTTP 413 Payload Too Large / Raw Diff > 7.5 MB*: Immediate fallback. Retrying GraphQL will fail 100% of the time due to gateway request limits.
+   - *Primary Rate Limit Depletion (`x-ratelimit-remaining: 0`)*: Immediate fallback. Git Smart HTTP (`/git-receive-pack`) does not draw from the REST/GraphQL rate pool.
+   - *Secondary Rate Limit (`HTTP 429` / `Retry-After > 10s`)*: Immediate fallback. Avoids burning billed runner minutes waiting out cooldowns.
+   - *Concurrency Race (`STALE_DATA`)*: Retriable up to 3 times with exponential backoff + jitter. If exhausted, fallback to Git CLI.
+3. **Git Index & Working Tree State Management**:
+   - **The Pre-Commit Divergence Trap**: If a local Git commit is created *before* attempting GraphQL, a successful GraphQL call creates a remote commit with a different SHA, causing local and remote tracking branches to diverge.
+   - **The Invariant**: Never run `git commit` locally before GraphQL. Keep the working tree uncommitted during the mutation.
+   - **State Realignment**: Upon GraphQL success, immediately execute `git fetch origin <branch> && git reset --hard origin/<branch>` to synchronize local HEAD with the remote verified commit.
+4. **Concrete Dispatcher**: Designed zero-dependency Python dispatcher script (`harness/hybrid_dispatcher.py`).
+
+#### Evidence:
+- Verified GitHub GraphQL API request body limits: ~10 MB JSON ceiling.
+- Sourced and validated full zero-dependency hybrid dispatcher script (`harness/hybrid_dispatcher.py`).
+- Verified Git Smart HTTP rate limit immunity against REST/GraphQL rate exhaustion.
+
+#### UNVERIFIED:
+- UNVERIFIED: Whether an Enterprise repository enforcing "Require signed commits" branch protection allows an administrative bypass rule for `github-actions[bot]` during Tier 2 Git CLI fallback.
+- UNVERIFIED: The exact lock duration held on Git refs by GitHub's Spokes storage cluster during `createCommitOnBranch` versus `git push`.
+
+#### Recommendation:
+- Deploy `harness/hybrid_dispatcher.py` to enable verified bot badges under normal operations with automatic Git CLI fallback under rate limits or large payloads.
+- Preserve the zero-local-commit invariant prior to GraphQL calls.
+
+#### Open questions:
+- If a repository enables "Require signed commits" branch protection, can a fallback Git CLI commit be signed dynamically on the runner using a transient, throwaway SSH commit signing key generated in-memory during the job and uploaded via GitHub API `POST /user/keys`?
+- Does `createCommitOnBranch` trigger downstream `on: push` workflows when authenticated with a fine-grained Personal Access Token (PAT), or is loop suppression strictly tied to token identity regardless of dispatch method?
+
 
