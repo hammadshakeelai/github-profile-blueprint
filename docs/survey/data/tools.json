@@ -1,0 +1,652 @@
+[
+ {
+  "repo": "anuraghazra/github-readme-stats",
+  "status": "ok",
+  "stars": 79816,
+  "pushed_at": "2026-08-31T00:55:37Z",
+  "months_since_push": 0.7,
+  "archived": false,
+  "description": ":zap: Dynamically generated stats for your github readmes",
+  "verdict": "active"
+ },
+ {
+  "repo": "abhisheknaiidu/awesome-github-profile-readme",
+  "status": "ok",
+  "stars": 31120,
+  "pushed_at": "2026-09-11T23:08:19Z",
+  "months_since_push": 0.3,
+  "archived": false,
+  "description": "\ud83d\ude0e A curated list of awesome GitHub Profile which updates in real time",
+  "verdict": "active"
+ },
+ {
+  "repo": "badges/shields",
+  "status": "ok",
+  "stars": 27202,
+  "pushed_at": "2026-09-19T03:54:59Z",
+  "months_since_push": 0.1,
+  "archived": false,
+  "description": "Concise, consistent, and legible badges in SVG and raster format",
+  "verdict": "active"
+ },
+ {
+  "repo": "simple-icons/simple-icons",
+  "status": "ok",
+  "stars": 25889,
+  "pushed_at": "2026-09-20T04:25:37Z",
+  "months_since_push": 0.0,
+  "archived": false,
+  "description": "SVG icons for popular brands",
+  "verdict": "active"
+ },
+ {
+  "repo": "rahuldkjain/github-profile-readme-generator",
+  "status": "ok",
+  "stars": 24443,
+  "pushed_at": "2025-10-28T10:27:15Z",
+  "months_since_push": 10.8,
+  "archived": false,
+  "description": "\ud83d\ude80 Generate GitHub profile README easily with the latest add-ons like visitors count, GitHub stats, etc using minimal UI.",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "lowlighter/metrics",
+  "status": "ok",
+  "stars": 17213,
+  "pushed_at": "2026-05-29T21:41:23Z",
+  "months_since_push": 3.7,
+  "archived": false,
+  "description": "\ud83d\udcca An infographics generator with 30+ plugins and 300+ options to display stats about your GitHub account and render them as SVG, Markdown, P",
+  "verdict": "active"
+ },
+ {
+  "repo": "Ileriayo/markdown-badges",
+  "status": "ok",
+  "stars": 17062,
+  "pushed_at": "2026-08-11T03:09:47Z",
+  "months_since_push": 1.3,
+  "archived": false,
+  "description": "The largest curated collection of markdown badges for your personal developer branding, profile, and projects.",
+  "verdict": "active"
+ },
+ {
+  "repo": "tandpfun/skill-icons",
+  "status": "ok",
+  "stars": 13145,
+  "pushed_at": "2026-02-27T03:42:02Z",
+  "months_since_push": 6.8,
+  "archived": false,
+  "description": "Showcase your skills on your Github readme or resum\u00e9 with ease \u2728",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "devicons/devicon",
+  "status": "ok",
+  "stars": 11831,
+  "pushed_at": "2026-09-19T14:32:37Z",
+  "months_since_push": 0.1,
+  "archived": false,
+  "description": "Set of icons representing programming languages, designing & development tools",
+  "verdict": "active"
+ },
+ {
+  "repo": "DenverCoder1/readme-typing-svg",
+  "status": "ok",
+  "stars": 9352,
+  "pushed_at": "2026-09-17T12:53:46Z",
+  "months_since_push": 0.1,
+  "archived": false,
+  "description": "\u26a1 Dynamically generated, customizable SVG that gives the appearance of typing and deleting text for use on your profile page, repositories, ",
+  "verdict": "active"
+ },
+ {
+  "repo": "DenverCoder1/github-readme-streak-stats",
+  "status": "ok",
+  "stars": 7142,
+  "pushed_at": "2026-09-17T10:43:57Z",
+  "months_since_push": 0.1,
+  "archived": false,
+  "description": "\ud83d\udd25 Stay motivated and show off your contribution streak! \ud83c\udf1f Display your total contributions, current streak, and longest streak on your GitHu",
+  "verdict": "active"
+ },
+ {
+  "repo": "ryo-ma/github-profile-trophy",
+  "status": "ok",
+  "stars": 6655,
+  "pushed_at": "2026-07-25T00:05:17Z",
+  "months_since_push": 1.9,
+  "archived": false,
+  "description": "\ud83c\udfc6 Add dynamically generated GitHub Stat Trophies  on your readme",
+  "verdict": "active"
+ },
+ {
+  "repo": "Platane/snk",
+  "status": "ok",
+  "stars": 6094,
+  "pushed_at": "2026-04-29T21:44:31Z",
+  "months_since_push": 4.7,
+  "archived": false,
+  "description": "\ud83d\udfe9\u2b1c Generates a snake game from a github user contributions graph and output a screen capture as animated svg or gif",
+  "verdict": "active"
+ },
+ {
+  "repo": "antonkomarev/github-profile-views-counter",
+  "status": "ok",
+  "stars": 5025,
+  "pushed_at": "2026-01-26T03:53:09Z",
+  "months_since_push": 7.8,
+  "archived": false,
+  "description": "It counts how many times your GitHub profile has been viewed. Free cloud micro-service.",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "anmol098/waka-readme-stats",
+  "status": "ok",
+  "stars": 3997,
+  "pushed_at": "2026-08-24T13:42:51Z",
+  "months_since_push": 0.9,
+  "archived": false,
+  "description": "This GitHub action helps to add cool dev metrics to your github profile Readme",
+  "verdict": "active"
+ },
+ {
+  "repo": "vn7n24fzkq/github-profile-summary-cards",
+  "status": "ok",
+  "stars": 3658,
+  "pushed_at": "2026-09-10T04:31:59Z",
+  "months_since_push": 0.4,
+  "archived": false,
+  "description": "A tool to generate your GitHub summary card for profile README",
+  "verdict": "active"
+ },
+ {
+  "repo": "gautamkrishnar/blog-post-workflow",
+  "status": "ok",
+  "stars": 3445,
+  "pushed_at": "2026-08-10T01:23:11Z",
+  "months_since_push": 1.4,
+  "archived": false,
+  "description": "Show your latest blog posts from any sources or StackOverflow activity or Youtube Videos on your GitHub profile/project readme automatically",
+  "verdict": "active"
+ },
+ {
+  "repo": "journey-ad/Moe-Counter",
+  "status": "ok",
+  "stars": 3081,
+  "pushed_at": "2026-04-16T03:39:37Z",
+  "months_since_push": 5.2,
+  "archived": false,
+  "description": "Moe counter badge with multiple themes! - \u591a\u79cd\u98ce\u683c\u53ef\u9009\u7684\u840c\u840c\u8ba1\u6570\u5668",
+  "verdict": "active"
+ },
+ {
+  "repo": "Ashutosh00710/github-readme-activity-graph",
+  "status": "ok",
+  "stars": 2339,
+  "pushed_at": "2026-05-17T14:39:05Z",
+  "months_since_push": 4.2,
+  "archived": false,
+  "description": "A dynamically generated activity graph to show your GitHub activities of last 31 days.",
+  "verdict": "active"
+ },
+ {
+  "repo": "kittinan/spotify-github-profile",
+  "status": "ok",
+  "stars": 2227,
+  "pushed_at": "2026-07-21T11:11:53Z",
+  "months_since_push": 2.0,
+  "archived": false,
+  "description": "Show your Spotify playing on your Github profile",
+  "verdict": "active"
+ },
+ {
+  "repo": "athul/waka-readme",
+  "status": "ok",
+  "stars": 1832,
+  "pushed_at": "2026-02-18T01:33:48Z",
+  "months_since_push": 7.1,
+  "archived": false,
+  "description": "Wakatime Weekly Metrics on your Profile Readme.",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "kyechan99/capsule-render",
+  "status": "ok",
+  "stars": 1826,
+  "pushed_at": "2026-09-18T15:06:54Z",
+  "months_since_push": 0.1,
+  "archived": false,
+  "description": "\ud83c\udf08 Dynamic Coloful Image Render",
+  "verdict": "active"
+ },
+ {
+  "repo": "yoshi389111/github-profile-3d-contrib",
+  "status": "ok",
+  "stars": 1750,
+  "pushed_at": "2026-09-13T07:32:24Z",
+  "months_since_push": 0.3,
+  "archived": false,
+  "description": "This GitHub Action creates a GitHub contribution calendar on a 3D profile image.",
+  "verdict": "active"
+ },
+ {
+  "repo": "stats-organization/github-stats-extended",
+  "status": "ok",
+  "stars": 1318,
+  "pushed_at": "2026-09-21T07:32:23Z",
+  "months_since_push": 0.0,
+  "archived": false,
+  "description": "Dynamically generate GitHub stats for your READMEs.",
+  "verdict": "active"
+ },
+ {
+  "repo": "rishavanand/github-profilinator",
+  "status": "ok",
+  "stars": 1230,
+  "pushed_at": "2025-04-08T01:56:53Z",
+  "months_since_push": 17.4,
+  "archived": true,
+  "description": "\ud83d\ude80  This tool contains mini GUI components that you can hook together to automatically generate markdown code for a perfect readme.",
+  "verdict": "archived"
+ },
+ {
+  "repo": "DenverCoder1/custom-icon-badges",
+  "status": "ok",
+  "stars": 976,
+  "pushed_at": "2026-01-26T06:48:25Z",
+  "months_since_push": 7.8,
+  "archived": false,
+  "description": "\ud83d\udee1 Allows users to more easily use Octicons and their own icons and logos on shields.io badges",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "jamesgeorge007/github-activity-readme",
+  "status": "ok",
+  "stars": 953,
+  "pushed_at": "2026-08-05T07:46:02Z",
+  "months_since_push": 1.5,
+  "archived": false,
+  "description": "Updates README with the recent GitHub activity of a user",
+  "verdict": "active"
+ },
+ {
+  "repo": "arturssmirnovs/github-profile-readme-generator",
+  "status": "ok",
+  "stars": 903,
+  "pushed_at": "2023-11-20T18:47:17Z",
+  "months_since_push": 34.0,
+  "archived": false,
+  "description": "GitHub profile readme generator allows you to create nice and simple GitHub profile readme files that will be included in your profile previ",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "novatorem/novatorem",
+  "status": "ok",
+  "stars": 758,
+  "pushed_at": "2026-02-16T18:49:12Z",
+  "months_since_push": 7.1,
+  "archived": false,
+  "description": "Dynamic realtime profile ReadMe linked with spotify",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "ABSphreak/readme-jokes",
+  "status": "ok",
+  "stars": 712,
+  "pushed_at": "2025-02-02T20:17:49Z",
+  "months_since_push": 19.5,
+  "archived": false,
+  "description": "\ud83d\ude04 Jokes for your GitHub READMEs",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "PiyushSuthar/github-readme-quotes",
+  "status": "ok",
+  "stars": 625,
+  "pushed_at": "2025-07-14T18:12:06Z",
+  "months_since_push": 14.2,
+  "archived": false,
+  "description": "\ud83d\udd25 Add Programming Quotes To Your GitHub Readme",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "stats-organization/github-readme-stats-action",
+  "status": "ok",
+  "stars": 297,
+  "pushed_at": "2026-09-19T10:24:19Z",
+  "months_since_push": 0.1,
+  "archived": false,
+  "description": "GitHub Action to generate GitHub Readme Stats cards.",
+  "verdict": "active"
+ },
+ {
+  "repo": "HwangTaehyun/github-repository-contribution-stats",
+  "status": "ok",
+  "stars": 241,
+  "pushed_at": "2026-02-01T05:09:22Z",
+  "months_since_push": 7.6,
+  "archived": false,
+  "description": ":fire: Dynamically generated Github Repository Contribution stats on your readmes (github-repository-contribution-stats)",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "khalby786/REHeader",
+  "status": "ok",
+  "stars": 235,
+  "pushed_at": "2020-10-10T11:22:39Z",
+  "months_since_push": 71.4,
+  "archived": false,
+  "description": "Generate beautiful header images for your GitHub profile READMEs.",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "ankurparihar/readme-pagespeed-insights",
+  "status": "ok",
+  "stars": 208,
+  "pushed_at": "2022-04-03T07:04:37Z",
+  "months_since_push": 53.6,
+  "archived": false,
+  "description": "Google lighthouse stats of your website that you can put in readme",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "abhisheknaiidu/todoist-readme",
+  "status": "ok",
+  "stars": 167,
+  "pushed_at": "2023-07-18T14:58:26Z",
+  "months_since_push": 38.1,
+  "archived": false,
+  "description": "\ud83d\udea7 Updates README with Todoist Stats of a user",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "omidnikrah/github-readme-stackoverflow",
+  "status": "ok",
+  "stars": 165,
+  "pushed_at": "2024-02-21T19:52:52Z",
+  "months_since_push": 30.9,
+  "archived": false,
+  "description": "\ud83d\udcca.  Dynamically generated your StackOverflow status on your GitHub READMEs!",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "soroushchehresa/github-readme-linkedin",
+  "status": "ok",
+  "stars": 137,
+  "pushed_at": "2024-07-31T00:04:43Z",
+  "months_since_push": 25.7,
+  "archived": false,
+  "description": "\ud83d\udccb A serverless application to get dynamically generated images from your LinkedIn profile on your GitHub READMEs",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "iampavangandhi/Gitwar",
+  "status": "ok",
+  "stars": 126,
+  "pushed_at": "2024-01-10T13:37:55Z",
+  "months_since_push": 32.4,
+  "archived": false,
+  "description": "\ud83d\ude80 Gitwar - Compete with Github ( \u26a0\ufe0f NOT ACTIVELY MAINTAINED )",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "omidnikrah/profile-activity-generator",
+  "status": "ok",
+  "stars": 110,
+  "pushed_at": "2022-12-31T22:27:09Z",
+  "months_since_push": 44.6,
+  "archived": false,
+  "description": "Generate custom profile activity for your profile README",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "gazf/github-readme-twitter",
+  "status": "ok",
+  "stars": 105,
+  "pushed_at": "2023-03-13T21:02:29Z",
+  "months_since_push": 42.3,
+  "archived": true,
+  "description": "Add Twitter to your github readme",
+  "verdict": "archived"
+ },
+ {
+  "repo": "omidnikrah/github-readme-medium",
+  "status": "ok",
+  "stars": 98,
+  "pushed_at": "2023-03-12T15:01:23Z",
+  "months_since_push": 42.3,
+  "archived": false,
+  "description": "\ud83d\udcd6    Dynamically generated your latest Medium article on your GitHub readmes!",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "techytushar/random-memer",
+  "status": "ok",
+  "stars": 78,
+  "pushed_at": "2023-01-03T15:57:52Z",
+  "months_since_push": 44.6,
+  "archived": false,
+  "description": "Returns random meme images scraped from Memedroid",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "umutphp/github-action-dynamic-profile-page",
+  "status": "ok",
+  "stars": 57,
+  "pushed_at": "2024-09-23T15:16:52Z",
+  "months_since_push": 23.9,
+  "archived": false,
+  "description": "GitHub Action to push updates to your special profile repository.",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "DenverCoder1/github-readme-youtube-stats",
+  "status": "ok",
+  "stars": 56,
+  "pushed_at": "2021-06-03T16:09:45Z",
+  "months_since_push": 63.6,
+  "archived": true,
+  "description": "Youtube stats badges for your Github profile README. Displays the total number of subscribers or the view count for your channel.",
+  "verdict": "archived"
+ },
+ {
+  "repo": "caneco/laravel-github-profile-view-counter",
+  "status": "ok",
+  "stars": 46,
+  "pushed_at": "2020-07-14T17:58:06Z",
+  "months_since_push": 74.2,
+  "archived": false,
+  "description": "This package will allows you to track Github profile views and display them in your profile readme, for free.",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "rowkav09/GitHub-profile-stats",
+  "status": "ok",
+  "stars": 41,
+  "pushed_at": "2026-09-21T11:00:54Z",
+  "months_since_push": 0.0,
+  "archived": false,
+  "description": "Beautiful GitHub stats cards for your README \u2014 just paste one line.",
+  "verdict": "active"
+ },
+ {
+  "repo": "arg3t/goodreads-readme",
+  "status": "ok",
+  "stars": 36,
+  "pushed_at": "2024-12-09T10:29:43Z",
+  "months_since_push": 21.4,
+  "archived": false,
+  "description": "This project provides a badge for sharing your current book in your github profile.",
+  "verdict": "slowing"
+ },
+ {
+  "repo": "jojoee/jojoee",
+  "status": "ok",
+  "stars": 30,
+  "pushed_at": "2026-09-19T05:15:42Z",
+  "months_since_push": 0.1,
+  "archived": false,
+  "description": ":)",
+  "verdict": "active"
+ },
+ {
+  "repo": "dahan8473/snake-and-commits",
+  "status": "ok",
+  "stars": 26,
+  "pushed_at": "2026-09-21T03:03:38Z",
+  "months_since_push": 0.0,
+  "archived": false,
+  "description": "Turn your GitHub contribution graph into a real game of Snake \u2014 animated SVG, zero dependencies, drop-in Action.",
+  "verdict": "active"
+ },
+ {
+  "repo": "claytonjhamilton/stackoverflow-badge",
+  "status": "ok",
+  "stars": 25,
+  "pushed_at": "2023-10-17T23:49:43Z",
+  "months_since_push": 35.1,
+  "archived": false,
+  "description": "Display your stats with this unique StackOverflow Badge",
+  "verdict": "dormant"
+ },
+ {
+  "repo": "maddhruv/github-readme-npm-downloads",
+  "status": "ok",
+  "stars": 24,
+  "pushed_at": "2024-06-14T01:14:52Z",
+  "months_since_push": 27.2,
+  "archived": true,
+  "description": "Show npm packages downloads :arrow_double_down: in GitHub README",
+  "verdict": "archived"
+ },
+ {
+  "repo": "creativecodeco/gitcard-studio",
+  "status": "ok",
+  "stars": 11,
+  "pushed_at": "2026-09-14T21:37:02Z",
+  "months_since_push": 0.2,
+  "archived": false,
+  "description": "\ud83d\ude80 High-performance API microservice & interactive web studio to generate customizable real-time GitHub profile stats cards, commit habit hea",
+  "verdict": "active"
+ },
+ {
+  "repo": "seuthootDev/github-readme-insight-terminal-ascii",
+  "status": "ok",
+  "stars": 9,
+  "pushed_at": "2026-08-27T04:05:51Z",
+  "months_since_push": 0.8,
+  "archived": false,
+  "description": "A tool to generate terminal-style ASCII SVGs from your GitHub profile contribution data",
+  "verdict": "active"
+ },
+ {
+  "repo": "prsdx/YourTomo",
+  "status": "ok",
+  "stars": 6,
+  "pushed_at": "2026-09-21T13:01:50Z",
+  "months_since_push": 0.0,
+  "archived": false,
+  "description": "A pixel cat that lives on my GitHub profile and reacts to my public activity \u2014 zero-dependency Python state machine rendered to animated SVG",
+  "verdict": "active"
+ },
+ {
+  "repo": "egorthinks/git-bonsai",
+  "status": "ok",
+  "stars": 5,
+  "pushed_at": "2026-07-14T17:59:31Z",
+  "months_since_push": 2.2,
+  "archived": false,
+  "description": "Grow a one-of-a-kind pixel-art bonsai from your GitHub history.",
+  "verdict": "active"
+ },
+ {
+  "repo": "flycran/github-gravity",
+  "status": "ok",
+  "stars": 2,
+  "pushed_at": "2026-09-21T03:07:45Z",
+  "months_since_push": 0.0,
+  "archived": false,
+  "description": "A GitHub Action that transforms your contribution graph into a physics-based animation with customizable text and gravity effects.",
+  "verdict": "active"
+ },
+ {
+  "repo": "in-c0/daily-badge",
+  "status": "ok",
+  "stars": 2,
+  "pushed_at": "2026-09-21T02:39:20Z",
+  "months_since_push": 0.0,
+  "archived": false,
+  "description": "Get a cute, quirky, uplifting message on your GitHub profile \u2014 refreshed daily, in your timezone. VS Code extension + shields.io endpoint.",
+  "verdict": "active"
+ },
+ {
+  "repo": "rafaeloliveiraz/gitglance",
+  "status": "ok",
+  "stars": 2,
+  "pushed_at": "2026-09-13T23:51:16Z",
+  "months_since_push": 0.2,
+  "archived": false,
+  "description": "Beautiful, self-hostable GitHub stats cards for your README. Many themes and styles (vercel, terminal, glass...). SVG, no rate-limit headach",
+  "verdict": "active"
+ },
+ {
+  "repo": "0xharkirat/dither-portrait",
+  "status": "ok",
+  "stars": 1,
+  "pushed_at": "2026-07-29T13:19:47Z",
+  "months_since_push": 1.8,
+  "archived": false,
+  "description": "Turn a photo into an animated dithered SVG for your GitHub profile README",
+  "verdict": "active"
+ },
+ {
+  "repo": "starlash7/github-candles",
+  "status": "ok",
+  "stars": 1,
+  "pushed_at": "2026-09-20T17:54:27Z",
+  "months_since_push": 0.0,
+  "archived": false,
+  "description": "Your GitHub contributions as a trading chart",
+  "verdict": "active"
+ },
+ {
+  "repo": "dvigo/github-stats",
+  "status": "ok",
+  "stars": 0,
+  "pushed_at": "2026-07-22T16:06:04Z",
+  "months_since_push": 2.0,
+  "archived": false,
+  "description": "A lightning-fast, highly aesthetic SVG statistics generator for your GitHub Profile README. Just copy and paste.",
+  "verdict": "active"
+ },
+ {
+  "repo": "icortesb/vinilo",
+  "status": "ok",
+  "stars": 0,
+  "pushed_at": "2026-09-13T03:22:03Z",
+  "months_since_push": 0.3,
+  "archived": false,
+  "description": "Your recently played Spotify tracks as a static SVG in your README. No server, no handing over your token.",
+  "verdict": "active"
+ },
+ {
+  "repo": "seuthootDev/github-readme-chinese-zodiac",
+  "status": "ok",
+  "stars": 0,
+  "pushed_at": "2026-09-02T09:53:11Z",
+  "months_since_push": 0.6,
+  "archived": false,
+  "description": "Asian zodiac (\u5341\u4e8c\u751f\u8096) SVG + pinned Gist cards from your GitHub activity",
+  "verdict": "active"
+ },
+ {
+  "repo": "seuthootDev/github-readme-zodiac",
+  "status": "ok",
+  "stars": 0,
+  "pushed_at": "2026-08-22T09:08:46Z",
+  "months_since_push": 1.0,
+  "archived": false,
+  "description": "GitHub activity \u2192 Zodiac-style SVG profile cards for your README",
+  "verdict": "active"
+ }
+]

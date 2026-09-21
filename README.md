@@ -1,0 +1,52 @@
+# GitHub Profile README — research
+
+Evidence-first research into what makes an exceptional GitHub profile README:
+what the best ones do, what actually renders, what breaks, and why. It feeds a
+reusable skill and, eventually, a profile designed from the findings.
+
+This is the v2 restart. The earlier infrastructure-first work (compiler, commit
+dispatcher, CI research) is preserved unchanged on the
+[`archive/v1`](https://github.com/hammadshakeelai/github-profile-blueprint/tree/archive/v1)
+branch.
+
+## Progress
+
+| Phase | Status |
+|---|---|
+| 1 · Survey — 446 real profiles, their images, and the generators behind them | **done** |
+| 2 · Technique catalogue — each technique with real users and a verified example | next |
+| 3 · Capability matrix — desktop / mobile web / GitHub app × dark / light, tested | |
+| 4 · Design direction — three rendered concepts, one chosen | |
+| 5 · Build the profile | |
+| 6 · Fold everything back into the skill | |
+
+Plan: [docs/PLAN-V2.md](docs/PLAN-V2.md)
+
+## What the survey found
+
+Full detail with numbers in [docs/survey/FINDINGS.md](docs/survey/FINDINGS.md).
+
+- **41% of profiles show a broken image.** The biggest single cause: free-tier
+  Vercel deployments being switched off. The public github-readme-stats
+  instance loads 0% of the time and is still embedded in 24% of profiles.
+- **55% of SVG cards are unreadable on a phone**, and 90% of those are
+  legible at full size — the 309px mobile column shrinks them. Hand-made cards
+  fail more often than generator services (63% vs 37%).
+- **The most visually ambitious profiles are the least readable on phones.**
+  Nobody surveyed is both ambitious and legible at 309px — that's the gap to
+  design into.
+- **Only 20% switch between dark and light**, and 42% are more than half
+  badges.
+
+The sixteen standout profiles, and what to take from each:
+[docs/survey/SHORTLIST.md](docs/survey/SHORTLIST.md).
+
+## Layout
+
+```
+docs/
+  PLAN-V2.md                 the plan
+  survey/                    Phase 1: findings, shortlist, tables, screenshots, data
+skills/github-profile-readme/  the skill — measured constraints, banner craft, SVG recipes
+tools/survey/                the survey tooling; everything re-runs from here
+```

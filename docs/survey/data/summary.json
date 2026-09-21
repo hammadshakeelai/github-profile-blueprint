@@ -1,0 +1,304 @@
+{
+ "generated_at": "2026-09-21T17:56:03+00:00",
+ "candidates": 487,
+ "status": {
+  "live": 446,
+  "org": 38,
+  "missing": 2,
+  "no-readme": 1
+ },
+ "pushed_within_12mo": 344,
+ "pushed_over_36mo_ago": 41,
+ "median_months_since_push": 1.1,
+ "displayed_images": 10782,
+ "distinct_image_urls": 8589,
+ "image_kinds": {
+  "committed": 2689,
+  "third-party": 7934,
+  "gh-upload": 159
+ },
+ "broken_occurrences_by_kind": {
+  "third-party": 458,
+  "gh-upload": 1,
+  "committed": 31
+ },
+ "broken_occurrences": 490,
+ "profiles_with_broken": 185,
+ "fail_reasons_distinct_urls": {
+  "vercel-paused": 215,
+  "vercel-disabled": 94,
+  "http-404": 68,
+  "error-card": 25,
+  "http-403": 17,
+  "http-410": 15,
+  "dns": 9,
+  "http-500": 7,
+  "http-400": 7,
+  "network": 5,
+  "not-image": 2,
+  "http-429": 2,
+  "timeout": 1,
+  "http-504": 1
+ },
+ "distinct_svgs": 6844,
+ "animated_svgs": 1472,
+ "svg_techniques_all": {
+  "gradient": 2429,
+  "embedded-svg": 2301,
+  "clip-path": 1775,
+  "filter": 1632,
+  "blur-glow": 1556,
+  "css-keyframes": 920,
+  "smil": 703,
+  "stroke-draw": 432,
+  "mask": 368,
+  "theme-aware-svg": 316,
+  "foreign-object": 156,
+  "embedded-font": 151,
+  "text-path": 118,
+  "embedded-raster": 104,
+  "script": 8
+ },
+ "svg_origin_counts": {
+  "bespoke": 1511,
+  "service": 683,
+  "badge-icon": 4434,
+  "generated": 187,
+  "copied": 29
+ },
+ "svg_techniques_bespoke": {
+  "gradient": 704,
+  "smil": 523,
+  "css-keyframes": 411,
+  "filter": 364,
+  "blur-glow": 303,
+  "theme-aware-svg": 293,
+  "stroke-draw": 288,
+  "clip-path": 256,
+  "mask": 77,
+  "foreign-object": 53,
+  "embedded-font": 50,
+  "embedded-raster": 40,
+  "text-path": 15,
+  "embedded-svg": 14
+ },
+ "svg_techniques_copied": {
+  "css-keyframes": 5,
+  "blur-glow": 3,
+  "filter": 3,
+  "smil": 2,
+  "foreign-object": 2,
+  "gradient": 1
+ },
+ "svg_techniques_services": {
+  "css-keyframes": 324,
+  "clip-path": 178,
+  "smil": 165,
+  "gradient": 161,
+  "mask": 127,
+  "text-path": 103,
+  "embedded-font": 99,
+  "stroke-draw": 60,
+  "embedded-svg": 57,
+  "foreign-object": 38,
+  "embedded-raster": 22,
+  "theme-aware-svg": 18,
+  "filter": 17,
+  "blur-glow": 15,
+  "script": 8
+ },
+ "bespoke_svgs_animated": 847,
+ "profiles_using_technique_bespoke": {
+  "smil": 132,
+  "gradient": 130,
+  "filter": 102,
+  "css-keyframes": 101,
+  "stroke-draw": 93,
+  "blur-glow": 90,
+  "clip-path": 90,
+  "theme-aware-svg": 35,
+  "foreign-object": 32,
+  "mask": 28,
+  "embedded-raster": 28,
+  "embedded-font": 13,
+  "text-path": 12,
+  "embedded-svg": 3,
+  "script": 1
+ },
+ "theme_switch": {
+  "none": 359,
+  "picture": 80,
+  "fragment": 7
+ },
+ "profiles_with_workflows": 240,
+ "profiles_with_gifs": 113,
+ "text_card_slots": 6500,
+ "slots_fully_illegible_mobile": 2810,
+ "slots_some_illegible_mobile": 3332,
+ "slots_some_illegible_desktop": 2682,
+ "profiles_with_illegible_card": 252,
+ "top_generators": [
+  [
+   "shields.io badges",
+   239,
+   "100%"
+  ],
+  [
+   "github-readme-stats \u2014 public instance",
+   107,
+   "0%"
+  ],
+  [
+   "profile views counter (komarev)",
+   103,
+   "100%"
+  ],
+  [
+   "github-readme-streak-stats",
+   95,
+   "97%"
+  ],
+  [
+   "readme-typing-svg",
+   87,
+   "100%"
+  ],
+  [
+   "snk contribution snake",
+   67,
+   "93%"
+  ],
+  [
+   "other users' repos (raw assets)",
+   58,
+   "89%"
+  ],
+  [
+   "github-readme-activity-graph",
+   57,
+   "2%"
+  ],
+  [
+   "skill-icons",
+   56,
+   "100%"
+  ],
+  [
+   "visitor badge",
+   42,
+   "59%"
+  ],
+  [
+   "GitHub upload (user-attachments)",
+   41,
+   "99%"
+  ],
+  [
+   "capsule-render",
+   41,
+   "100%"
+  ],
+  [
+   "github-readme-stats \u2014 self-hosted",
+   39,
+   "94%"
+  ],
+  [
+   "github-profile-trophy",
+   36,
+   "11%"
+  ],
+  [
+   "giphy",
+   35,
+   "98%"
+  ]
+ ],
+ "by_cohort": {
+  "curated": {
+   "profiles": 187,
+   "layout_measured": 186,
+   "median_images": 9,
+   "with_broken_image": "39%",
+   "using_dead_stats_instance": "25%",
+   "dark_light_switching": "5%",
+   "with_custom_svg": "23%",
+   "with_animated_custom_svg": "10%",
+   "with_workflows": "41%",
+   "badge_wall_over_half": "40%",
+   "phone_illegible_card_measured": "15%",
+   "phone_some_tiny_text_measured": "28%",
+   "desktop_illegible_card_measured": "\u2014",
+   "table_scrolls_sideways_on_phone": "6%",
+   "cards_crushed_in_table": "3%",
+   "page_scrolls_sideways_on_phone": "0%",
+   "cards_measured": 184,
+   "cards_illegible_on_phone": "28%",
+   "of_those_phone_caused": "84%",
+   "of_those_tiny_everywhere": "16%",
+   "illegible_cards_by_origin": {
+    "bespoke": "21/56 (38%)",
+    "service": "27/123 (22%)",
+    "generated": "2/4 (50%)",
+    "copied": "1/1 (100%)"
+   }
+  },
+  "search": {
+   "profiles": 259,
+   "layout_measured": 256,
+   "median_images": 17,
+   "with_broken_image": "44%",
+   "using_dead_stats_instance": "24%",
+   "dark_light_switching": "30%",
+   "with_custom_svg": "70%",
+   "with_animated_custom_svg": "65%",
+   "with_workflows": "63%",
+   "badge_wall_over_half": "43%",
+   "phone_illegible_card_measured": "70%",
+   "phone_some_tiny_text_measured": "82%",
+   "desktop_illegible_card_measured": "\u2014",
+   "table_scrolls_sideways_on_phone": "8%",
+   "cards_crushed_in_table": "12%",
+   "page_scrolls_sideways_on_phone": "0%",
+   "cards_measured": 1546,
+   "cards_illegible_on_phone": "58%",
+   "of_those_phone_caused": "91%",
+   "of_those_tiny_everywhere": "9%",
+   "illegible_cards_by_origin": {
+    "bespoke": "656/1014 (65%)",
+    "service": "171/409 (42%)",
+    "generated": "64/122 (52%)",
+    "copied": "1/1 (100%)"
+   }
+  },
+  "all": {
+   "profiles": 446,
+   "layout_measured": 442,
+   "median_images": 14.0,
+   "with_broken_image": "41%",
+   "using_dead_stats_instance": "24%",
+   "dark_light_switching": "20%",
+   "with_custom_svg": "50%",
+   "with_animated_custom_svg": "42%",
+   "with_workflows": "54%",
+   "badge_wall_over_half": "42%",
+   "phone_illegible_card_measured": "47%",
+   "phone_some_tiny_text_measured": "59%",
+   "desktop_illegible_card_measured": "\u2014",
+   "table_scrolls_sideways_on_phone": "7%",
+   "cards_crushed_in_table": "9%",
+   "page_scrolls_sideways_on_phone": "0%",
+   "cards_measured": 1730,
+   "cards_illegible_on_phone": "55%",
+   "of_those_phone_caused": "90%",
+   "of_those_tiny_everywhere": "10%",
+   "illegible_cards_by_origin": {
+    "bespoke": "677/1070 (63%)",
+    "service": "198/532 (37%)",
+    "generated": "66/126 (52%)",
+    "copied": "2/2 (100%)"
+   }
+  }
+ },
+ "layout_match_rate": "98%"
+}

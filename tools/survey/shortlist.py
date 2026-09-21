@@ -20,11 +20,17 @@ from pathlib import Path
 DATA = Path(__file__).resolve().parents[2] / "docs" / "survey" / "data"
 
 
+def illegible(r: dict) -> int:
+    """Measured phone illegibility where real layout exists, else the estimate."""
+    return r["m_illegible_cards"] if r.get("layout_measured") else r["illegible_cards"]
+
+
 def score(r: dict) -> float:
     s = 3 * min(r["custom_svgs"], 6) + 4 * min(r["custom_animated"], 4)
     s += 5 if r["theme_switch"] != "none" else 0
     s -= 4 * min(r["broken"], 3)
-    s -= 2 * min(r["illegible_cards"], 3)
+    s -= 2 * min(illegible(r), 3)
+    s -= 3 if r.get("tables_scrolling_with_images") or r.get("page_overflow_phone") else 0
     s -= 6 if r["badge_share"] > 0.5 else 0
     return s
 
@@ -41,7 +47,7 @@ def main() -> None:
         src = "search" if any(c.startswith("code-search") for c in r["categories"]) else "curated"
         print(f"{r['score']:5.0f}  {r['user']:<24} {src:<8} custom={r['custom_svgs']:<3} "
               f"anim={r['custom_animated']:<3} theme={r['theme_switch']:<8} brk={r['broken']:<2} "
-              f"illeg={r['illegible_cards']:<2} badges={r['badge_share']:.0%}")
+              f"illeg={illegible(r):<2} badges={r['badge_share']:.0%}")
     (DATA / "shortlist_candidates.json").write_text(
         json.dumps([{k: r[k] for k in ("user", "url", "score", "categories", "custom_svgs",
                                         "custom_animated", "theme_switch", "broken",

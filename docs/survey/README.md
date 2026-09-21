@@ -2,74 +2,75 @@
 
 A library of real GitHub profile READMEs and the generators they depend on,
 built from evidence rather than general knowledge. Every row is filled by
-fetching the actual README and the actual images it references.
+fetching the actual README and every image it references, and phone behaviour
+is measured from real rendered layout.
+
+**446 personal profiles · 10,782 images fetched · 442 profiles measured at
+phone width · 65 tool repositories health-checked · 20 shortlisted and
+screenshotted.**
+
+## Read these
+
+| File | What it is |
+|---|---|
+| [FINDINGS.md](FINDINGS.md) | What the data says, each claim tied to its numbers — start here |
+| [SHORTLIST.md](SHORTLIST.md) | The sixteen exceptional profiles, plus four for one idea each |
+| [GENERATORS.md](GENERATORS.md) | Every image service seen, ranked by use, with liveness and phone legibility |
+| [TOOLS.md](TOOLS.md) | The repositories behind them, and whether anyone maintains them |
+| [PROFILES.md](PROFILES.md) | All 446 profiles, one row each |
+| `shots/` | Shortlisted profiles at 390px (phone) and 1280px (desktop) |
+| `data/` | The derived JSON every table is built from |
+
+## Sources
+
+| Source | Cohort | Why |
+|---|---|---|
+| `abhisheknaiidu/awesome-github-profile-readme` (31k★) | curated · 187 | The canonical curated list; shows what's popular and copied |
+| GitHub code search for `animateMotion`, `animateTransform`, `stroke-dashoffset`, `keyframes`, `feGaussianBlur`, `feTurbulence`, `feDisplacementMap`, `textPath`, `prefers-color-scheme` in committed `.svg` files, kept only in `username/username` repos owned by a person | search · 259 | Finds the ambitious — people hand-making SVGs — rather than the popular |
+| The awesome list's `## Tools` section, plus the major generators observed | — | Seed list for `TOOLS.md` |
+
+The cohorts are reported separately throughout. The search cohort was selected
+for hand-made SVGs, so its custom-SVG rates are high by construction; its other
+rates are comparable.
 
 ## Method
 
-`tools/survey/harvest.py` collects; `tools/survey/analyze.py` turns the raw data
-into the tables here. Both are re-runnable, so the survey can be refreshed as
-profiles change or die.
+All of it re-runs from `tools/survey/`:
 
-1. **Candidates** come from curated sources (see *Sources*), each tagged with
-   where it was found and the curator's category.
-2. For each candidate, the GitHub API supplies the profile repo's metadata, its
-   README source, and whether it has workflows.
-3. Every image the README references — markdown `![]()`, `<img src>`, and
-   `<picture><source srcset>` — is resolved to an absolute URL and fetched.
-4. SVG responses are parsed for technique markers and for the legibility maths
-   in `skills/github-profile-readme/references/measured-constraints.md`.
+| Step | Script | Does |
+|---|---|---|
+| 1 | `source_codesearch.py` | Technique-first candidate discovery via code search |
+| 2 | `harvest.py` | Fetches each profile's README via the API, resolves and fetches every image, derives SVG metrics |
+| 3 | `layout.py` | Loads each live profile in headless Chrome at 390px and 1280px and records every image's rendered box |
+| 4 | `analyze.py` | Builds `PROFILES.md`, `GENERATORS.md`, `summary.json` |
+| 5 | `tools_health.py` | Maintenance status of the tool repositories → `TOOLS.md` |
+| 6 | `shortlist.py` | Ranks candidates worth looking at (a pre-filter, not the judgement) |
+| 7 | `screenshot.py`, `contact_sheet.py` | Captures and tiles pages for visual review |
 
-Nothing here is copied from the READMEs themselves: the repo stores links and
-derived measurements, not other people's content.
+Nothing copied from the READMEs themselves is stored: the repo keeps links and
+derived measurements. README text and image bodies live in a gitignored cache
+(`.cache/survey/`). The GitHub token is sent to `api.github.com` only; SVGs from
+third-party hosts are treated as untrusted and refused if they declare a DTD or
+entities.
+
+Several first-pass readings were wrong and were corrected before any finding was
+written — the full list is at the end of [FINDINGS.md](FINDINGS.md).
 
 ## Row schema — profiles
 
 | Field | Meaning |
 |---|---|
-| `user` | GitHub username; the profile lives at `github.com/<user>` |
-| `source`, `category` | Where it was found, and the curator's tag |
-| `status` | `live`, `missing` (repo gone or renamed), or `no-readme` |
-| `pushed_at` | Last push to the profile repo — staleness signal |
-| `images` | Total images referenced |
-| `repo_assets` | Images committed to the profile repo itself |
-| `third_party` | Images served by an external host |
-| `generators` | Named generators identified from image URLs |
-| `svgs`, `animated_svgs` | SVG images, and how many contain SMIL or CSS animation |
-| `techniques` | SVG features found: filter, mask, clipPath, gradient, stroke-dash draw, embedded font, embedded raster, theme-aware SVG |
-| `theme_switch` | `picture` (`<picture>` + `prefers-color-scheme`), `fragment` (`#gh-dark-mode-only`), or `none` |
-| `gifs` | Animated GIF count |
-| `broken` | Images that did not return a usable image — the *still live* test |
-| `workflows` | Number of Actions workflows; non-zero suggests generated content |
-| `mobile_worst_px` | Smallest text in any SVG, in px, once scaled into a 309px phone container |
-
-A row is complete when every field is filled from fetched data. `notes` —
-the qualitative "what's notable" — is written only for the shortlist, after
-the profile has actually been looked at.
-
-## Row schema — generators
-
-| Field | Meaning |
-|---|---|
-| `generator` | Name, and the repository that builds it |
-| `profiles` | How many surveyed profiles use it |
-| `requests`, `ok` | Image requests made, and how many returned a usable image |
-| `error_cards` | 200 responses whose body is an error message ("rate limit", "something went wrong") |
-| `median_ms` | Median response time |
-| `mobile_worst_px` | Median smallest-text size at 309px across its cards |
-
-## Sources
-
-| Source | Why |
-|---|---|
-| `abhisheknaiidu/awesome-github-profile-readme` | Canonical curated list, 31k stars, ~190 profiles across 16 categories |
-| Its `## Tools` section | Seed list of generators |
-
-Further sources are added here as they are harvested, each with the same
-treatment.
-
-## Outputs
-
-- `PROFILES.md` — every surveyed profile, one row each
-- `GENERATORS.md` — every generator seen, ranked by use, with liveness
-- `FINDINGS.md` — what the data says, each claim tied to the numbers
-- `data/` — the raw derived JSON the tables are built from
+| `user`, `cohort`, `category` | Profile, which population it's in, and where it was found |
+| `status` | `live`, `org` (an organisation, excluded), `missing`, or `no-readme` |
+| `images` | Images displayed (theme variants in `<picture>` not double-counted) |
+| `committed` / `gh_upload` / `third_party` | Where each image is served from |
+| `generators` | Named services and tools identified from image URLs |
+| `custom_svgs`, `custom_animated` | Bespoke SVGs — in the user's own repos, not a known tool's output, not copied |
+| `generated_svgs`, `copied_svgs` | Committed outputs of known Actions; byte-identical copies of someone else's SVG |
+| `techniques` | Features found in the bespoke SVGs |
+| `theme_switch` | `picture`, `fragment` (`#gh-dark-mode-only`), or `none` |
+| `broken` | Images that did not return a usable image after two attempts |
+| `workflows` | Actions workflows in the profile repo |
+| `m_text_cards`, `m_illegible_cards` | SVG cards (badges excluded) measured on the phone, and how many have their largest text under 11px |
+| `m_illegible_phone_caused` / `m_illegible_everywhere` | Of those: legible at native size but shrunk by the phone, vs too small on any device |
+| `tables_scrolling_with_images`, `crushed_in_table` | Phone table behaviour, measured |

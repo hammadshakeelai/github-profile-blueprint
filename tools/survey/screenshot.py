@@ -4,73 +4,80 @@
     python tools/survey/screenshot.py user1 user2 ...
     python tools/survey/screenshot.py --scheme light user1
 
-Writes docs/survey/shots/<user>-<width>[-light].jpg. 390px wide renders GitHub's
-mobile layout (309px README container); 1280px renders the desktop layout.
+Writes docs/survey/shots/<user>-<width>[-light].jpg.
 
-Each capture uses its own throwaway browser profile, so captures can run in
-parallel without fighting over a profile lock.
+The phone capture uses true mobile emulation over the DevTools protocol (mobile
+viewport semantics at 390px, giving GitHub's 309px README column) rather than a
+narrowed desktop window — a narrow window keeps desktop layout rules and can
+clip content at the right edge. Desktop captures are downscaled to keep the
+repository light.
 """
 from __future__ import annotations
 
 import argparse
-import concurrent.futures as cf
-import os
-import shutil
-import subprocess
+import asyncio
+import base64
+import io
 import sys
-import tempfile
 from pathlib import Path
 
 from PIL import Image
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from cdp import browser, chrome  # noqa: E402,F401  (chrome re-exported for callers)
+
 ROOT = Path(__file__).resolve().parents[2]
 SHOTS = ROOT / "docs" / "survey" / "shots"
-CHROME_CANDIDATES = [
-    os.environ.get("CHROME", ""),
-    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
-    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-    "/usr/bin/google-chrome", "/usr/bin/chromium", "/usr/bin/chromium-browser",
-]
 VIEWPORTS = {390: 3600, 1280: 2800}      # width -> captured height
-DESKTOP_SAVE_W = 960                      # downscale desktop shots to keep the repo light
+DESKTOP_SAVE_W = 960
+
+SETTLE_JS = r"""
+(async () => {
+  const imgs = [...document.querySelectorAll('article.markdown-body img')];
+  await Promise.race([
+    Promise.all(imgs.map(i => i.complete ? 0 : new Promise(r => {
+      i.addEventListener('load', r, {once: true}); i.addEventListener('error', r, {once: true}); }))),
+    new Promise(r => setTimeout(r, 12000))]);
+  await new Promise(r => setTimeout(r, 800));   // let SMIL/CSS animations reach a frame
+  return imgs.length;
+})()
+"""
 
 
-def chrome() -> str:
-    for c in CHROME_CANDIDATES:
-        if c and Path(c).exists():
-            return c
-    sys.exit("Chrome not found; set CHROME=/path/to/chrome")
-
-
-def capture(user: str, width: int, scheme: str) -> str:
-    height = VIEWPORTS[width]
+async def capture(new_tab, user: str, width: int, scheme: str) -> str:
     suffix = "" if scheme == "dark" else f"-{scheme}"
     out = SHOTS / f"{user}-{width}{suffix}.jpg"
-    tmp = Path(tempfile.mkdtemp(prefix="shot-"))
-    png = tmp / "shot.png"
-    # Blink's PreferredColorScheme: 0 = dark, 1 = light.
-    pref = 0 if scheme == "dark" else 1
-    cmd = [chrome(), "--headless=new", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu",
-           "--hide-scrollbars", "--no-first-run", "--mute-audio",
-           f"--user-data-dir={tmp / 'profile'}", f"--window-size={width},{height}",
-           f"--blink-settings=preferredColorScheme={pref}",
-           f"--screenshot={png}", f"https://github.com/{user}"]
+    tab = await new_tab()
     try:
-        subprocess.run(cmd, capture_output=True, timeout=120)
-        if not png.exists() or png.stat().st_size == 0:
-            return f"FAIL  {user} @{width}"
-        img = Image.open(png).convert("RGB")
+        await tab.emulate(width, VIEWPORTS[width], scheme)
+        tab.drain()
+        await tab.send("Page.navigate", {"url": f"https://github.com/{user}"})
+        await tab.wait_event("Page.loadEventFired", 30)
+        await tab.send("Runtime.evaluate", {"expression": SETTLE_JS, "awaitPromise": True}, timeout=45)
+        shot = await tab.send("Page.captureScreenshot", {"format": "png"}, timeout=60)
+        img = Image.open(io.BytesIO(base64.b64decode(shot["result"]["data"]))).convert("RGB")
         if width > 1000:
             img = img.resize((DESKTOP_SAVE_W, round(img.height * DESKTOP_SAVE_W / img.width)),
                              Image.LANCZOS)
         SHOTS.mkdir(parents=True, exist_ok=True)
         img.save(out, "JPEG", quality=72, optimize=True, progressive=True)
         return f"ok    {out.name}  {out.stat().st_size // 1024} KB"
-    except subprocess.TimeoutExpired:
-        return f"FAIL  {user} @{width} (timeout)"
+    except Exception as e:
+        return f"FAIL  {user} @{width} ({type(e).__name__})"
     finally:
-        shutil.rmtree(tmp, ignore_errors=True)
+        tab.reader.cancel()
+        await tab.ws.close()
+
+
+async def run(users: list[str], widths: list[int], scheme: str, workers: int) -> None:
+    jobs = [(u, w) for u in users for w in widths]
+    sem = asyncio.Semaphore(workers)
+    async with browser() as new_tab:
+        async def one(job):
+            async with sem:
+                line = await capture(new_tab, job[0], job[1], scheme)
+                print(line, flush=True)
+        await asyncio.gather(*(one(j) for j in jobs))
 
 
 def main() -> None:
@@ -80,11 +87,7 @@ def main() -> None:
     ap.add_argument("--widths", default="390,1280")
     ap.add_argument("--workers", type=int, default=3)
     a = ap.parse_args()
-    widths = [int(w) for w in a.widths.split(",")]
-    jobs = [(u, w) for u in a.users for w in widths]
-    with cf.ThreadPoolExecutor(a.workers) as ex:
-        for line in ex.map(lambda j: capture(j[0], j[1], a.scheme), jobs):
-            print(line, flush=True)
+    asyncio.run(run(a.users, [int(w) for w in a.widths.split(",")], a.scheme, a.workers))
 
 
 if __name__ == "__main__":

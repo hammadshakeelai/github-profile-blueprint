@@ -1,0 +1,657 @@
+[
+ {
+  "user": "ayxn07",
+  "url": "https://github.com/ayxn07",
+  "score": 34,
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "custom_svgs": 31,
+  "custom_animated": 23,
+  "theme_switch": "none",
+  "broken": 0,
+  "illegible_cards": 0,
+  "badge_share": 0.0,
+  "techniques": [
+   "clip-path",
+   "css-keyframes",
+   "embedded-svg",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "nihalsheikh",
+  "url": "https://github.com/nihalsheikh",
+  "score": 34,
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "custom_svgs": 7,
+  "custom_animated": 7,
+  "theme_switch": "none",
+  "broken": 0,
+  "illegible_cards": 0,
+  "badge_share": 0.0,
+  "techniques": [
+   "clip-path",
+   "css-keyframes",
+   "embedded-raster",
+   "embedded-svg",
+   "gradient",
+   "mask",
+   "smil"
+  ]
+ },
+ {
+  "user": "10ishk",
+  "url": "https://github.com/10ishk",
+  "score": 33,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 6,
+  "custom_animated": 6,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 3,
+  "badge_share": 0.0,
+  "techniques": [
+   "blur-glow",
+   "filter",
+   "gradient",
+   "mask",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "AlexChek51",
+  "url": "https://github.com/AlexChek51",
+  "score": 33,
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "custom_svgs": 12,
+  "custom_animated": 12,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 3,
+  "badge_share": 0.0,
+  "techniques": [
+   "blur-glow",
+   "css-keyframes",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "aniketpitre",
+  "url": "https://github.com/aniketpitre",
+  "score": 33,
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "custom_svgs": 7,
+  "custom_animated": 7,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 6,
+  "badge_share": 0.27,
+  "techniques": [
+   "css-keyframes",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "ashfordeOU",
+  "url": "https://github.com/ashfordeOU",
+  "score": 33,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 21,
+  "custom_animated": 12,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 11,
+  "badge_share": 0.0,
+  "techniques": [
+   "css-keyframes",
+   "embedded-font",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "Dhyanesh006",
+  "url": "https://github.com/Dhyanesh006",
+  "score": 33,
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "custom_svgs": 28,
+  "custom_animated": 28,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 18,
+  "badge_share": 0.0,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "css-keyframes",
+   "embedded-raster",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "erogluyusuf",
+  "url": "https://github.com/erogluyusuf",
+  "score": 33,
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "custom_svgs": 12,
+  "custom_animated": 12,
+  "theme_switch": "picture",
+  "broken": 1,
+  "illegible_cards": 1,
+  "badge_share": 0.0,
+  "techniques": [
+   "css-keyframes",
+   "embedded-raster",
+   "embedded-svg",
+   "smil"
+  ]
+ },
+ {
+  "user": "JackLuciano",
+  "url": "https://github.com/JackLuciano",
+  "score": 33,
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "custom_svgs": 25,
+  "custom_animated": 25,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 18,
+  "badge_share": 0.29,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "JGit705",
+  "url": "https://github.com/JGit705",
+  "score": 33,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 9,
+  "custom_animated": 9,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 7,
+  "badge_share": 0.25,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "css-keyframes",
+   "filter",
+   "gradient",
+   "mask",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "KingEGame",
+  "url": "https://github.com/KingEGame",
+  "score": 33,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 17,
+  "custom_animated": 17,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 9,
+  "badge_share": 0.05,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "css-keyframes",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "omkarrr88",
+  "url": "https://github.com/omkarrr88",
+  "score": 33,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 30,
+  "custom_animated": 30,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 24,
+  "badge_share": 0.0,
+  "techniques": [
+   "css-keyframes",
+   "gradient",
+   "smil"
+  ]
+ },
+ {
+  "user": "sepahead",
+  "url": "https://github.com/sepahead",
+  "score": 33,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 39,
+  "custom_animated": 17,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 16,
+  "badge_share": 0.33,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "css-keyframes",
+   "filter",
+   "gradient",
+   "mask",
+   "smil",
+   "stroke-draw",
+   "theme-aware-svg"
+  ]
+ },
+ {
+  "user": "SergiGTAr",
+  "url": "https://github.com/SergiGTAr",
+  "score": 33,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 7,
+  "custom_animated": 7,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 6,
+  "badge_share": 0.0,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "css-keyframes",
+   "embedded-raster",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "SimarBhatiaSB7",
+  "url": "https://github.com/SimarBhatiaSB7",
+  "score": 33,
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "custom_svgs": 6,
+  "custom_animated": 6,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 5,
+  "badge_share": 0.0,
+  "techniques": [
+   "css-keyframes",
+   "embedded-font",
+   "stroke-draw",
+   "theme-aware-svg"
+  ]
+ },
+ {
+  "user": "umang-eng",
+  "url": "https://github.com/umang-eng",
+  "score": 33,
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "custom_svgs": 16,
+  "custom_animated": 16,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 8,
+  "badge_share": 0.24,
+  "techniques": [
+   "css-keyframes",
+   "mask",
+   "stroke-draw",
+   "theme-aware-svg"
+  ]
+ },
+ {
+  "user": "XxMasterepicxX",
+  "url": "https://github.com/XxMasterepicxX",
+  "score": 33,
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "custom_svgs": 21,
+  "custom_animated": 19,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 16,
+  "badge_share": 0.04,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "css-keyframes",
+   "filter",
+   "gradient",
+   "mask",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "brandon-fryslie",
+  "url": "https://github.com/brandon-fryslie",
+  "score": 32,
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: feDisplacementMap"
+  ],
+  "custom_svgs": 8,
+  "custom_animated": 8,
+  "theme_switch": "none",
+  "broken": 0,
+  "illegible_cards": 1,
+  "badge_share": 0.0,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "GoneTone",
+  "url": "https://github.com/GoneTone",
+  "score": 32,
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "custom_svgs": 15,
+  "custom_animated": 5,
+  "theme_switch": "none",
+  "broken": 0,
+  "illegible_cards": 1,
+  "badge_share": 0.0,
+  "techniques": [
+   "clip-path",
+   "css-keyframes"
+  ]
+ },
+ {
+  "user": "HasanKhan05",
+  "url": "https://github.com/HasanKhan05",
+  "score": 32,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 5,
+  "custom_animated": 5,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 2,
+  "badge_share": 0.44,
+  "techniques": [
+   "blur-glow",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "0xGI0",
+  "url": "https://github.com/0xGI0",
+  "score": 30,
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "custom_svgs": 41,
+  "custom_animated": 3,
+  "theme_switch": "none",
+  "broken": 0,
+  "illegible_cards": 0,
+  "badge_share": 0.0,
+  "techniques": [
+   "clip-path",
+   "css-keyframes",
+   "embedded-svg",
+   "foreign-object",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "GokulG-04",
+  "url": "https://github.com/GokulG-04",
+  "score": 30,
+  "categories": [
+   "code-search: keyframes",
+   "code-search: feGaussianBlur"
+  ],
+  "custom_svgs": 5,
+  "custom_animated": 5,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 4,
+  "badge_share": 0.45,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "css-keyframes",
+   "embedded-raster",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "harish-sethuraman",
+  "url": "https://github.com/harish-sethuraman",
+  "score": 30,
+  "categories": [
+   "Badges"
+  ],
+  "custom_svgs": 11,
+  "custom_animated": 9,
+  "theme_switch": "none",
+  "broken": 1,
+  "illegible_cards": 0,
+  "badge_share": 0.0,
+  "techniques": [
+   "css-keyframes",
+   "foreign-object"
+  ]
+ },
+ {
+  "user": "harkirat-data",
+  "url": "https://github.com/harkirat-data",
+  "score": 29,
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "custom_svgs": 16,
+  "custom_animated": 16,
+  "theme_switch": "picture",
+  "broken": 1,
+  "illegible_cards": 8,
+  "badge_share": 0.0,
+  "techniques": [
+   "css-keyframes",
+   "mask",
+   "stroke-draw",
+   "theme-aware-svg"
+  ]
+ },
+ {
+  "user": "itgoyo",
+  "url": "https://github.com/itgoyo",
+  "score": 29,
+  "categories": [
+   "GitHub Actions"
+  ],
+  "custom_svgs": 7,
+  "custom_animated": 3,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 5,
+  "badge_share": 0.0,
+  "techniques": [
+   "clip-path",
+   "css-keyframes",
+   "embedded-raster",
+   "foreign-object",
+   "gradient",
+   "script",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "JConfessor",
+  "url": "https://github.com/JConfessor",
+  "score": 29,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 12,
+  "custom_animated": 3,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 8,
+  "badge_share": 0.0,
+  "techniques": [
+   "clip-path",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ },
+ {
+  "user": "SuperZombi",
+  "url": "https://github.com/SuperZombi",
+  "score": 29,
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "custom_svgs": 8,
+  "custom_animated": 2,
+  "theme_switch": "picture",
+  "broken": 0,
+  "illegible_cards": 1,
+  "badge_share": 0.03,
+  "techniques": [
+   "blur-glow",
+   "css-keyframes",
+   "embedded-font",
+   "embedded-raster",
+   "filter",
+   "gradient",
+   "smil",
+   "text-path",
+   "theme-aware-svg"
+  ]
+ },
+ {
+  "user": "trinib",
+  "url": "https://github.com/trinib",
+  "score": 29,
+  "categories": [
+   "A Little Bit of Everything"
+  ],
+  "custom_svgs": 7,
+  "custom_animated": 6,
+  "theme_switch": "fragment",
+  "broken": 1,
+  "illegible_cards": 8,
+  "badge_share": 0.06,
+  "techniques": [
+   "blur-glow",
+   "css-keyframes",
+   "embedded-raster",
+   "filter",
+   "foreign-object"
+  ]
+ },
+ {
+  "user": "atikulmunna",
+  "url": "https://github.com/atikulmunna",
+  "score": 28,
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: prefers-color-scheme"
+  ],
+  "custom_svgs": 14,
+  "custom_animated": 14,
+  "theme_switch": "none",
+  "broken": 0,
+  "illegible_cards": 10,
+  "badge_share": 0.0,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "filter",
+   "gradient",
+   "mask",
+   "smil",
+   "theme-aware-svg"
+  ]
+ },
+ {
+  "user": "getaudra",
+  "url": "https://github.com/getaudra",
+  "score": 28,
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "custom_svgs": 8,
+  "custom_animated": 5,
+  "theme_switch": "none",
+  "broken": 0,
+  "illegible_cards": 7,
+  "badge_share": 0.0,
+  "techniques": [
+   "blur-glow",
+   "clip-path",
+   "filter",
+   "gradient",
+   "smil",
+   "stroke-draw"
+  ]
+ }
+]

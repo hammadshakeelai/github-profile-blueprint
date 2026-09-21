@@ -1,0 +1,781 @@
+{
+ "embedded-raster": [
+  {
+   "user": "cangokceaslan",
+   "profile": "https://github.com/cangokceaslan",
+   "svg": "https://github.com/cangokceaslan/cangokceaslan/blob/main/assets/connects/website-dark.svg",
+   "bytes": 10380,
+   "animated": false
+  },
+  {
+   "user": "Richard117297",
+   "profile": "https://github.com/Richard117297",
+   "svg": "https://github.com/Richard117297/Richard117297/blob/main/assets/readme/header.svg",
+   "bytes": 228239,
+   "animated": true
+  },
+  {
+   "user": "eeshsaxena",
+   "profile": "https://github.com/eeshsaxena",
+   "svg": "https://github.com/eeshsaxena/eeshsaxena/blob/main/music-list.svg",
+   "bytes": 310262,
+   "animated": false
+  },
+  {
+   "user": "SuperZombi",
+   "profile": "https://github.com/SuperZombi",
+   "svg": "https://github.com/SuperZombi/SuperZombi/blob/main/stats/contributions.svg",
+   "bytes": 65807,
+   "animated": true
+  },
+  {
+   "user": "blackcater",
+   "profile": "https://github.com/blackcater",
+   "svg": "https://github.com/blackcater/blackcater/blob/main/images/social-blog.svg",
+   "bytes": 297273,
+   "animated": false
+  },
+  {
+   "user": "nihalsheikh",
+   "profile": "https://github.com/nihalsheikh",
+   "svg": "https://github.com/nihalsheikh/nihalsheikh/blob/main/.github/assets/readme-aura-component-3-ef723d13.svg",
+   "bytes": 450467,
+   "animated": true
+  },
+  {
+   "user": "SergiGTAr",
+   "profile": "https://github.com/SergiGTAr",
+   "svg": "https://github.com/SergiGTAr/SergiGTAr/blob/main/assets/pipboy-terminal-dark.svg",
+   "bytes": 60121,
+   "animated": true
+  },
+  {
+   "user": "GokulG-04",
+   "profile": "https://github.com/GokulG-04",
+   "svg": "https://github.com/GokulG-04/GokulG-04/blob/main/banner.svg?v=2",
+   "bytes": 73432,
+   "animated": true
+  }
+ ],
+ "theme-aware-svg": [
+  {
+   "user": "cangokceaslan",
+   "profile": "https://github.com/cangokceaslan",
+   "svg": "https://github.com/cangokceaslan/cangokceaslan/blob/main/assets/connects/goodtech.svg",
+   "bytes": 10174,
+   "animated": false
+  },
+  {
+   "user": "eeshsaxena",
+   "profile": "https://github.com/eeshsaxena",
+   "svg": "https://github.com/eeshsaxena/eeshsaxena/blob/main/sponsor.svg",
+   "bytes": 910,
+   "animated": false
+  },
+  {
+   "user": "krishna0605",
+   "profile": "https://github.com/krishna0605",
+   "svg": "https://github.com/krishna0605/krishna0605/blob/main/assets/hero.svg",
+   "bytes": 5238,
+   "animated": true
+  },
+  {
+   "user": "umang-eng",
+   "profile": "https://github.com/umang-eng",
+   "svg": "https://github.com/umang-eng/umang-eng/blob/main/assets/header-v1.svg?v=4",
+   "bytes": 3626,
+   "animated": true
+  },
+  {
+   "user": "nexmoe",
+   "profile": "https://github.com/nexmoe",
+   "svg": "https://github.com/nexmoe/nexmoe/blob/master/assets/github-overview.svg",
+   "bytes": 5067,
+   "animated": false
+  },
+  {
+   "user": "Srabon-bot",
+   "profile": "https://github.com/Srabon-bot",
+   "svg": "https://github.com/Srabon-bot/Srabon-bot/blob/main/ascii.svg",
+   "bytes": 14468,
+   "animated": true
+  },
+  {
+   "user": "Skymly",
+   "profile": "https://github.com/Skymly",
+   "svg": "https://github.com/Skymly/Skymly/blob/main/profile/header.svg",
+   "bytes": 6024,
+   "animated": true
+  },
+  {
+   "user": "YoraiLevi",
+   "profile": "https://github.com/YoraiLevi",
+   "svg": "https://github.com/YoraiLevi/YoraiLevi/blob/master/assets/card-dark-0.svg",
+   "bytes": 16206,
+   "animated": false
+  }
+ ],
+ "gradient": [
+  {
+   "user": "cangokceaslan",
+   "profile": "https://github.com/cangokceaslan",
+   "svg": "https://github.com/cangokceaslan/cangokceaslan/blob/main/assets/programming-languages/python.svg",
+   "bytes": 1936,
+   "animated": false
+  },
+  {
+   "user": "sepahead",
+   "profile": "https://github.com/sepahead",
+   "svg": "https://github.com/sepahead/sepahead/blob/main/assets/hero-light.svg",
+   "bytes": 6303,
+   "animated": true
+  },
+  {
+   "user": "shanraisshan",
+   "profile": "https://github.com/shanraisshan",
+   "svg": "https://github.com/shanraisshan/shanraisshan/blob/main/!/hadith-wallpaper.svg",
+   "bytes": 4565,
+   "animated": false
+  },
+  {
+   "user": "omkarrr88",
+   "profile": "https://github.com/omkarrr88",
+   "svg": "https://github.com/omkarrr88/omkarrr88/blob/main/profile/header.svg",
+   "bytes": 4348,
+   "animated": true
+  },
+  {
+   "user": "Dhyanesh006",
+   "profile": "https://github.com/Dhyanesh006",
+   "svg": "https://github.com/Dhyanesh006/Dhyanesh006/blob/main/assets/matrix-banner.svg",
+   "bytes": 69870,
+   "animated": true
+  },
+  {
+   "user": "karthik5033",
+   "profile": "https://github.com/karthik5033",
+   "svg": "https://github.com/karthik5033/karthik5033/blob/main/assets/custom-divider.svg",
+   "bytes": 2805,
+   "animated": true
+  },
+  {
+   "user": "rahul-jha98",
+   "profile": "https://github.com/rahul-jha98",
+   "svg": "https://github.com/rahul-jha98/github_readme_icons/blob/main/language_and_tools/square/python/python.svg",
+   "bytes": 2334,
+   "animated": false
+  },
+  {
+   "user": "ashfordeOU",
+   "profile": "https://github.com/ashfordeOU",
+   "svg": "https://github.com/ashfordeOU/ashfordeOU/blob/main/assets/hero-light.svg",
+   "bytes": 165511,
+   "animated": true
+  }
+ ],
+ "clip-path": [
+  {
+   "user": "sepahead",
+   "profile": "https://github.com/sepahead",
+   "svg": "https://github.com/sepahead/sepahead/blob/main/assets/hero-light.svg",
+   "bytes": 6303,
+   "animated": true
+  },
+  {
+   "user": "ayxn07",
+   "profile": "https://github.com/ayxn07",
+   "svg": "https://github.com/ayxn07/Ayxn07/blob/main/assets/card-ayxn-studio.svg",
+   "bytes": 58506,
+   "animated": true
+  },
+  {
+   "user": "shanraisshan",
+   "profile": "https://github.com/shanraisshan",
+   "svg": "https://github.com/shanraisshan/shanraisshan/blob/main/!/claude-mascot.svg",
+   "bytes": 5215,
+   "animated": true
+  },
+  {
+   "user": "Richard117297",
+   "profile": "https://github.com/Richard117297",
+   "svg": "https://github.com/Richard117297/Richard117297/blob/main/assets/readme/header.svg",
+   "bytes": 228239,
+   "animated": true
+  },
+  {
+   "user": "JackLuciano",
+   "profile": "https://github.com/JackLuciano",
+   "svg": "https://github.com/JackLuciano/JackLuciano/blob/main/assets/header.svg",
+   "bytes": 7109,
+   "animated": true
+  },
+  {
+   "user": "eeshsaxena",
+   "profile": "https://github.com/eeshsaxena",
+   "svg": "https://github.com/eeshsaxena/eeshsaxena/blob/main/languages.svg",
+   "bytes": 2737,
+   "animated": false
+  },
+  {
+   "user": "XxMasterepicxX",
+   "profile": "https://github.com/XxMasterepicxX",
+   "svg": "https://github.com/XxMasterepicxX/XxMasterepicxX/blob/main/assets/header-light.svg",
+   "bytes": 207566,
+   "animated": true
+  },
+  {
+   "user": "ChG4bbo",
+   "profile": "https://github.com/ChG4bbo",
+   "svg": "https://github.com/ChG4bbo/ChG4bbo/blob/main/assets/header.svg",
+   "bytes": 56531,
+   "animated": true
+  }
+ ],
+ "css-keyframes": [
+  {
+   "user": "sepahead",
+   "profile": "https://github.com/sepahead",
+   "svg": "https://github.com/sepahead/sepahead/blob/main/assets/hero-light.svg",
+   "bytes": 6303,
+   "animated": true
+  },
+  {
+   "user": "ayxn07",
+   "profile": "https://github.com/ayxn07",
+   "svg": "https://github.com/ayxn07/Ayxn07/blob/main/assets/typing.svg",
+   "bytes": 54224,
+   "animated": true
+  },
+  {
+   "user": "shanraisshan",
+   "profile": "https://github.com/shanraisshan",
+   "svg": "https://github.com/shanraisshan/shanraisshan/blob/main/!/claude-mascot.svg",
+   "bytes": 5215,
+   "animated": true
+  },
+  {
+   "user": "omkarrr88",
+   "profile": "https://github.com/omkarrr88",
+   "svg": "https://github.com/omkarrr88/omkarrr88/blob/main/profile/header.svg",
+   "bytes": 4348,
+   "animated": true
+  },
+  {
+   "user": "rahul-jha98",
+   "profile": "https://github.com/rahul-jha98",
+   "svg": "https://github.com/rahul-jha98/github-stats-transparent/blob/output/generated/overview.svg",
+   "bytes": 5355,
+   "animated": true
+  },
+  {
+   "user": "ashfordeOU",
+   "profile": "https://github.com/ashfordeOU",
+   "svg": "https://github.com/ashfordeOU/ashfordeOU/blob/main/assets/hero-light.svg",
+   "bytes": 165511,
+   "animated": true
+  },
+  {
+   "user": "XxMasterepicxX",
+   "profile": "https://github.com/XxMasterepicxX",
+   "svg": "https://github.com/XxMasterepicxX/XxMasterepicxX/blob/main/assets/header-light.svg",
+   "bytes": 207566,
+   "animated": true
+  },
+  {
+   "user": "ChG4bbo",
+   "profile": "https://github.com/ChG4bbo",
+   "svg": "https://github.com/ChG4bbo/ChG4bbo/blob/main/assets/header.svg",
+   "bytes": 56531,
+   "animated": true
+  }
+ ],
+ "stroke-draw": [
+  {
+   "user": "ayxn07",
+   "profile": "https://github.com/ayxn07",
+   "svg": "https://github.com/ayxn07/Ayxn07/blob/main/assets/card-ayxn-studio.svg",
+   "bytes": 58506,
+   "animated": true
+  },
+  {
+   "user": "krishna0605",
+   "profile": "https://github.com/krishna0605",
+   "svg": "https://github.com/krishna0605/krishna0605/blob/main/assets/hero.svg",
+   "bytes": 5238,
+   "animated": true
+  },
+  {
+   "user": "umang-eng",
+   "profile": "https://github.com/umang-eng",
+   "svg": "https://github.com/umang-eng/umang-eng/blob/main/assets/header-v1.svg?v=4",
+   "bytes": 3626,
+   "animated": true
+  },
+  {
+   "user": "bisug",
+   "profile": "https://github.com/bisug",
+   "svg": "https://github.com/bisug/bisug/blob/main/assets/header.svg",
+   "bytes": 17322,
+   "animated": true
+  },
+  {
+   "user": "AlexChek51",
+   "profile": "https://github.com/AlexChek51",
+   "svg": "https://github.com/AlexChek51/AlexChek51/blob/main/assets/header-dark.svg",
+   "bytes": 18904,
+   "animated": true
+  },
+  {
+   "user": "JConfessor",
+   "profile": "https://github.com/JConfessor",
+   "svg": "https://github.com/JConfessor/JConfessor/blob/main/assets/hero-dark.svg",
+   "bytes": 9368,
+   "animated": true
+  },
+  {
+   "user": "DivyamTalwar",
+   "profile": "https://github.com/DivyamTalwar",
+   "svg": "https://github.com/DivyamTalwar/DivyamTalwar/blob/main/assets/card-jitmind.svg",
+   "bytes": 9264,
+   "animated": true
+  },
+  {
+   "user": "Skymly",
+   "profile": "https://github.com/Skymly",
+   "svg": "https://github.com/Skymly/Skymly/blob/main/profile/header.svg",
+   "bytes": 6024,
+   "animated": true
+  }
+ ],
+ "smil": [
+  {
+   "user": "omkarrr88",
+   "profile": "https://github.com/omkarrr88",
+   "svg": "https://github.com/omkarrr88/omkarrr88/blob/main/profile/section-about.svg",
+   "bytes": 1273,
+   "animated": true
+  },
+  {
+   "user": "Jorexdev",
+   "profile": "https://github.com/Jorexdev",
+   "svg": "https://github.com/Jorexdev/Jorexdev/blob/main/img/jorex-glow-v7.svg",
+   "bytes": 1434,
+   "animated": true
+  },
+  {
+   "user": "bisug",
+   "profile": "https://github.com/bisug",
+   "svg": "https://github.com/bisug/bisug/blob/main/assets/header.svg",
+   "bytes": 17322,
+   "animated": true
+  },
+  {
+   "user": "AlexChek51",
+   "profile": "https://github.com/AlexChek51",
+   "svg": "https://github.com/AlexChek51/AlexChek51/blob/main/assets/header-dark.svg",
+   "bytes": 18904,
+   "animated": true
+  },
+  {
+   "user": "JConfessor",
+   "profile": "https://github.com/JConfessor",
+   "svg": "https://github.com/JConfessor/JConfessor/blob/main/assets/hero-dark.svg",
+   "bytes": 9368,
+   "animated": true
+  },
+  {
+   "user": "Srabon-bot",
+   "profile": "https://github.com/Srabon-bot",
+   "svg": "https://github.com/Srabon-bot/Srabon-bot/blob/main/ascii.svg",
+   "bytes": 14468,
+   "animated": true
+  },
+  {
+   "user": "DivyamTalwar",
+   "profile": "https://github.com/DivyamTalwar",
+   "svg": "https://github.com/DivyamTalwar/DivyamTalwar/blob/main/assets/hero-v2.svg",
+   "bytes": 6236,
+   "animated": true
+  },
+  {
+   "user": "Skymly",
+   "profile": "https://github.com/Skymly",
+   "svg": "https://github.com/Skymly/Skymly/blob/main/profile/header.svg",
+   "bytes": 6024,
+   "animated": true
+  }
+ ],
+ "blur-glow": [
+  {
+   "user": "Dhyanesh006",
+   "profile": "https://github.com/Dhyanesh006",
+   "svg": "https://github.com/Dhyanesh006/Dhyanesh006/blob/main/assets/matrix-banner.svg",
+   "bytes": 69870,
+   "animated": true
+  },
+  {
+   "user": "Richard117297",
+   "profile": "https://github.com/Richard117297",
+   "svg": "https://github.com/Richard117297/Richard117297/blob/main/assets/readme/header.svg",
+   "bytes": 228239,
+   "animated": true
+  },
+  {
+   "user": "JackLuciano",
+   "profile": "https://github.com/JackLuciano",
+   "svg": "https://github.com/JackLuciano/JackLuciano/blob/main/assets/header.svg",
+   "bytes": 7109,
+   "animated": true
+  },
+  {
+   "user": "karthik5033",
+   "profile": "https://github.com/karthik5033",
+   "svg": "https://github.com/karthik5033/karthik5033/blob/main/assets/custom-divider.svg",
+   "bytes": 2805,
+   "animated": true
+  },
+  {
+   "user": "XxMasterepicxX",
+   "profile": "https://github.com/XxMasterepicxX",
+   "svg": "https://github.com/XxMasterepicxX/XxMasterepicxX/blob/main/assets/header-light.svg",
+   "bytes": 207566,
+   "animated": true
+  },
+  {
+   "user": "ChG4bbo",
+   "profile": "https://github.com/ChG4bbo",
+   "svg": "https://github.com/ChG4bbo/ChG4bbo/blob/main/assets/header.svg",
+   "bytes": 56531,
+   "animated": true
+  },
+  {
+   "user": "atikulmunna",
+   "profile": "https://github.com/atikulmunna",
+   "svg": "https://github.com/atikulmunna/atikulmunna/blob/main/assets/flappy.svg?v=eb93efb5",
+   "bytes": 108595,
+   "animated": true
+  },
+  {
+   "user": "Jorexdev",
+   "profile": "https://github.com/Jorexdev",
+   "svg": "https://github.com/Jorexdev/Jorexdev/blob/main/img/jorex-glow-v7.svg",
+   "bytes": 1434,
+   "animated": true
+  }
+ ],
+ "filter": [
+  {
+   "user": "Dhyanesh006",
+   "profile": "https://github.com/Dhyanesh006",
+   "svg": "https://github.com/Dhyanesh006/Dhyanesh006/blob/main/assets/matrix-banner.svg",
+   "bytes": 69870,
+   "animated": true
+  },
+  {
+   "user": "JackLuciano",
+   "profile": "https://github.com/JackLuciano",
+   "svg": "https://github.com/JackLuciano/JackLuciano/blob/main/assets/header.svg",
+   "bytes": 7109,
+   "animated": true
+  },
+  {
+   "user": "karthik5033",
+   "profile": "https://github.com/karthik5033",
+   "svg": "https://github.com/karthik5033/karthik5033/blob/main/assets/custom-divider.svg",
+   "bytes": 2805,
+   "animated": true
+  },
+  {
+   "user": "atikulmunna",
+   "profile": "https://github.com/atikulmunna",
+   "svg": "https://github.com/atikulmunna/atikulmunna/blob/main/assets/flappy.svg?v=eb93efb5",
+   "bytes": 108595,
+   "animated": true
+  },
+  {
+   "user": "Jorexdev",
+   "profile": "https://github.com/Jorexdev",
+   "svg": "https://github.com/Jorexdev/Jorexdev/blob/main/img/jorex-glow-v7.svg",
+   "bytes": 1434,
+   "animated": true
+  },
+  {
+   "user": "Thomas-George-T",
+   "profile": "https://github.com/Thomas-George-T",
+   "svg": "https://github.com/Thomas-George-T/Thomas-George-T/blob/master/assets/linux-tux.svg",
+   "bytes": 18456,
+   "animated": false
+  },
+  {
+   "user": "AlexChek51",
+   "profile": "https://github.com/AlexChek51",
+   "svg": "https://github.com/AlexChek51/AlexChek51/blob/main/assets/header-dark.svg",
+   "bytes": 18904,
+   "animated": true
+  },
+  {
+   "user": "DivyamTalwar",
+   "profile": "https://github.com/DivyamTalwar",
+   "svg": "https://github.com/DivyamTalwar/DivyamTalwar/blob/main/assets/hero-v2.svg",
+   "bytes": 6236,
+   "animated": true
+  }
+ ],
+ "mask": [
+  {
+   "user": "rahul-jha98",
+   "profile": "https://github.com/rahul-jha98",
+   "svg": "https://github.com/rahul-jha98/github_readme_icons/blob/main/language_and_tools/square/node/node.svg",
+   "bytes": 4008,
+   "animated": false
+  },
+  {
+   "user": "umang-eng",
+   "profile": "https://github.com/umang-eng",
+   "svg": "https://github.com/umang-eng/umang-eng/blob/main/assets/ecosystem.svg?v=4",
+   "bytes": 11031,
+   "animated": true
+  },
+  {
+   "user": "atikulmunna",
+   "profile": "https://github.com/atikulmunna",
+   "svg": "https://github.com/atikulmunna/atikulmunna/blob/main/assets/flappy.svg?v=eb93efb5",
+   "bytes": 108595,
+   "animated": true
+  },
+  {
+   "user": "JGit705",
+   "profile": "https://github.com/JGit705",
+   "svg": "https://github.com/JGit705/JGit705/blob/main/profile/assets/hero.svg",
+   "bytes": 12238,
+   "animated": true
+  },
+  {
+   "user": "SirAllap",
+   "profile": "https://github.com/SirAllap",
+   "svg": "https://github.com/SirAllap/SirAllap/blob/main/assets/header-light.svg",
+   "bytes": 57186,
+   "animated": true
+  },
+  {
+   "user": "nihalsheikh",
+   "profile": "https://github.com/nihalsheikh",
+   "svg": "https://github.com/nihalsheikh/nihalsheikh/blob/main/.github/assets/readme-aura-component-3-ef723d13.svg",
+   "bytes": 450467,
+   "animated": true
+  },
+  {
+   "user": "10ishk",
+   "profile": "https://github.com/10ishk",
+   "svg": "https://github.com/10ishk/10ishk/blob/main/assets/wave.svg",
+   "bytes": 1391,
+   "animated": true
+  },
+  {
+   "user": "rroy233",
+   "profile": "https://github.com/rroy233",
+   "svg": "https://github.com/rroy233/rroy233/blob/main/profile/streak.svg",
+   "bytes": 7042,
+   "animated": true
+  }
+ ],
+ "foreign-object": [
+  {
+   "user": "YoraiLevi",
+   "profile": "https://github.com/YoraiLevi",
+   "svg": "https://github.com/YoraiLevi/YoraiLevi/blob/master/assets/card-dark-0.svg",
+   "bytes": 16206,
+   "animated": false
+  },
+  {
+   "user": "Abhishek-Singh-2008",
+   "profile": "https://github.com/Abhishek-Singh-2008",
+   "svg": "https://github.com/Abhishek-Singh-2008/github-stats/blob/generated/overview.svg",
+   "bytes": 5404,
+   "animated": true
+  },
+  {
+   "user": "MacroPower",
+   "profile": "https://github.com/MacroPower",
+   "svg": "https://github.com/MacroPower/github-stats-transparent/blob/output/generated/overview.svg",
+   "bytes": 5361,
+   "animated": true
+  },
+  {
+   "user": "blackphoenix42",
+   "profile": "https://github.com/blackphoenix42",
+   "svg": "https://github.com/blackphoenix42/blackphoenix42/blob/master/assets/auto/github-readme-activity-graph-vercel-app-c310536a.svg",
+   "bytes": 15768,
+   "animated": true
+  },
+  {
+   "user": "andyruwruw",
+   "profile": "https://github.com/andyruwruw",
+   "svg": "https://github.com/andyruwruw/andyruwruw/blob/master/example/now-playing.svg",
+   "bytes": 131903,
+   "animated": true
+  },
+  {
+   "user": "prateek-chaubey",
+   "profile": "https://github.com/prateek-chaubey",
+   "svg": "https://github.com/prateek-chaubey/prateek-chaubey/blob/main/blank.svg",
+   "bytes": 254,
+   "animated": false
+  },
+  {
+   "user": "0xGI0",
+   "profile": "https://github.com/0xGI0",
+   "svg": "https://github.com/0xGI0/0xGI0/blob/main/text.svg",
+   "bytes": 2735,
+   "animated": true
+  },
+  {
+   "user": "BrunnerLivio",
+   "profile": "https://github.com/BrunnerLivio",
+   "svg": "https://github.com/BrunnerLivio/brunnerlivio/blob/master/images/personal_note.svg",
+   "bytes": 766,
+   "animated": true
+  }
+ ],
+ "embedded-font": [
+  {
+   "user": "ashfordeOU",
+   "profile": "https://github.com/ashfordeOU",
+   "svg": "https://github.com/ashfordeOU/ashfordeOU/blob/main/assets/hero-light.svg",
+   "bytes": 165511,
+   "animated": true
+  },
+  {
+   "user": "bisug",
+   "profile": "https://github.com/bisug",
+   "svg": "https://github.com/bisug/bisug/blob/output/typing.svg",
+   "bytes": 10707,
+   "animated": true
+  },
+  {
+   "user": "Srabon-bot",
+   "profile": "https://github.com/Srabon-bot",
+   "svg": "https://github.com/Srabon-bot/Srabon-bot/blob/main/ascii.svg",
+   "bytes": 14468,
+   "animated": true
+  },
+  {
+   "user": "SuperZombi",
+   "profile": "https://github.com/SuperZombi",
+   "svg": "https://github.com/SuperZombi/SuperZombi/blob/main/stats/typing.svg",
+   "bytes": 534419,
+   "animated": true
+  },
+  {
+   "user": "SimarBhatiaSB7",
+   "profile": "https://github.com/SimarBhatiaSB7",
+   "svg": "https://github.com/SimarBhatiaSB7/SimarBhatiaSB7/blob/main/assets/header-v1.svg",
+   "bytes": 225246,
+   "animated": true
+  },
+  {
+   "user": "rroy233",
+   "profile": "https://github.com/rroy233",
+   "svg": "https://github.com/rroy233/rroy233/blob/main/profile/typing.svg",
+   "bytes": 10511,
+   "animated": true
+  },
+  {
+   "user": "trinib",
+   "profile": "https://github.com/trinib",
+   "svg": "https://github-readme-daily-quotes-trinibs-projects.vercel.app/api?theme=merko&category=programming&border=true&border_color=bdf259&border_width=3&border_radius=40&font=new_rocker",
+   "bytes": 51947,
+   "animated": false
+  },
+  {
+   "user": "Ankit404butfound",
+   "profile": "https://github.com/Ankit404butfound",
+   "svg": "https://github.com/Ankit404butfound/Ankit404butfound/blob/main/assets/bye.svg",
+   "bytes": 7728,
+   "animated": true
+  }
+ ],
+ "text-path": [
+  {
+   "user": "SuperZombi",
+   "profile": "https://github.com/SuperZombi",
+   "svg": "https://github.com/SuperZombi/SuperZombi/blob/main/stats/typing.svg",
+   "bytes": 534419,
+   "animated": true
+  },
+  {
+   "user": "rroy233",
+   "profile": "https://github.com/rroy233",
+   "svg": "https://github.com/rroy233/rroy233/blob/main/profile/typing.svg",
+   "bytes": 10511,
+   "animated": true
+  },
+  {
+   "user": "dhiruXDev",
+   "profile": "https://github.com/dhiruXDev",
+   "svg": "https://github.com/dhiruXDev/dhiruXDev/blob/main/banner.svg",
+   "bytes": 5308,
+   "animated": true
+  },
+  {
+   "user": "liss-bot",
+   "profile": "https://github.com/liss-bot",
+   "svg": "https://github.com/liss-bot/liss-bot/blob/main/intro.svg",
+   "bytes": 1852,
+   "animated": true
+  },
+  {
+   "user": "Ankit404butfound",
+   "profile": "https://github.com/Ankit404butfound",
+   "svg": "https://github.com/Ankit404butfound/Ankit404butfound/blob/main/assets/bye.svg",
+   "bytes": 7728,
+   "animated": true
+  },
+  {
+   "user": "chethanyadav456",
+   "profile": "https://github.com/chethanyadav456",
+   "svg": "https://github.com/chethanyadav456/chethanyadav456/blob/main/intro.svg",
+   "bytes": 9862,
+   "animated": true
+  },
+  {
+   "user": "happyren",
+   "profile": "https://github.com/happyren",
+   "svg": "https://github.com/happyren/happyren/blob/main/name.svg",
+   "bytes": 5622,
+   "animated": true
+  },
+  {
+   "user": "Twisuki",
+   "profile": "https://github.com/Twisuki",
+   "svg": "https://github.com/Twisuki/Twisuki/blob/main/src/titleType.svg",
+   "bytes": 935,
+   "animated": true
+  }
+ ],
+ "embedded-svg": [
+  {
+   "user": "terrytangyuan",
+   "profile": "https://github.com/terrytangyuan",
+   "svg": "https://github.com/terrytangyuan/terrytangyuan/blob/main/imgs/cv.svg",
+   "bytes": 1511,
+   "animated": false
+  },
+  {
+   "user": "nihalsheikh",
+   "profile": "https://github.com/nihalsheikh",
+   "svg": "https://github.com/nihalsheikh/nihalsheikh/blob/main/.github/assets/readme-aura-component-4-f3ede027.svg",
+   "bytes": 6545,
+   "animated": true
+  }
+ ],
+ "script": [
+  {
+   "user": "trinib",
+   "profile": "https://github.com/trinib",
+   "svg": "https://readme-jokes-trinibs-projects.vercel.app/api",
+   "bytes": 1678,
+   "animated": false
+  }
+ ]
+}

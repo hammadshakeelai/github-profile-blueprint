@@ -52,7 +52,18 @@ mined for hypotheses, then each claim either gets a citation or gets cut.
 
 ## The plan
 
-### Phase 1 — Survey (the part never done)
+### Phase 1 — Survey (the part never done) — **done**
+
+> **Outcome:** 446 personal profiles (187 curated, 259 found by technique-first
+> code search), 10,782 images fetched, phone layout measured for 442 in headless
+> Chrome, 65 tool repositories health-checked, 16 shortlisted after visual
+> review. Exceeds every target below. See `docs/survey/FINDINGS.md` and
+> `docs/survey/SHORTLIST.md`.
+>
+> Two changes from the original plan, both forced by evidence: screenshots were
+> taken for the shortlist rather than all 60+ (real layout measurement replaced
+> eyeballing for the rest, and proved more accurate), and a second, technique-
+> first source was added because the curated list only shows what's popular.
 
 Build the library. Breadth first, judgement later.
 
@@ -129,12 +140,13 @@ done, make it that one.
 
 ## Where the work lives
 
-Recommendation: **this repo, new branch `v2/research`.** The salvage list above
-is most of its value and it's already public with history worth keeping.
+**Decided and done:** this repo, branch `v2/research`, started from a clean tree.
+Everything from v1 is frozen unchanged on `archive/v1`; only the measured
+material (the skill) was carried forward. `docs/01`–`08` stayed behind on the
+archive rather than sitting next to new docs as peers.
 
-Drop the two-agent path-ownership split — it existed to stop two agents
-colliding and is now overhead. `docs/RESEARCH-LOG.md` and `docs/RESEARCH-CLAUDE.md`
-merge into one ledger.
+The two-agent path-ownership split is dropped — it existed to stop two agents
+colliding and is now overhead.
 
 Keep `hammadshakeelai/github-profile-blueprint` as the research repo. The actual
 profile ships separately to `hammadshakeelAl/hammadshakeelAl`, which still needs

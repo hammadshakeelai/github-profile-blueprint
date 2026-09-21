@@ -1,0 +1,3618 @@
+[
+ {
+  "user": "022UGDW213",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/ibot-avatar.svg"
+  ]
+ },
+ {
+  "user": "07anishu12",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform",
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "dark.svg"
+  ]
+ },
+ {
+  "user": "0xGI0",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "text.svg"
+  ]
+ },
+ {
+  "user": "0xPacman",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "load.svg"
+  ]
+ },
+ {
+  "user": "10ishk",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/orbit-skills.svg"
+  ]
+ },
+ {
+  "user": "2b-adrix",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "new.svg"
+  ]
+ },
+ {
+  "user": "aadrikash",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "dark.svg",
+   "light.svg"
+  ]
+ },
+ {
+  "user": "aasthatayal",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-rainbow.svg"
+  ]
+ },
+ {
+  "user": "Abdullah3010",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "images/header.svg"
+  ]
+ },
+ {
+  "user": "abhiraj-mishra",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "Abhishek-Singh-2008",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "stats.svg",
+   "trophies.svg"
+  ]
+ },
+ {
+  "user": "ad956",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-green.svg"
+  ]
+ },
+ {
+  "user": "Adarshcode-012",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform",
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "info-card.svg"
+  ]
+ },
+ {
+  "user": "addok",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "adityab894",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "anime.svg"
+  ]
+ },
+ {
+  "user": "aeneasr",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "globe.svg"
+  ]
+ },
+ {
+  "user": "Akash420-oss",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/neon-divider.svg"
+  ]
+ },
+ {
+  "user": "AkbarIlham20st",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/divider/poseidon-divider.svg"
+  ]
+ },
+ {
+  "user": "Alan-campos17",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "dark.svg",
+   "light.svg"
+  ]
+ },
+ {
+  "user": "AlexChek51",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/stats-dark.svg"
+  ]
+ },
+ {
+  "user": "alexiri",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "header.svg"
+  ]
+ },
+ {
+  "user": "ali-novruz",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/hero.svg"
+  ]
+ },
+ {
+  "user": "AliKHaliliT",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "util_resources/readme/hero.svg"
+  ]
+ },
+ {
+  "user": "AlloyFS",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "assets/logo.svg"
+  ]
+ },
+ {
+  "user": "Alok-Rithvik",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "amart302",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "GIF/github-user-contribution.svg"
+  ]
+ },
+ {
+  "user": "Anant23452",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "aniketpitre",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/dark/chapter4_v4.svg"
+  ]
+ },
+ {
+  "user": "anjiqing",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-contribution-grid-snake.svg"
+  ]
+ },
+ {
+  "user": "Ankit404butfound",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "assets/bye.svg"
+  ]
+ },
+ {
+  "user": "anshumanjadiya1102",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "stars-nebula.svg"
+  ]
+ },
+ {
+  "user": "antonprafanto",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-metrics.svg"
+  ]
+ },
+ {
+  "user": "Anurag-Mohan",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "journey.svg"
+  ]
+ },
+ {
+  "user": "Aryan681",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform",
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/outside-terminal.svg",
+   "assets/title-terminal.svg"
+  ]
+ },
+ {
+  "user": "ashfordeOU",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/hero-light.svg"
+  ]
+ },
+ {
+  "user": "atanuroy22",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "icon.svg"
+  ]
+ },
+ {
+  "user": "AtharvM02222",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "signature.svg"
+  ]
+ },
+ {
+  "user": "atikulmunna",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/loss.svg",
+   "assets/social-linkedin.svg"
+  ]
+ },
+ {
+  "user": "authelia",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "docs/static/images/contributors/13240971.svg",
+   "docs/static/images/contributors/2125341.svg"
+  ]
+ },
+ {
+  "user": "avocadomisstvt",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feTurbulence",
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/banner.svg"
+  ]
+ },
+ {
+  "user": "Ayush-0918",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/featured-projects.svg"
+  ]
+ },
+ {
+  "user": "ayxn07",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/link-linkedin.svg"
+  ]
+ },
+ {
+  "user": "azpradipta",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/barca-stats.svg"
+  ]
+ },
+ {
+  "user": "bahromnematov",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "BenjaminSRussell",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/act-hunt.svg"
+  ]
+ },
+ {
+  "user": "bisug",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/footer.svg"
+  ]
+ },
+ {
+  "user": "blackphoenix42",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/auto/capsule-render-vercel-app-cf31bea0.svg"
+  ]
+ },
+ {
+  "user": "brandon-fryslie",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/mycelium-web.svg",
+   "doodle-archive/2026/07/2026-07-29-144732.svg"
+  ]
+ },
+ {
+  "user": "BryanCPineda",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "svg.svg"
+  ]
+ },
+ {
+  "user": "cangokceaslan",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/programming-languages/python.svg"
+  ]
+ },
+ {
+  "user": "cclngit",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-metrics.svg"
+  ]
+ },
+ {
+  "user": "ChaitanyaJhindal",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/banner.svg"
+  ]
+ },
+ {
+  "user": "chatman-media",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "logo-3d.svg"
+  ]
+ },
+ {
+  "user": "ChenYCL",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "header.svg"
+  ]
+ },
+ {
+  "user": "chethanyadav456",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "eof.svg",
+   "intro.svg"
+  ]
+ },
+ {
+  "user": "ChG4bbo",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/shapes-it.svg"
+  ]
+ },
+ {
+  "user": "chonghaoooi",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/pixel-beach-banner-v6.svg"
+  ]
+ },
+ {
+  "user": "cifertech",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform",
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "dark_mode.svg"
+  ]
+ },
+ {
+  "user": "cipher-attack",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "key.svg"
+  ]
+ },
+ {
+  "user": "cnrad",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "wave.svg"
+  ]
+ },
+ {
+  "user": "coder-with-ai",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "profile/github-contribution-grid-snake-dark.svg"
+  ]
+ },
+ {
+  "user": "CODERUDRA-X",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "radar.svg"
+  ]
+ },
+ {
+  "user": "coi",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "docs/images/logo.svg"
+  ]
+ },
+ {
+  "user": "comaps",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "iphone/Maps/Images.xcassets/Interface/Symbols/tolls.circle.slash.symbolset/tolls.circle.slash.svg"
+  ]
+ },
+ {
+  "user": "comdotlinux",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "issue_pr_lang.svg"
+  ]
+ },
+ {
+  "user": "conifercone",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "svg.svg"
+  ]
+ },
+ {
+  "user": "Crysicia",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-green.svg"
+  ]
+ },
+ {
+  "user": "CypherpunkSamurai",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "metrics.plugin.isocalendar.fullyear.svg"
+  ]
+ },
+ {
+  "user": "d4rkn3m3s1s",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "dacxjo",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "metrics-leetcode.svg"
+  ]
+ },
+ {
+  "user": "Dakshinde130",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "hero-banner.svg"
+  ]
+ },
+ {
+  "user": "datavzrd",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "davidemaggi",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/avatar-glitch.svg"
+  ]
+ },
+ {
+  "user": "dBiz",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "res/Dark/BenePad.svg",
+   "res/Dark/Bene.svg",
+   "res/Light/Bene.svg",
+   "res/Dark/VCA4.svg",
+   "res/Light/VCA4.svg"
+  ]
+ },
+ {
+  "user": "Ddasunsandeepa",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "devashish2024",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "card.svg"
+  ]
+ },
+ {
+  "user": "DFLTPLYR",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "profile/streak.svg"
+  ]
+ },
+ {
+  "user": "dhiruXDev",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "banner.svg"
+  ]
+ },
+ {
+  "user": "Dhruv-Khant-26",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/divider.svg"
+  ]
+ },
+ {
+  "user": "DhruvBhatia0",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "images/visitor_count.svg"
+  ]
+ },
+ {
+  "user": "dhruvdabur",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-view.svg"
+  ]
+ },
+ {
+  "user": "Dhyanesh006",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/matrix-tech.svg"
+  ]
+ },
+ {
+  "user": "DivyamTalwar",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/hero-line-14.svg"
+  ]
+ },
+ {
+  "user": "Doctor-wu",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "dpzgsydx",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-view.svg"
+  ]
+ },
+ {
+  "user": "dreamfarer-space",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "assets/closed-loop-dark.svg"
+  ]
+ },
+ {
+  "user": "DVT3004",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "cards.svg",
+   "vibe.svg"
+  ]
+ },
+ {
+  "user": "EdwinNRM",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "banner.svg"
+  ]
+ },
+ {
+  "user": "eeshsaxena",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "c3.svg",
+   "c1.svg",
+   "c2.svg",
+   "cp-5.svg",
+   "cp-8.svg",
+   "cp-1.svg",
+   "cp-9.svg",
+   "cp-7.svg",
+   "cp-3.svg",
+   "cp-4.svg",
+   "cp-2.svg",
+   "cp-6.svg",
+   "cp-10.svg",
+   "chead.svg"
+  ]
+ },
+ {
+  "user": "elecmonkey",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/card-full.svg"
+  ]
+ },
+ {
+  "user": "engenty",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "apps/docs/public/favicon.svg"
+  ]
+ },
+ {
+  "user": "eriksape",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   ".github/assets/computer.svg"
+  ]
+ },
+ {
+  "user": "ermaozi",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "img/loading-01.svg"
+  ]
+ },
+ {
+  "user": "erogluyusuf",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-metrics.svg"
+  ]
+ },
+ {
+  "user": "eudiogolobo",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-contribution-grid-snake-dark.svg"
+  ]
+ },
+ {
+  "user": "format-message",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "icon.svg",
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "freeciv",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "data/graphics/freeciv-ruledit.svg"
+  ]
+ },
+ {
+  "user": "FreeFades2Black",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/terminal-status.svg"
+  ]
+ },
+ {
+  "user": "fury-05",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/about-card.svg"
+  ]
+ },
+ {
+  "user": "gabrielmatsan",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/generated/galaxy-header.svg"
+  ]
+ },
+ {
+  "user": "gagahputrabangsa",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "dark.svg"
+  ]
+ },
+ {
+  "user": "getaudra",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/command-center-hero.svg"
+  ]
+ },
+ {
+  "user": "ghkdusghd",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/chat.svg"
+  ]
+ },
+ {
+  "user": "ghulamyazdani",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "header.svg"
+  ]
+ },
+ {
+  "user": "giovanisims",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-green.svg"
+  ]
+ },
+ {
+  "user": "gitkrypton18",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "pacman-krypton.svg"
+  ]
+ },
+ {
+  "user": "GlanceMap",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "app/src/main/assets/theme/os-map/os_res/svg/border_control.svg"
+  ]
+ },
+ {
+  "user": "GokulG-04",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes",
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "lanyard.svg"
+  ]
+ },
+ {
+  "user": "GoneTone",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "profile-summary-card-output/default/1-repos-per-language.svg"
+  ]
+ },
+ {
+  "user": "grpcmd",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "demo.svg"
+  ]
+ },
+ {
+  "user": "GylanSalih",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "Footer Design.svg"
+  ]
+ },
+ {
+  "user": "H-JuKyung",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-view.svg"
+  ]
+ },
+ {
+  "user": "HalfSweet",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "left.svg"
+  ]
+ },
+ {
+  "user": "happyren",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "harkirat-data",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/dark/timeline.svg"
+  ]
+ },
+ {
+  "user": "HasanKhan05",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/animated-security-lab.svg"
+  ]
+ },
+ {
+  "user": "HedgehogDubz",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/feed-handler-v2.svg"
+  ]
+ },
+ {
+  "user": "hekimm",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/header.svg"
+  ]
+ },
+ {
+  "user": "hemkesh2021-dotcom",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/beige-v5/sentinel-mobile.svg",
+   "assets/headers/interests-light-v3.svg",
+   "assets/beige-v6/sentinel-prototype-details-desktop.svg",
+   "assets/headers/sentinel/prototype-dark-v3.svg",
+   "assets/profile-languages-dark.svg"
+  ]
+ },
+ {
+  "user": "hgunay",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "hk4crprasad",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-green.svg"
+  ]
+ },
+ {
+  "user": "hoangprohigher",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "Hopsan",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "componentLibraries/defaultLibrary/Hydraulic/Special/HydraulicOrificeCheckValveG.svg"
+  ]
+ },
+ {
+  "user": "HugoGW",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "physics-banner.svg"
+  ]
+ },
+ {
+  "user": "hypro",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "doc/hypro_Logo.svg"
+  ]
+ },
+ {
+  "user": "imnotparama",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/tech_matrix.svg"
+  ]
+ },
+ {
+  "user": "ishandutta2007",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "chat.svg"
+  ]
+ },
+ {
+  "user": "Israel5",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-view.svg"
+  ]
+ },
+ {
+  "user": "JackLuciano",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-green-animate.svg"
+  ]
+ },
+ {
+  "user": "jammmin02",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "jasineri",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "jayvdb",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "lines.svg"
+  ]
+ },
+ {
+  "user": "JConfessor",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/domain-light.svg"
+  ]
+ },
+ {
+  "user": "jebomin",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "jerrylin1102",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/agent-control-room.svg"
+  ]
+ },
+ {
+  "user": "Jerryzjx",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-south-season-animate.svg"
+  ]
+ },
+ {
+  "user": "JGit705",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "profile/assets/footer.svg"
+  ]
+ },
+ {
+  "user": "Jorexdev",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "img/separator-v4.svg"
+  ]
+ },
+ {
+  "user": "jorge07",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/header.svg"
+  ]
+ },
+ {
+  "user": "journey-ad",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "sayhi.svg"
+  ]
+ },
+ {
+  "user": "jyc8369",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/profile/lifecycle-light.svg"
+  ]
+ },
+ {
+  "user": "karthik5033",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/icon-react.svg"
+  ]
+ },
+ {
+  "user": "kavatana",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "brain.svg"
+  ]
+ },
+ {
+  "user": "keelbismark",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/languages.svg"
+  ]
+ },
+ {
+  "user": "keyz",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "thonk.svg"
+  ]
+ },
+ {
+  "user": "KingEGame",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/profile/signal-divider-dark.svg"
+  ]
+ },
+ {
+  "user": "kingsmen732",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "metrics.plugin.introduction.svg"
+  ]
+ },
+ {
+  "user": "KLayout",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "src/icons/svg/menu_16px.svg"
+  ]
+ },
+ {
+  "user": "Kolpixx",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-contribution-grid-snake.svg"
+  ]
+ },
+ {
+  "user": "Kosvel-dev",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/kosvel-card.svg"
+  ]
+ },
+ {
+  "user": "krishna0605",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/marks/01.svg"
+  ]
+ },
+ {
+  "user": "kunaltyagi9",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform",
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "dark.svg",
+   "light.svg"
+  ]
+ },
+ {
+  "user": "lahuen",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "web/images/products/pedido-semanal.svg"
+  ]
+ },
+ {
+  "user": "leo-lem",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "wave.svg"
+  ]
+ },
+ {
+  "user": "LeoSousaJesus",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "img/pytorch-anim.svg"
+  ]
+ },
+ {
+  "user": "lethanhan01",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/3d-contribute/pacman-contributions.svg"
+  ]
+ },
+ {
+  "user": "LingmoOS",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "shell/bc/Icons/Crule/status/32/image-missing.svg"
+  ]
+ },
+ {
+  "user": "liss-bot",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "intro.svg"
+  ]
+ },
+ {
+  "user": "llmrtc",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "LogFaer",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/banner.svg"
+  ]
+ },
+ {
+  "user": "lucasfeva",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-view.svg"
+  ]
+ },
+ {
+  "user": "luccas00",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-green.svg"
+  ]
+ },
+ {
+  "user": "M-F-Tushar",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/cards/career.svg"
+  ]
+ },
+ {
+  "user": "Mailu",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "docs/assets/logo.svg"
+  ]
+ },
+ {
+  "user": "manicinc",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "src/components/Nav/LookingGlassLogo/looking-glasss.svg"
+  ]
+ },
+ {
+  "user": "MauricioGoulartt",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/svg/header.svg"
+  ]
+ },
+ {
+  "user": "melih-dijital",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "light.svg"
+  ]
+ },
+ {
+  "user": "MeowDump",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "mona.svg"
+  ]
+ },
+ {
+  "user": "micromark",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "mikecuevas",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "minirang",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform",
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "img.svg"
+  ]
+ },
+ {
+  "user": "minseokKim6823",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-green-animate.svg"
+  ]
+ },
+ {
+  "user": "Moekyawaung-cyber",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "header.svg"
+  ]
+ },
+ {
+  "user": "Mr-IR0k-oo1",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "profile-stats.svg"
+  ]
+ },
+ {
+  "user": "murthy0x05",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "src/assets/phantom-notes-project-icon.svg"
+  ]
+ },
+ {
+  "user": "n3wth",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "apps/garden/public/figures/career/interview-preparation.svg"
+  ]
+ },
+ {
+  "user": "nekocatso",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes",
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "wave.svg"
+  ]
+ },
+ {
+  "user": "newsboat",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "nexmoe",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/repository-bars/huanshere-videolingo.svg"
+  ]
+ },
+ {
+  "user": "nihalsheikh",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   ".github/assets/readme-aura-component-2-aab4342f.svg"
+  ]
+ },
+ {
+  "user": "nikhilchauhan018",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "tech-orbit.svg"
+  ]
+ },
+ {
+  "user": "NilMarquez",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "nujiak",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "header.svg"
+  ]
+ },
+ {
+  "user": "Nvinod007",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "src/assets/footer-signal.svg"
+  ]
+ },
+ {
+  "user": "Nyaughh",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "a.svg"
+  ]
+ },
+ {
+  "user": "odoo",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "addons/html_builder/static/image_shapes/geometric/geo_slanted.svg",
+   "addons/html_builder/static/image_shapes/geometric_round/geo_round_blob_soft.svg",
+   "addons/html_builder/static/image_shapes/pattern/pattern_wave_4.svg"
+  ]
+ },
+ {
+  "user": "omarfh111",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/banner.svg"
+  ]
+ },
+ {
+  "user": "omersayak",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/light.svg"
+  ]
+ },
+ {
+  "user": "omkarrr88",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "profile/activity.svg"
+  ]
+ },
+ {
+  "user": "ongsiewtyng",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "dark.svg"
+  ]
+ },
+ {
+  "user": "OpenIoTHub",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "assets/web/open/vnc/app/images/warning.svg"
+  ]
+ },
+ {
+  "user": "openml",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "img/team_player_1.svg"
+  ]
+ },
+ {
+  "user": "openulteo",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "src/ovd/ApplicationServer/desktop/icons/theme/categories/applications-chat.svg"
+  ]
+ },
+ {
+  "user": "osm2go",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "data/icons/styles/standard/office/lawyer.svg"
+  ]
+ },
+ {
+  "user": "oussamatght",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "hero.svg"
+  ]
+ },
+ {
+  "user": "overlay5",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "overlay-top.svg"
+  ]
+ },
+ {
+  "user": "pawan941394",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/card-youtube.svg"
+  ]
+ },
+ {
+  "user": "pc2468",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "dark.svg",
+   "light.svg"
+  ]
+ },
+ {
+  "user": "pedrolabre",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   ".github/assets/cat-tools-en.svg"
+  ]
+ },
+ {
+  "user": "pikachu0310",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "profile/github-stats.svg"
+  ]
+ },
+ {
+  "user": "Pkansagra-hub",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "PranavKale03",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "anime.svg"
+  ]
+ },
+ {
+  "user": "praphulln19",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/streak.svg"
+  ]
+ },
+ {
+  "user": "PrasanBora",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "prateek-chaubey",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "pc.svg",
+   "\u221e.svg",
+   "icon.svg",
+   "pkc.svg"
+  ]
+ },
+ {
+  "user": "preloop",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "frontend/public/assets/mcp-firewall2.svg"
+  ]
+ },
+ {
+  "user": "prettyblueberry",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "golang.svg"
+  ]
+ },
+ {
+  "user": "pritamsingh019",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "footer.svg"
+  ]
+ },
+ {
+  "user": "QuranVideoMaker",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "icon.svg"
+  ]
+ },
+ {
+  "user": "RafaTheMonk",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/rafaos.svg"
+  ]
+ },
+ {
+  "user": "rakshitagarwal",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "RatneshwarPandey12220865",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "card-research.svg"
+  ]
+ },
+ {
+  "user": "Richard117297",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/readme/project-hegemony-linear.svg"
+  ]
+ },
+ {
+  "user": "riptide-06",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/racing/t1-t2.svg"
+  ]
+ },
+ {
+  "user": "rishabhjain071130-glitch",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/logo.svg"
+  ]
+ },
+ {
+  "user": "rithviknag04",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "light.svg"
+  ]
+ },
+ {
+  "user": "RK1905101",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "rohitkr8527",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/engineering-snake.svg"
+  ]
+ },
+ {
+  "user": "rroy233",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "profile/top-langs.svg"
+  ]
+ },
+ {
+  "user": "rudyhendrawn",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-metrics.svg"
+  ]
+ },
+ {
+  "user": "Ryyn-Sd",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "hi.svg"
+  ]
+ },
+ {
+  "user": "sabbirimon",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/cellular-5g.svg"
+  ]
+ },
+ {
+  "user": "santoshshinde2012",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/cynefin.svg"
+  ]
+ },
+ {
+  "user": "sarasmorais",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-contribution-grid-snake.svg"
+  ]
+ },
+ {
+  "user": "SarveshMankar",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "SeaL773",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-view.svg"
+  ]
+ },
+ {
+  "user": "Senppoa",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/aurora-veil.svg"
+  ]
+ },
+ {
+  "user": "sepahead",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "docs/mural/atlas/murals/01_from_signal_to_frontier/03_celestial_cartographer/01_from_signal_to_frontier__03_celestial_cartographer__dark.svg",
+   "docs/mural/assets/02_one_mission_end_to_end_master__dark.svg"
+  ]
+ },
+ {
+  "user": "SergiGTAr",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/pipboy-terminal-dark.svg"
+  ]
+ },
+ {
+  "user": "serplay",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "profile/top-langs.svg"
+  ]
+ },
+ {
+  "user": "servo",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "tests/wpt/tests/svg/text/reftests/textpath-path-attr-side-right-ref.svg"
+  ]
+ },
+ {
+  "user": "shanraisshan",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "!/repo.svg"
+  ]
+ },
+ {
+  "user": "shreyasfegade",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/header-light.svg"
+  ]
+ },
+ {
+  "user": "shreythakkar2056",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "info-card.svg"
+  ]
+ },
+ {
+  "user": "sigma7863",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "SimarBhatiaSB7",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/dark/timeline.svg"
+  ]
+ },
+ {
+  "user": "SirAllap",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "brand/dpr/dpr-liquid-dark.svg",
+   "assets/dpr-light.svg"
+  ]
+ },
+ {
+  "user": "skhan61",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/banner.svg"
+  ]
+ },
+ {
+  "user": "skruv",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "icon.svg"
+  ]
+ },
+ {
+  "user": "Skymly",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "profile/pipeline.svg"
+  ]
+ },
+ {
+  "user": "solfany",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-view.svg"
+  ]
+ },
+ {
+  "user": "Someshdiwan",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "Assets/2025/2025-Archived.svg"
+  ]
+ },
+ {
+  "user": "soymissyera",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/sep-encaje-oro.svg"
+  ]
+ },
+ {
+  "user": "spotcircuit",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "public/static/images/content-generation-flow.svg"
+  ]
+ },
+ {
+  "user": "sqlpage",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "sqlpage/favicon.svg"
+  ]
+ },
+ {
+  "user": "Srabon-bot",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "name-banner.svg"
+  ]
+ },
+ {
+  "user": "SrikarSriramoju",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform",
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "name_animation.svg"
+  ]
+ },
+ {
+  "user": "starterjs",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "files/starter logo.svg"
+  ]
+ },
+ {
+  "user": "StaticSharp",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "StaticSharpDemo/Root/FavIcon.svg"
+  ]
+ },
+ {
+  "user": "steren",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "icon.svg"
+  ]
+ },
+ {
+  "user": "stoolap",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "stubbornlove",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/jarvis.svg"
+  ]
+ },
+ {
+  "user": "sunbc0120",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/social/instagram-terminal.svg"
+  ]
+ },
+ {
+  "user": "SuperZombi",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "stats/pins/GICutscenesUI-light.svg"
+  ]
+ },
+ {
+  "user": "suru-plus",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "Suru++/apps/scalable/octopi.svg"
+  ]
+ },
+ {
+  "user": "sushi057",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/banner.svg"
+  ]
+ },
+ {
+  "user": "Sushmitadasari",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "dark.svg",
+   "light.svg"
+  ]
+ },
+ {
+  "user": "swaraj54",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "syarief02",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "profile/pin-goldmind-ai.svg"
+  ]
+ },
+ {
+  "user": "SYLESH-1125",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/projects-3d.svg"
+  ]
+ },
+ {
+  "user": "tableaunoir",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feTurbulence",
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "favicon.svg"
+  ]
+ },
+ {
+  "user": "tfadeyi",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "repositories.svg"
+  ]
+ },
+ {
+  "user": "thatmanfrancis",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feTurbulence"
+  ],
+  "svg_paths": [
+   "public/placeholders/portrait.svg"
+  ]
+ },
+ {
+  "user": "TheSlayer7",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-green-animate.svg"
+  ]
+ },
+ {
+  "user": "topazcoder",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-south-season-animate.svg"
+  ]
+ },
+ {
+  "user": "Twisuki",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "src/titleType-en.svg"
+  ]
+ },
+ {
+  "user": "umair-aziz025",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "banner.svg"
+  ]
+ },
+ {
+  "user": "umang-eng",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/s04.svg"
+  ]
+ },
+ {
+  "user": "utsavratan",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "banner.svg"
+  ]
+ },
+ {
+  "user": "VaheOfficial",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/palettes/cyan-pink/fly.svg"
+  ]
+ },
+ {
+  "user": "vfile",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "Vinayak-Khavare",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "assets/text.svg"
+  ]
+ },
+ {
+  "user": "Viraj281105",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion",
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "assets/hero.svg",
+   "assets/medguard-architecture.svg"
+  ]
+ },
+ {
+  "user": "Virendra108",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/now.svg"
+  ]
+ },
+ {
+  "user": "VolodymyrTesliuk",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "public/section-about-dark.svg"
+  ]
+ },
+ {
+  "user": "wanghongyu666qiang",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "output/github-contribution-grid-snake-dark.svg"
+  ]
+ },
+ {
+  "user": "WebKit",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: textPath"
+  ],
+  "svg_paths": [
+   "LayoutTests/imported/w3c/web-platform-tests/svg/text/reftests/textpath-path-attr-multiple-subpaths.svg",
+   "LayoutTests/imported/w3c/web-platform-tests/svg/text/reftests/textpath-path-attr-use-up-to-first-error-expected.svg",
+   "LayoutTests/svg/text/textPathBoundsBug.svg"
+  ]
+ },
+ {
+  "user": "wenmua",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feGaussianBlur"
+  ],
+  "svg_paths": [
+   "src/icons/icon_26.svg"
+  ]
+ },
+ {
+  "user": "wizardassassin",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "stats.svg"
+  ]
+ },
+ {
+  "user": "WuJunkai2004",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "profile/stats.svg"
+  ]
+ },
+ {
+  "user": "Xalzeroph",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/profile-navigation-mobile-dark.svg"
+  ]
+ },
+ {
+  "user": "XxMasterepicxX",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: feDisplacementMap"
+  ],
+  "svg_paths": [
+   "assets/languages-light.svg"
+  ]
+ },
+ {
+  "user": "y4nder",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "stats.svg"
+  ]
+ },
+ {
+  "user": "yamadatt",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-view.svg"
+  ]
+ },
+ {
+  "user": "yJunS",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-season-animate.svg"
+  ]
+ },
+ {
+  "user": "yohomfan",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-metrics/followup.indepth.svg"
+  ]
+ },
+ {
+  "user": "YoraiLevi",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: prefers-color-scheme"
+  ],
+  "svg_paths": [
+   "assets/card-light-starred-0.svg"
+  ]
+ },
+ {
+  "user": "zaidhafeeez",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-green.svg"
+  ]
+ },
+ {
+  "user": "zainabhina05-png",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "assets/whoami-card.svg"
+  ]
+ },
+ {
+  "user": "zakarialaoui10",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: stroke-dashoffset"
+  ],
+  "svg_paths": [
+   "logo.svg"
+  ]
+ },
+ {
+  "user": "zaryabriaz",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "name.svg"
+  ]
+ },
+ {
+  "user": "ZeeshanHaider16",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateMotion"
+  ],
+  "svg_paths": [
+   "assets/section-experience.svg"
+  ]
+ },
+ {
+  "user": "ZetangForward",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "github-metrics/languages.indepth.svg"
+  ]
+ },
+ {
+  "user": "zimkk",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: keyframes"
+  ],
+  "svg_paths": [
+   "section-05-proof.svg"
+  ]
+ },
+ {
+  "user": "zingimmick",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "profile-3d-contrib/profile-night-green.svg"
+  ]
+ },
+ {
+  "user": "zotero",
+  "sources": [
+   "code-search"
+  ],
+  "categories": [
+   "code-search: animateTransform"
+  ],
+  "svg_paths": [
+   "chrome/skin/default/zotero/20/universal/pdf-search-spinner.svg"
+  ]
+ }
+]

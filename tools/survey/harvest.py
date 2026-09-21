@@ -72,6 +72,26 @@ def _cache_key(url: str, accept: str) -> str:
     return hashlib.sha256(f"{url}|{accept}".encode()).hexdigest()[:40]
 
 
+def to_uri(url: str) -> str:
+    """Percent-encode what a browser would: non-ASCII, spaces, stray characters.
+
+    READMEs are full of badge labels with accents and emoji, and filenames with
+    spaces. Browsers encode these transparently; urllib raises instead, which
+    would otherwise be misreported as the image host being down. Existing
+    %-escapes are preserved.
+    """
+    p = urllib.parse.urlsplit(url)
+    host = p.hostname or ""
+    if any(ord(ch) > 127 for ch in host):
+        idna = host.encode("idna").decode("ascii")
+        netloc = p.netloc.replace(host, idna)
+    else:
+        netloc = p.netloc
+    path = urllib.parse.quote(p.path, safe="/%:@!$&'()*+,;=~-._")
+    query = urllib.parse.quote(p.query, safe="=&%:@!$'()*+,;/?~-._")
+    return urllib.parse.urlunsplit((p.scheme, netloc, path, query, ""))
+
+
 def http_get(url: str, accept: str = "*/*", timeout: float = 15.0,
              max_bytes: int = 4_000_000) -> dict:
     """GET with caching. Returns status, ctype, body, ms, final_url, error."""
@@ -93,7 +113,7 @@ def http_get(url: str, accept: str = "*/*", timeout: float = 15.0,
             "final_url": url, "error": None}
     body = b""
     try:
-        req = urllib.request.Request(url, headers=headers)
+        req = urllib.request.Request(to_uri(url), headers=headers)
         with urllib.request.urlopen(req, timeout=timeout) as r:
             body = r.read(max_bytes + 1)[:max_bytes]
             meta.update(status=r.status, ctype=r.headers.get("Content-Type", ""),
@@ -178,9 +198,22 @@ IMG_MD = re.compile(r"!\[[^\]]*\]\(\s*<?([^)\s>]+)")
 IMG_TAG = re.compile(r"<img\b[^>]*>", re.I | re.S)
 SOURCE_TAG = re.compile(r"<source\b[^>]*>", re.I | re.S)
 PICTURE = re.compile(r"<picture\b.*?</picture>", re.I | re.S)
-ATTR = lambda name: re.compile(rf"\b{name}\s*=\s*[\"']?\s*([^\"'\s>]+)", re.I)
-SRC, SRCSET, WIDTH, HEIGHT, MEDIA = (ATTR("src"), ATTR("srcset"), ATTR("width"),
-                                     ATTR("height"), re.compile(r"\bmedia\s*=\s*[\"']([^\"']+)", re.I))
+class _Attr:
+    """Attribute value, quoted (may contain spaces) or bare. `.search()` mimics re."""
+
+    def __init__(self, name: str):
+        self.rx = re.compile(rf"\b{name}\s*=\s*(?:\"([^\"]*)\"|'([^']*)'|([^\s>]+))", re.I)
+
+    def search(self, s: str):
+        m = self.rx.search(s)
+        if not m:
+            return None
+        val = next(g for g in m.groups() if g is not None).strip()
+        return type("M", (), {"group": lambda self, i=1: val})()
+
+
+SRC, SRCSET, WIDTH, HEIGHT, MEDIA = (_Attr("src"), _Attr("srcset"), _Attr("width"),
+                                     _Attr("height"), _Attr("media"))
 
 
 def _dim(tag: str, rx: re.Pattern) -> tuple[float | None, bool]:
@@ -275,10 +308,113 @@ ERROR_PHRASES = ("something went wrong", "rate limit", "api rate", "could not re
                  "exceeded", "deployment_paused", "deployment has been disabled",
                  "user not found", "internal server error", "bad credentials")
 
+# Signatures that GitHub Actions leave in the SVGs they commit. A committed file
+# is not necessarily hand-made: these mark the ones a tool generated.
+FINGERPRINTS = [
+    ("snk contribution snake", re.compile(r"Platane/snk", re.I)),
+    ("github-profile-3d-contrib", re.compile(r"rb-l0-left|class=\"radar\"")),
+    ("lowlighter/metrics", re.compile(r"id=\"metrics-end\"")),
+    ("github-readme-stats", re.compile(r"data-testid=\"(card-title|main-card-body|lang-items)\"")),
+]
+
 FONT_RX = [
     re.compile(r"font-size\s*[:=]\s*[\"']?\s*([0-9.]+)\s*(px|pt|em|rem|%)?", re.I),
     re.compile(r"\bfont\s*:\s*[^;\"'}]*?\b([0-9.]+)\s*(px|pt)\b", re.I),
 ]
+
+
+import math
+import xml.etree.ElementTree as ET
+
+_LEN = re.compile(r"^\s*([0-9.]+)\s*(px|pt|em|rem|%)?\s*$", re.I)
+_CSS_RULE = re.compile(r"([^{}]+)\{([^}]*)\}")
+_CSS_SIZE = [re.compile(r"font-size\s*:\s*([0-9.]+\s*(?:px|pt|em|rem|%)?)", re.I),
+             re.compile(r"\bfont\s*:\s*[^;]*?\b([0-9.]+\s*(?:px|pt))\b", re.I)]
+
+
+def _length(val: str | None, parent: float) -> float | None:
+    """A CSS font-size in px, resolving relative units against the parent size."""
+    if not val:
+        return None
+    m = _LEN.match(val)
+    if not m:
+        return None
+    v, unit = float(m.group(1)), (m.group(2) or "px").lower()
+    return {"px": v, "pt": v * 4 / 3, "em": v * parent, "rem": v * 16.0,
+            "%": parent * v / 100}[unit]
+
+
+def _scale(transform: str | None) -> float:
+    """Uniform scale factor of an SVG transform list (scale() and matrix())."""
+    if not transform:
+        return 1.0
+    s = 1.0
+    for fn, args in re.findall(r"(scale|matrix)\s*\(([^)]*)\)", transform, re.I):
+        nums = [float(x) for x in re.findall(r"-?[0-9.]+(?:e-?\d+)?", args)]
+        if fn.lower() == "scale" and nums:
+            s *= math.sqrt(abs(nums[0] * (nums[1] if len(nums) > 1 else nums[0])))
+        elif fn.lower() == "matrix" and len(nums) >= 4:
+            s *= math.sqrt(abs(nums[0] * nums[3] - nums[1] * nums[2]))
+    return s
+
+
+def text_sizes(text: str) -> list[float] | None:
+    """Effective size of every visible text run, in viewBox units.
+
+    Walks the element tree carrying inherited font-size and the product of all
+    enclosing transforms. A flat scan of font-size values gets badges wrong —
+    shields.io sets font-size="110" and then applies transform="scale(.1)" —
+    and misses em units and class-based CSS. Returns None if the SVG won't parse.
+
+    These SVGs come from arbitrary third-party hosts, so they're untrusted. Any
+    document declaring a DTD or entities is refused before parsing — the vector
+    for both XXE and entity-expansion ("billion laughs") attacks, and the core
+    of what defusedxml forbids — and falls back to the flat scan instead.
+    """
+    if re.search(r"<!DOCTYPE|<!ENTITY", text, re.I):
+        return None
+    try:
+        root = ET.fromstring(text.encode("utf-8"))
+    except ET.ParseError:
+        return None
+    by_class: dict[str, str] = {}
+    by_tag: dict[str, str] = {}
+    for style in root.iter():
+        if style.tag.split("}")[-1] != "style" or not style.text:
+            continue
+        for selectors, body in _CSS_RULE.findall(style.text):
+            size = next((m.group(1) for rx in _CSS_SIZE if (m := rx.search(body))), None)
+            if not size:
+                continue
+            for sel in selectors.split(","):
+                last = sel.strip().split()[-1] if sel.strip() else ""
+                if last.startswith("."):
+                    by_class[last[1:].split(":")[0]] = size
+                elif last in ("text", "tspan", "textPath", "*", "svg", "g"):
+                    by_tag[last] = size
+    sizes: list[float] = []
+
+    def walk(el, fs: float, scale: float) -> None:
+        tag = el.tag.split("}")[-1]
+        for key in ("*", tag):
+            if key in by_tag:
+                fs = _length(by_tag[key], fs) or fs
+        for c in (el.get("class") or "").split():
+            if c in by_class:
+                fs = _length(by_class[c], fs) or fs
+        fs = _length(el.get("font-size"), fs) or fs
+        st = el.get("style") or ""
+        m = re.search(r"font-size\s*:\s*([^;]+)", st, re.I)
+        if m:
+            fs = _length(m.group(1), fs) or fs
+        scale *= _scale(el.get("transform"))
+        if tag in ("text", "tspan", "textPath") and (el.text or "").strip():
+            sizes.append(fs * scale)
+        for child in el:
+            walk(child, fs, scale)
+
+    walk(root, SVG_DEFAULT_FONT_PX, 1.0)
+    return [s for s in sizes if s > 0.5]
 
 
 def svg_metrics(text: str) -> dict:
@@ -307,6 +443,12 @@ def svg_metrics(text: str) -> dict:
                 continue
             if v >= 4:            # ignore nonsense / hairline values
                 sizes.append(v)
+    # Prefer the tree walk (transforms, inheritance, CSS classes); fall back to
+    # the flat scan only when the SVG doesn't parse as XML.
+    walked = text_sizes(text) if has_text else None
+    method = "tree" if walked else "scan"
+    if walked:
+        sizes = walked
     # Smallest text alone can't tell decorative micro-labels from an unreadable
     # card, so keep the largest too: if even that is illegible, the card is.
     min_font = (min(sizes) if sizes else SVG_DEFAULT_FONT_PX) if has_text else None
@@ -334,21 +476,31 @@ def svg_metrics(text: str) -> dict:
         "text-path": "<textpath" in low,
     }.items() if hit)
 
-    return {"vb_w": vbw, "vb_h": vbh, "intrinsic_w": intrinsic, "has_text": has_text,
+    fingerprint = next((name for name, rx in FINGERPRINTS if rx.search(text)), None)
+
+    return {"fingerprint": fingerprint,
+            "vb_w": vbw, "vb_h": vbh, "intrinsic_w": intrinsic, "has_text": has_text,
             "min_font": min_font, "max_font": max_font, "font_sizes_found": len(sizes),
+            "size_method": method if has_text else None,
             "animated": anim_smil or anim_css, "techniques": techniques}
 
 
 IMG_ACCEPT = "image/avif,image/webp,image/svg+xml,image/*,*/*;q=0.8"
 TRANSIENT = {"timeout", "network"}
+RECHECK_DELAY = 0.6        # seconds before each recheck request
+RECHECK_WORKERS = 2
 
 
 def recheck(url: str) -> dict:
     """Second attempt for timeouts and resets: drop the cached miss, allow 30s.
 
     A single slow response is not evidence a generator is dead, so only failures
-    that repeat are reported as broken.
+    that repeat are reported as broken. The recheck runs slowly on purpose: the
+    first pass sends hundreds of requests to hosts like img.shields.io, which then
+    throttles the client — retrying at the same rate would measure our own
+    flooding, not the service.
     """
+    time.sleep(RECHECK_DELAY)
     key = _cache_key(url, IMG_ACCEPT)
     for suffix in (".json", ".bin"):
         (CACHE / f"{key}{suffix}").unlink(missing_ok=True)
@@ -372,6 +524,8 @@ def analyze_image(url: str, timeout: float = 15.0) -> dict:
     if is_svg:
         text = body.decode("utf-8", "replace")
         res["svg"] = svg_metrics(text)
+        # Identical bytes in different people's repos means a copied asset.
+        res["sha1"] = hashlib.sha1(body).hexdigest()[:16]
         visible = re.sub(r"<[^>]+>", " ", text).lower()
         error_card = any(p in visible for p in ERROR_PHRASES)
     res["error_card"] = error_card
@@ -434,6 +588,11 @@ def fetch_profile(c: dict) -> dict:
         rec["http"] = meta["status"]
         return rec
     info = json.loads(meta["body"] or b"{}")
+    # Organisations like WebKit/WebKit match the owner==repo pattern, but an org
+    # page never renders a repo README as a profile — they aren't profiles.
+    if info.get("owner", {}).get("type") != "User":
+        rec.update(status="org", owner=info.get("owner", {}).get("login", user))
+        return rec
     owner, repo = info.get("owner", {}).get("login", user), info.get("name", user)
     branch = info.get("default_branch", "main")
     rec.update(owner=owner, repo=repo, branch=branch, pushed_at=info.get("pushed_at"),
@@ -495,8 +654,8 @@ def main() -> None:
     flaky = [u for u, r in images.items()
              if r.get("fail_reason") in TRANSIENT and not r.get("rechecked")]
     if flaky:
-        print(f"rechecking {len(flaky)} timeouts/resets with a 30s budget", flush=True)
-        with cf.ThreadPoolExecutor(max(2, a.workers // 2)) as ex:
+        print(f"rechecking {len(flaky)} timeouts/resets slowly, 30s budget each", flush=True)
+        with cf.ThreadPoolExecutor(RECHECK_WORKERS) as ex:
             for res in ex.map(recheck, flaky):
                 images[res["url"]] = res
         still = sum(images[u].get("fail_reason") is not None for u in flaky)
@@ -511,8 +670,8 @@ def main() -> None:
                 o["desktop_px"] = legibility(o, img, DESKTOP_R)
 
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "profiles.json").write_text(json.dumps(profiles, indent=1, sort_keys=True), encoding="utf-8")
-    (OUT / "images.json").write_text(json.dumps(images, indent=1, sort_keys=True), encoding="utf-8")
+    (OUT / "profiles.json").write_text(json.dumps(profiles, separators=(",", ":"), sort_keys=True), encoding="utf-8")
+    (OUT / "images.json").write_text(json.dumps(images, separators=(",", ":"), sort_keys=True), encoding="utf-8")
     live = sum(p["status"] == "live" for p in profiles)
     print(f"done: {live}/{len(profiles)} live profiles, {len(images)} images -> {OUT}", flush=True)
 
