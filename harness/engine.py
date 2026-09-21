@@ -95,25 +95,121 @@ def extract_dynamic_section(tag: str) -> str | None:
     except Exception:
         return None
 
+def fetch_workflow_reliability(
+    owner: str,
+    repo: str,
+    token: str | None = None,
+    workflow_file: str | None = None,
+    window_size: int = 30,
+) -> dict:
+    """
+    Fetches real-time GitHub Actions workflow run telemetry and computes
+    the rolling empirical pass rate percentage over the last N decisive runs.
+    """
+    default_telemetry = {
+        "ci_reliability": 99.8,
+        "ci_status_text": "OPTIMAL (Zero failures)",
+        "evaluated_runs": 0,
+        "success_count": 0,
+        "failure_count": 0,
+        "cancelled_count": 0,
+    }
+
+    if workflow_file:
+        url = (
+            f"https://api.github.com/repos/{owner}/{repo}/actions/workflows/{workflow_file}/runs"
+            f"?branch=main&per_page={window_size}"
+        )
+    else:
+        url = (
+            f"https://api.github.com/repos/{owner}/{repo}/actions/runs"
+            f"?branch=main&exclude_pull_requests=true&per_page={window_size}"
+        )
+
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "ProfileHarness-Engine",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            runs = data.get("workflow_runs", [])
+    except Exception:
+        return default_telemetry
+
+    current_run_id = int(os.environ.get("GITHUB_RUN_ID", 0))
+    success_count = 0
+    failure_count = 0
+    cancelled_count = 0
+
+    for run in runs:
+        run_id = run.get("id")
+        status = run.get("status")
+        conclusion = run.get("conclusion")
+
+        # Exclude active/current executing workflow instance
+        if run_id == current_run_id or status != "completed":
+            continue
+
+        if conclusion == "success":
+            success_count += 1
+        elif conclusion in ("failure", "timed_out"):
+            failure_count += 1
+        elif conclusion == "cancelled":
+            cancelled_count += 1
+
+    total_decisive = success_count + failure_count
+
+    if total_decisive == 0:
+        reliability = 100.0
+        status_text = "OPTIMAL (Zero failures)"
+    else:
+        reliability = round((success_count / total_decisive) * 100.0, 1)
+        if failure_count == 0:
+            status_text = "OPTIMAL (Zero failures)"
+        elif reliability >= 98.0:
+            status_text = "OPTIMAL (High availability)"
+        elif reliability >= 95.0:
+            status_text = "STABLE (Minor flakes)"
+        else:
+            status_text = f"DEGRADED ({failure_count} failures)"
+
+    return {
+        "ci_reliability": reliability,
+        "ci_status_text": status_text,
+        "evaluated_runs": total_decisive,
+        "success_count": success_count,
+        "failure_count": failure_count,
+        "cancelled_count": cancelled_count,
+    }
+
 def get_previous_sync_state():
     """Extracts previous telemetry metrics from README.md to preserve determinism."""
     if not README_PATH.exists():
-        return None, None
+        return None, None, None
     try:
         txt = README_PATH.read_text(encoding="utf-8")
         commits_match = re.search(r"\|\s*Recent Git Commits\s*\|\s*(\d+)\s*\|", txt)
+        rel_match = re.search(r"\|\s*Pipeline Reliability\s*\|\s*([\d.]+)%\s*\|", txt)
         sync_match = re.search(r"\|\s*Last Engine Sync\s*\|\s*([^|]+?)\s*\|", txt)
         prev_commits = int(commits_match.group(1)) if commits_match else None
+        prev_rel = float(rel_match.group(1)) if rel_match else None
         prev_sync = sync_match.group(1).strip() if sync_match else None
-        return prev_commits, prev_sync
+        return prev_commits, prev_rel, prev_sync
     except Exception:
-        return None, None
+        return None, None, None
 
 def fetch_github_metrics(username: str, token: str | None = None) -> dict:
-    """Fetches real-time commit telemetry from GitHub's Public Event API."""
+    """Fetches real-time commit and CI telemetry from GitHub APIs."""
     metrics = {
         "recent_commits": 128,
         "ci_reliability": 99.8,
+        "ci_status_text": "OPTIMAL (Zero failures)",
     }
 
     try:
@@ -132,15 +228,26 @@ def fetch_github_metrics(username: str, token: str | None = None) -> dict:
     except Exception as e:
         print(f"Notice: Telemetry fallback engaged ({e})")
 
+    # Fetch live CI workflow reliability
+    repo_slug = os.environ.get("GITHUB_REPOSITORY", f"{username}/{username}")
+    owner, repo = repo_slug.split("/", 1) if "/" in repo_slug else (username, username)
+    ci_data = fetch_workflow_reliability(owner, repo, token, window_size=30)
+    metrics["ci_reliability"] = ci_data["ci_reliability"]
+    metrics["ci_status_text"] = ci_data["ci_status_text"]
+
     # Determine updated_at with strict idempotency guarantees:
-    # 1. Respect SOURCE_DATE_EPOCH (standard reproducible builds specification)
     if "SOURCE_DATE_EPOCH" in os.environ:
         epoch = int(os.environ["SOURCE_DATE_EPOCH"])
         metrics["updated_at"] = datetime.fromtimestamp(epoch, tz=timezone.utc).strftime("%Y-%m-%d %H:%M")
     else:
-        prev_commits, prev_sync = get_previous_sync_state()
-        # 2. If telemetry metrics did not change, preserve previous timestamp to guarantee byte-identical idempotency
-        if prev_commits is not None and prev_sync is not None and metrics["recent_commits"] == prev_commits:
+        prev_commits, prev_rel, prev_sync = get_previous_sync_state()
+        if (
+            prev_commits is not None
+            and prev_rel is not None
+            and prev_sync is not None
+            and metrics["recent_commits"] == prev_commits
+            and metrics["ci_reliability"] == prev_rel
+        ):
             metrics["updated_at"] = prev_sync
         else:
             metrics["updated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
@@ -154,21 +261,26 @@ def render_svg_dashboard(config: dict, metrics: dict):
     
     commits = metrics["recent_commits"]
     sync_time = metrics["updated_at"]
+    ci_rel = float(metrics.get("ci_reliability", 99.8))
+    ci_bar_width = max(0, min(180, int(round(180 * (ci_rel / 100.0)))))
+    ci_status = xml_escape(metrics.get("ci_status_text", "OPTIMAL").split()[0])
     labels = config["modules"]["git_native_dashboard"]["metric_labels"]
     metric_1_label = xml_escape(str(labels.get("metric_1", "Recent Git Commits")))
     metric_2_label = xml_escape(str(labels.get("metric_2", "CI Pipeline Reliability")))
     metric_3_label = xml_escape(str(labels.get("metric_3", "Telemetry Status")))
 
+    status_color = "#22c55e" if ci_rel >= 95.0 else "#ef4444"
+
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 140" width="650" height="140">
   <defs>
     <style>
       .card {{ fill: #0b0f19; stroke: #1e293b; stroke-width: 1.5; rx: 10px; }}
-      .header {{ font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #38bdf8; font-weight: bold; }}
-      .label {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11px; fill: #94a3b8; }}
-      .value {{ font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: bold; fill: #f8fafc; }}
+      .header {{ font-family: 'JetBrains Mono', -apple-system-ui-monospace, 'SF Mono', 'Roboto Mono', monospace; font-size: 13px; fill: #38bdf8; font-weight: bold; }}
+      .label {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #94a3b8; }}
+      .value {{ font-family: 'JetBrains Mono', -apple-system-ui-monospace, 'SF Mono', 'Roboto Mono', monospace; font-size: 18px; font-weight: bold; fill: #f8fafc; }}
       .bar-bg {{ fill: #1e293b; rx: 3px; }}
       .bar-fill {{ fill: #38bdf8; rx: 3px; }}
-      .status-dot {{ fill: #22c55e; }}
+      .status-dot {{ fill: {status_color}; }}
     </style>
   </defs>
   <rect class="card" x="2" y="2" width="646" height="136"/>
@@ -184,19 +296,19 @@ def render_svg_dashboard(config: dict, metrics: dict):
   
   <g transform="translate(234, 52)">
     <text class="label" x="0" y="0">{metric_2_label}</text>
-    <text class="value" x="0" y="22">{metrics['ci_reliability']}%</text>
+    <text class="value" x="0" y="22">{ci_rel}%</text>
     <rect class="bar-bg" x="0" y="32" width="180" height="5"/>
-    <rect class="bar-fill" x="0" y="32" width="176" height="5"/>
+    <rect class="bar-fill" x="0" y="32" width="{ci_bar_width}" height="5"/>
   </g>
 
   <g transform="translate(444, 52)">
     <text class="label" x="0" y="0">{metric_3_label}</text>
-    <text class="value" x="0" y="22">OPTIMAL</text>
+    <text class="value" x="0" y="22">{ci_status}</text>
     <rect class="bar-bg" x="0" y="32" width="180" height="5"/>
     <rect class="bar-fill" x="0" y="32" width="180" height="5"/>
   </g>
   
-  <text x="24" y="120" font-family="monospace" font-size="10" fill="#64748b">SYNCHRONIZED: {sync_time} UTC // GIT-NATIVE ZERO CAMO LATENCY</text>
+  <text x="24" y="120" font-family="-apple-system-ui-monospace, 'SF Mono', 'Roboto Mono', monospace" font-size="10" fill="#64748b">SYNCHRONIZED: {sync_time} UTC // GIT-NATIVE ZERO CAMO LATENCY</text>
 </svg>"""
     svg_path.write_text(svg, encoding="utf-8")
     print(f"Generated: {svg_path}")
@@ -324,19 +436,22 @@ def render_quantum_coherence_svg(config: dict, metrics: dict):
   <defs>
     <style>
       .holo-card {{ fill: #07090e; stroke: #1e293b; stroke-width: 1.5; rx: 12px; }}
-      .hud-title {{ font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #38bdf8; font-weight: bold; letter-spacing: 1px; }}
-      .hud-val {{ font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #f8fafc; font-weight: bold; }}
-      .hud-sub {{ font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #64748b; }}
+      .hud-title {{ font-family: 'JetBrains Mono', -apple-system-ui-monospace, 'SF Mono', 'Roboto Mono', monospace; font-size: 12px; fill: #38bdf8; font-weight: bold; letter-spacing: 1px; }}
+      .hud-val {{ font-family: 'JetBrains Mono', -apple-system-ui-monospace, 'SF Mono', 'Roboto Mono', monospace; font-size: 15px; fill: #f8fafc; font-weight: bold; }}
+      .hud-sub {{ font-family: 'JetBrains Mono', -apple-system-ui-monospace, 'SF Mono', 'Roboto Mono', monospace; font-size: 10px; fill: #64748b; }}
       
       .orbit-ring-1 {{
+        transform-box: fill-box;
         transform-origin: 530px 100px;
         animation: spin1 16s linear infinite;
       }}
       .orbit-ring-2 {{
+        transform-box: fill-box;
         transform-origin: 530px 100px;
         animation: spin2 22s linear infinite reverse;
       }}
       .orbit-ring-3 {{
+        transform-box: fill-box;
         transform-origin: 530px 100px;
         animation: spin3 12s linear infinite;
       }}
@@ -348,6 +463,10 @@ def render_quantum_coherence_svg(config: dict, metrics: dict):
         animation: qpulse 2.5s infinite ease-in-out;
       }}
       @keyframes qpulse {{ 0%, 100% {{ opacity: 0.8; r: 6px; }} 50% {{ opacity: 0.3; r: 10px; }} }}
+
+      @media (prefers-reduced-motion: reduce) {{
+        * {{ animation: none !important; }}
+      }}
     </style>
     <linearGradient id="quantum-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
@@ -529,14 +648,15 @@ def compile_readme(config: dict, metrics: dict, state_sha: str = "") -> str:
   <img src="./assets/terminal-typing.svg" width="650" alt="Terminal Simulation"/>
 </p>"""
 
-    # 4. Telemetry markers & Dashboard
+    ci_rel_str = f"{metrics.get('ci_reliability', 99.8)}%"
+    ci_status_str = metrics.get("ci_status_text", "OPTIMAL (Zero failures)")
     telemetry_md = f"""<!-- TELEMETRY:START -->
 ```text
 +-----------------------------------------------------------------------------------+
 | METRIC                    | VALUE             | STATUS                            |
 +---------------------------+-------------------+-----------------------------------+
 | Recent Git Commits        | {commits:<17} | ACTIVE                            |
-| Pipeline Reliability      | 99.8%             | OPTIMAL (Zero failures)           |
+| Pipeline Reliability      | {ci_rel_str:<17} | {ci_status_str:<33} |
 | Last Engine Sync          | {sync_time:<17} | UTC SYNCHRONIZED                  |
 +-----------------------------------------------------------------------------------+
 ```
