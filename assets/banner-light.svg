@@ -20,6 +20,6 @@
   <circle cx="60" cy="35" r="6" fill="#eab308" opacity="0.8"/>
   <circle cx="80" cy="35" r="6" fill="#22c55e" opacity="0.8"/>
   <text x="40" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="#0f172a">Hammad Shakeel</text>
-  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#light-accent)">PRINCIPAL SYSTEMS ARCHITECT & DISTRIBUTED SYSTEMS ENGINEER</text>
+  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#light-accent)">PRINCIPAL SYSTEMS ARCHITECT &amp; DISTRIBUTED SYSTEMS ENGINEER</text>
   <text x="40" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#475569">Rust • Go • Linux Kernel &amp; eBPF Telemetry • High-Throughput Distributed State Machines</text>
 </svg>

@@ -12,6 +12,8 @@ import re
 import sys
 import urllib.request
 import urllib.parse
+import xml.etree.ElementTree as ET
+from xml.sax.saxutils import escape as xml_escape, quoteattr as xml_quoteattr
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -92,6 +94,9 @@ def render_svg_dashboard(config: dict, metrics: dict):
     commits = metrics["recent_commits"]
     sync_time = metrics["updated_at"]
     labels = config["modules"]["git_native_dashboard"]["metric_labels"]
+    metric_1_label = xml_escape(str(labels.get("metric_1", "Recent Git Commits")))
+    metric_2_label = xml_escape(str(labels.get("metric_2", "CI Pipeline Reliability")))
+    metric_3_label = xml_escape(str(labels.get("metric_3", "Telemetry Status")))
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 140" width="650" height="140">
   <defs>
@@ -110,21 +115,21 @@ def render_svg_dashboard(config: dict, metrics: dict):
   <text class="header" x="38" y="28">SYSTEM TELEMETRY // PRODUCTION METRICS</text>
   
   <g transform="translate(24, 52)">
-    <text class="label" x="0" y="0">{labels['metric_1']}</text>
+    <text class="label" x="0" y="0">{metric_1_label}</text>
     <text class="value" x="0" y="22">{commits}</text>
     <rect class="bar-bg" x="0" y="32" width="180" height="5"/>
     <rect class="bar-fill" x="0" y="32" width="{min(180, commits * 2)}" height="5"/>
   </g>
   
   <g transform="translate(234, 52)">
-    <text class="label" x="0" y="0">{labels['metric_2']}</text>
+    <text class="label" x="0" y="0">{metric_2_label}</text>
     <text class="value" x="0" y="22">{metrics['ci_reliability']}%</text>
     <rect class="bar-bg" x="0" y="32" width="180" height="5"/>
     <rect class="bar-fill" x="0" y="32" width="176" height="5"/>
   </g>
 
   <g transform="translate(444, 52)">
-    <text class="label" x="0" y="0">{labels['metric_3']}</text>
+    <text class="label" x="0" y="0">{metric_3_label}</text>
     <text class="value" x="0" y="22">OPTIMAL</text>
     <rect class="bar-bg" x="0" y="32" width="180" height="5"/>
     <rect class="bar-fill" x="0" y="32" width="180" height="5"/>
@@ -138,8 +143,8 @@ def render_svg_dashboard(config: dict, metrics: dict):
 def render_svg_banners(config: dict):
     """Renders responsive Dark and Light mode hero banner SVGs."""
     profile = config["profile"]
-    name = profile["name"]
-    headline = profile["headline"]
+    name = xml_escape(profile["name"])
+    headline_upper = xml_escape(profile["headline"].upper())
     
     # Dark Banner
     dark_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240">
@@ -164,7 +169,7 @@ def render_svg_banners(config: dict):
   <circle cx="60" cy="35" r="6" fill="#eab308" opacity="0.8"/>
   <circle cx="80" cy="35" r="6" fill="#22c55e" opacity="0.8"/>
   <text x="40" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="#f8fafc">{name}</text>
-  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#accent)">{headline.upper()}</text>
+  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#accent)">{headline_upper}</text>
   <text x="40" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#94a3b8">Rust • Go • Linux Kernel &amp; eBPF Telemetry • High-Throughput Distributed State Machines</text>
 </svg>"""
     (ASSETS_DIR / "banner-dark.svg").write_text(dark_svg, encoding="utf-8")
@@ -192,7 +197,7 @@ def render_svg_banners(config: dict):
   <circle cx="60" cy="35" r="6" fill="#eab308" opacity="0.8"/>
   <circle cx="80" cy="35" r="6" fill="#22c55e" opacity="0.8"/>
   <text x="40" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="#0f172a">{name}</text>
-  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#light-accent)">{headline.upper()}</text>
+  <text x="40" y="150" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="600" fill="url(#light-accent)">{headline_upper}</text>
   <text x="40" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#475569">Rust • Go • Linux Kernel &amp; eBPF Telemetry • High-Throughput Distributed State Machines</text>
 </svg>"""
     (ASSETS_DIR / "banner-light.svg").write_text(light_svg, encoding="utf-8")
@@ -220,6 +225,11 @@ def render_virtual_pet_svg(config: dict, metrics: dict):
         level = "Lvl 1 (Starving)"
         color = "#f59e0b"
 
+    face_escaped = xml_escape(face)
+    name_upper = xml_escape(name.upper())
+    level_escaped = xml_escape(level)
+    mood_upper = xml_escape(mood.upper())
+
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
   <defs>
     <style>
@@ -232,12 +242,12 @@ def render_virtual_pet_svg(config: dict, metrics: dict):
     </style>
   </defs>
   <rect class="pet-card" x="1" y="1" width="318" height="78"/>
-  <text class="pet-face" x="20" y="48">{face}</text>
+  <text class="pet-face" x="20" y="48">{face_escaped}</text>
   <g transform="translate(140, 24)">
-    <text class="pet-name" x="0" y="0">PET: {name.upper()}</text>
+    <text class="pet-name" x="0" y="0">PET: {name_upper}</text>
     <circle class="pet-pulse" cx="95" cy="-4" r="3"/>
-    <text class="pet-status" x="0" y="20">{level}</text>
-    <text class="pet-status" x="0" y="38">STATUS: {mood.upper()}</text>
+    <text class="pet-status" x="0" y="20">{level_escaped}</text>
+    <text class="pet-status" x="0" y="38">STATUS: {mood_upper}</text>
   </g>
 </svg>"""
     (ASSETS_DIR / "pet.svg").write_text(svg, encoding="utf-8")
@@ -674,6 +684,17 @@ def lint_readme(content: str):
         if not svg_file.exists():
             errors.append(f"Missing required asset: assets/{asset}")
         else:
+            # C1: Validate XML well-formedness with stdlib ElementTree first
+            try:
+                tree = ET.parse(svg_file)
+                root = tree.getroot()
+                if not root.tag.endswith("svg"):
+                    errors.append(f"Malformed SVG in assets/{asset}: root tag is <{root.tag}>, expected <svg>")
+                if "viewBox" not in root.attrib:
+                    warnings.append(f"Accessibility Warning: assets/{asset} is missing 'viewBox' attribute")
+            except ET.ParseError as e:
+                errors.append(f"Malformed XML in assets/{asset}: {e}")
+
             svg_text = svg_file.read_text(encoding="utf-8")
             if "<foreignObject" in svg_text:
                 errors.append(f"Sanitizer Error: <foreignObject> found in assets/{asset} (blocked by GitHub Camo / renderers)")
