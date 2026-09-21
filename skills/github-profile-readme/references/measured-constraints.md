@@ -97,10 +97,11 @@ referenced, never pasted.
 
 ## Font loading
 
-CSP blocks external font fetches for SVGs referenced as images. `@import`,
-`<link>`, and bare `font-family: 'Some Web Font'` all fail silently to the
-generic fallback. Only fonts installed on the viewer's machine, or embedded in
-the file as base64, will render.
+SVGs referenced as images cannot fetch external resources, so `@import`,
+`<link>`, and URL-based `@font-face` never load. A bare
+`font-family: 'Some Web Font'` still works — but only for viewers who have that
+font installed locally; everyone else falls through the stack silently. Only
+locally installed fonts, or fonts embedded in the file as base64, will render.
 
 Practical fallback stacks that resolve well across platforms:
 

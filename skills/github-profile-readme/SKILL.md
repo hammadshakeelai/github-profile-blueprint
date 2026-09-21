@@ -69,18 +69,25 @@ advice applies to PNG/JPG only. For SVG the viewBox is a *coordinate system*, no
 a resolution — only the ratio above matters. Getting this wrong is what leads
 people to 2400px viewBoxes with 20px type.
 
-## Fonts: your font is not loading
+## Fonts: your web font is not loading
 
-GitHub's CSP blocks external font loading in SVGs referenced as images. A
-declaration like `font-family: 'JetBrains Mono', monospace` **renders as generic
-monospace** — the design intent is silently lost, with no error.
+An SVG referenced as an image cannot *load* anything external: `@import`,
+`<link>`, and `@font-face` pointing at a URL are all blocked. So a declaration
+like `font-family: 'JetBrains Mono', monospace` only renders as JetBrains Mono
+for viewers who **already have it installed**. Everyone else silently gets the
+next font in the stack — with no error.
+
+That makes the stack itself the design decision. Keep the preferred face first
+(it costs nothing and rewards viewers who have it), then real system fonts, so
+the fallback is deliberate rather than whatever the browser defaults to.
 
 Options:
 
-- **Design for the fallback stack.** Simplest and most robust. Use
-  `ui-monospace, SFMono-Regular, Menlo, Consolas, monospace` or
-  `-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif` and accept
-  per-platform variation.
+- **Design for the fallback stack.** Simplest and most robust:
+  `'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace` or
+  `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`. Accept
+  per-platform variation. Note `ui-monospace` is the real token;
+  `-apple-system-ui-monospace` is not valid CSS and is ignored.
 - **Embed the font as base64.** Subset the glyphs you actually use, base64 a
   WOFF2, inline it in an `@font-face` inside the SVG's `<style>`. Full fidelity,
   but a full font is 100KB+ — subset aggressively or the file balloons.

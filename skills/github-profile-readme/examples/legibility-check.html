@@ -1,9 +1,15 @@
-<!doctype html><meta charset="utf-8"><title>Banner before / after</title>
-<body style="background:#0d1117;color:#c9d1d9;font:13px -apple-system,Segoe UI,sans-serif;padding:12px;margin:0;width:700px">
-<p style="margin:0 0 6px;color:#f85149;font-weight:600">BEFORE &mdash; 1200&times;240 @ mobile 309px</p>
-<img src="before-banner.svg" width="309">
-<p style="margin:16px 0 6px;color:#3fb950;font-weight:600">AFTER &mdash; 900&times;300 @ mobile 309px</p>
-<img src="after-banner.svg" width="309">
-<p style="margin:16px 0 6px;color:#3fb950;font-weight:600">AFTER @ desktop 846px</p>
-<img src="after-banner.svg" width="640">
+<!doctype html>
+<meta charset="utf-8">
+<title>Legibility check</title>
+<!--
+  Renders an SVG at the two widths that matter for a GitHub profile README:
+  846px (desktop container cap) and 309px (390px phone). Swap the src to test
+  any banner. Serve over HTTP (python -m http.server) rather than file:// so the
+  browser treats the SVG like GitHub does.
+-->
+<body style="background:#0d1117;color:#c9d1d9;font:13px -apple-system,Segoe UI,sans-serif;padding:16px;margin:0">
+  <p style="margin:0 0 6px">Desktop container &mdash; 846px</p>
+  <img src="reference-banner-dark.svg" width="846" alt="Reference banner at desktop width">
+  <p style="margin:24px 0 6px">Mobile container &mdash; 309px</p>
+  <img src="reference-banner-dark.svg" width="309" alt="Reference banner at mobile width">
 </body>

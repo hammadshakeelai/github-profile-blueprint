@@ -16,3 +16,6 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
+
+# Survey HTTP cache (README text and image bodies; never committed)
+.cache/
