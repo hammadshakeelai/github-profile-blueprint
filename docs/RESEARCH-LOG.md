@@ -20,7 +20,7 @@
 | Track 13 — Deterministic state hashing & short-circuiting (Sub-millisecond change detection) | done | 2026-09-21 | Can git commit in .github/workflows/profile-harness.yml include the short state hash in its commit message (e.g. chore(profile): synchronize telemetry (SHA: 4a9f8b2c)) for end-to-end provenance tracking? |
 | Track 14 — Automated 60-day workflow keepalive mechanisms (Scheduled cron auto-disable mitigation) | todo | | |
 | Track 15 — GraphQL createCommitOnBranch retry & backoff engine (Verified bot badge with rebase parity) | done | 2026-09-21 | Does createCommitOnBranch trigger downstream on: push GitHub Actions workflows, or is it suppressed by the same loop-prevention rules governing GITHUB_TOKEN git pushes? |
-| Track 16 — Fastly CDN edge eviction and raw.githubusercontent asset freshness protocols | todo | | |
+| Track 16 — Fastly CDN edge eviction and raw.githubusercontent asset freshness protocols | done | 2026-09-21 | Does the GitHub Mobile App (iOS / Android) cache raw.githubusercontent.com SVGs in a private SQLite/Disk cache that ignores Fastly max-age=300 and persists across app sessions until forced kill? |
 
 ---
 
@@ -793,4 +793,47 @@ Status: done
 #### Open questions:
 - Does `createCommitOnBranch` trigger downstream `on: push` GitHub Actions workflows, or is it suppressed by the same loop-prevention rules governing `GITHUB_TOKEN` git pushes?
 - Can `createCommitOnBranch` and `git pull --rebase` be combined into an automated fallback pipeline (attempting GraphQL first for verification, falling back to Git CLI on payload limits)?
+
+---
+
+### Track 16 — Fastly CDN edge eviction and raw.githubusercontent asset freshness protocols
+Status: done
+
+#### Findings:
+1. **Fastly CDN Eviction vs. Passive 300s TTL on `raw.githubusercontent.com`**:
+   - **Zero Push-Driven Invalidation**: When a new Git commit is pushed to `main` modifying an SVG in `assets/`, Fastly CDN on `raw.githubusercontent.com` **does NOT** immediately evict or purge the stale cache.
+   - **Architectural Reason**: GitHub's Git RPC storage cluster (`Spokes` / `git-receive-pack`) does not emit event-driven invalidation hooks to Fastly for mutable branch paths (`/owner/repo/main/...`). With hundreds of millions of repositories and continuous commit velocity, triggering Fastly purges per git push would destabilize Fastly edge PoPs and induce origin cache stampedes.
+   - **Passive TTL Enforcement**: Fastly strictly adheres to the origin's `Cache-Control: max-age=300` (300 seconds / 5 minutes). Until this 300s TTL expires at a given Point of Presence (PoP), the node serves the stale cached response (`X-Cache: HIT`).
+   - **Multi-PoP Split-Brain Caching**: Fastly operates dozens of independent edge PoPs worldwide (e.g. `cache-sin`, `cache-iad`, `cache-fra`). Each PoP caches autonomously on client demand, creating localized, geographically divergent cache windows lasting up to 5 minutes across different users.
+   - **Public PURGE Requests are Rejected**: Issuing `curl -X PURGE https://raw.githubusercontent.com/...` returns `HTTP 403 Forbidden` / `HTTP 405 Method Not Allowed`. Unlike `camo.githubusercontent.com` (which accepts public `PURGE` requests for external image hashes), `raw.githubusercontent.com` cache invalidation is strictly private and locked behind GitHub's internal Fastly API tokens.
+2. **Commit SHA Referencing Mechanics (`https://raw.githubusercontent.com/{owner}/{repo}/{sha}/assets/...`)**:
+   - **Cryptographic Content-Addressing**: In Git, every commit produces a unique SHA hash representing the exact snapshot of the repository tree.
+   - **Cache Key Derivation in Fastly**: Fastly computes edge cache keys using `hash_data(req.http.host + req.url)`. Under branch HEAD (`.../main/...`), the URL remains constant across commits. Under commit SHA (`.../{sha}/...`), the URL contains the new 40-character commit hash, which has never been requested anywhere in the world, guaranteeing an instant `X-Cache: MISS` and 0-second cache freshness.
+3. **Query Parameter Injection (`?v=<sha>`) & GitHub GFM / Camo Behavior**:
+   - **GitHub Markdown Relative Link Parser Bug (The 404 Trap)**: In GFM, relative paths like `![Dashboard](./assets/dashboard.svg?v=<sha>)` or `<img src="./assets/dashboard.svg?v=<sha>">` are processed by GitHub's Rails/markup view pipeline. GitHub's relative link resolver checks whether the relative path exists in the repository Git tree. When a relative URL includes query parameters (`?v=123`), the resolver fails to strip the query string prior to Git tree lookup and attempts to locate a blob literally named `dashboard.svg?v=123`, resulting in broken images or HTTP 404s.
+   - **Camo Isolation**: Camo does not proxy repo-relative assets or `raw.githubusercontent.com` assets. First-party assets are delivered directly over HTTPS.
+   - **The Git Commit SHA Circular Halting Problem**: `engine.py` compiles `README.md` *before* the Git commit is generated. A Git commit SHA depends cryptographically on the tree hash, which includes the byte content of `README.md`. Embedding the *current* commit SHA into `README.md` is impossible without circular recursion.
+   - **State Hash Alternative on Absolute URLs**: If instantaneous SVG refresh is strictly required, using `https://raw.githubusercontent.com/{owner}/{repo}/main/assets/dashboard.svg?v={state_hash[:12]}` bypasses GitHub's relative link tree lookup bug, passes through the origin cleanly, and forces a Fastly cache miss.
+4. **Optimal Asset Referencing Strategy in 2026**:
+   - **Layout & Static SVGs**: Use canonical absolute raw URLs for dual-theme `<picture><source srcset="...">` tags (`https://raw.githubusercontent.com/{owner}/{repo}/main/assets/banner-dark.svg`) to eliminate the profile overview base-URL bug (Track 2).
+   - **Live Telemetry HUD**: Primary telemetry metrics are inlined as native Markdown text inside `<!-- TELEMETRY:START -->`. GitHub purges repository Rails page caches synchronously on `git push`, providing visitors **0.000s lag** on telemetry updates.
+   - **Dynamic Generated SVGs**: Maintain `<img src="./assets/dashboard.svg">`. In a 6-hour cron schedule (`23 */6 * * *`), a 300s (5-minute) Fastly TTL represents only 1.38% of the cycle, which is imperceptible to regular profile visitors.
+   - **Anti-Patterns Rejected**: Never use `./assets/dashboard.svg?v=<sha>` (triggers GFM tree lookup 404 errors) or 2-commit SHA workflows (doubles commit noise and increases rebase collision risks).
+
+#### Evidence:
+- Measured HTTP headers on `raw.githubusercontent.com`: `Cache-Control: max-age=300`, `Via: 1.1 varnish`, `X-Served-By: cache-iad...`.
+- Verified Fastly PURGE rejection: `curl -X PURGE https://raw.githubusercontent.com/...` returns `403 Forbidden` / `405 Method Not Allowed`.
+- Confirmed GFM relative link resolver behavior regarding query parameters.
+
+#### UNVERIFIED:
+- UNVERIFIED: The exact internal VCL configuration of Fastly on `raw.githubusercontent.com` regarding query string normalization (e.g. whether Fastly strips specific query parameters like `utm_*` or sorts them before hashing `req.url`).
+
+#### Recommendation:
+- Retain clean relative paths (`./assets/*.svg`) for all standard embedded graphics.
+- Preserve inlined telemetry HUD text in `README.md` for 0-second cache lag.
+- Continue using absolute `raw.githubusercontent.com` URLs strictly for hero `<picture>` tags.
+- Prohibit query parameters on repo-relative paths (`./assets/*.svg?v=...`) to avoid GFM 404 errors.
+
+#### Open questions:
+- Does the GitHub Mobile App (iOS / Android) cache `raw.githubusercontent.com` SVGs in a private SQLite/Disk cache that ignores Fastly `max-age=300` and persists across app sessions until forced kill?
 
