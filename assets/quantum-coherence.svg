@@ -2,19 +2,22 @@
   <defs>
     <style>
       .holo-card { fill: #07090e; stroke: #1e293b; stroke-width: 1.5; rx: 12px; }
-      .hud-title { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 12px; fill: #38bdf8; font-weight: bold; letter-spacing: 1px; }
-      .hud-val { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 15px; fill: #f8fafc; font-weight: bold; }
-      .hud-sub { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace; font-size: 10px; fill: #64748b; }
+      .hud-title { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'Roboto Mono', monospace; font-size: 12px; fill: #38bdf8; font-weight: bold; letter-spacing: 1px; }
+      .hud-val { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'Roboto Mono', monospace; font-size: 15px; fill: #f8fafc; font-weight: bold; }
+      .hud-sub { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', 'Roboto Mono', monospace; font-size: 10px; fill: #64748b; }
       
       .orbit-ring-1 {
+        transform-box: fill-box;
         transform-origin: 530px 100px;
         animation: spin1 16s linear infinite;
       }
       .orbit-ring-2 {
+        transform-box: fill-box;
         transform-origin: 530px 100px;
         animation: spin2 22s linear infinite reverse;
       }
       .orbit-ring-3 {
+        transform-box: fill-box;
         transform-origin: 530px 100px;
         animation: spin3 12s linear infinite;
       }
@@ -26,6 +29,10 @@
         animation: qpulse 2.5s infinite ease-in-out;
       }
       @keyframes qpulse { 0%, 100% { opacity: 0.8; r: 6px; } 50% { opacity: 0.3; r: 10px; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; }
+      }
     </style>
     <linearGradient id="quantum-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
