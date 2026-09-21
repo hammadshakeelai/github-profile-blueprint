@@ -38,20 +38,22 @@ SETTLE_JS = r"""
     Promise.all(imgs.map(i => i.complete ? 0 : new Promise(r => {
       i.addEventListener('load', r, {once: true}); i.addEventListener('error', r, {once: true}); }))),
     new Promise(r => setTimeout(r, 12000))]);
-  await new Promise(r => setTimeout(r, 800));   // let SMIL/CSS animations reach a frame
+  await new Promise(r => setTimeout(r, 2500));  // let client-side re-render finish and animations settle
   return imgs.length;
 })()
 """
 
 
-async def capture(new_tab, user: str, width: int, scheme: str) -> str:
+async def capture(new_tab, user: str, width: int, scheme: str, out_dir: Path | None = None) -> str:
+    """`user` is a GitHub username, or name=URL to capture any page (e.g. a comp)."""
+    name, url = (user.split("=", 1) if "=" in user else (user, f"https://github.com/{user}"))
     suffix = "" if scheme == "dark" else f"-{scheme}"
-    out = SHOTS / f"{user}-{width}{suffix}.jpg"
+    out = (out_dir or SHOTS) / f"{name}-{width}{suffix}.jpg"
     tab = await new_tab()
     try:
         await tab.emulate(width, VIEWPORTS[width], scheme)
         tab.drain()
-        await tab.send("Page.navigate", {"url": f"https://github.com/{user}"})
+        await tab.send("Page.navigate", {"url": url})
         await tab.wait_event("Page.loadEventFired", 30)
         await tab.send("Runtime.evaluate", {"expression": SETTLE_JS, "awaitPromise": True}, timeout=45)
         shot = await tab.send("Page.captureScreenshot", {"format": "png"}, timeout=60)
@@ -59,23 +61,24 @@ async def capture(new_tab, user: str, width: int, scheme: str) -> str:
         if width > 1000:
             img = img.resize((DESKTOP_SAVE_W, round(img.height * DESKTOP_SAVE_W / img.width)),
                              Image.LANCZOS)
-        SHOTS.mkdir(parents=True, exist_ok=True)
+        out.parent.mkdir(parents=True, exist_ok=True)
         img.save(out, "JPEG", quality=72, optimize=True, progressive=True)
         return f"ok    {out.name}  {out.stat().st_size // 1024} KB"
     except Exception as e:
-        return f"FAIL  {user} @{width} ({type(e).__name__})"
+        return f"FAIL  {name} @{width} ({type(e).__name__})"
     finally:
         tab.reader.cancel()
         await tab.ws.close()
 
 
-async def run(users: list[str], widths: list[int], scheme: str, workers: int) -> None:
+async def run(users: list[str], widths: list[int], scheme: str, workers: int,
+              out_dir: Path | None = None) -> None:
     jobs = [(u, w) for u in users for w in widths]
     sem = asyncio.Semaphore(workers)
     async with browser() as new_tab:
         async def one(job):
             async with sem:
-                line = await capture(new_tab, job[0], job[1], scheme)
+                line = await capture(new_tab, job[0], job[1], scheme, out_dir)
                 print(line, flush=True)
         await asyncio.gather(*(one(j) for j in jobs))
 
@@ -86,8 +89,9 @@ def main() -> None:
     ap.add_argument("--scheme", choices=["dark", "light"], default="dark")
     ap.add_argument("--widths", default="390,1280")
     ap.add_argument("--workers", type=int, default=3)
+    ap.add_argument("--out", type=Path, default=None, help="directory for the JPEGs (default: docs/survey/shots)")
     a = ap.parse_args()
-    asyncio.run(run(a.users, [int(w) for w in a.widths.split(",")], a.scheme, a.workers))
+    asyncio.run(run(a.users, [int(w) for w in a.widths.split(",")], a.scheme, a.workers, a.out))
 
 
 if __name__ == "__main__":
