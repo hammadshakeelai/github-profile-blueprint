@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T17:56:03+00:00",
+ "generated_at": "2026-09-21T18:01:43+00:00",
  "candidates": 487,
  "status": {
   "live": 446,
@@ -60,15 +60,15 @@
   "script": 8
  },
  "svg_origin_counts": {
-  "bespoke": 1511,
+  "bespoke": 1506,
   "service": 683,
   "badge-icon": 4434,
-  "generated": 187,
+  "generated": 192,
   "copied": 29
  },
  "svg_techniques_bespoke": {
   "gradient": 704,
-  "smil": 523,
+  "smil": 518,
   "css-keyframes": 411,
   "filter": 364,
   "blur-glow": 303,
@@ -78,7 +78,7 @@
   "mask": 77,
   "foreign-object": 53,
   "embedded-font": 50,
-  "embedded-raster": 40,
+  "embedded-raster": 35,
   "text-path": 15,
   "embedded-svg": 14
  },
@@ -107,10 +107,10 @@
   "blur-glow": 15,
   "script": 8
  },
- "bespoke_svgs_animated": 847,
+ "bespoke_svgs_animated": 842,
  "profiles_using_technique_bespoke": {
-  "smil": 132,
   "gradient": 130,
+  "smil": 129,
   "filter": 102,
   "css-keyframes": 101,
   "stroke-draw": 93,
@@ -119,7 +119,7 @@
   "theme-aware-svg": 35,
   "foreign-object": 32,
   "mask": 28,
-  "embedded-raster": 28,
+  "embedded-raster": 23,
   "embedded-font": 13,
   "text-path": 12,
   "embedded-svg": 3,
@@ -228,7 +228,7 @@
    "badge_wall_over_half": "40%",
    "phone_illegible_card_measured": "15%",
    "phone_some_tiny_text_measured": "28%",
-   "desktop_illegible_card_measured": "\u2014",
+   "desktop_illegible_card_measured": "3%",
    "table_scrolls_sideways_on_phone": "6%",
    "cards_crushed_in_table": "3%",
    "page_scrolls_sideways_on_phone": "0%",
@@ -250,13 +250,13 @@
    "with_broken_image": "44%",
    "using_dead_stats_instance": "24%",
    "dark_light_switching": "30%",
-   "with_custom_svg": "70%",
-   "with_animated_custom_svg": "65%",
+   "with_custom_svg": "69%",
+   "with_animated_custom_svg": "64%",
    "with_workflows": "63%",
    "badge_wall_over_half": "43%",
    "phone_illegible_card_measured": "70%",
    "phone_some_tiny_text_measured": "82%",
-   "desktop_illegible_card_measured": "\u2014",
+   "desktop_illegible_card_measured": "23%",
    "table_scrolls_sideways_on_phone": "8%",
    "cards_crushed_in_table": "12%",
    "page_scrolls_sideways_on_phone": "0%",
@@ -265,9 +265,9 @@
    "of_those_phone_caused": "91%",
    "of_those_tiny_everywhere": "9%",
    "illegible_cards_by_origin": {
-    "bespoke": "656/1014 (65%)",
+    "bespoke": "651/1009 (65%)",
     "service": "171/409 (42%)",
-    "generated": "64/122 (52%)",
+    "generated": "69/127 (54%)",
     "copied": "1/1 (100%)"
    }
   },
@@ -284,7 +284,7 @@
    "badge_wall_over_half": "42%",
    "phone_illegible_card_measured": "47%",
    "phone_some_tiny_text_measured": "59%",
-   "desktop_illegible_card_measured": "\u2014",
+   "desktop_illegible_card_measured": "15%",
    "table_scrolls_sideways_on_phone": "7%",
    "cards_crushed_in_table": "9%",
    "page_scrolls_sideways_on_phone": "0%",
@@ -293,9 +293,9 @@
    "of_those_phone_caused": "90%",
    "of_those_tiny_everywhere": "10%",
    "illegible_cards_by_origin": {
-    "bespoke": "677/1070 (63%)",
+    "bespoke": "672/1065 (63%)",
     "service": "198/532 (37%)",
-    "generated": "66/126 (52%)",
+    "generated": "71/131 (54%)",
     "copied": "2/2 (100%)"
    }
   }

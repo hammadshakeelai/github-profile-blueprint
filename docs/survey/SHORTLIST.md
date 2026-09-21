@@ -1,6 +1,6 @@
 # Shortlist
 
-Sixteen profiles that are genuinely exceptional, plus four worth studying for one
+Fifteen profiles that are genuinely exceptional, plus five worth studying for one
 specific idea. Chosen from 446 surveyed profiles in two steps:
 
 1. `tools/survey/shortlist.py` ranked every profile by how much of its own
@@ -19,7 +19,7 @@ excluded.
 ## The pattern across all of them
 
 **The most visually ambitious profiles are the least readable on a phone.** Of
-the sixteen, fourteen have at least one card whose *largest* text renders under
+the fifteen, thirteen have at least one card whose *largest* text renders under
 11px in the 309px mobile column — most of them several. The other two can't be
 scored: ayxn07 outlines its text into paths, and marcizhu's board has no text. They are designed as
 desktop web pages and scaled down whole. The ones that hold up on a phone do so
@@ -49,9 +49,8 @@ occupies it convincingly.
 | [getaudra](https://github.com/getaudra) | Command centre | Honest labels on the data | 7 of 8 illegible |
 | [sepahead](https://github.com/sepahead) | Data narrative | A graph of how the projects relate | 28 of 33 illegible |
 | [atikulmunna](https://github.com/atikulmunna) | Monochrome arcade | Game animation as the banner | 10 of 14 illegible |
-| [erogluyusuf](https://github.com/erogluyusuf) | Single strong idea | Skill icons laid out as a keyboard | 12 of 12 illegible |
 
-## The sixteen
+## The fifteen
 
 ### Editorial and brand
 
@@ -134,11 +133,6 @@ input channel a README has. The board is a table of images, which on a phone
 scrolls sideways rather than shrinking. Take: **Issues are the interaction
 layer.**
 
-**[erogluyusuf](https://github.com/erogluyusuf)** — skill icons laid out as a
-keyboard. One original idea in an otherwise busy page. Take: **a single
-unexpected metaphor beats a dozen standard cards.** Also a warning: every one of
-its 12 cards is illegible on a phone, and one image is broken.
-
 **[atikulmunna](https://github.com/atikulmunna)** — black and white throughout;
 the banner is an animated side-scrolling game, the contribution graph an
 invaders-style animation. Game motion used as identity, in a disciplined
@@ -174,6 +168,12 @@ SimarBhatiaSB7, rather than as four originals.
 
 ## Worth studying for one idea
 
+- **[erogluyusuf](https://github.com/erogluyusuf)** — skill icons laid out as a
+  keyboard, a committed PNG (`key.png`). A genuinely unexpected metaphor. The
+  rest of the page is a pacman contribution graph (an Action's output) and repo
+  cards from a card service he built himself on a free Vercel deployment; all
+  12 cards are illegible on a phone and one image is broken. The keyboard is
+  the idea worth taking.
 - **[codeSTACKr](https://github.com/codeSTACKr)** — auto-updated lists of latest
   videos and blog posts as plain text. Unglamorous, and legible on every screen.
   (It still embeds the dead github-readme-stats public instance.)
@@ -187,7 +187,7 @@ SimarBhatiaSB7, rather than as four originals.
 ## What none of them do
 
 - **Stay readable at 309px while being ambitious.** The gap noted at the top.
-- **Treat dark and light as equal citizens.** Five of the sixteen have no theme
+- **Treat dark and light as equal citizens.** Five of the fifteen have no theme
   switching at all. The rest were reviewed in dark mode only; whether their
   light versions hold up is a Phase 3 question, not yet answered.
 - **Use motion sparingly.** Animation is everywhere; almost nothing settles.

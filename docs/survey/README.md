@@ -5,16 +5,16 @@ built from evidence rather than general knowledge. Every row is filled by
 fetching the actual README and every image it references, and phone behaviour
 is measured from real rendered layout.
 
-**446 personal profiles · 10,782 images fetched · 442 profiles measured at
-phone width · 65 tool repositories health-checked · 20 shortlisted and
-screenshotted.**
+**446 personal profiles · 10,782 images fetched · layout measured for 442 at
+phone and 441 at desktop width · 65 tool repositories health-checked · 20
+shortlisted and screenshotted.**
 
 ## Read these
 
 | File | What it is |
 |---|---|
 | [FINDINGS.md](FINDINGS.md) | What the data says, each claim tied to its numbers — start here |
-| [SHORTLIST.md](SHORTLIST.md) | The sixteen exceptional profiles, plus four for one idea each |
+| [SHORTLIST.md](SHORTLIST.md) | The fifteen exceptional profiles, plus five for one idea each |
 | [GENERATORS.md](GENERATORS.md) | Every image service seen, ranked by use, with liveness and phone legibility |
 | [TOOLS.md](TOOLS.md) | The repositories behind them, and whether anyone maintains them |
 | [PROFILES.md](PROFILES.md) | All 446 profiles, one row each |

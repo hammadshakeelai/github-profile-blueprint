@@ -38,7 +38,7 @@ Full detail with numbers in [docs/survey/FINDINGS.md](docs/survey/FINDINGS.md).
 - **Only 20% switch between dark and light**, and 42% are more than half
   badges.
 
-The sixteen standout profiles, and what to take from each:
+The fifteen standout profiles, and what to take from each:
 [docs/survey/SHORTLIST.md](docs/survey/SHORTLIST.md).
 
 ## Layout

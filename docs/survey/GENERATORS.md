@@ -18,8 +18,8 @@ Every image service seen in the surveyed profiles, ranked by how many profiles u
 | visitor badge | various | 42 | 44 | 59% | http-410 ×14, dns ×3 | 1448 | 67% (24) |
 | GitHub upload (user-attachments) | — | 41 | 89 | 99% | http-403 ×1 | 1923 | 100% (1) |
 | capsule-render | [kyechan99/capsule-render](https://github.com/kyechan99/capsule-render) | 41 | 65 | 100% | — | 675 | 28% (29) |
-| github-readme-stats — self-hosted | [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) | 39 | 86 | 94% | vercel-disabled ×3, error-card ×1 | 1897 | 20% (82) |
-| github-profile-trophy | [ryo-ma/github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy) | 36 | 37 | 11% | vercel-disabled ×31, network ×1 | 939 | 100% (4) |
+| github-readme-stats — self-hosted | [anuraghazra/github-readme-stats](https://github.com/anuraghazra/github-readme-stats) | 39 | 86 | 94% | vercel-disabled ×3, http-410 ×1 | 1897 | 20% (82) |
+| github-profile-trophy | [ryo-ma/github-profile-trophy](https://github.com/ryo-ma/github-profile-trophy) | 36 | 37 | 11% | vercel-disabled ×31, http-404 ×1 | 939 | 100% (4) |
 | giphy | — | 35 | 66 | 98% | http-404 ×1 | 2336 | — |
 | icon CDNs | icons8 / vectorlogo.zone / iconify / wikimedia / flaticon | 31 | 189 | 92% | http-400 ×7, http-403 ×4 | 617 | 100% (2) |
 | devicon | [devicons/devicon](https://github.com/devicons/devicon) | 27 | 201 | 100% | http-403 ×1 | 755 | — |
@@ -30,7 +30,7 @@ Every image service seen in the surveyed profiles, ranked by how many profiles u
 | GitHub avatars | — | 13 | 159 | 100% | — | 516 | — |
 | donation buttons | buymeacoffee / ko-fi | 10 | 6 | 83% | http-403 ×1 | 568 | — |
 | holopin badges | holopin.io | 9 | 9 | 100% | — | 4952 | — |
-| spotify now-playing | novatorem/novatorem & kittinan/spotify-github-profile | 9 | 9 | 44% | http-500 ×2, vercel-disabled ×1 | 2539 | 0% (4) |
+| spotify now-playing | novatorem/novatorem & kittinan/spotify-github-profile | 9 | 9 | 44% | http-500 ×2, network ×1 | 2539 | 0% (4) |
 | demolab badges & cards | DenverCoder1 (demolab.com) | 8 | 67 | 97% | http-404 ×2 | 989 | 25% (68) |
 | imgur | — | 8 | 23 | 96% | http-403 ×1 | 1508 | — |
 | wakatime | wakatime / athul/waka-readme | 8 | 9 | 100% | — | 2229 | 44% (9) |

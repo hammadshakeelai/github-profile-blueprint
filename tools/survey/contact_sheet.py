@@ -18,7 +18,9 @@ SHOTS = Path(__file__).resolve().parents[2] / "docs" / "survey" / "shots"
 
 # Crop boxes (fraction of width, absolute px of height) that keep the README.
 # Desktop shots are saved at 960px; the README column starts after the sidebar.
-CROP = {390: (0.0, 1.0, 420, 3300), 1280: (0.255, 0.985, 60, 2100)}
+# Tuned to screenshot.py's emulated captures: on a phone the avatar, bio and
+# achievements push the README down to roughly y=560.
+CROP = {390: (0.0, 1.0, 560, 3400), 1280: (0.255, 0.985, 60, 2100)}
 TILE_W = {390: 240, 1280: 420}
 
 

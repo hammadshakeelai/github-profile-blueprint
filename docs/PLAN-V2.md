@@ -47,8 +47,10 @@ Keep but **park** — correct work, premature, revisit only if a design needs it
 hybrid commit dispatcher, verified-commit GraphQL path, 60-day keepalive, live
 CI telemetry gauge, SLA hysteresis. None of these should drive design decisions.
 
-Treat as **unsourced until re-verified**: `docs/01`–`docs/08`. Not deleted —
-mined for hypotheses, then each claim either gets a citation or gets cut.
+**Left behind** on `archive/v1`: `docs/01`–`docs/08`. They were written from
+general knowledge and read as authoritative; mining them would smuggle
+unsourced claims into v2 wearing Phase 1 citations. The technique catalogue
+starts empty and is built only from survey evidence.
 
 ## The plan
 
@@ -56,7 +58,7 @@ mined for hypotheses, then each claim either gets a citation or gets cut.
 
 > **Outcome:** 446 personal profiles (187 curated, 259 found by technique-first
 > code search), 10,782 images fetched, phone layout measured for 442 in headless
-> Chrome, 65 tool repositories health-checked, 16 shortlisted after visual
+> Chrome, 65 tool repositories health-checked, 15 shortlisted after visual
 > review. Exceeds every target below. See `docs/survey/FINDINGS.md` and
 > `docs/survey/SHORTLIST.md`.
 >
@@ -84,6 +86,15 @@ Build the library. Breadth first, judgement later.
 screenshot set. Data, not opinion.
 
 ### Phase 2 — Technique catalogue
+
+> **Already banked from Phase 1:** `docs/survey/data/technique_exemplars.json`
+> holds up to eight real bespoke SVGs per technique, spread across profiles and
+> preferring ones whose images all load, plus usage counts by profile. So
+> Phase 2 is not discovery. For each technique: open the cited exemplars,
+> extract the minimal pattern, verify it renders on GitHub (desktop and phone),
+> and write it up. Techniques with almost no users (`<script>`: 1, embedded SVG
+> images: 3) go in a short "seen but rare" note rather than getting entries —
+> an entry implies the technique is viable, and one user isn't evidence.
 
 Derive from Phase 1 only. For each technique: what it is, who uses it (link),
 how it's built, whether it survives GitHub's sanitizer, how it behaves at 309px,
@@ -154,9 +165,10 @@ auth for that account.
 
 ## Definition of done
 
-- [ ] 60+ profiles catalogued with links and technique tags
-- [ ] 25+ generators catalogued with liveness risk noted
-- [ ] Every one screenshotted at 846px and 309px
+- [x] 60+ profiles catalogued with links and technique tags — 446
+- [x] 25+ generators catalogued with liveness risk noted — 40+ services, 65 repos
+- [x] Every one checked at desktop and phone width — real layout measured for
+      442 (phone) and 441 (desktop); the 20 shortlisted also screenshotted
 - [ ] Technique catalogue where each entry cites a real user and has a verified
       minimal example
 - [ ] Capability matrix with every cell tested

@@ -19,8 +19,9 @@ Mailu/Mailu — an org page never shows a repo README as a profile), 2 were gone
 and 1 had no README.
 
 They reference **10,782 images (8,589 distinct URLs)**, every one of which was
-fetched. **442 profiles** were also loaded in headless Chrome at phone width to
-measure real layout; 98% of rendered images matched their fetched source.
+fetched. The profiles were also loaded in headless Chrome to measure real
+layout — **442 at phone width, 441 at desktop** — and 98% of rendered images
+matched their fetched source.
 
 The search cohort was chosen *for* hand-made SVGs, so its custom-SVG rates are
 high by construction. Every other comparison between the cohorts — breakage,
@@ -80,6 +81,9 @@ Of **1,730 SVG cards** measured on the phone — badges and icons excluded —
 - **Hand-made cards fail more than services: 63% vs 37%.** Generator authors
   design at moderate widths; people crafting their own panels design wide
   canvases with small text, which is exactly what a phone punishes.
+- **Desktop is not immune, just far better:** measured the same way at 1280px
+  (441 profiles), 15% of profiles have at least one illegible card (137 cards)
+  — 3% curated, 23% search. Mostly panels drawn wider than the 846px column.
 
 Measured per generator (images in brackets): readme-typing-svg **54%** (98),
 lowlighter/metrics **83%** (29), github-profile-summary-cards **60%** (52),
@@ -134,8 +138,8 @@ so one profile with forty files can't outvote forty with one):
 
 | Technique | Profiles |
 |---|--:|
-| SMIL animation (`<animate>`, `animateMotion`) | 132 |
 | Gradients | 130 |
+| SMIL animation (`<animate>`, `animateMotion`) | 129 |
 | Filters | 102 |
 | CSS `@keyframes` | 101 |
 | Stroke-dash line drawing | 93 |
@@ -153,14 +157,15 @@ Real example files for each are in `data/technique_exemplars.json`.
 
 ## 7. "Custom" isn't always original
 
-Of **1,511 bespoke SVGs** (committed to the user's own repos and not a known
-tool's output), 847 animate.
+Of **1,506 bespoke SVGs** (committed to the user's own repos and not a known
+tool's output), 842 animate.
 
-- **187 committed SVGs are generated** by four Actions, identified by
-  signatures they leave in the file: snk writes `Generated with …Platane/snk`,
-  lowlighter/metrics ends with `id="metrics-end"`, github-profile-3d-contrib
-  uses `rb-l0-left` classes, and github-readme-stats cards carry
-  `data-testid="card-title"`.
+- **192 committed SVGs are generated** by five Actions, identified by
+  signatures they leave in the file: snk and pacman-contribution-graph write
+  `<desc>Generated with …</desc>`, lowlighter/metrics ends with
+  `id="metrics-end"`, github-profile-3d-contrib uses `rb-l0-left` classes, and
+  github-readme-stats cards carry `data-testid="card-title"`. Any other SVG
+  announcing itself with a `Generated with/by` description is caught too.
 - **Byte-identical copying is rare**: 29 files across 14 profiles.
 - **Structural templates are not rare, and hashing can't see them.** Four
   profiles share one "Index Nº 001" layout with personalised text — found by
@@ -215,14 +220,20 @@ because each would otherwise have been published as a false claim:
   design, so they're excluded from card statistics.
 - **Unrecognised third-party hosts were counted as bespoke.** Only files in the
   user's own repos, or on a domain carrying their name, count now.
+- **Committed Action output was counted as hand-made.** A pacman contribution
+  graph in 10 profiles slipped past the fingerprint list; generators that
+  describe themselves in a `<desc>` element are now detected generically.
+- **A desktop figure briefly read 0%.** No desktop layout had been measured yet,
+  so the pool was empty. It never reached this document; the measured figure
+  is 15%.
 
 ## Limits
 
 - Legibility is measured from SVG `<text>` only. Raster images with text, and
   SVGs whose lettering is outlined into paths (ayxn07), can't be scored.
 - The 11px floor is a design threshold, not a hard perceptual limit.
-- Phone layout was measured in dark mode at one width (390px). Light mode, other
-  widths and GitHub's native mobile apps are Phase 3.
+- Layout was measured in dark mode at two widths (390px phone, 1280px desktop).
+  Light mode, other widths and GitHub's native mobile apps are Phase 3.
 - Breakage is a snapshot of September 2026 from one network location.
 - Code search returns at most 1,000 hits per query, so the search cohort is a
   large sample of ambitious profiles, not all of them.

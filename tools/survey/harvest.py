@@ -312,10 +312,13 @@ ERROR_PHRASES = ("something went wrong", "rate limit", "api rate", "could not re
 # is not necessarily hand-made: these mark the ones a tool generated.
 FINGERPRINTS = [
     ("snk contribution snake", re.compile(r"Platane/snk", re.I)),
+    ("pacman-contribution-graph", re.compile(r"pacman-contribution-graph", re.I)),
     ("github-profile-3d-contrib", re.compile(r"rb-l0-left|class=\"radar\"")),
     ("lowlighter/metrics", re.compile(r"id=\"metrics-end\"")),
     ("github-readme-stats", re.compile(r"data-testid=\"(card-title|main-card-body|lang-items)\"")),
 ]
+# Many generators announce themselves in the file; catch the ones not listed.
+GENERATED_DESC = re.compile(r"<desc>\s*Generated (?:with|by)\s+([^<\n]{2,80})", re.I)
 
 FONT_RX = [
     re.compile(r"font-size\s*[:=]\s*[\"']?\s*([0-9.]+)\s*(px|pt|em|rem|%)?", re.I),
@@ -477,6 +480,9 @@ def svg_metrics(text: str) -> dict:
     }.items() if hit)
 
     fingerprint = next((name for name, rx in FINGERPRINTS if rx.search(text)), None)
+    if fingerprint is None and (m := GENERATED_DESC.search(text)):
+        # "Generated with some-tool on Mon Sep 21 2026 …" -> "some-tool"
+        fingerprint = re.split(r"\s+on\s+|\s+at\s+|\s*\(|,", m.group(1).strip())[0].strip()[:60] or None
 
     return {"fingerprint": fingerprint,
             "vb_w": vbw, "vb_h": vbh, "intrinsic_w": intrinsic, "has_text": has_text,
