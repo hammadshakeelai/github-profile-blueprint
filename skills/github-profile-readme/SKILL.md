@@ -93,6 +93,23 @@ inside the image, but wrapping a `<picture>` in an `<a>` makes an entire panel a
 tap target — the largest control a README can have. Use it instead of faking
 interactivity.
 
+## Alt text is the only way out of the image
+
+A card's words are pixels. The `alt` attribute is the only channel back out,
+and that is measured: an `<img>` whose SVG declares `role="img"`, an
+`aria-label`, a `<title>` *and* a `<desc>` exposes an accessible name of `""`.
+Nothing inside the file crosses the boundary — so don't bother labelling in
+there, and never treat it as a substitute.
+
+In the survey, **954 of 2,527 text-bearing SVG cards (37.8%) have no usable
+alt** — absent, empty, the filename, or a word like "banner". 61 profiles
+describe nothing at all.
+
+- Write what the card **says**: `"LinuxWeb: real Alpine Linux in a browser tab"`.
+- `alt=""` is right for decoration and wrong for anything carrying information.
+- If the alt is hard to write, the card is carrying too much — move it to
+  markdown, where it is readable, reflowable and searchable anyway.
+
 ## What survives inside the image
 
 Referencing an SVG via `<img>` or `![]()` puts the browser in the SVG spec's

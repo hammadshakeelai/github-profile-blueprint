@@ -89,7 +89,22 @@ SMIL beats CSS keyframes in hand-made work. Every one of these is rebuilt as a
 minimal working example in
 [`docs/techniques/CATALOGUE.md`](../../../docs/techniques/CATALOGUE.md).
 
-### 5 · "Custom" is often generated or templated
+### 5 · A third of content images can't be reached at all
+
+Re-parsed from the live READMEs (`docs/research/ALT-TEXT.md`):
+
+| Class | Non-badge images | Text-bearing cards |
+|---|--:|--:|
+| no `alt` attribute | 34.2% | 30.3% |
+| `alt=""` | 9.9% | 7.5% |
+| the filename, or a word like "banner" | 8.0% | 5.0% |
+| anything actually written | 48.0% | 57.2% |
+
+"Anything actually written" is a ceiling, not a score — the classifier only
+rejects obvious junk. 61 profiles describe none of their images. The hand-made
+cohort does better (57.5% vs 31.1%), the reverse of the legibility split.
+
+### 6 · "Custom" is often generated or templated
 
 Of 1,506 bespoke SVGs, 192 are Action output identifiable by signatures the
 generators leave behind (`<desc>Generated with …`, `id="metrics-end"`,
@@ -97,7 +112,7 @@ generators leave behind (`<desc>Generated with …`, `id="metrics-end"`,
 **structural templates are not** — four profiles share one "Index Nº 001"
 layout with personalised text. Hashing can't see that; looking can.
 
-### 6 · A recent push means nothing
+### 7 · A recent push means nothing
 
 54% of profiles run Actions, many committing on a schedule. The median profile
 was "last pushed" 1.1 months ago while its human content is years old.

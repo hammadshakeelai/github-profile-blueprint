@@ -9,7 +9,7 @@ claim without a citation, a measurement, or an `UNVERIFIED` tag.
 |---|---|---|
 | 1 | Does a relative `srcset` resolve on a profile page? | **done** |
 | 2 | Does `prefers-reduced-motion` reach an SVG in secure animated mode? | **done** |
-| 3 | Alt text and accessibility across 10,782 images | todo |
+| 3 | Alt text and accessibility across 10,782 images | **done** |
 | 4 | `profile-lint` — every measured rule as a checker | todo |
 | 5 | Narrow the iOS unknown with an iPhone-emulated WebKit pass | todo |
 
@@ -52,6 +52,10 @@ answer: what share carry meaningful alt text, what share carry none or
 decorative junk ("banner", "gif"), and how that splits by cohort. The survey
 measured whether a card can be *read*; this asks whether it can be read by
 someone who can't see it.
+
+**Answer:** 37.8% of text-bearing cards offer no way to reach their content, and
+nothing inside an SVG — `<title>`, `<desc>`, `aria-label`, `role` — crosses into
+the host page's accessibility tree. See [research/ALT-TEXT.md](research/ALT-TEXT.md).
 
 ## 4 · `profile-lint`
 
