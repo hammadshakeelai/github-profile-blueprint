@@ -22,7 +22,10 @@ const pw = require(process.env.PLAYWRIGHT_CORE || 'playwright-core');
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const OUT = process.env.OUT || path.join(ROOT, '.cache', 'matrix');
 const REF = process.env.REF || 'v2/research';
-const URL = `https://github.com/hammadshakeelai/github-profile-blueprint/blob/${REF}/docs/techniques/GALLERY.md`;
+const PAGE = process.env.PAGE || 'docs/techniques/GALLERY.md';
+const URL = `https://github.com/hammadshakeelai/github-profile-blueprint/blob/${REF}/${PAGE}`;
+// 'reduce' emulates a viewer who has asked their OS for less animation.
+const REDUCED = process.env.REDUCED || 'no-preference';
 // 730ms rather than a round number: a gap that divides a loop's length evenly
 // revisits the same few moments every cycle and can miss brief motion entirely.
 const FRAMES = +(process.env.FRAMES || 8), FRAME_GAP = +(process.env.FRAME_GAP || 730);
@@ -54,7 +57,8 @@ const LIST = `(async () => {
 })()`;
 
 async function pass(browser, engine, width, scheme) {
-  const opts = { viewport: { width, height: 9000 }, colorScheme: scheme, deviceScaleFactor: 1 };
+  const opts = { viewport: { width, height: 9000 }, colorScheme: scheme, deviceScaleFactor: 1,
+                 reducedMotion: REDUCED };
   // Firefox has no mobile emulation mode; it gets the narrow viewport only.
   if (width < 700 && engine !== 'firefox') Object.assign(opts, { isMobile: true, hasTouch: true });
   const ctx = await browser.newContext(opts);

@@ -17,3 +17,12 @@ moving either way.
 hide the layer running it and reveal a still one.
 
 ![SMIL animation swapped for a still frame under reduced motion](examples/rm-swap.svg)
+
+**`<picture>` gated on reduced motion** — the host page evaluates this query
+even though the image can't. If the sanitizer keeps the attribute, a viewer who
+asked for less motion gets the still file.
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="examples/rm-still.svg">
+  <img alt="A sliding square, replaced by a still one for viewers who asked for reduced motion" src="examples/rm-motion.svg" width="600">
+</picture>
