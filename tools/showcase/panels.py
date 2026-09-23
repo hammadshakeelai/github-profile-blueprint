@@ -111,10 +111,11 @@ def hero(p, name: str, line: str, motion: bool = True, width: int = W) -> str:
     # character without depending on the viewer's font metrics.
     typed = escape(line)
     tw = width - 64
-    if len(line) * small * 0.6 > tw:        # mono, so 0.6 em is a safe estimate
+    drawn = max(small, floor_for(width))   # what the clamp will actually use
+    if len(line) * drawn * 0.6 > tw:       # mono, so 0.6 em is a safe estimate
         raise SystemExit(f"hero tagline too long for a {width}-unit canvas at the "
                          f"legibility floor: {line!r} needs "
-                         f"{len(line) * small * 0.6:.0f} of {tw} units")
+                         f"{len(line) * drawn * 0.6:.0f} of {tw} units")
     steps = 26
     reveal = (f'<animate attributeName="width" dur="2.6s" fill="freeze" calcMode="discrete" '
               f'keyTimes="{";".join(f"{i / steps:.3f}" for i in range(steps + 1))}" '
@@ -129,7 +130,7 @@ def hero(p, name: str, line: str, motion: bool = True, width: int = W) -> str:
             + f'<rect x="32" y="{h - 46}" width="{width - 64}" height="4" rx="2" fill="url(#sh)"/>'
             + text(32, 88 * k + 20, name, big, p["text"], 800, canvas=width)
             + f'<clipPath id="tc"><rect x="32" y="{110 * k + 12}" height="{small * 1.6}" width="{tw if not motion else 0}">{reveal}</rect></clipPath>'
-            + f'<g clip-path="url(#tc)">{text(32, 128 * k + 24, typed, small, p["muted"], family=MONO)}</g>'
+            + f'<g clip-path="url(#tc)">{text(32, 128 * k + 24, typed, small, p["muted"], family=MONO, canvas=width)}</g>'
             + f'<rect x="32" y="{110 * k + 14}" width="{small * 0.5:.0f}" height="{small * 1.2:.0f}" '
               f'fill="{p["hot"]}" opacity="1">{caret}</rect>')
     return svg(width, h, body, f"{name} — {line}")
