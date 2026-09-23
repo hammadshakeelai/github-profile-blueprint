@@ -1,0 +1,141 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -50.22,
+     -27.24
+    ]
+   },
+   "properties": {
+    "profile": "github.com/rafaballerini",
+    "stars": 2696,
+    "location": "Santa Catarina, Brazil",
+    "marker-size": "large",
+    "marker-color": "#f778ba"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.17,
+     41.39
+    ]
+   },
+   "properties": {
+    "profile": "github.com/midudev",
+    "stars": 1465,
+    "location": "Barcelona",
+    "marker-size": "large",
+    "marker-color": "#f778ba"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.38,
+     43.65
+    ]
+   },
+   "properties": {
+    "profile": "github.com/novatorem",
+    "stars": 758,
+    "location": "Toronto",
+    "marker-size": "medium",
+    "marker-color": "#58a6ff"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     55.27,
+     25.2
+    ]
+   },
+   "properties": {
+    "profile": "github.com/anmol098",
+    "stars": 689,
+    "location": "Dubai",
+    "marker-size": "medium",
+    "marker-color": "#58a6ff"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -61.22,
+     10.69
+    ]
+   },
+   "properties": {
+    "profile": "github.com/trinib",
+    "stars": 508,
+    "location": "Trinidad & Tobago",
+    "marker-size": "medium",
+    "marker-color": "#58a6ff"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.43,
+     37.46
+    ]
+   },
+   "properties": {
+    "profile": "github.com/simonw",
+    "stars": 443,
+    "location": "Half Moon Bay, California",
+    "marker-size": "small",
+    "marker-color": "#58a6ff"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.11,
+     48.15
+    ]
+   },
+   "properties": {
+    "profile": "github.com/MartinHeinz",
+    "stars": 440,
+    "location": "Bratislava",
+    "marker-size": "small",
+    "marker-color": "#58a6ff"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.42,
+     37.77
+    ]
+   },
+   "properties": {
+    "profile": "github.com/andyruwruw",
+    "stars": 290,
+    "location": "Bay Area, California",
+    "marker-size": "small",
+    "marker-color": "#58a6ff"
+   }
+  }
+ ]
+}

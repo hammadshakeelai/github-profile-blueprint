@@ -1,0 +1,1329 @@
+{
+ "geojson-map": {
+  "probe": "\"```geojson\"",
+  "total_hits": 327,
+  "profiles": [
+   "BEPb",
+   "BagToad",
+   "Charmve",
+   "FrankQu29",
+   "IndieMinimalist",
+   "Maxnegrao33",
+   "SethCodesABitForSchool",
+   "VaishnavJois",
+   "Viotty",
+   "anshumanjadiya1102",
+   "bardiotmarin",
+   "bhza",
+   "johndjameson",
+   "leandrofahur",
+   "mr-Tony-ship-it",
+   "ninetendo59",
+   "taichimaner",
+   "that-stanford-kid",
+   "weiland",
+   "xiaohuooo"
+  ],
+  "profile_count_in_sample": 20
+ },
+ "topojson-map": {
+  "probe": "\"```topojson\"",
+  "total_hits": 47,
+  "profiles": [
+   "Sakib-Sobaha",
+   "nanimm88",
+   "y1141335509"
+  ],
+  "profile_count_in_sample": 3
+ },
+ "stl-3d-model": {
+  "probe": "\"```stl\"",
+  "total_hits": 391,
+  "profiles": [
+   "MisterRabbitYT",
+   "TheAdkk",
+   "leandrumartin",
+   "merge-my-pr",
+   "olorcain",
+   "snewmanri"
+  ],
+  "profile_count_in_sample": 6
+ },
+ "mermaid-diagram": {
+  "probe": "\"```mermaid\"",
+  "total_hits": 430080,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "math-block": {
+  "probe": "\"$$\" \"\\\\frac\"",
+  "total_hits": 71296,
+  "profiles": [
+   "fastfem"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "alert-callouts": {
+  "probe": "\"[!NOTE]\"",
+  "total_hits": 247808,
+  "profiles": [
+   "DiscordBM",
+   "Spottarr",
+   "infinidysk"
+  ],
+  "profile_count_in_sample": 3
+ },
+ "footnotes": {
+  "probe": "\"[^1]:\"",
+  "total_hits": 26304,
+  "profiles": [
+   "abap-community",
+   "numbagg",
+   "touist"
+  ],
+  "profile_count_in_sample": 3
+ },
+ "details-collapse": {
+  "probe": "\"<details>\" \"<summary>\"",
+  "total_hits": 514048,
+  "profiles": [
+   "ITurres",
+   "OpenCourseAPI"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "kbd-keys": {
+  "probe": "\"<kbd>\"",
+  "total_hits": 99328,
+  "profiles": [
+   "libconfuse"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "sub-sup": {
+  "probe": "\"<sup>\" \"<sub>\"",
+  "total_hits": 95744,
+  "profiles": [
+   "Archfx",
+   "NicoJanE",
+   "Witanthan",
+   "myriacat"
+  ],
+  "profile_count_in_sample": 4
+ },
+ "video-upload": {
+  "probe": "\"user-attachments/assets\"",
+  "total_hits": 948224,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "mp4-video": {
+  "probe": "\".mp4\"",
+  "total_hits": 298496,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "audio": {
+  "probe": "\".mp3\"",
+  "total_hits": 105728,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "issue-driven-game": {
+  "probe": "\"issues/new?title=\"",
+  "total_hits": 6080,
+  "profiles": [
+   "beardedspice",
+   "biojs",
+   "cssinjs",
+   "sass-mq"
+  ],
+  "profile_count_in_sample": 4
+ },
+ "chess-via-issues": {
+  "probe": "\"chess\" \"issues/new\"",
+  "total_hits": 750,
+  "profiles": [
+   "BengalPirate",
+   "Charles-Chrismann",
+   "Lyzev",
+   "Mothilal-M",
+   "RicoToothless",
+   "Z0ZeroX",
+   "anducnguyen",
+   "losehu",
+   "marcizhu",
+   "muath-ye",
+   "prettierlichess",
+   "timburgan",
+   "trinib"
+  ],
+  "profile_count_in_sample": 13
+ },
+ "tic-tac-toe": {
+  "probe": "\"tic-tac-toe\" OR \"tictactoe\"",
+  "total_hits": 7984,
+  "profiles": [
+   "joemar25"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "connect-four": {
+  "probe": "\"connect4\" OR \"connect-four\"",
+  "total_hits": 121,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "guestbook": {
+  "probe": "\"guestbook\"",
+  "total_hits": 9632,
+  "profiles": [
+   "fullsoak",
+   "johncms",
+   "joshmgross",
+   "wuzhicms"
+  ],
+  "profile_count_in_sample": 4
+ },
+ "wordle-in-readme": {
+  "probe": "\"wordle\"",
+  "total_hits": 61440,
+  "profiles": [
+   "dpinones",
+   "lleonardogr"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "minesweeper": {
+  "probe": "\"minesweeper\"",
+  "total_hits": 15808,
+  "profiles": [
+   "zumrudu-anka"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "reversi": {
+  "probe": "\"reversi\" OR \"othello\"",
+  "total_hits": 1226,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "sudoku": {
+  "probe": "\"sudoku\"",
+  "total_hits": 37696,
+  "profiles": [
+   "Yanndroid"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "rock-paper-scissors": {
+  "probe": "\"rock paper scissors\"",
+  "total_hits": 14848,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "pokemon-game": {
+  "probe": "\"pokemon\" \"issues/new\"",
+  "total_hits": 200,
+  "profiles": [
+   "henriarauj0",
+   "public-api-lists"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "voting-poll": {
+  "probe": "\"vote\" \"issues/new\"",
+  "total_hits": 4200,
+  "profiles": [
+   "AlaSQL",
+   "PyUtilib",
+   "fastschema",
+   "matterpoll",
+   "nodebp",
+   "nxshell",
+   "php-cds"
+  ],
+  "profile_count_in_sample": 7
+ },
+ "snake": {
+  "probe": "\"github-contribution-grid-snake\"",
+  "total_hits": 32768,
+  "profiles": [
+   "Aayushstha1",
+   "AhmedShawkyDev",
+   "AlexMGP7",
+   "Awais-Asghar",
+   "BoborahimAlisherovich",
+   "CaduZulian",
+   "Chefcurry4",
+   "Crspy2",
+   "D3vil0p3r",
+   "DXOGO",
+   "DanielVera987",
+   "Furkathertaha",
+   "GabrielaSenna",
+   "GianniGaspari",
+   "GiuliaMartinsS2",
+   "Isaa22",
+   "Isac999",
+   "Jacksx20",
+   "JakukuR",
+   "Jan-Carles",
+   "Jose6348",
+   "KaSaNaa",
+   "Khaan25",
+   "Narendarcodes",
+   "NormanMises",
+   "PraveenKumar05-hub",
+   "RamonLarcherRibeiro",
+   "Redstone2337",
+   "Riquehenri",
+   "Rushikesh3377",
+   "Ryzz123",
+   "Saif7M",
+   "Shewart",
+   "Zcb991",
+   "alexrese",
+   "arthurvanl",
+   "artie93",
+   "baliezgi",
+   "beha7080",
+   "birrulwldain"
+  ],
+  "profile_count_in_sample": 87
+ },
+ "pacman": {
+  "probe": "\"pacman-contribution-graph\"",
+  "total_hits": 4528,
+  "profiles": [
+   "11Yashyadav",
+   "Abdellahsyani",
+   "AbinVarghese1",
+   "AbraraliS",
+   "AcciGen",
+   "AgedAnna",
+   "Andresa-Alves-Ribeiro",
+   "AndreyJustino",
+   "AriHenrique",
+   "Balaji-Coder06",
+   "Carolina-Silva",
+   "Code2With-Pratik",
+   "Dizzle0",
+   "FChJunior",
+   "Gojiro-34",
+   "GuilhermeHRG",
+   "Gyesss",
+   "HSiolin",
+   "Hacker-Sam-is-here",
+   "Henrytos",
+   "HeyVenom49",
+   "IagoPelitero",
+   "JohnMaleek",
+   "JunusErgin",
+   "Kavindu03-dev",
+   "KaykyFernandez",
+   "Kenji211",
+   "KiyoScript",
+   "LixdyDev",
+   "LoveKhatri",
+   "MatheusSMariano-Dev",
+   "MeliSantos",
+   "Miko-Ard",
+   "Mohamed20384",
+   "Nikhil6306",
+   "Persinus",
+   "Ph-Alves",
+   "PkLavc",
+   "Rafly-Ydstra",
+   "Ryzz123"
+  ],
+  "profile_count_in_sample": 98
+ },
+ "3d-contrib": {
+  "probe": "\"profile-3d-contrib\"",
+  "total_hits": 3952,
+  "profiles": [
+   "0xARCOS",
+   "1422756921",
+   "1595901624",
+   "Ahmed-Al-Aini",
+   "BielVereda",
+   "Bosha-a",
+   "Chrissiku",
+   "DeanLemans",
+   "Deepansubraman",
+   "DheerajSChauhan",
+   "Diophantus03",
+   "EdenWuyifan",
+   "Enchograph",
+   "FedeDP",
+   "FengYing1314",
+   "Flexsidee",
+   "HaynesChennn",
+   "HectorDanielAyarachiFuentes",
+   "JacksonSantin",
+   "Jacksx20",
+   "Johanbadillo",
+   "Lingbou",
+   "Lucas-Vinicius-Santos",
+   "MrEntity303",
+   "NolanHo",
+   "Pcjmy",
+   "RajShree1854",
+   "Redstone2337",
+   "RohanExploit",
+   "SKsaikiran",
+   "Samuelrlm",
+   "SessionHu",
+   "Soleil-des-chats",
+   "TephrocactusMYC",
+   "TheAndreyZakharov",
+   "Undertone0809",
+   "VikashPR",
+   "XueshiQiao",
+   "Ying-Luan",
+   "ZYONGE"
+  ],
+  "profile_count_in_sample": 95
+ },
+ "breakout": {
+  "probe": "\"github-breakout\" OR \"breakout.svg\"",
+  "total_hits": 1,
+  "profiles": [
+   "sitiom"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "space-shooter": {
+  "probe": "\"space-shooter\"",
+  "total_hits": 2400,
+  "profiles": [
+   "Omair-Akbar",
+   "RakshakSigdel"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "game-of-life": {
+  "probe": "\"game-of-life\" OR \"gameoflife\"",
+  "total_hits": 465,
+  "profiles": [
+   "qonwaygameoflife"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "tetris": {
+  "probe": "\"tetris\"",
+  "total_hits": 33088,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "skyline": {
+  "probe": "\"skyline\"",
+  "total_hits": 12320,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "isometric-contrib": {
+  "probe": "\"isometric\"",
+  "total_hits": 17120,
+  "profiles": [
+   "fifengine"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "spotify-now-playing": {
+  "probe": "\"spotify\" \"now-playing\" OR \"spotify-github-profile\"",
+  "total_hits": 33,
+  "profiles": [
+   "Abransh",
+   "Ajith-ajay",
+   "DavidCreat",
+   "EliseyRotar",
+   "GraveEaterMadison",
+   "IlyVoid",
+   "PrakasRavichandran",
+   "aarushis18",
+   "arsyadCode",
+   "dbisina",
+   "gauravbshet",
+   "gllrmzndm",
+   "grookee",
+   "kongvut",
+   "minhaj-hossain",
+   "rudraksh2611",
+   "scherenhaenden",
+   "scriptlver",
+   "sudee404",
+   "tanuj-shah",
+   "thewickedkarma",
+   "usmancynosure"
+  ],
+  "profile_count_in_sample": 22
+ },
+ "lastfm": {
+  "probe": "\"last.fm\" OR \"lastfm\"",
+  "total_hits": 4448,
+  "profiles": [
+   "catppuccin"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "wakatime": {
+  "probe": "\"wakatime\"",
+  "total_hits": 20672,
+  "profiles": [
+   "1422756921",
+   "ADiTyaRaj8969",
+   "LegacyUpdate",
+   "Mo-Shakib",
+   "Suhaib3100",
+   "TalelMejri",
+   "blackcater",
+   "cusaldmsr",
+   "eternidad33",
+   "greyhatguy007",
+   "theashishgavade",
+   "vinitshahdeo",
+   "williamkoller",
+   "wxx9248"
+  ],
+  "profile_count_in_sample": 14
+ },
+ "blog-post-workflow": {
+  "probe": "\"BLOG-POST-LIST\"",
+  "total_hits": 5776,
+  "profiles": [
+   "0xGodson",
+   "AI-Ithou",
+   "Admiraldesvl",
+   "Anita-ihuman",
+   "AswinBarath",
+   "ChamudiAyashmi",
+   "Devkant21",
+   "ElianCodes",
+   "GOVINDARAJLE",
+   "Harryyan",
+   "Juniorc027",
+   "JustSteveKing",
+   "KattyaCuevas",
+   "MS-Rex",
+   "MichaelCade",
+   "Muhsin-42",
+   "Nilmanduil",
+   "Ninja1375",
+   "Omar8345",
+   "Piotr1215",
+   "Rishit-dagli",
+   "RoseSecurity",
+   "Sagar0-0",
+   "SidharthMishra-07",
+   "Silent-Watcher",
+   "SplashCodeDex",
+   "TannerGilbert",
+   "TheLime1",
+   "ThePhD",
+   "Vishal1297",
+   "aadarshkumarr",
+   "abulhasan-18",
+   "adyanth",
+   "aitikgupta",
+   "alfreddagenais",
+   "aps08",
+   "arpit-omprakash",
+   "assuncaocharles",
+   "azl397985856",
+   "blackgirlbytes"
+  ],
+  "profile_count_in_sample": 87
+ },
+ "youtube-feed": {
+  "probe": "\"YOUTUBE-VIDEO-LIST\" OR \"youtube-cards\"",
+  "total_hits": 0,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "leetcode": {
+  "probe": "\"leetcode\" \"card\"",
+  "total_hits": 30656,
+  "profiles": [
+   "Aayush1904",
+   "Akshit07012002",
+   "BlueJokerVI",
+   "Dash10107",
+   "Dev-Aditya-More",
+   "Deva0604",
+   "EdgedSquirrels",
+   "Ghanendra3366",
+   "HaiBV",
+   "HarshitPachori",
+   "K1905-cpu",
+   "MobinTGR8",
+   "NEHA1039",
+   "Punit173",
+   "RishabhRawatt",
+   "SaranHiruthikM",
+   "Snehashis87",
+   "TUSHAR-KHATRI13",
+   "TheSnehaSharma",
+   "VinyasCS-007",
+   "aaronangxz",
+   "abhinit21",
+   "anas-haq",
+   "apooravmalik",
+   "ayush-km",
+   "crixodia",
+   "edorado93",
+   "garvitthakral",
+   "gomarag",
+   "greyhatguy007",
+   "hariharanragothaman",
+   "hmzi67",
+   "ictrl",
+   "keshav-khandelwal",
+   "krishnas005",
+   "lakshmanroy",
+   "mahede182",
+   "mahfuj02",
+   "manoj5047",
+   "mirzokiroff"
+  ],
+  "profile_count_in_sample": 46
+ },
+ "codeforces": {
+  "probe": "\"codeforces\"",
+  "total_hits": 61952,
+  "profiles": [
+   "1999AZZAR",
+   "ArdaBakici",
+   "Mehedi-Hasan-Rabbi",
+   "Mohit-kumar123",
+   "greyhatguy007"
+  ],
+  "profile_count_in_sample": 5
+ },
+ "monkeytype": {
+  "probe": "\"monkeytype\"",
+  "total_hits": 2180,
+  "profiles": [
+   "catppuccin",
+   "rohanmistry231"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "duolingo": {
+  "probe": "\"duolingo\"",
+  "total_hits": 7216,
+  "profiles": [
+   "DuoHacker",
+   "awesome-english",
+   "redecheck"
+  ],
+  "profile_count_in_sample": 3
+ },
+ "chesscom-lichess": {
+  "probe": "\"lichess\" OR \"chess.com\"",
+  "total_hits": 1656,
+  "profiles": [
+   "DGTCentaurMods",
+   "SyedShaheerHussain",
+   "catppuccin",
+   "flawchess",
+   "public-apis"
+  ],
+  "profile_count_in_sample": 5
+ },
+ "steam": {
+  "probe": "\"steam\" \"profile\" \"card\"",
+  "total_hits": 6096,
+  "profiles": [
+   "DrRyanHuang",
+   "LoveIiei",
+   "beyonik",
+   "h-ssiqueira",
+   "lansonsam",
+   "winesapOS"
+  ],
+  "profile_count_in_sample": 6
+ },
+ "anilist-myanimelist": {
+  "probe": "\"anilist\" OR \"myanimelist\"",
+  "total_hits": 1168,
+  "profiles": [
+   "Aidoku",
+   "Chimahon",
+   "MAL-Dubs",
+   "MALSync",
+   "NyanTV",
+   "agregarr",
+   "awesome-jellyfin",
+   "public-api-lists",
+   "public-apis",
+   "yomihon"
+  ],
+  "profile_count_in_sample": 10
+ },
+ "goodreads": {
+  "probe": "\"goodreads\"",
+  "total_hits": 8832,
+  "profiles": [
+   "DL4ES",
+   "OAuthSwift",
+   "aralroca",
+   "schemaspy",
+   "tokenspice"
+  ],
+  "profile_count_in_sample": 5
+ },
+ "strava": {
+  "probe": "\"strava\"",
+  "total_hits": 13824,
+  "profiles": [
+   "HomebyTwo"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "discord-presence": {
+  "probe": "\"lanyard\"",
+  "total_hits": 3376,
+  "profiles": [
+   "88JC",
+   "BetaWile",
+   "HerXayah",
+   "Kuuuuuuuu",
+   "aiko-chan-ai",
+   "andrewstech",
+   "befoulers",
+   "canzade",
+   "xtekky"
+  ],
+  "profile_count_in_sample": 9
+ },
+ "weather": {
+  "probe": "\"weather\" \"svg\"",
+  "total_hits": 58112,
+  "profiles": [
+   "cell2fire",
+   "hu8813",
+   "sci-wms",
+   "sqm-autorate"
+  ],
+  "profile_count_in_sample": 4
+ },
+ "quote-of-the-day": {
+  "probe": "\"quote\" \"readme\" \"svg\"",
+  "total_hits": 97024,
+  "profiles": [
+   "AbdulbasitSaid",
+   "AkashSaha747",
+   "Amanpandit87",
+   "Amardeep111",
+   "Be1newinner",
+   "CabHug",
+   "CodingWithHardik",
+   "D3vil0p3r",
+   "Favouridowu02",
+   "Glazkoff",
+   "Harini03170408",
+   "ItzSudharshan",
+   "JeanCarloUNL",
+   "Kaushikselvaraju",
+   "Kyori-kyo",
+   "LaSan99",
+   "Lebohang1821",
+   "Madushansuriyabandara",
+   "MathewKioko",
+   "PoOwAa",
+   "Redvey",
+   "SabarishCodeWizard",
+   "SakhrWahib",
+   "Salmandabbakuti",
+   "Sonikak004",
+   "ViNu-23",
+   "ViniCosta1",
+   "abhishek2244",
+   "cfmleditor",
+   "cypriel17",
+   "encryrose",
+   "erfan-ops",
+   "govinda777",
+   "gptshubham595",
+   "gunthertresor",
+   "huraira-younas",
+   "jasixiedust",
+   "joaoHMeireles",
+   "mohanadft",
+   "mpa-mxiang"
+  ],
+  "profile_count_in_sample": 45
+ },
+ "jokes": {
+  "probe": "\"readme-jokes\"",
+  "total_hits": 2644,
+  "profiles": [
+   "1422756921",
+   "AkashSingh3031",
+   "Alok-2002",
+   "BeatriceWambuiMbugua",
+   "BlesslinJerishR",
+   "BodhiLaughton",
+   "Chameleon-Coder",
+   "ChinmayKaitade",
+   "D3vil0p3r",
+   "DevHeart1",
+   "FarhaKousar1601",
+   "ImSaMPro",
+   "ImaniAN",
+   "JonayedMohiuddin",
+   "KabilanMA",
+   "Komal914",
+   "MISAKIGA",
+   "Manoranjanhere",
+   "Mbringhurst82",
+   "MonadWizard",
+   "Mouneshgouda",
+   "PramodKumarYadav",
+   "PurpleNurps",
+   "Shewart",
+   "The-Young-Programer",
+   "The-Young-Programmer",
+   "VictorOmondiCDS",
+   "Vishal2186",
+   "VisheshBansal",
+   "abdullokhonz",
+   "airbauer",
+   "alanJames00",
+   "alokverma18",
+   "amanraox",
+   "anvar-muzaffarli",
+   "artromone",
+   "bsilente",
+   "cBridges851",
+   "daseanm",
+   "dclxviclan"
+  ],
+  "profile_count_in_sample": 59
+ },
+ "hacker-news": {
+  "probe": "\"hacker news\"",
+  "total_hits": 24992,
+  "profiles": [
+   "Tablane"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "star-history": {
+  "probe": "\"star-history.com\"",
+  "total_hits": 43008,
+  "profiles": [
+   "FeatureProbe",
+   "anonystick"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "repobeats": {
+  "probe": "\"repobeats\"",
+  "total_hits": 5904,
+  "profiles": [
+   "BoletoNet",
+   "CryptoBlades",
+   "MineTrax",
+   "OpenSpace",
+   "SyntaxUI",
+   "chibisafe",
+   "fluentcms",
+   "owo-dusk"
+  ],
+  "profile_count_in_sample": 8
+ },
+ "metrics-plugins": {
+  "probe": "\"metrics.plugins\"",
+  "total_hits": 237,
+  "profiles": [
+   "spiderkd"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "trophies": {
+  "probe": "\"github-profile-trophy\"",
+  "total_hits": 68608,
+  "profiles": [
+   "4mritGiri",
+   "AbdulbasitSaid",
+   "Alexiscomete",
+   "AryaS01",
+   "Attia-Ahmed",
+   "B3R3H",
+   "BitDEVil2K16",
+   "Chuckibmk",
+   "Cody-geekdive",
+   "D3R50N",
+   "D3vil0p3r",
+   "DavidVillalobos",
+   "EijiTomonari",
+   "GHOST117s",
+   "GabrielDev1708",
+   "Gorakh-Gupta",
+   "IvanRomero03",
+   "JUN-SUZU",
+   "JaumDarkz",
+   "Juhan280",
+   "KUMAR-AKASH-M",
+   "KhoraLee",
+   "LordDeatHunter",
+   "LugenNe0N",
+   "MAHADI-143",
+   "MTayeb93",
+   "Masterfloh",
+   "MohamedAbdel-Azeem",
+   "NTangHao",
+   "Nekory23",
+   "Omar-Ebrahim-1",
+   "PepeBlinksho",
+   "PurpleRadish42",
+   "RuthKerubo",
+   "ThomasVasileiadis",
+   "TracerDS",
+   "TroddenSpade",
+   "TurboHK",
+   "VipeR-69",
+   "XinYao1994"
+  ],
+  "profile_count_in_sample": 92
+ },
+ "profile-summary-cards": {
+  "probe": "\"profile-summary-cards\"",
+  "total_hits": 189440,
+  "profiles": [
+   "0xMrNiko",
+   "5djr",
+   "Anilnayak126",
+   "Ansalpandey",
+   "Apps-Makers",
+   "CHUNG-HAO",
+   "D0men1c0",
+   "Eduardo-Baranowski",
+   "ErickkADR",
+   "Fabayu",
+   "Fiisya",
+   "Fyphen1223",
+   "Gorgoll",
+   "GrandMoff100",
+   "GregoryKogan",
+   "Gueguelas",
+   "HanielCota",
+   "Ishanoshada",
+   "Jacksx20",
+   "KausainAhmed",
+   "KiyoEditz",
+   "LarryDpk",
+   "Lucas-Vinicius-Santos",
+   "LyricYang",
+   "MdJiyaulHaq",
+   "MohiMozaffari",
+   "Mukku27",
+   "NisargPipaliya",
+   "Ornella-Gigante",
+   "PawaOx4th",
+   "Premkolte",
+   "Ricobyter",
+   "SKsaikiran",
+   "SUDEEPBOTS",
+   "SafferStha",
+   "Ton-Chyod-s",
+   "VichuA2",
+   "abhinit21",
+   "ali-bouali",
+   "anuththara2007-W"
+  ],
+  "profile_count_in_sample": 95
+ },
+ "activity-graph": {
+  "probe": "\"activity-graph\"",
+  "total_hits": 54656,
+  "profiles": [
+   "ACodeHX",
+   "AdityaBhattacharya1",
+   "AndreCabalo",
+   "B0K1NG",
+   "D3vil0p3r",
+   "DVHcoding",
+   "DevinduDh",
+   "FChJunior",
+   "Fxzzie",
+   "Guttojss",
+   "ImTheScreaM",
+   "Juhan280",
+   "KUMAR-AKASH-M",
+   "KermitTheFr0g",
+   "LetMeFly666",
+   "Luigifao",
+   "MAHADI-143",
+   "Marcelinojr",
+   "MarcoCSG",
+   "Mental-Fox",
+   "MireliAraujo",
+   "Mumtaz12",
+   "MyNameIsKry",
+   "NeeDKK",
+   "NennyCoast",
+   "Param-1712",
+   "ParsivalT",
+   "Parth10P",
+   "Phoebe0",
+   "RafaelVicen",
+   "Rebellows",
+   "Redstone2337",
+   "SamanthaASilva",
+   "TogiFerretFerret",
+   "Upamanyu-coder",
+   "VichuA2",
+   "WahiDestroyer",
+   "aayushc22",
+   "abdullahalsazib",
+   "affanrahman0"
+  ],
+  "profile_count_in_sample": 90
+ },
+ "visitor-map": {
+  "probe": "\"visitor\" \"map\"",
+  "total_hits": 106752,
+  "profiles": [
+   "openindoormaps",
+   "reluxscript",
+   "yyogue"
+  ],
+  "profile_count_in_sample": 3
+ },
+ "clustrmaps": {
+  "probe": "\"clustrmaps\"",
+  "total_hits": 196,
+  "profiles": [
+   "Barca0412",
+   "Rankyer",
+   "cs-w0r1d",
+   "ktwu01",
+   "linwhitehat"
+  ],
+  "profile_count_in_sample": 5
+ },
+ "ascii-art": {
+  "probe": "\"```\" \"\u2800\" OR \"\u2588\u2580\u2580\"",
+  "total_hits": 27,
+  "profiles": [
+   "kacphur",
+   "riturajkumar01"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "rickroll": {
+  "probe": "\"dQw4w9WgXcQ\"",
+  "total_hits": 8624,
+  "profiles": [
+   "Eternatus9999",
+   "embedlite",
+   "lavacord"
+  ],
+  "profile_count_in_sample": 3
+ },
+ "konami": {
+  "probe": "\"konami\"",
+  "total_hits": 4776,
+  "profiles": [
+   "openclawfice"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "qr-code": {
+  "probe": "\"qr\" \"code\" \"svg\"",
+  "total_hits": 153600,
+  "profiles": [
+   "RaisFast",
+   "godror",
+   "openindoormaps",
+   "receiptline"
+  ],
+  "profile_count_in_sample": 4
+ },
+ "morse": {
+  "probe": "\"morse\"",
+  "total_hits": 19968,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "binary-bio": {
+  "probe": "\"01001000\"",
+  "total_hits": 3992,
+  "profiles": [
+   "Chandansaha2005"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "emoji-art": {
+  "probe": "\"\ud83d\udfe9\ud83d\udfe9\ud83d\udfe9\"",
+  "total_hits": 808,
+  "profiles": [
+   "DanielFonsecaa",
+   "JamBalaya56562",
+   "Parameow3",
+   "RaginiSingh2024",
+   "Windsun6688",
+   "alex-oos",
+   "atharv01h",
+   "cxsunflower",
+   "diwasatreya",
+   "legotardo",
+   "ouuan"
+  ],
+  "profile_count_in_sample": 11
+ },
+ "hidden-comment": {
+  "probe": "\"<!-- hidden\"",
+  "total_hits": 762,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "marquee-tag": {
+  "probe": "\"<marquee\"",
+  "total_hits": 1736,
+  "profiles": [
+   "nyancss"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "readme-in-another-language": {
+  "probe": "\"<div dir=\\\"rtl\\\">\"",
+  "total_hits": 3272,
+  "profiles": [
+   "bitcoind-me"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "pixel-art": {
+  "probe": "\"pixel art\"",
+  "total_hits": 24576,
+  "profiles": [
+   "goatattack"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "neofetch": {
+  "probe": "\"neofetch\"",
+  "total_hits": 9120,
+  "profiles": [
+   "UstymUkhman"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "fastfetch": {
+  "probe": "\"fastfetch\"",
+  "total_hits": 7920,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "terminal-svg": {
+  "probe": "\"terminal\" \"typing\" \"svg\"",
+  "total_hits": 39872,
+  "profiles": [
+   "Dynesshely",
+   "GAP-Pathum",
+   "RLR-GitHub",
+   "dRafaleD",
+   "deployd",
+   "glific",
+   "nishchal-gond"
+  ],
+  "profile_count_in_sample": 7
+ },
+ "resume-in-readme": {
+  "probe": "\"resume\" \"json\"",
+  "total_hits": 369664,
+  "profiles": [
+   "AT2QA-Official-Code",
+   "infinidysk"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "json-bio": {
+  "probe": "\"const me = {\" OR \"\\\"name\\\":\"",
+  "total_hits": 5,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "python-class-bio": {
+  "probe": "\"class \" \"def __init__(self)\"",
+  "total_hits": 42112,
+  "profiles": [
+   "vqpy"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "yaml-bio": {
+  "probe": "\"```yaml\" \"name:\"",
+  "total_hits": 475136,
+  "profiles": [
+   "polyspace-actions"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "sql-bio": {
+  "probe": "\"SELECT\" \"FROM developer\"",
+  "total_hits": 3640,
+  "profiles": [
+   "bitcoinxt",
+   "receevi"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "rust-bio": {
+  "probe": "\"fn main()\"",
+  "total_hits": 70912,
+  "profiles": [
+   "faster-rs",
+   "teloxide"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "timezone-clock": {
+  "probe": "\"timezone\" \"clock\"",
+  "total_hits": 22656,
+  "profiles": [
+   "Tpekins"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "age-counter": {
+  "probe": "\"years old\" \"svg\"",
+  "total_hits": 5872,
+  "profiles": [
+   "MertBalkan",
+   "jstachio"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "tip-jar": {
+  "probe": "\"buymeacoffee\" OR \"ko-fi\"",
+  "total_hits": 5856,
+  "profiles": [
+   "Beaver-Notes",
+   "GoldHEN"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "sponsors-wall": {
+  "probe": "\"sponsorkit\"",
+  "total_hits": 678,
+  "profiles": [
+   "ast-grep",
+   "colyseus",
+   "hybridly",
+   "prosekit",
+   "soketi",
+   "velopack"
+  ],
+  "profile_count_in_sample": 6
+ },
+ "all-contributors": {
+  "probe": "\"ALL-CONTRIBUTORS-LIST\"",
+  "total_hits": 20544,
+  "profiles": [
+   "Soundux",
+   "codebuddies",
+   "codenameone",
+   "machinelearnjs",
+   "vuese",
+   "wponion"
+  ],
+  "profile_count_in_sample": 6
+ },
+ "gh-sponsors-button": {
+  "probe": "\"github.com/sponsors\"",
+  "total_hits": 91904,
+  "profiles": [
+   "BittyTax",
+   "OctoLinker",
+   "django-hijack",
+   "dotsnav",
+   "json-everything"
+  ],
+  "profile_count_in_sample": 5
+ },
+ "dependabot-badge": {
+  "probe": "\"dependabot\"",
+  "total_hits": 40896,
+  "profiles": [
+   "openaustralia"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "rss": {
+  "probe": "\"rss\" \"feed\"",
+  "total_hits": 144128,
+  "profiles": [
+   "11tyCMS",
+   "LaunchKit",
+   "abulhasan-18"
+  ],
+  "profile_count_in_sample": 3
+ },
+ "random-image-per-load": {
+  "probe": "\"random\" \"unsplash\"",
+  "total_hits": 5504,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "cats-api": {
+  "probe": "\"cataas\" OR \"thecatapi\"",
+  "total_hits": 119,
+  "profiles": [
+   "public-api-lists"
+  ],
+  "profile_count_in_sample": 1
+ },
+ "dog-api": {
+  "probe": "\"dog.ceo\"",
+  "total_hits": 1896,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ },
+ "gif-banner": {
+  "probe": "\".gif\" \"banner\"",
+  "total_hits": 47616,
+  "profiles": [
+   "Alessandro-Cavaliere",
+   "Ananya63",
+   "CTzatzakis",
+   "Hidden-Warden",
+   "KUNALCHOURE",
+   "MohamadSharafeddine",
+   "MosbyLeia",
+   "Mukku27",
+   "TarunTheDev",
+   "Tejaswi-Chaudhari",
+   "Velt1",
+   "Why4real",
+   "blackcater",
+   "foldergram",
+   "hardingadonis",
+   "hathawayj",
+   "tussanakorn",
+   "ziyyaa1",
+   "zluvsand"
+  ],
+  "profile_count_in_sample": 19
+ },
+ "lottie": {
+  "probe": "\"lottie\"",
+  "total_hits": 32448,
+  "profiles": [
+   "BetterSolano",
+   "DevArchitecture"
+  ],
+  "profile_count_in_sample": 2
+ },
+ "readme-changes-daily": {
+  "probe": "\"updated daily\" OR \"last updated\"",
+  "total_hits": 892,
+  "profiles": [],
+  "profile_count_in_sample": 0
+ }
+}

@@ -1,0 +1,276 @@
+{
+ "ashfordeOU": {
+  "url": "https://raw.githubusercontent.com/ashfordeOU/ashfordeOU/main/assets/hero-dark.svg",
+  "vb_w": 880.0,
+  "vb_h": 396.0,
+  "min_font": 10.0,
+  "animated": true,
+  "kb": 162,
+  "features": [
+   "SMIL",
+   "CSS keyframes",
+   "embedded font",
+   "media query",
+   "radialGradient"
+  ]
+ },
+ "Xalzeroph": {
+  "url": "https://raw.githubusercontent.com/Xalzeroph/Xalzeroph/main/assets/profile-header-dark.svg?v=81",
+  "vb_w": 1200.0,
+  "vb_h": 500.0,
+  "min_font": 16.0,
+  "animated": true,
+  "kb": 127,
+  "features": [
+   "feGaussianBlur",
+   "SMIL",
+   "media query",
+   "radialGradient"
+  ]
+ },
+ "ayxn07": {
+  "url": "https://raw.githubusercontent.com/ayxn07/ayxn07/main/assets/portfolio-hero.png",
+  "raster": true,
+  "bytes": 442300
+ },
+ "harkirat-data": {
+  "url": "https://raw.githubusercontent.com/harkirat-data/harkirat-data/main/assets/dark/header-v1.svg",
+  "vb_w": 1000.0,
+  "vb_h": 400.0,
+  "min_font": 11.0,
+  "animated": true,
+  "kb": 4,
+  "features": [
+   "CSS keyframes",
+   "media query"
+  ]
+ },
+ "getaudra": {
+  "url": "https://raw.githubusercontent.com/getaudra/getaudra/main/assets/command-center-hero.svg",
+  "vb_w": 1200.0,
+  "vb_h": 430.0,
+  "min_font": 15.0,
+  "animated": true,
+  "kb": 3,
+  "features": [
+   "feGaussianBlur",
+   "SMIL"
+  ]
+ },
+ "SergiGTAr": {
+  "url": "https://raw.githubusercontent.com/SergiGTAr/SergiGTAr/main/assets/pipboy-terminal-dark.svg",
+  "vb_w": 720.0,
+  "vb_h": 760.0,
+  "min_font": 12.0,
+  "animated": true,
+  "kb": 59,
+  "features": [
+   "feGaussianBlur",
+   "clipPath",
+   "pattern",
+   "SMIL",
+   "CSS keyframes",
+   "embedded raster",
+   "media query",
+   "radialGradient"
+  ]
+ },
+ "HiradEmami": {
+  "url": "https://raw.githubusercontent.com/HiradEmami/HiradEmami/master/docs/assets/svg/system/start_here_control_surface.svg",
+  "vb_w": 1100.0,
+  "vb_h": 320.0,
+  "min_font": 9.0,
+  "animated": true,
+  "kb": 6,
+  "features": [
+   "feGaussianBlur",
+   "pattern",
+   "SMIL",
+   "radialGradient"
+  ]
+ },
+ "JackLuciano": {
+  "url": "https://raw.githubusercontent.com/JackLuciano/JackLuciano/main/assets/header.svg",
+  "vb_w": 1000.0,
+  "vb_h": 300.0,
+  "min_font": 12.0,
+  "animated": true,
+  "kb": 7,
+  "features": [
+   "feGaussianBlur",
+   "clipPath",
+   "pattern",
+   "SMIL",
+   "radialGradient"
+  ]
+ },
+ "adamalston": {
+  "url": "https://www.adamalston.com/observatory.svg",
+  "vb_w": 720.0,
+  "vb_h": 320.0,
+  "min_font": 7.0,
+  "animated": false,
+  "kb": 12,
+  "features": []
+ },
+ "XxMasterepicxX": {
+  "url": "https://raw.githubusercontent.com/XxMasterepicxX/XxMasterepicxX/main/assets/header-dark.svg",
+  "vb_w": 1000.0,
+  "vb_h": 300.0,
+  "min_font": 10.5,
+  "animated": true,
+  "kb": 203,
+  "features": [
+   "feTurbulence",
+   "feDisplacementMap",
+   "feGaussianBlur",
+   "mask",
+   "clipPath",
+   "SMIL",
+   "CSS keyframes",
+   "radialGradient"
+  ]
+ },
+ "JConfessor": {
+  "url": "https://raw.githubusercontent.com/JConfessor/JConfessor/main/assets/hero-dark.svg",
+  "vb_w": 1100.0,
+  "vb_h": 360.0,
+  "min_font": 10.5,
+  "animated": true,
+  "kb": 9,
+  "features": [
+   "clipPath",
+   "pattern",
+   "SMIL",
+   "radialGradient"
+  ]
+ },
+ "sepahead": {
+  "url": "https://raw.githubusercontent.com/sepahead/sepahead/main/assets/hero-dark.svg",
+  "vb_w": 860.0,
+  "vb_h": 176.0,
+  "min_font": 13.0,
+  "animated": true,
+  "kb": 6,
+  "features": [
+   "clipPath",
+   "CSS keyframes",
+   "media query"
+  ]
+ },
+ "atikulmunna": {
+  "url": "https://raw.githubusercontent.com/atikulmunna/atikulmunna/main/assets/flappy.svg?v=eb93efb5",
+  "vb_w": 1000.0,
+  "vb_h": 240.0,
+  "min_font": 7.0,
+  "animated": true,
+  "kb": 106,
+  "features": [
+   "feGaussianBlur",
+   "mask",
+   "clipPath",
+   "SMIL",
+   "media query",
+   "radialGradient"
+  ]
+ },
+ "thenolle": {
+  "url": "https://raw.githubusercontent.com/thenolle/thenolle/master/images/banner.svg",
+  "vb_w": 375.0,
+  "vb_h": 160.0,
+  "min_font": 5.5,
+  "animated": true,
+  "kb": 1455,
+  "features": [
+   "feGaussianBlur",
+   "clipPath",
+   "SMIL",
+   "embedded raster",
+   "embedded font"
+  ]
+ },
+ "rossjrw": {
+  "url": "https://raw.githubusercontent.com/rossjrw/rossjrw/play/games/current/board.4710.svg",
+  "vb_w": 177.0,
+  "vb_h": 110.0,
+  "min_font": null,
+  "animated": false,
+  "kb": 143,
+  "features": [
+   "feGaussianBlur",
+   "clipPath",
+   "radialGradient"
+  ]
+ },
+ "leereilly": {
+  "url": "https://raw.githubusercontent.com/leereilly/leereilly/master/contribution-graph.svg",
+  "vb_w": 739.0,
+  "vb_h": 95.0,
+  "min_font": null,
+  "animated": true,
+  "kb": 37,
+  "features": [
+   "SMIL"
+  ]
+ },
+ "AlexChek51": {
+  "url": "https://raw.githubusercontent.com/AlexChek51/AlexChek51/main/assets/header-dark.svg",
+  "vb_w": 1200.0,
+  "vb_h": 480.0,
+  "min_font": 13.0,
+  "animated": true,
+  "kb": 18,
+  "features": [
+   "feGaussianBlur",
+   "SMIL",
+   "CSS keyframes",
+   "media query",
+   "radialGradient"
+  ]
+ },
+ "JosephQ47": {
+  "url": "https://raw.githubusercontent.com/JosephQ47/JosephQ47/main/assets/matrix-banner.svg?v=2",
+  "vb_w": 1200.0,
+  "vb_h": 260.0,
+  "min_font": 14.0,
+  "animated": true,
+  "kb": 54,
+  "features": [
+   "feGaussianBlur",
+   "CSS keyframes",
+   "radialGradient"
+  ]
+ },
+ "jcubic": {
+  "url": null
+ },
+ "Umeem26": {
+  "url": "https://raw.githubusercontent.com/Umeem26/Umeem26/main/assets/hero-dark.svg",
+  "vb_w": 1200.0,
+  "vb_h": 240.0,
+  "min_font": 18.0,
+  "animated": true,
+  "kb": 3,
+  "features": [
+   "mask",
+   "clipPath",
+   "pattern",
+   "CSS keyframes",
+   "media query",
+   "radialGradient"
+  ]
+ },
+ "Dhyanesh006": {
+  "url": "https://raw.githubusercontent.com/Dhyanesh006/Dhyanesh006/main/assets/matrix-banner.svg",
+  "vb_w": 1920.0,
+  "vb_h": 524.0,
+  "min_font": 16.0,
+  "animated": true,
+  "kb": 68,
+  "features": [
+   "feGaussianBlur",
+   "SMIL",
+   "radialGradient"
+  ]
+ }
+}
