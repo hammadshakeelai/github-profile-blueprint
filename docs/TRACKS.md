@@ -12,6 +12,9 @@ claim without a citation, a measurement, or an `UNVERIFIED` tag.
 | 3 | Alt text and accessibility across 10,782 images | **done** |
 | 4 | `profile-lint` — every measured rule as a checker | **done** |
 | 5 | Narrow the iOS unknown with an iPhone-emulated WebKit pass | **done** |
+| 6 | Can a `<picture>` source be gated on **width**? | todo |
+| 7 | Package profile-lint so other people can run it | todo |
+| 8 | A five-minute real-device checklist | todo |
 
 ---
 
@@ -83,3 +86,30 @@ rather than left blank.
 WebKit exception, all three theme mechanisms working. What remains genuinely
 unknown: iOS Low Power Mode, the GitHub mobile apps' native renderers, and real
 3× rasterisation. See [research/IOS.md](research/IOS.md).
+
+## 6 · Can a `<picture>` source be gated on width?
+
+Track 2 proved GitHub's sanitizer keeps `media="(prefers-reduced-motion: reduce)"`
+and that all three engines honour it. Two surveyed profiles (Xalzeroph,
+SirAllap) ship `max-width` sources pointing at phone-specific files, and the
+Track 1 pass saw those sources correctly *not* apply at 1280px — but nobody has
+checked that they *do* apply at 390px.
+
+If they do, the survey's largest finding stops being a trade-off. Today a card
+must choose between a desktop-scale canvas and 309px legibility. With a
+width-gated source it can ship both: one SVG drawn for 846px, another drawn in
+309 units where 11px is 11px. That would change the skill's central advice, so
+it needs verifying rather than assuming.
+
+## 7 · Package profile-lint
+
+It currently runs from a checkout of this repository. A composite GitHub Action,
+or a single file with no imports from `tools/survey/`, would let anyone point it
+at their profile. Worth doing only once the rules have settled.
+
+## 8 · A five-minute real-device checklist
+
+Track 5 left three things emulation cannot answer: iOS Low Power Mode, the
+GitHub mobile apps' native renderers, and real 3x rasterisation. All three are
+answerable by one person with a phone in a few minutes, if the gallery is laid
+out so each answer is a yes/no you can read off. Build that page.
