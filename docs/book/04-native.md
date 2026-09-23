@@ -19,2104 +19,2104 @@ month, on a plinth — the same numbers as the showcase heatmap, as a city.
 
 ```stl
 solid skyline
-  facet normal 0 0 -1
+  facet normal 0 -1 0
     outer loop
-      vertex -1.00 -1.00 0.00
-      vertex 73.00 4.00 0.00
-      vertex 73.00 -1.00 0.00
-    endloop
-  endfacet
-  facet normal 0 0 -1
-    outer loop
-      vertex -1.00 -1.00 0.00
-      vertex -1.00 4.00 0.00
-      vertex 73.00 4.00 0.00
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex -1.00 -1.00 0.60
-      vertex 73.00 -1.00 0.60
-      vertex 73.00 4.00 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex -1.00 -1.00 0.60
-      vertex 73.00 4.00 0.60
-      vertex -1.00 4.00 0.60
+      vertex -1.00 0.00 1.00
+      vertex 73.00 0.00 -4.00
+      vertex 73.00 0.00 1.00
     endloop
   endfacet
   facet normal 0 -1 0
     outer loop
-      vertex -1.00 -1.00 0.00
-      vertex 73.00 -1.00 0.00
-      vertex 73.00 -1.00 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex -1.00 -1.00 0.00
-      vertex 73.00 -1.00 0.60
-      vertex -1.00 -1.00 0.60
+      vertex -1.00 0.00 1.00
+      vertex -1.00 0.00 -4.00
+      vertex 73.00 0.00 -4.00
     endloop
   endfacet
   facet normal 0 1 0
     outer loop
-      vertex 73.00 4.00 0.00
-      vertex -1.00 4.00 0.00
-      vertex -1.00 4.00 0.60
+      vertex -1.00 0.60 1.00
+      vertex 73.00 0.60 1.00
+      vertex 73.00 0.60 -4.00
     endloop
   endfacet
   facet normal 0 1 0
     outer loop
-      vertex 73.00 4.00 0.00
-      vertex -1.00 4.00 0.60
-      vertex 73.00 4.00 0.60
-    endloop
-  endfacet
-  facet normal 1 0 0
-    outer loop
-      vertex 73.00 -1.00 0.00
-      vertex 73.00 4.00 0.00
-      vertex 73.00 4.00 0.60
-    endloop
-  endfacet
-  facet normal 1 0 0
-    outer loop
-      vertex 73.00 -1.00 0.00
-      vertex 73.00 4.00 0.60
-      vertex 73.00 -1.00 0.60
-    endloop
-  endfacet
-  facet normal -1 0 0
-    outer loop
-      vertex -1.00 -1.00 0.00
-      vertex -1.00 -1.00 0.60
-      vertex -1.00 4.00 0.60
-    endloop
-  endfacet
-  facet normal -1 0 0
-    outer loop
-      vertex -1.00 -1.00 0.00
-      vertex -1.00 4.00 0.60
-      vertex -1.00 4.00 0.00
-    endloop
-  endfacet
-  facet normal 0 0 -1
-    outer loop
-      vertex 0.00 0.50 0.60
-      vertex 2.00 2.50 0.60
-      vertex 2.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 -1
-    outer loop
-      vertex 0.00 0.50 0.60
-      vertex 0.00 2.50 0.60
-      vertex 2.00 2.50 0.60
+      vertex -1.00 0.60 1.00
+      vertex 73.00 0.60 -4.00
+      vertex -1.00 0.60 -4.00
     endloop
   endfacet
   facet normal 0 0 1
     outer loop
-      vertex 0.00 0.50 0.60
-      vertex 2.00 0.50 0.60
-      vertex 2.00 2.50 0.60
+      vertex -1.00 0.00 1.00
+      vertex 73.00 0.00 1.00
+      vertex 73.00 0.60 1.00
     endloop
   endfacet
   facet normal 0 0 1
     outer loop
-      vertex 0.00 0.50 0.60
-      vertex 2.00 2.50 0.60
-      vertex 0.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 0.00 0.50 0.60
-      vertex 2.00 0.50 0.60
-      vertex 2.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 0.00 0.50 0.60
-      vertex 2.00 0.50 0.60
-      vertex 0.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 2.00 2.50 0.60
-      vertex 0.00 2.50 0.60
-      vertex 0.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 2.00 2.50 0.60
-      vertex 0.00 2.50 0.60
-      vertex 2.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 1 0 0
-    outer loop
-      vertex 2.00 0.50 0.60
-      vertex 2.00 2.50 0.60
-      vertex 2.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 1 0 0
-    outer loop
-      vertex 2.00 0.50 0.60
-      vertex 2.00 2.50 0.60
-      vertex 2.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal -1 0 0
-    outer loop
-      vertex 0.00 0.50 0.60
-      vertex 0.00 0.50 0.60
-      vertex 0.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal -1 0 0
-    outer loop
-      vertex 0.00 0.50 0.60
-      vertex 0.00 2.50 0.60
-      vertex 0.00 2.50 0.60
+      vertex -1.00 0.00 1.00
+      vertex 73.00 0.60 1.00
+      vertex -1.00 0.60 1.00
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 3.00 0.50 0.60
-      vertex 5.00 2.50 0.60
-      vertex 5.00 0.50 0.60
+      vertex 73.00 0.00 -4.00
+      vertex -1.00 0.00 -4.00
+      vertex -1.00 0.60 -4.00
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 3.00 0.50 0.60
-      vertex 3.00 2.50 0.60
-      vertex 5.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 3.00 0.50 0.60
-      vertex 5.00 0.50 0.60
-      vertex 5.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 3.00 0.50 0.60
-      vertex 5.00 2.50 0.60
-      vertex 3.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 3.00 0.50 0.60
-      vertex 5.00 0.50 0.60
-      vertex 5.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 3.00 0.50 0.60
-      vertex 5.00 0.50 0.60
-      vertex 3.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 5.00 2.50 0.60
-      vertex 3.00 2.50 0.60
-      vertex 3.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 5.00 2.50 0.60
-      vertex 3.00 2.50 0.60
-      vertex 5.00 2.50 0.60
+      vertex 73.00 0.00 -4.00
+      vertex -1.00 0.60 -4.00
+      vertex 73.00 0.60 -4.00
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 5.00 0.50 0.60
-      vertex 5.00 2.50 0.60
-      vertex 5.00 2.50 0.60
+      vertex 73.00 0.00 1.00
+      vertex 73.00 0.00 -4.00
+      vertex 73.00 0.60 -4.00
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 5.00 0.50 0.60
-      vertex 5.00 2.50 0.60
-      vertex 5.00 0.50 0.60
+      vertex 73.00 0.00 1.00
+      vertex 73.00 0.60 -4.00
+      vertex 73.00 0.60 1.00
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 3.00 0.50 0.60
-      vertex 3.00 0.50 0.60
-      vertex 3.00 2.50 0.60
+      vertex -1.00 0.00 1.00
+      vertex -1.00 0.60 1.00
+      vertex -1.00 0.60 -4.00
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 3.00 0.50 0.60
-      vertex 3.00 2.50 0.60
-      vertex 3.00 2.50 0.60
+      vertex -1.00 0.00 1.00
+      vertex -1.00 0.60 -4.00
+      vertex -1.00 0.00 -4.00
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0.00 0.60 -0.50
+      vertex 2.00 0.60 -2.50
+      vertex 2.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 0.00 0.60 -0.50
+      vertex 0.00 0.60 -2.50
+      vertex 2.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 0.00 0.60 -0.50
+      vertex 2.00 0.60 -0.50
+      vertex 2.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 0.00 0.60 -0.50
+      vertex 2.00 0.60 -2.50
+      vertex 0.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0.00 0.60 -0.50
+      vertex 2.00 0.60 -0.50
+      vertex 2.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 0.00 0.60 -0.50
+      vertex 2.00 0.60 -0.50
+      vertex 0.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 6.00 0.50 0.60
-      vertex 8.00 2.50 0.60
-      vertex 8.00 0.50 0.60
+      vertex 2.00 0.60 -2.50
+      vertex 0.00 0.60 -2.50
+      vertex 0.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 6.00 0.50 0.60
-      vertex 6.00 2.50 0.60
-      vertex 8.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 6.00 0.50 0.60
-      vertex 8.00 0.50 0.60
-      vertex 8.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 6.00 0.50 0.60
-      vertex 8.00 2.50 0.60
-      vertex 6.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 6.00 0.50 0.60
-      vertex 8.00 0.50 0.60
-      vertex 8.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 6.00 0.50 0.60
-      vertex 8.00 0.50 0.60
-      vertex 6.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 8.00 2.50 0.60
-      vertex 6.00 2.50 0.60
-      vertex 6.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 8.00 2.50 0.60
-      vertex 6.00 2.50 0.60
-      vertex 8.00 2.50 0.60
+      vertex 2.00 0.60 -2.50
+      vertex 0.00 0.60 -2.50
+      vertex 2.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 8.00 0.50 0.60
-      vertex 8.00 2.50 0.60
-      vertex 8.00 2.50 0.60
+      vertex 2.00 0.60 -0.50
+      vertex 2.00 0.60 -2.50
+      vertex 2.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 8.00 0.50 0.60
-      vertex 8.00 2.50 0.60
-      vertex 8.00 0.50 0.60
+      vertex 2.00 0.60 -0.50
+      vertex 2.00 0.60 -2.50
+      vertex 2.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 6.00 0.50 0.60
-      vertex 6.00 0.50 0.60
-      vertex 6.00 2.50 0.60
+      vertex 0.00 0.60 -0.50
+      vertex 0.00 0.60 -0.50
+      vertex 0.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 6.00 0.50 0.60
-      vertex 6.00 2.50 0.60
-      vertex 6.00 2.50 0.60
+      vertex 0.00 0.60 -0.50
+      vertex 0.00 0.60 -2.50
+      vertex 0.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 3.00 0.60 -0.50
+      vertex 5.00 0.60 -2.50
+      vertex 5.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 3.00 0.60 -0.50
+      vertex 3.00 0.60 -2.50
+      vertex 5.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 3.00 0.60 -0.50
+      vertex 5.00 0.60 -0.50
+      vertex 5.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 3.00 0.60 -0.50
+      vertex 5.00 0.60 -2.50
+      vertex 3.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 3.00 0.60 -0.50
+      vertex 5.00 0.60 -0.50
+      vertex 5.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 3.00 0.60 -0.50
+      vertex 5.00 0.60 -0.50
+      vertex 3.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 9.00 0.50 0.60
-      vertex 11.00 2.50 0.60
-      vertex 11.00 0.50 0.60
+      vertex 5.00 0.60 -2.50
+      vertex 3.00 0.60 -2.50
+      vertex 3.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 9.00 0.50 0.60
-      vertex 9.00 2.50 0.60
-      vertex 11.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 9.00 0.50 0.60
-      vertex 11.00 0.50 0.60
-      vertex 11.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 9.00 0.50 0.60
-      vertex 11.00 2.50 0.60
-      vertex 9.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 9.00 0.50 0.60
-      vertex 11.00 0.50 0.60
-      vertex 11.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 9.00 0.50 0.60
-      vertex 11.00 0.50 0.60
-      vertex 9.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 11.00 2.50 0.60
-      vertex 9.00 2.50 0.60
-      vertex 9.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 11.00 2.50 0.60
-      vertex 9.00 2.50 0.60
-      vertex 11.00 2.50 0.60
+      vertex 5.00 0.60 -2.50
+      vertex 3.00 0.60 -2.50
+      vertex 5.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 11.00 0.50 0.60
-      vertex 11.00 2.50 0.60
-      vertex 11.00 2.50 0.60
+      vertex 5.00 0.60 -0.50
+      vertex 5.00 0.60 -2.50
+      vertex 5.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 11.00 0.50 0.60
-      vertex 11.00 2.50 0.60
-      vertex 11.00 0.50 0.60
+      vertex 5.00 0.60 -0.50
+      vertex 5.00 0.60 -2.50
+      vertex 5.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 9.00 0.50 0.60
-      vertex 9.00 0.50 0.60
-      vertex 9.00 2.50 0.60
+      vertex 3.00 0.60 -0.50
+      vertex 3.00 0.60 -0.50
+      vertex 3.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 9.00 0.50 0.60
-      vertex 9.00 2.50 0.60
-      vertex 9.00 2.50 0.60
+      vertex 3.00 0.60 -0.50
+      vertex 3.00 0.60 -2.50
+      vertex 3.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 6.00 0.60 -0.50
+      vertex 8.00 0.60 -2.50
+      vertex 8.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 6.00 0.60 -0.50
+      vertex 6.00 0.60 -2.50
+      vertex 8.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 6.00 0.60 -0.50
+      vertex 8.00 0.60 -0.50
+      vertex 8.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 6.00 0.60 -0.50
+      vertex 8.00 0.60 -2.50
+      vertex 6.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 6.00 0.60 -0.50
+      vertex 8.00 0.60 -0.50
+      vertex 8.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 6.00 0.60 -0.50
+      vertex 8.00 0.60 -0.50
+      vertex 6.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 12.00 0.50 0.60
-      vertex 14.00 2.50 0.60
-      vertex 14.00 0.50 0.60
+      vertex 8.00 0.60 -2.50
+      vertex 6.00 0.60 -2.50
+      vertex 6.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 12.00 0.50 0.60
-      vertex 12.00 2.50 0.60
-      vertex 14.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 12.00 0.50 0.60
-      vertex 14.00 0.50 0.60
-      vertex 14.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 12.00 0.50 0.60
-      vertex 14.00 2.50 0.60
-      vertex 12.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 12.00 0.50 0.60
-      vertex 14.00 0.50 0.60
-      vertex 14.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 12.00 0.50 0.60
-      vertex 14.00 0.50 0.60
-      vertex 12.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 14.00 2.50 0.60
-      vertex 12.00 2.50 0.60
-      vertex 12.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 14.00 2.50 0.60
-      vertex 12.00 2.50 0.60
-      vertex 14.00 2.50 0.60
+      vertex 8.00 0.60 -2.50
+      vertex 6.00 0.60 -2.50
+      vertex 8.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 14.00 0.50 0.60
-      vertex 14.00 2.50 0.60
-      vertex 14.00 2.50 0.60
+      vertex 8.00 0.60 -0.50
+      vertex 8.00 0.60 -2.50
+      vertex 8.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 14.00 0.50 0.60
-      vertex 14.00 2.50 0.60
-      vertex 14.00 0.50 0.60
+      vertex 8.00 0.60 -0.50
+      vertex 8.00 0.60 -2.50
+      vertex 8.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 12.00 0.50 0.60
-      vertex 12.00 0.50 0.60
-      vertex 12.00 2.50 0.60
+      vertex 6.00 0.60 -0.50
+      vertex 6.00 0.60 -0.50
+      vertex 6.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 12.00 0.50 0.60
-      vertex 12.00 2.50 0.60
-      vertex 12.00 2.50 0.60
+      vertex 6.00 0.60 -0.50
+      vertex 6.00 0.60 -2.50
+      vertex 6.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 9.00 0.60 -0.50
+      vertex 11.00 0.60 -2.50
+      vertex 11.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 9.00 0.60 -0.50
+      vertex 9.00 0.60 -2.50
+      vertex 11.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 9.00 0.60 -0.50
+      vertex 11.00 0.60 -0.50
+      vertex 11.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 9.00 0.60 -0.50
+      vertex 11.00 0.60 -2.50
+      vertex 9.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 9.00 0.60 -0.50
+      vertex 11.00 0.60 -0.50
+      vertex 11.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 9.00 0.60 -0.50
+      vertex 11.00 0.60 -0.50
+      vertex 9.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 15.00 0.50 0.60
-      vertex 17.00 2.50 0.60
-      vertex 17.00 0.50 0.60
+      vertex 11.00 0.60 -2.50
+      vertex 9.00 0.60 -2.50
+      vertex 9.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 15.00 0.50 0.60
-      vertex 15.00 2.50 0.60
-      vertex 17.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 15.00 0.50 0.60
-      vertex 17.00 0.50 0.60
-      vertex 17.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 15.00 0.50 0.60
-      vertex 17.00 2.50 0.60
-      vertex 15.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 15.00 0.50 0.60
-      vertex 17.00 0.50 0.60
-      vertex 17.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 15.00 0.50 0.60
-      vertex 17.00 0.50 0.60
-      vertex 15.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 17.00 2.50 0.60
-      vertex 15.00 2.50 0.60
-      vertex 15.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 17.00 2.50 0.60
-      vertex 15.00 2.50 0.60
-      vertex 17.00 2.50 0.60
+      vertex 11.00 0.60 -2.50
+      vertex 9.00 0.60 -2.50
+      vertex 11.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 17.00 0.50 0.60
-      vertex 17.00 2.50 0.60
-      vertex 17.00 2.50 0.60
+      vertex 11.00 0.60 -0.50
+      vertex 11.00 0.60 -2.50
+      vertex 11.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 17.00 0.50 0.60
-      vertex 17.00 2.50 0.60
-      vertex 17.00 0.50 0.60
+      vertex 11.00 0.60 -0.50
+      vertex 11.00 0.60 -2.50
+      vertex 11.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 15.00 0.50 0.60
-      vertex 15.00 0.50 0.60
-      vertex 15.00 2.50 0.60
+      vertex 9.00 0.60 -0.50
+      vertex 9.00 0.60 -0.50
+      vertex 9.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 15.00 0.50 0.60
-      vertex 15.00 2.50 0.60
-      vertex 15.00 2.50 0.60
+      vertex 9.00 0.60 -0.50
+      vertex 9.00 0.60 -2.50
+      vertex 9.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 12.00 0.60 -0.50
+      vertex 14.00 0.60 -2.50
+      vertex 14.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 12.00 0.60 -0.50
+      vertex 12.00 0.60 -2.50
+      vertex 14.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 12.00 0.60 -0.50
+      vertex 14.00 0.60 -0.50
+      vertex 14.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 12.00 0.60 -0.50
+      vertex 14.00 0.60 -2.50
+      vertex 12.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 12.00 0.60 -0.50
+      vertex 14.00 0.60 -0.50
+      vertex 14.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 12.00 0.60 -0.50
+      vertex 14.00 0.60 -0.50
+      vertex 12.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 18.00 0.50 0.60
-      vertex 20.00 2.50 0.60
-      vertex 20.00 0.50 0.60
+      vertex 14.00 0.60 -2.50
+      vertex 12.00 0.60 -2.50
+      vertex 12.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 18.00 0.50 0.60
-      vertex 18.00 2.50 0.60
-      vertex 20.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 18.00 0.50 0.60
-      vertex 20.00 0.50 0.60
-      vertex 20.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 18.00 0.50 0.60
-      vertex 20.00 2.50 0.60
-      vertex 18.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 18.00 0.50 0.60
-      vertex 20.00 0.50 0.60
-      vertex 20.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 18.00 0.50 0.60
-      vertex 20.00 0.50 0.60
-      vertex 18.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 20.00 2.50 0.60
-      vertex 18.00 2.50 0.60
-      vertex 18.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 20.00 2.50 0.60
-      vertex 18.00 2.50 0.60
-      vertex 20.00 2.50 0.60
+      vertex 14.00 0.60 -2.50
+      vertex 12.00 0.60 -2.50
+      vertex 14.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 20.00 0.50 0.60
-      vertex 20.00 2.50 0.60
-      vertex 20.00 2.50 0.60
+      vertex 14.00 0.60 -0.50
+      vertex 14.00 0.60 -2.50
+      vertex 14.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 20.00 0.50 0.60
-      vertex 20.00 2.50 0.60
-      vertex 20.00 0.50 0.60
+      vertex 14.00 0.60 -0.50
+      vertex 14.00 0.60 -2.50
+      vertex 14.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 18.00 0.50 0.60
-      vertex 18.00 0.50 0.60
-      vertex 18.00 2.50 0.60
+      vertex 12.00 0.60 -0.50
+      vertex 12.00 0.60 -0.50
+      vertex 12.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 18.00 0.50 0.60
-      vertex 18.00 2.50 0.60
-      vertex 18.00 2.50 0.60
+      vertex 12.00 0.60 -0.50
+      vertex 12.00 0.60 -2.50
+      vertex 12.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 15.00 0.60 -0.50
+      vertex 17.00 0.60 -2.50
+      vertex 17.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 15.00 0.60 -0.50
+      vertex 15.00 0.60 -2.50
+      vertex 17.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 15.00 0.60 -0.50
+      vertex 17.00 0.60 -0.50
+      vertex 17.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 15.00 0.60 -0.50
+      vertex 17.00 0.60 -2.50
+      vertex 15.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 15.00 0.60 -0.50
+      vertex 17.00 0.60 -0.50
+      vertex 17.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 15.00 0.60 -0.50
+      vertex 17.00 0.60 -0.50
+      vertex 15.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 21.00 0.50 0.60
-      vertex 23.00 2.50 0.60
-      vertex 23.00 0.50 0.60
+      vertex 17.00 0.60 -2.50
+      vertex 15.00 0.60 -2.50
+      vertex 15.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 21.00 0.50 0.60
-      vertex 21.00 2.50 0.60
-      vertex 23.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 21.00 0.50 2.47
-      vertex 23.00 0.50 2.47
-      vertex 23.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 21.00 0.50 2.47
-      vertex 23.00 2.50 2.47
-      vertex 21.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 21.00 0.50 0.60
-      vertex 23.00 0.50 0.60
-      vertex 23.00 0.50 2.47
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 21.00 0.50 0.60
-      vertex 23.00 0.50 2.47
-      vertex 21.00 0.50 2.47
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 23.00 2.50 0.60
-      vertex 21.00 2.50 0.60
-      vertex 21.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 23.00 2.50 0.60
-      vertex 21.00 2.50 2.47
-      vertex 23.00 2.50 2.47
+      vertex 17.00 0.60 -2.50
+      vertex 15.00 0.60 -2.50
+      vertex 17.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 23.00 0.50 0.60
-      vertex 23.00 2.50 0.60
-      vertex 23.00 2.50 2.47
+      vertex 17.00 0.60 -0.50
+      vertex 17.00 0.60 -2.50
+      vertex 17.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 23.00 0.50 0.60
-      vertex 23.00 2.50 2.47
-      vertex 23.00 0.50 2.47
+      vertex 17.00 0.60 -0.50
+      vertex 17.00 0.60 -2.50
+      vertex 17.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 21.00 0.50 0.60
-      vertex 21.00 0.50 2.47
-      vertex 21.00 2.50 2.47
+      vertex 15.00 0.60 -0.50
+      vertex 15.00 0.60 -0.50
+      vertex 15.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 21.00 0.50 0.60
-      vertex 21.00 2.50 2.47
-      vertex 21.00 2.50 0.60
+      vertex 15.00 0.60 -0.50
+      vertex 15.00 0.60 -2.50
+      vertex 15.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 18.00 0.60 -0.50
+      vertex 20.00 0.60 -2.50
+      vertex 20.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 18.00 0.60 -0.50
+      vertex 18.00 0.60 -2.50
+      vertex 20.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 18.00 0.60 -0.50
+      vertex 20.00 0.60 -0.50
+      vertex 20.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 18.00 0.60 -0.50
+      vertex 20.00 0.60 -2.50
+      vertex 18.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 18.00 0.60 -0.50
+      vertex 20.00 0.60 -0.50
+      vertex 20.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 18.00 0.60 -0.50
+      vertex 20.00 0.60 -0.50
+      vertex 18.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 24.00 0.50 0.60
-      vertex 26.00 2.50 0.60
-      vertex 26.00 0.50 0.60
+      vertex 20.00 0.60 -2.50
+      vertex 18.00 0.60 -2.50
+      vertex 18.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 24.00 0.50 0.60
-      vertex 24.00 2.50 0.60
-      vertex 26.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 24.00 0.50 0.60
-      vertex 26.00 0.50 0.60
-      vertex 26.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 24.00 0.50 0.60
-      vertex 26.00 2.50 0.60
-      vertex 24.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 24.00 0.50 0.60
-      vertex 26.00 0.50 0.60
-      vertex 26.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 24.00 0.50 0.60
-      vertex 26.00 0.50 0.60
-      vertex 24.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 26.00 2.50 0.60
-      vertex 24.00 2.50 0.60
-      vertex 24.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 26.00 2.50 0.60
-      vertex 24.00 2.50 0.60
-      vertex 26.00 2.50 0.60
+      vertex 20.00 0.60 -2.50
+      vertex 18.00 0.60 -2.50
+      vertex 20.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 26.00 0.50 0.60
-      vertex 26.00 2.50 0.60
-      vertex 26.00 2.50 0.60
+      vertex 20.00 0.60 -0.50
+      vertex 20.00 0.60 -2.50
+      vertex 20.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 26.00 0.50 0.60
-      vertex 26.00 2.50 0.60
-      vertex 26.00 0.50 0.60
+      vertex 20.00 0.60 -0.50
+      vertex 20.00 0.60 -2.50
+      vertex 20.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 24.00 0.50 0.60
-      vertex 24.00 0.50 0.60
-      vertex 24.00 2.50 0.60
+      vertex 18.00 0.60 -0.50
+      vertex 18.00 0.60 -0.50
+      vertex 18.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 24.00 0.50 0.60
-      vertex 24.00 2.50 0.60
-      vertex 24.00 2.50 0.60
+      vertex 18.00 0.60 -0.50
+      vertex 18.00 0.60 -2.50
+      vertex 18.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 21.00 0.60 -0.50
+      vertex 23.00 0.60 -2.50
+      vertex 23.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 21.00 0.60 -0.50
+      vertex 21.00 0.60 -2.50
+      vertex 23.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 21.00 2.47 -0.50
+      vertex 23.00 2.47 -0.50
+      vertex 23.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 21.00 2.47 -0.50
+      vertex 23.00 2.47 -2.50
+      vertex 21.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 21.00 0.60 -0.50
+      vertex 23.00 0.60 -0.50
+      vertex 23.00 2.47 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 21.00 0.60 -0.50
+      vertex 23.00 2.47 -0.50
+      vertex 21.00 2.47 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 27.00 0.50 0.60
-      vertex 29.00 2.50 0.60
-      vertex 29.00 0.50 0.60
+      vertex 23.00 0.60 -2.50
+      vertex 21.00 0.60 -2.50
+      vertex 21.00 2.47 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 27.00 0.50 0.60
-      vertex 27.00 2.50 0.60
-      vertex 29.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 27.00 0.50 1.07
-      vertex 29.00 0.50 1.07
-      vertex 29.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 27.00 0.50 1.07
-      vertex 29.00 2.50 1.07
-      vertex 27.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 27.00 0.50 0.60
-      vertex 29.00 0.50 0.60
-      vertex 29.00 0.50 1.07
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 27.00 0.50 0.60
-      vertex 29.00 0.50 1.07
-      vertex 27.00 0.50 1.07
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 29.00 2.50 0.60
-      vertex 27.00 2.50 0.60
-      vertex 27.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 29.00 2.50 0.60
-      vertex 27.00 2.50 1.07
-      vertex 29.00 2.50 1.07
+      vertex 23.00 0.60 -2.50
+      vertex 21.00 2.47 -2.50
+      vertex 23.00 2.47 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 29.00 0.50 0.60
-      vertex 29.00 2.50 0.60
-      vertex 29.00 2.50 1.07
+      vertex 23.00 0.60 -0.50
+      vertex 23.00 0.60 -2.50
+      vertex 23.00 2.47 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 29.00 0.50 0.60
-      vertex 29.00 2.50 1.07
-      vertex 29.00 0.50 1.07
+      vertex 23.00 0.60 -0.50
+      vertex 23.00 2.47 -2.50
+      vertex 23.00 2.47 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 27.00 0.50 0.60
-      vertex 27.00 0.50 1.07
-      vertex 27.00 2.50 1.07
+      vertex 21.00 0.60 -0.50
+      vertex 21.00 2.47 -0.50
+      vertex 21.00 2.47 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 27.00 0.50 0.60
-      vertex 27.00 2.50 1.07
-      vertex 27.00 2.50 0.60
+      vertex 21.00 0.60 -0.50
+      vertex 21.00 2.47 -2.50
+      vertex 21.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 24.00 0.60 -0.50
+      vertex 26.00 0.60 -2.50
+      vertex 26.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 24.00 0.60 -0.50
+      vertex 24.00 0.60 -2.50
+      vertex 26.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 24.00 0.60 -0.50
+      vertex 26.00 0.60 -0.50
+      vertex 26.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 24.00 0.60 -0.50
+      vertex 26.00 0.60 -2.50
+      vertex 24.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 24.00 0.60 -0.50
+      vertex 26.00 0.60 -0.50
+      vertex 26.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 24.00 0.60 -0.50
+      vertex 26.00 0.60 -0.50
+      vertex 24.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 30.00 0.50 0.60
-      vertex 32.00 2.50 0.60
-      vertex 32.00 0.50 0.60
+      vertex 26.00 0.60 -2.50
+      vertex 24.00 0.60 -2.50
+      vertex 24.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 30.00 0.50 0.60
-      vertex 30.00 2.50 0.60
-      vertex 32.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 30.00 0.50 2.93
-      vertex 32.00 0.50 2.93
-      vertex 32.00 2.50 2.93
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 30.00 0.50 2.93
-      vertex 32.00 2.50 2.93
-      vertex 30.00 2.50 2.93
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 30.00 0.50 0.60
-      vertex 32.00 0.50 0.60
-      vertex 32.00 0.50 2.93
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 30.00 0.50 0.60
-      vertex 32.00 0.50 2.93
-      vertex 30.00 0.50 2.93
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 32.00 2.50 0.60
-      vertex 30.00 2.50 0.60
-      vertex 30.00 2.50 2.93
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 32.00 2.50 0.60
-      vertex 30.00 2.50 2.93
-      vertex 32.00 2.50 2.93
+      vertex 26.00 0.60 -2.50
+      vertex 24.00 0.60 -2.50
+      vertex 26.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 32.00 0.50 0.60
-      vertex 32.00 2.50 0.60
-      vertex 32.00 2.50 2.93
+      vertex 26.00 0.60 -0.50
+      vertex 26.00 0.60 -2.50
+      vertex 26.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 32.00 0.50 0.60
-      vertex 32.00 2.50 2.93
-      vertex 32.00 0.50 2.93
+      vertex 26.00 0.60 -0.50
+      vertex 26.00 0.60 -2.50
+      vertex 26.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 30.00 0.50 0.60
-      vertex 30.00 0.50 2.93
-      vertex 30.00 2.50 2.93
+      vertex 24.00 0.60 -0.50
+      vertex 24.00 0.60 -0.50
+      vertex 24.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 30.00 0.50 0.60
-      vertex 30.00 2.50 2.93
-      vertex 30.00 2.50 0.60
+      vertex 24.00 0.60 -0.50
+      vertex 24.00 0.60 -2.50
+      vertex 24.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 27.00 0.60 -0.50
+      vertex 29.00 0.60 -2.50
+      vertex 29.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 27.00 0.60 -0.50
+      vertex 27.00 0.60 -2.50
+      vertex 29.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 27.00 1.07 -0.50
+      vertex 29.00 1.07 -0.50
+      vertex 29.00 1.07 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 27.00 1.07 -0.50
+      vertex 29.00 1.07 -2.50
+      vertex 27.00 1.07 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 27.00 0.60 -0.50
+      vertex 29.00 0.60 -0.50
+      vertex 29.00 1.07 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 27.00 0.60 -0.50
+      vertex 29.00 1.07 -0.50
+      vertex 27.00 1.07 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 33.00 0.50 0.60
-      vertex 35.00 2.50 0.60
-      vertex 35.00 0.50 0.60
+      vertex 29.00 0.60 -2.50
+      vertex 27.00 0.60 -2.50
+      vertex 27.00 1.07 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 33.00 0.50 0.60
-      vertex 33.00 2.50 0.60
-      vertex 35.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 33.00 0.50 0.60
-      vertex 35.00 0.50 0.60
-      vertex 35.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 33.00 0.50 0.60
-      vertex 35.00 2.50 0.60
-      vertex 33.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 33.00 0.50 0.60
-      vertex 35.00 0.50 0.60
-      vertex 35.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 33.00 0.50 0.60
-      vertex 35.00 0.50 0.60
-      vertex 33.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 35.00 2.50 0.60
-      vertex 33.00 2.50 0.60
-      vertex 33.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 35.00 2.50 0.60
-      vertex 33.00 2.50 0.60
-      vertex 35.00 2.50 0.60
+      vertex 29.00 0.60 -2.50
+      vertex 27.00 1.07 -2.50
+      vertex 29.00 1.07 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 35.00 0.50 0.60
-      vertex 35.00 2.50 0.60
-      vertex 35.00 2.50 0.60
+      vertex 29.00 0.60 -0.50
+      vertex 29.00 0.60 -2.50
+      vertex 29.00 1.07 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 35.00 0.50 0.60
-      vertex 35.00 2.50 0.60
-      vertex 35.00 0.50 0.60
+      vertex 29.00 0.60 -0.50
+      vertex 29.00 1.07 -2.50
+      vertex 29.00 1.07 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 33.00 0.50 0.60
-      vertex 33.00 0.50 0.60
-      vertex 33.00 2.50 0.60
+      vertex 27.00 0.60 -0.50
+      vertex 27.00 1.07 -0.50
+      vertex 27.00 1.07 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 33.00 0.50 0.60
-      vertex 33.00 2.50 0.60
-      vertex 33.00 2.50 0.60
+      vertex 27.00 0.60 -0.50
+      vertex 27.00 1.07 -2.50
+      vertex 27.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 30.00 0.60 -0.50
+      vertex 32.00 0.60 -2.50
+      vertex 32.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 30.00 0.60 -0.50
+      vertex 30.00 0.60 -2.50
+      vertex 32.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 30.00 2.93 -0.50
+      vertex 32.00 2.93 -0.50
+      vertex 32.00 2.93 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 30.00 2.93 -0.50
+      vertex 32.00 2.93 -2.50
+      vertex 30.00 2.93 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 30.00 0.60 -0.50
+      vertex 32.00 0.60 -0.50
+      vertex 32.00 2.93 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 30.00 0.60 -0.50
+      vertex 32.00 2.93 -0.50
+      vertex 30.00 2.93 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 36.00 0.50 0.60
-      vertex 38.00 2.50 0.60
-      vertex 38.00 0.50 0.60
+      vertex 32.00 0.60 -2.50
+      vertex 30.00 0.60 -2.50
+      vertex 30.00 2.93 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 36.00 0.50 0.60
-      vertex 36.00 2.50 0.60
-      vertex 38.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 36.00 0.50 1.07
-      vertex 38.00 0.50 1.07
-      vertex 38.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 36.00 0.50 1.07
-      vertex 38.00 2.50 1.07
-      vertex 36.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 36.00 0.50 0.60
-      vertex 38.00 0.50 0.60
-      vertex 38.00 0.50 1.07
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 36.00 0.50 0.60
-      vertex 38.00 0.50 1.07
-      vertex 36.00 0.50 1.07
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 38.00 2.50 0.60
-      vertex 36.00 2.50 0.60
-      vertex 36.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 38.00 2.50 0.60
-      vertex 36.00 2.50 1.07
-      vertex 38.00 2.50 1.07
+      vertex 32.00 0.60 -2.50
+      vertex 30.00 2.93 -2.50
+      vertex 32.00 2.93 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 38.00 0.50 0.60
-      vertex 38.00 2.50 0.60
-      vertex 38.00 2.50 1.07
+      vertex 32.00 0.60 -0.50
+      vertex 32.00 0.60 -2.50
+      vertex 32.00 2.93 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 38.00 0.50 0.60
-      vertex 38.00 2.50 1.07
-      vertex 38.00 0.50 1.07
+      vertex 32.00 0.60 -0.50
+      vertex 32.00 2.93 -2.50
+      vertex 32.00 2.93 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 36.00 0.50 0.60
-      vertex 36.00 0.50 1.07
-      vertex 36.00 2.50 1.07
+      vertex 30.00 0.60 -0.50
+      vertex 30.00 2.93 -0.50
+      vertex 30.00 2.93 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 36.00 0.50 0.60
-      vertex 36.00 2.50 1.07
-      vertex 36.00 2.50 0.60
+      vertex 30.00 0.60 -0.50
+      vertex 30.00 2.93 -2.50
+      vertex 30.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 33.00 0.60 -0.50
+      vertex 35.00 0.60 -2.50
+      vertex 35.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 33.00 0.60 -0.50
+      vertex 33.00 0.60 -2.50
+      vertex 35.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 33.00 0.60 -0.50
+      vertex 35.00 0.60 -0.50
+      vertex 35.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 33.00 0.60 -0.50
+      vertex 35.00 0.60 -2.50
+      vertex 33.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 33.00 0.60 -0.50
+      vertex 35.00 0.60 -0.50
+      vertex 35.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 33.00 0.60 -0.50
+      vertex 35.00 0.60 -0.50
+      vertex 33.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 39.00 0.50 0.60
-      vertex 41.00 2.50 0.60
-      vertex 41.00 0.50 0.60
+      vertex 35.00 0.60 -2.50
+      vertex 33.00 0.60 -2.50
+      vertex 33.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 39.00 0.50 0.60
-      vertex 39.00 2.50 0.60
-      vertex 41.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 39.00 0.50 0.60
-      vertex 41.00 0.50 0.60
-      vertex 41.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 39.00 0.50 0.60
-      vertex 41.00 2.50 0.60
-      vertex 39.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 39.00 0.50 0.60
-      vertex 41.00 0.50 0.60
-      vertex 41.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 39.00 0.50 0.60
-      vertex 41.00 0.50 0.60
-      vertex 39.00 0.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 41.00 2.50 0.60
-      vertex 39.00 2.50 0.60
-      vertex 39.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 41.00 2.50 0.60
-      vertex 39.00 2.50 0.60
-      vertex 41.00 2.50 0.60
+      vertex 35.00 0.60 -2.50
+      vertex 33.00 0.60 -2.50
+      vertex 35.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 41.00 0.50 0.60
-      vertex 41.00 2.50 0.60
-      vertex 41.00 2.50 0.60
+      vertex 35.00 0.60 -0.50
+      vertex 35.00 0.60 -2.50
+      vertex 35.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 41.00 0.50 0.60
-      vertex 41.00 2.50 0.60
-      vertex 41.00 0.50 0.60
+      vertex 35.00 0.60 -0.50
+      vertex 35.00 0.60 -2.50
+      vertex 35.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 39.00 0.50 0.60
-      vertex 39.00 0.50 0.60
-      vertex 39.00 2.50 0.60
+      vertex 33.00 0.60 -0.50
+      vertex 33.00 0.60 -0.50
+      vertex 33.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 39.00 0.50 0.60
-      vertex 39.00 2.50 0.60
-      vertex 39.00 2.50 0.60
+      vertex 33.00 0.60 -0.50
+      vertex 33.00 0.60 -2.50
+      vertex 33.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 36.00 0.60 -0.50
+      vertex 38.00 0.60 -2.50
+      vertex 38.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 36.00 0.60 -0.50
+      vertex 36.00 0.60 -2.50
+      vertex 38.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 36.00 1.07 -0.50
+      vertex 38.00 1.07 -0.50
+      vertex 38.00 1.07 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 36.00 1.07 -0.50
+      vertex 38.00 1.07 -2.50
+      vertex 36.00 1.07 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 36.00 0.60 -0.50
+      vertex 38.00 0.60 -0.50
+      vertex 38.00 1.07 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 36.00 0.60 -0.50
+      vertex 38.00 1.07 -0.50
+      vertex 36.00 1.07 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 42.00 0.50 0.60
-      vertex 44.00 2.50 0.60
-      vertex 44.00 0.50 0.60
+      vertex 38.00 0.60 -2.50
+      vertex 36.00 0.60 -2.50
+      vertex 36.00 1.07 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 42.00 0.50 0.60
-      vertex 42.00 2.50 0.60
-      vertex 44.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 42.00 0.50 1.07
-      vertex 44.00 0.50 1.07
-      vertex 44.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 42.00 0.50 1.07
-      vertex 44.00 2.50 1.07
-      vertex 42.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 42.00 0.50 0.60
-      vertex 44.00 0.50 0.60
-      vertex 44.00 0.50 1.07
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 42.00 0.50 0.60
-      vertex 44.00 0.50 1.07
-      vertex 42.00 0.50 1.07
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 44.00 2.50 0.60
-      vertex 42.00 2.50 0.60
-      vertex 42.00 2.50 1.07
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 44.00 2.50 0.60
-      vertex 42.00 2.50 1.07
-      vertex 44.00 2.50 1.07
+      vertex 38.00 0.60 -2.50
+      vertex 36.00 1.07 -2.50
+      vertex 38.00 1.07 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 44.00 0.50 0.60
-      vertex 44.00 2.50 0.60
-      vertex 44.00 2.50 1.07
+      vertex 38.00 0.60 -0.50
+      vertex 38.00 0.60 -2.50
+      vertex 38.00 1.07 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 44.00 0.50 0.60
-      vertex 44.00 2.50 1.07
-      vertex 44.00 0.50 1.07
+      vertex 38.00 0.60 -0.50
+      vertex 38.00 1.07 -2.50
+      vertex 38.00 1.07 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 42.00 0.50 0.60
-      vertex 42.00 0.50 1.07
-      vertex 42.00 2.50 1.07
+      vertex 36.00 0.60 -0.50
+      vertex 36.00 1.07 -0.50
+      vertex 36.00 1.07 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 42.00 0.50 0.60
-      vertex 42.00 2.50 1.07
-      vertex 42.00 2.50 0.60
+      vertex 36.00 0.60 -0.50
+      vertex 36.00 1.07 -2.50
+      vertex 36.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 39.00 0.60 -0.50
+      vertex 41.00 0.60 -2.50
+      vertex 41.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 39.00 0.60 -0.50
+      vertex 39.00 0.60 -2.50
+      vertex 41.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 39.00 0.60 -0.50
+      vertex 41.00 0.60 -0.50
+      vertex 41.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 39.00 0.60 -0.50
+      vertex 41.00 0.60 -2.50
+      vertex 39.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 39.00 0.60 -0.50
+      vertex 41.00 0.60 -0.50
+      vertex 41.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 39.00 0.60 -0.50
+      vertex 41.00 0.60 -0.50
+      vertex 39.00 0.60 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 45.00 0.50 0.60
-      vertex 47.00 2.50 0.60
-      vertex 47.00 0.50 0.60
+      vertex 41.00 0.60 -2.50
+      vertex 39.00 0.60 -2.50
+      vertex 39.00 0.60 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 45.00 0.50 0.60
-      vertex 45.00 2.50 0.60
-      vertex 47.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 45.00 0.50 2.47
-      vertex 47.00 0.50 2.47
-      vertex 47.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 45.00 0.50 2.47
-      vertex 47.00 2.50 2.47
-      vertex 45.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 45.00 0.50 0.60
-      vertex 47.00 0.50 0.60
-      vertex 47.00 0.50 2.47
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 45.00 0.50 0.60
-      vertex 47.00 0.50 2.47
-      vertex 45.00 0.50 2.47
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 47.00 2.50 0.60
-      vertex 45.00 2.50 0.60
-      vertex 45.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 47.00 2.50 0.60
-      vertex 45.00 2.50 2.47
-      vertex 47.00 2.50 2.47
+      vertex 41.00 0.60 -2.50
+      vertex 39.00 0.60 -2.50
+      vertex 41.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 47.00 0.50 0.60
-      vertex 47.00 2.50 0.60
-      vertex 47.00 2.50 2.47
+      vertex 41.00 0.60 -0.50
+      vertex 41.00 0.60 -2.50
+      vertex 41.00 0.60 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 47.00 0.50 0.60
-      vertex 47.00 2.50 2.47
-      vertex 47.00 0.50 2.47
+      vertex 41.00 0.60 -0.50
+      vertex 41.00 0.60 -2.50
+      vertex 41.00 0.60 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 45.00 0.50 0.60
-      vertex 45.00 0.50 2.47
-      vertex 45.00 2.50 2.47
+      vertex 39.00 0.60 -0.50
+      vertex 39.00 0.60 -0.50
+      vertex 39.00 0.60 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 45.00 0.50 0.60
-      vertex 45.00 2.50 2.47
-      vertex 45.00 2.50 0.60
+      vertex 39.00 0.60 -0.50
+      vertex 39.00 0.60 -2.50
+      vertex 39.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 42.00 0.60 -0.50
+      vertex 44.00 0.60 -2.50
+      vertex 44.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 42.00 0.60 -0.50
+      vertex 42.00 0.60 -2.50
+      vertex 44.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 42.00 1.07 -0.50
+      vertex 44.00 1.07 -0.50
+      vertex 44.00 1.07 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 42.00 1.07 -0.50
+      vertex 44.00 1.07 -2.50
+      vertex 42.00 1.07 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 42.00 0.60 -0.50
+      vertex 44.00 0.60 -0.50
+      vertex 44.00 1.07 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 42.00 0.60 -0.50
+      vertex 44.00 1.07 -0.50
+      vertex 42.00 1.07 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 48.00 0.50 0.60
-      vertex 50.00 2.50 0.60
-      vertex 50.00 0.50 0.60
+      vertex 44.00 0.60 -2.50
+      vertex 42.00 0.60 -2.50
+      vertex 42.00 1.07 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 48.00 0.50 0.60
-      vertex 48.00 2.50 0.60
-      vertex 50.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 48.00 0.50 2.00
-      vertex 50.00 0.50 2.00
-      vertex 50.00 2.50 2.00
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 48.00 0.50 2.00
-      vertex 50.00 2.50 2.00
-      vertex 48.00 2.50 2.00
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 48.00 0.50 0.60
-      vertex 50.00 0.50 0.60
-      vertex 50.00 0.50 2.00
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 48.00 0.50 0.60
-      vertex 50.00 0.50 2.00
-      vertex 48.00 0.50 2.00
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 50.00 2.50 0.60
-      vertex 48.00 2.50 0.60
-      vertex 48.00 2.50 2.00
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 50.00 2.50 0.60
-      vertex 48.00 2.50 2.00
-      vertex 50.00 2.50 2.00
+      vertex 44.00 0.60 -2.50
+      vertex 42.00 1.07 -2.50
+      vertex 44.00 1.07 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 50.00 0.50 0.60
-      vertex 50.00 2.50 0.60
-      vertex 50.00 2.50 2.00
+      vertex 44.00 0.60 -0.50
+      vertex 44.00 0.60 -2.50
+      vertex 44.00 1.07 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 50.00 0.50 0.60
-      vertex 50.00 2.50 2.00
-      vertex 50.00 0.50 2.00
+      vertex 44.00 0.60 -0.50
+      vertex 44.00 1.07 -2.50
+      vertex 44.00 1.07 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 48.00 0.50 0.60
-      vertex 48.00 0.50 2.00
-      vertex 48.00 2.50 2.00
+      vertex 42.00 0.60 -0.50
+      vertex 42.00 1.07 -0.50
+      vertex 42.00 1.07 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 48.00 0.50 0.60
-      vertex 48.00 2.50 2.00
-      vertex 48.00 2.50 0.60
+      vertex 42.00 0.60 -0.50
+      vertex 42.00 1.07 -2.50
+      vertex 42.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 45.00 0.60 -0.50
+      vertex 47.00 0.60 -2.50
+      vertex 47.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 45.00 0.60 -0.50
+      vertex 45.00 0.60 -2.50
+      vertex 47.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 45.00 2.47 -0.50
+      vertex 47.00 2.47 -0.50
+      vertex 47.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 45.00 2.47 -0.50
+      vertex 47.00 2.47 -2.50
+      vertex 45.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 45.00 0.60 -0.50
+      vertex 47.00 0.60 -0.50
+      vertex 47.00 2.47 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 45.00 0.60 -0.50
+      vertex 47.00 2.47 -0.50
+      vertex 45.00 2.47 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 51.00 0.50 0.60
-      vertex 53.00 2.50 0.60
-      vertex 53.00 0.50 0.60
+      vertex 47.00 0.60 -2.50
+      vertex 45.00 0.60 -2.50
+      vertex 45.00 2.47 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 51.00 0.50 0.60
-      vertex 51.00 2.50 0.60
-      vertex 53.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 51.00 0.50 1.53
-      vertex 53.00 0.50 1.53
-      vertex 53.00 2.50 1.53
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 51.00 0.50 1.53
-      vertex 53.00 2.50 1.53
-      vertex 51.00 2.50 1.53
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 51.00 0.50 0.60
-      vertex 53.00 0.50 0.60
-      vertex 53.00 0.50 1.53
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 51.00 0.50 0.60
-      vertex 53.00 0.50 1.53
-      vertex 51.00 0.50 1.53
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 53.00 2.50 0.60
-      vertex 51.00 2.50 0.60
-      vertex 51.00 2.50 1.53
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 53.00 2.50 0.60
-      vertex 51.00 2.50 1.53
-      vertex 53.00 2.50 1.53
+      vertex 47.00 0.60 -2.50
+      vertex 45.00 2.47 -2.50
+      vertex 47.00 2.47 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 53.00 0.50 0.60
-      vertex 53.00 2.50 0.60
-      vertex 53.00 2.50 1.53
+      vertex 47.00 0.60 -0.50
+      vertex 47.00 0.60 -2.50
+      vertex 47.00 2.47 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 53.00 0.50 0.60
-      vertex 53.00 2.50 1.53
-      vertex 53.00 0.50 1.53
+      vertex 47.00 0.60 -0.50
+      vertex 47.00 2.47 -2.50
+      vertex 47.00 2.47 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 51.00 0.50 0.60
-      vertex 51.00 0.50 1.53
-      vertex 51.00 2.50 1.53
+      vertex 45.00 0.60 -0.50
+      vertex 45.00 2.47 -0.50
+      vertex 45.00 2.47 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 51.00 0.50 0.60
-      vertex 51.00 2.50 1.53
-      vertex 51.00 2.50 0.60
+      vertex 45.00 0.60 -0.50
+      vertex 45.00 2.47 -2.50
+      vertex 45.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 48.00 0.60 -0.50
+      vertex 50.00 0.60 -2.50
+      vertex 50.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 48.00 0.60 -0.50
+      vertex 48.00 0.60 -2.50
+      vertex 50.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 48.00 2.00 -0.50
+      vertex 50.00 2.00 -0.50
+      vertex 50.00 2.00 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 48.00 2.00 -0.50
+      vertex 50.00 2.00 -2.50
+      vertex 48.00 2.00 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 48.00 0.60 -0.50
+      vertex 50.00 0.60 -0.50
+      vertex 50.00 2.00 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 48.00 0.60 -0.50
+      vertex 50.00 2.00 -0.50
+      vertex 48.00 2.00 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 54.00 0.50 0.60
-      vertex 56.00 2.50 0.60
-      vertex 56.00 0.50 0.60
+      vertex 50.00 0.60 -2.50
+      vertex 48.00 0.60 -2.50
+      vertex 48.00 2.00 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 54.00 0.50 0.60
-      vertex 54.00 2.50 0.60
-      vertex 56.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 54.00 0.50 5.27
-      vertex 56.00 0.50 5.27
-      vertex 56.00 2.50 5.27
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 54.00 0.50 5.27
-      vertex 56.00 2.50 5.27
-      vertex 54.00 2.50 5.27
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 54.00 0.50 0.60
-      vertex 56.00 0.50 0.60
-      vertex 56.00 0.50 5.27
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 54.00 0.50 0.60
-      vertex 56.00 0.50 5.27
-      vertex 54.00 0.50 5.27
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 56.00 2.50 0.60
-      vertex 54.00 2.50 0.60
-      vertex 54.00 2.50 5.27
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 56.00 2.50 0.60
-      vertex 54.00 2.50 5.27
-      vertex 56.00 2.50 5.27
+      vertex 50.00 0.60 -2.50
+      vertex 48.00 2.00 -2.50
+      vertex 50.00 2.00 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 56.00 0.50 0.60
-      vertex 56.00 2.50 0.60
-      vertex 56.00 2.50 5.27
+      vertex 50.00 0.60 -0.50
+      vertex 50.00 0.60 -2.50
+      vertex 50.00 2.00 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 56.00 0.50 0.60
-      vertex 56.00 2.50 5.27
-      vertex 56.00 0.50 5.27
+      vertex 50.00 0.60 -0.50
+      vertex 50.00 2.00 -2.50
+      vertex 50.00 2.00 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 54.00 0.50 0.60
-      vertex 54.00 0.50 5.27
-      vertex 54.00 2.50 5.27
+      vertex 48.00 0.60 -0.50
+      vertex 48.00 2.00 -0.50
+      vertex 48.00 2.00 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 54.00 0.50 0.60
-      vertex 54.00 2.50 5.27
-      vertex 54.00 2.50 0.60
+      vertex 48.00 0.60 -0.50
+      vertex 48.00 2.00 -2.50
+      vertex 48.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 51.00 0.60 -0.50
+      vertex 53.00 0.60 -2.50
+      vertex 53.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 51.00 0.60 -0.50
+      vertex 51.00 0.60 -2.50
+      vertex 53.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 51.00 1.53 -0.50
+      vertex 53.00 1.53 -0.50
+      vertex 53.00 1.53 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 51.00 1.53 -0.50
+      vertex 53.00 1.53 -2.50
+      vertex 51.00 1.53 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 51.00 0.60 -0.50
+      vertex 53.00 0.60 -0.50
+      vertex 53.00 1.53 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 51.00 0.60 -0.50
+      vertex 53.00 1.53 -0.50
+      vertex 51.00 1.53 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 57.00 0.50 0.60
-      vertex 59.00 2.50 0.60
-      vertex 59.00 0.50 0.60
+      vertex 53.00 0.60 -2.50
+      vertex 51.00 0.60 -2.50
+      vertex 51.00 1.53 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 57.00 0.50 0.60
-      vertex 57.00 2.50 0.60
-      vertex 59.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 57.00 0.50 4.80
-      vertex 59.00 0.50 4.80
-      vertex 59.00 2.50 4.80
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 57.00 0.50 4.80
-      vertex 59.00 2.50 4.80
-      vertex 57.00 2.50 4.80
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 57.00 0.50 0.60
-      vertex 59.00 0.50 0.60
-      vertex 59.00 0.50 4.80
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 57.00 0.50 0.60
-      vertex 59.00 0.50 4.80
-      vertex 57.00 0.50 4.80
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 59.00 2.50 0.60
-      vertex 57.00 2.50 0.60
-      vertex 57.00 2.50 4.80
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 59.00 2.50 0.60
-      vertex 57.00 2.50 4.80
-      vertex 59.00 2.50 4.80
+      vertex 53.00 0.60 -2.50
+      vertex 51.00 1.53 -2.50
+      vertex 53.00 1.53 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 59.00 0.50 0.60
-      vertex 59.00 2.50 0.60
-      vertex 59.00 2.50 4.80
+      vertex 53.00 0.60 -0.50
+      vertex 53.00 0.60 -2.50
+      vertex 53.00 1.53 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 59.00 0.50 0.60
-      vertex 59.00 2.50 4.80
-      vertex 59.00 0.50 4.80
+      vertex 53.00 0.60 -0.50
+      vertex 53.00 1.53 -2.50
+      vertex 53.00 1.53 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 57.00 0.50 0.60
-      vertex 57.00 0.50 4.80
-      vertex 57.00 2.50 4.80
+      vertex 51.00 0.60 -0.50
+      vertex 51.00 1.53 -0.50
+      vertex 51.00 1.53 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 57.00 0.50 0.60
-      vertex 57.00 2.50 4.80
-      vertex 57.00 2.50 0.60
+      vertex 51.00 0.60 -0.50
+      vertex 51.00 1.53 -2.50
+      vertex 51.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 54.00 0.60 -0.50
+      vertex 56.00 0.60 -2.50
+      vertex 56.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 54.00 0.60 -0.50
+      vertex 54.00 0.60 -2.50
+      vertex 56.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 54.00 5.27 -0.50
+      vertex 56.00 5.27 -0.50
+      vertex 56.00 5.27 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 54.00 5.27 -0.50
+      vertex 56.00 5.27 -2.50
+      vertex 54.00 5.27 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 54.00 0.60 -0.50
+      vertex 56.00 0.60 -0.50
+      vertex 56.00 5.27 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 54.00 0.60 -0.50
+      vertex 56.00 5.27 -0.50
+      vertex 54.00 5.27 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 60.00 0.50 0.60
-      vertex 62.00 2.50 0.60
-      vertex 62.00 0.50 0.60
+      vertex 56.00 0.60 -2.50
+      vertex 54.00 0.60 -2.50
+      vertex 54.00 5.27 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 60.00 0.50 0.60
-      vertex 60.00 2.50 0.60
-      vertex 62.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 60.00 0.50 2.93
-      vertex 62.00 0.50 2.93
-      vertex 62.00 2.50 2.93
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 60.00 0.50 2.93
-      vertex 62.00 2.50 2.93
-      vertex 60.00 2.50 2.93
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 60.00 0.50 0.60
-      vertex 62.00 0.50 0.60
-      vertex 62.00 0.50 2.93
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 60.00 0.50 0.60
-      vertex 62.00 0.50 2.93
-      vertex 60.00 0.50 2.93
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 62.00 2.50 0.60
-      vertex 60.00 2.50 0.60
-      vertex 60.00 2.50 2.93
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 62.00 2.50 0.60
-      vertex 60.00 2.50 2.93
-      vertex 62.00 2.50 2.93
+      vertex 56.00 0.60 -2.50
+      vertex 54.00 5.27 -2.50
+      vertex 56.00 5.27 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 62.00 0.50 0.60
-      vertex 62.00 2.50 0.60
-      vertex 62.00 2.50 2.93
+      vertex 56.00 0.60 -0.50
+      vertex 56.00 0.60 -2.50
+      vertex 56.00 5.27 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 62.00 0.50 0.60
-      vertex 62.00 2.50 2.93
-      vertex 62.00 0.50 2.93
+      vertex 56.00 0.60 -0.50
+      vertex 56.00 5.27 -2.50
+      vertex 56.00 5.27 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 60.00 0.50 0.60
-      vertex 60.00 0.50 2.93
-      vertex 60.00 2.50 2.93
+      vertex 54.00 0.60 -0.50
+      vertex 54.00 5.27 -0.50
+      vertex 54.00 5.27 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 60.00 0.50 0.60
-      vertex 60.00 2.50 2.93
-      vertex 60.00 2.50 0.60
+      vertex 54.00 0.60 -0.50
+      vertex 54.00 5.27 -2.50
+      vertex 54.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 57.00 0.60 -0.50
+      vertex 59.00 0.60 -2.50
+      vertex 59.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 57.00 0.60 -0.50
+      vertex 57.00 0.60 -2.50
+      vertex 59.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 57.00 4.80 -0.50
+      vertex 59.00 4.80 -0.50
+      vertex 59.00 4.80 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 57.00 4.80 -0.50
+      vertex 59.00 4.80 -2.50
+      vertex 57.00 4.80 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 57.00 0.60 -0.50
+      vertex 59.00 0.60 -0.50
+      vertex 59.00 4.80 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 57.00 0.60 -0.50
+      vertex 59.00 4.80 -0.50
+      vertex 57.00 4.80 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 63.00 0.50 0.60
-      vertex 65.00 2.50 0.60
-      vertex 65.00 0.50 0.60
+      vertex 59.00 0.60 -2.50
+      vertex 57.00 0.60 -2.50
+      vertex 57.00 4.80 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 63.00 0.50 0.60
-      vertex 63.00 2.50 0.60
-      vertex 65.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 63.00 0.50 3.87
-      vertex 65.00 0.50 3.87
-      vertex 65.00 2.50 3.87
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 63.00 0.50 3.87
-      vertex 65.00 2.50 3.87
-      vertex 63.00 2.50 3.87
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 63.00 0.50 0.60
-      vertex 65.00 0.50 0.60
-      vertex 65.00 0.50 3.87
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 63.00 0.50 0.60
-      vertex 65.00 0.50 3.87
-      vertex 63.00 0.50 3.87
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 65.00 2.50 0.60
-      vertex 63.00 2.50 0.60
-      vertex 63.00 2.50 3.87
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 65.00 2.50 0.60
-      vertex 63.00 2.50 3.87
-      vertex 65.00 2.50 3.87
+      vertex 59.00 0.60 -2.50
+      vertex 57.00 4.80 -2.50
+      vertex 59.00 4.80 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 65.00 0.50 0.60
-      vertex 65.00 2.50 0.60
-      vertex 65.00 2.50 3.87
+      vertex 59.00 0.60 -0.50
+      vertex 59.00 0.60 -2.50
+      vertex 59.00 4.80 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 65.00 0.50 0.60
-      vertex 65.00 2.50 3.87
-      vertex 65.00 0.50 3.87
+      vertex 59.00 0.60 -0.50
+      vertex 59.00 4.80 -2.50
+      vertex 59.00 4.80 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 63.00 0.50 0.60
-      vertex 63.00 0.50 3.87
-      vertex 63.00 2.50 3.87
+      vertex 57.00 0.60 -0.50
+      vertex 57.00 4.80 -0.50
+      vertex 57.00 4.80 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 63.00 0.50 0.60
-      vertex 63.00 2.50 3.87
-      vertex 63.00 2.50 0.60
+      vertex 57.00 0.60 -0.50
+      vertex 57.00 4.80 -2.50
+      vertex 57.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 60.00 0.60 -0.50
+      vertex 62.00 0.60 -2.50
+      vertex 62.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 60.00 0.60 -0.50
+      vertex 60.00 0.60 -2.50
+      vertex 62.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 60.00 2.93 -0.50
+      vertex 62.00 2.93 -0.50
+      vertex 62.00 2.93 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 60.00 2.93 -0.50
+      vertex 62.00 2.93 -2.50
+      vertex 60.00 2.93 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 60.00 0.60 -0.50
+      vertex 62.00 0.60 -0.50
+      vertex 62.00 2.93 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 60.00 0.60 -0.50
+      vertex 62.00 2.93 -0.50
+      vertex 60.00 2.93 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 66.00 0.50 0.60
-      vertex 68.00 2.50 0.60
-      vertex 68.00 0.50 0.60
+      vertex 62.00 0.60 -2.50
+      vertex 60.00 0.60 -2.50
+      vertex 60.00 2.93 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 66.00 0.50 0.60
-      vertex 66.00 2.50 0.60
-      vertex 68.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 66.00 0.50 2.47
-      vertex 68.00 0.50 2.47
-      vertex 68.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 66.00 0.50 2.47
-      vertex 68.00 2.50 2.47
-      vertex 66.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 66.00 0.50 0.60
-      vertex 68.00 0.50 0.60
-      vertex 68.00 0.50 2.47
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 66.00 0.50 0.60
-      vertex 68.00 0.50 2.47
-      vertex 66.00 0.50 2.47
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 68.00 2.50 0.60
-      vertex 66.00 2.50 0.60
-      vertex 66.00 2.50 2.47
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 68.00 2.50 0.60
-      vertex 66.00 2.50 2.47
-      vertex 68.00 2.50 2.47
+      vertex 62.00 0.60 -2.50
+      vertex 60.00 2.93 -2.50
+      vertex 62.00 2.93 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 68.00 0.50 0.60
-      vertex 68.00 2.50 0.60
-      vertex 68.00 2.50 2.47
+      vertex 62.00 0.60 -0.50
+      vertex 62.00 0.60 -2.50
+      vertex 62.00 2.93 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 68.00 0.50 0.60
-      vertex 68.00 2.50 2.47
-      vertex 68.00 0.50 2.47
+      vertex 62.00 0.60 -0.50
+      vertex 62.00 2.93 -2.50
+      vertex 62.00 2.93 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 66.00 0.50 0.60
-      vertex 66.00 0.50 2.47
-      vertex 66.00 2.50 2.47
+      vertex 60.00 0.60 -0.50
+      vertex 60.00 2.93 -0.50
+      vertex 60.00 2.93 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 66.00 0.50 0.60
-      vertex 66.00 2.50 2.47
-      vertex 66.00 2.50 0.60
+      vertex 60.00 0.60 -0.50
+      vertex 60.00 2.93 -2.50
+      vertex 60.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 63.00 0.60 -0.50
+      vertex 65.00 0.60 -2.50
+      vertex 65.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 63.00 0.60 -0.50
+      vertex 63.00 0.60 -2.50
+      vertex 65.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 63.00 3.87 -0.50
+      vertex 65.00 3.87 -0.50
+      vertex 65.00 3.87 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 63.00 3.87 -0.50
+      vertex 65.00 3.87 -2.50
+      vertex 63.00 3.87 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 63.00 0.60 -0.50
+      vertex 65.00 0.60 -0.50
+      vertex 65.00 3.87 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 63.00 0.60 -0.50
+      vertex 65.00 3.87 -0.50
+      vertex 63.00 3.87 -0.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 69.00 0.50 0.60
-      vertex 71.00 2.50 0.60
-      vertex 71.00 0.50 0.60
+      vertex 65.00 0.60 -2.50
+      vertex 63.00 0.60 -2.50
+      vertex 63.00 3.87 -2.50
     endloop
   endfacet
   facet normal 0 0 -1
     outer loop
-      vertex 69.00 0.50 0.60
-      vertex 69.00 2.50 0.60
-      vertex 71.00 2.50 0.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 69.00 0.50 14.60
-      vertex 71.00 0.50 14.60
-      vertex 71.00 2.50 14.60
-    endloop
-  endfacet
-  facet normal 0 0 1
-    outer loop
-      vertex 69.00 0.50 14.60
-      vertex 71.00 2.50 14.60
-      vertex 69.00 2.50 14.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 69.00 0.50 0.60
-      vertex 71.00 0.50 0.60
-      vertex 71.00 0.50 14.60
-    endloop
-  endfacet
-  facet normal 0 -1 0
-    outer loop
-      vertex 69.00 0.50 0.60
-      vertex 71.00 0.50 14.60
-      vertex 69.00 0.50 14.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 71.00 2.50 0.60
-      vertex 69.00 2.50 0.60
-      vertex 69.00 2.50 14.60
-    endloop
-  endfacet
-  facet normal 0 1 0
-    outer loop
-      vertex 71.00 2.50 0.60
-      vertex 69.00 2.50 14.60
-      vertex 71.00 2.50 14.60
+      vertex 65.00 0.60 -2.50
+      vertex 63.00 3.87 -2.50
+      vertex 65.00 3.87 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 71.00 0.50 0.60
-      vertex 71.00 2.50 0.60
-      vertex 71.00 2.50 14.60
+      vertex 65.00 0.60 -0.50
+      vertex 65.00 0.60 -2.50
+      vertex 65.00 3.87 -2.50
     endloop
   endfacet
   facet normal 1 0 0
     outer loop
-      vertex 71.00 0.50 0.60
-      vertex 71.00 2.50 14.60
-      vertex 71.00 0.50 14.60
+      vertex 65.00 0.60 -0.50
+      vertex 65.00 3.87 -2.50
+      vertex 65.00 3.87 -0.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 69.00 0.50 0.60
-      vertex 69.00 0.50 14.60
-      vertex 69.00 2.50 14.60
+      vertex 63.00 0.60 -0.50
+      vertex 63.00 3.87 -0.50
+      vertex 63.00 3.87 -2.50
     endloop
   endfacet
   facet normal -1 0 0
     outer loop
-      vertex 69.00 0.50 0.60
-      vertex 69.00 2.50 14.60
-      vertex 69.00 2.50 0.60
+      vertex 63.00 0.60 -0.50
+      vertex 63.00 3.87 -2.50
+      vertex 63.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 66.00 0.60 -0.50
+      vertex 68.00 0.60 -2.50
+      vertex 68.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 66.00 0.60 -0.50
+      vertex 66.00 0.60 -2.50
+      vertex 68.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 66.00 2.47 -0.50
+      vertex 68.00 2.47 -0.50
+      vertex 68.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 66.00 2.47 -0.50
+      vertex 68.00 2.47 -2.50
+      vertex 66.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 66.00 0.60 -0.50
+      vertex 68.00 0.60 -0.50
+      vertex 68.00 2.47 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 66.00 0.60 -0.50
+      vertex 68.00 2.47 -0.50
+      vertex 66.00 2.47 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 68.00 0.60 -2.50
+      vertex 66.00 0.60 -2.50
+      vertex 66.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 68.00 0.60 -2.50
+      vertex 66.00 2.47 -2.50
+      vertex 68.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 68.00 0.60 -0.50
+      vertex 68.00 0.60 -2.50
+      vertex 68.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 68.00 0.60 -0.50
+      vertex 68.00 2.47 -2.50
+      vertex 68.00 2.47 -0.50
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 66.00 0.60 -0.50
+      vertex 66.00 2.47 -0.50
+      vertex 66.00 2.47 -2.50
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 66.00 0.60 -0.50
+      vertex 66.00 2.47 -2.50
+      vertex 66.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 69.00 0.60 -0.50
+      vertex 71.00 0.60 -2.50
+      vertex 71.00 0.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 -1 0
+    outer loop
+      vertex 69.00 0.60 -0.50
+      vertex 69.00 0.60 -2.50
+      vertex 71.00 0.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 69.00 14.60 -0.50
+      vertex 71.00 14.60 -0.50
+      vertex 71.00 14.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 1 0
+    outer loop
+      vertex 69.00 14.60 -0.50
+      vertex 71.00 14.60 -2.50
+      vertex 69.00 14.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 69.00 0.60 -0.50
+      vertex 71.00 0.60 -0.50
+      vertex 71.00 14.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 1
+    outer loop
+      vertex 69.00 0.60 -0.50
+      vertex 71.00 14.60 -0.50
+      vertex 69.00 14.60 -0.50
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 71.00 0.60 -2.50
+      vertex 69.00 0.60 -2.50
+      vertex 69.00 14.60 -2.50
+    endloop
+  endfacet
+  facet normal 0 0 -1
+    outer loop
+      vertex 71.00 0.60 -2.50
+      vertex 69.00 14.60 -2.50
+      vertex 71.00 14.60 -2.50
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 71.00 0.60 -0.50
+      vertex 71.00 0.60 -2.50
+      vertex 71.00 14.60 -2.50
+    endloop
+  endfacet
+  facet normal 1 0 0
+    outer loop
+      vertex 71.00 0.60 -0.50
+      vertex 71.00 14.60 -2.50
+      vertex 71.00 14.60 -0.50
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 69.00 0.60 -0.50
+      vertex 69.00 14.60 -0.50
+      vertex 69.00 14.60 -2.50
+    endloop
+  endfacet
+  facet normal -1 0 0
+    outer loop
+      vertex 69.00 0.60 -0.50
+      vertex 69.00 14.60 -2.50
+      vertex 69.00 0.60 -2.50
     endloop
   endfacet
 endsolid skyline
@@ -2357,7 +2357,7 @@ pie showData
 
 The rule that decides whether a banner can be read on a phone, stated exactly:
 
-$$F_{\min} = 	ext{target} 	imes rac{W}{R}$$
+$$F_{\min} = \text{target} \times \frac{W}{R}$$
 
 ---
 

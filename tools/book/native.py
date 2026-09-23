@@ -51,8 +51,10 @@ def skyline() -> str:
         tris += box(i * 3, 0.5, 0.6, i * 3 + 2, 2.5, h)
     lines = ["solid skyline"]
     for n, (a, b, c) in tris:
-        lines += [f"  facet normal {n[0]} {n[1]} {n[2]}", "    outer loop",
-                  *[f"      vertex {p[0]:.2f} {p[1]:.2f} {p[2]:.2f}" for p in (a, b, c)],
+        lines += [f"  facet normal {n[0]} {n[2]} {-n[1]}", "    outer loop",
+                  # GitHub's STL viewer treats Y as up; boxes are built Z-up, so
+                  # write each vertex as (x, z, -y) to stand the towers upright.
+                  *[f"      vertex {p[0]:.2f} {p[2]:.2f} {-p[1]:.2f}" for p in (a, b, c)],
                   "    endloop", "  endfacet"]
     return "\n".join(lines + ["endsolid skyline"]) + "\n"
 
