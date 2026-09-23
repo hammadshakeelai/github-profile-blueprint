@@ -55,6 +55,14 @@ dark and light.
 - **A pushed change takes about five minutes to appear** (the CDN serves the
   old file for `max-age=300`); a commit-pinned URL is fresh in seconds.
 
+## The Profile README Book
+
+[docs/book/](docs/book/README.md) — a lookbook of the best-looking profiles in the
+world, a cabinet of curiosities (a 4,500-year-old board game played by visitors,
+live server telemetry, bonsai grown from commits), a 129-entry dictionary, live
+demos of the 3D models, maps and diagrams GitHub renders natively, and nine new
+designs built from 2026's trends that stay legible on a phone.
+
 ## Two profiles built from the findings
 
 - [`profile/`](profile) — the restrained one, chosen in
@@ -134,6 +142,7 @@ docs/
   survey/                    Phase 1: findings, shortlist, tables, screenshots, data
 skills/github-profile-readme/  the skill — the survey's evidence, per-engine facts, craft, recipes
 profile/                     the built profile README and its SVGs
+docs/book/                   the Profile README Book — lookbook, curiosities, dictionary, designs
 tools/survey/                the survey tooling; everything re-runs from here
 tools/lint/                  profile-lint — every measured rule, runnable
 tools/research/              the open-track investigations
