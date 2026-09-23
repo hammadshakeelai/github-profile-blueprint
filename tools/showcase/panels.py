@@ -165,7 +165,7 @@ def languages(p, data: list[tuple[str, int]], width: int = W) -> str:
     colours = ["accent", "hot", "go", "warm", "deep", "muted"]
     bar_y, bar_h = 56, 30
     x = 0
-    bars, legend = "", ""
+    bars, legend, entries = "", "", []
     for i, (name, n) in enumerate(data):
         w = width * n / total
         c = p[colours[i % len(colours)]]
@@ -173,11 +173,20 @@ def languages(p, data: list[tuple[str, int]], width: int = W) -> str:
                 f'fill="freeze" begin="0s"/>')
         # Starts at full width and is *revealed* by a mask, so frame zero is complete.
         bars += (f'<rect x="{x:.1f}" y="{bar_y}" width="{w:.1f}" height="{bar_h}" fill="{c}"/>')
-        ly, lx = 118 + (i // 3) * 34, (i % 3) * (width / 3)
-        legend += (f'<circle cx="{lx + 10:.0f}" cy="{ly - 7}" r="7" fill="{c}"/>'
-                   + text(lx + 26, ly, f"{name} · {n}", 22, p["muted"], canvas=width))
+        entries.append((f"{name} · {n}", c))
         x += w
-    h = 118 + ((len(data) + 2) // 3) * 34
+
+    # Laid out by measured width: "Jupyter Notebook · 17" and "C++ · 4" are not
+    # the same size, and a three-column grid collides them.
+    size, lx, ly, rows = 22, 0, 118, 1
+    for label, c in entries:
+        ew = 26 + len(label) * size * 0.55 + 22
+        if lx + ew > width:
+            lx, ly, rows = 0, ly + 34, rows + 1
+        legend += (f'<circle cx="{lx + 10:.0f}" cy="{ly - 7}" r="7" fill="{c}"/>'
+                   + text(lx + 26, ly, label, size, p["muted"], canvas=width))
+        lx += ew
+    h = 118 + rows * 34
     body = (card(p, width, h) + text(24, 36, "Languages across 87 repositories", 24, p["text"], 700, canvas=width)
             + f'<g>{bars}</g>' + legend)
     return svg(width, h, body, "Language distribution: " +
@@ -191,7 +200,7 @@ def rhythm(p, months: list[tuple[str, int]], width: int = W) -> str:
     cols = len(months)
     cell = min(30, (width - 48) // max(cols, 1))
     peak = max((n for _, n in months), default=1) or 1
-    h = 150
+    h = 166
     cells = ""
     for i, (label, n) in enumerate(months):
         t = n / peak
@@ -202,8 +211,12 @@ def rhythm(p, months: list[tuple[str, int]], width: int = W) -> str:
                   f'fill="{c}" opacity="{o:.2f}">'
                   f'<animate attributeName="opacity" values="{o:.2f};{min(1, o + .3):.2f};{o:.2f}" '
                   f'dur="4s" begin="{i * 0.12:.2f}s" repeatCount="indefinite"/></rect>')
-        if i % 3 == 0:
-            cells += text(x + cell / 2, 54 + cell + 22, label, 17, p["muted"], anchor="middle")
+        # Labelled by year: a bare month number reads as noise once the range
+        # crosses into a new one.
+        if label.endswith("-01") or i == 0:
+            cells += (f'<path d="M{x} {54 + cell + 4} L{x} {54 + cell + 12}" '
+                      f'stroke="{p["line"]}" stroke-width="2"/>'
+                      + text(x + 4, 54 + cell + 34, label[:4], 22, p["muted"], canvas=width))
     body = (card(p, width, h) + text(24, 36, "Repository activity by month", 24, p["text"], 700, canvas=width)
             + cells)
     return svg(width, h, body,
@@ -215,6 +228,12 @@ def rhythm(p, months: list[tuple[str, int]], width: int = W) -> str:
 # --------------------------------------------------------------------------- #
 def terminal(p, lines: list[tuple[str, str]], width: int = W) -> str:
     row, top = 30, 78
+    size = max(21, floor_for(width))
+    budget = int((width - 48) / (size * 0.60))      # monospace, ~0.6 em per glyph
+    spill = [s for _, s in lines if len(s) + 2 > budget]
+    if spill:
+        raise SystemExit(f"terminal line longer than {budget} characters at the "
+                         f"legibility floor: {spill[0]!r}")
     h = top + row * len(lines) + 26
     body = [card(p, width, h),
             f'<path d="M0 16 a16 16 0 0 1 16 -16 h{width - 32} a16 16 0 0 1 16 16 v34 h-{width} z" '
@@ -256,18 +275,27 @@ def orbit(p, rings: list[list[str]], width: int = W) -> str:
         for i, label in enumerate(labels):
             start = i * 360 / len(labels)
             colour = [p["accent"], p["hot"], p["go"], p["warm"]][(ri + i) % 4]
-            body.append(
-                f'<g transform="rotate({start} {cx} {cy})">'
-                f'<g transform="translate({cx + r} {cy})">'
-                f'<circle r="5" fill="{colour}"/>'
-                + text(10, 6, label, 20, p["text"], 600, canvas=width) +
-                f'</g></g>'
-                if ri == 0 else
-                f'<g><animateTransform attributeName="transform" type="rotate" '
-                f'from="{start} {cx} {cy}" to="{start + 360} {cx} {cy}" dur="{dur}s" '
-                f'repeatCount="indefinite"/>'
-                f'<g transform="translate({cx + r} {cy})"><circle r="5" fill="{colour}"/>'
-                + text(10, 6, label, 20, p["text"], 600, canvas=width) + '</g></g>')
+            # The ring carries each label around it; an inner group turns the
+            # opposite way at the same rate so the word stays upright all the
+            # way round, instead of going over on its head at the far side.
+            label_svg = text(10, 6, label, 20, p["text"], 600, canvas=width)
+            if ri == 0:
+                body.append(
+                    f'<g transform="rotate({start} {cx} {cy})">'
+                    f'<g transform="translate({cx + r} {cy})">'
+                    f'<circle r="5" fill="{colour}"/>'
+                    f'<g transform="rotate({-start})">{label_svg}</g>'
+                    f'</g></g>')
+            else:
+                body.append(
+                    f'<g><animateTransform attributeName="transform" type="rotate" '
+                    f'from="{start} {cx} {cy}" to="{start + 360} {cx} {cy}" dur="{dur}s" '
+                    f'repeatCount="indefinite"/>'
+                    f'<g transform="translate({cx + r} {cy})"><circle r="5" fill="{colour}"/>'
+                    f'<g><animateTransform attributeName="transform" type="rotate" '
+                    f'from="{-start} 0 0" to="{-start - 360} 0 0" dur="{dur}s" '
+                    f'repeatCount="indefinite"/>{label_svg}</g>'
+                    f'</g></g>')
     body.append(f'<circle cx="{cx}" cy="{cy}" r="34" fill="{p["bg"]}" stroke="{p["accent"]}"/>')
     body.append(text(cx, cy + 8, "stack", 22, p["accent"], 700, anchor="middle", canvas=width))
     return svg(width, h, "".join(body),

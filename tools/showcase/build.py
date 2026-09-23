@@ -126,7 +126,7 @@ def build_assets(d: dict, projects: list[dict]) -> None:
                                          ("Assembly", "deep"), ("three.js", "accent"),
                                          ("PyTorch", "hot"), ("Linux", "go")]))
     write("languages", lambda p: P.languages(p, d["languages"][:6]))
-    write("rhythm", lambda p: P.rhythm(p, [(m[5:7], n) for m, n in d["months"]]))
+    write("rhythm", lambda p: P.rhythm(p, d["months"]))
     write("gauges", lambda p: P.gauges(p, [
         ("repositories", d["repos"], 100, "accent"),
         ("live demos", d["pages_sites"], 40, "go"),
@@ -134,13 +134,13 @@ def build_assets(d: dict, projects: list[dict]) -> None:
         ("months building", months_between(d["first_repo"]), 36, "warm")]))
     write("terminal", lambda p: P.terminal(p, [
         ("cmd", "ls ~/things-that-run-in-a-tab"),
-        ("out", f"{d['repos']} repositories, {d['pages_sites']} with a live site"),
+        ("out", f"{d['repos']} repos, {d['pages_sites']} with a live site"),
         ("cmd", "./linuxweb --boot"),
-        ("ok", "alpine linux: userspace up, home persisted"),
+        ("ok", "alpine userspace up, home persisted"),
         ("cmd", "./doomsday --asm 8086"),
-        ("ok", "dosbox: weekday computed in hand-written assembly"),
+        ("ok", "dosbox: weekday in 8086 assembly"),
         ("cmd", "./paklegalbench --eval"),
-        ("warn", "retrieval over Pakistani statute — harness measuring"),
+        ("warn", "statute retrieval: harness measuring"),
     ]))
     write("orbit", lambda p: P.orbit(p, [["core"], ["Python", "TypeScript", "C++"],
                                          ["Linux", "WebAssembly", "three.js", "RAG", "x86"]]))
