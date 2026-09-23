@@ -59,6 +59,14 @@ const LIST = `(async () => {
 async function pass(browser, engine, width, scheme) {
   const opts = { viewport: { width, height: 9000 }, colorScheme: scheme, deviceScaleFactor: 1,
                  reducedMotion: REDUCED };
+  // DEVICE=iphone emulates an actual iPhone rather than a narrow window: iOS
+  // user agent, 3x pixel ratio, touch. In WebKit — Safari's engine — that is
+  // the closest this machine gets to iOS Safari. It is still not iOS Safari.
+  if (process.env.DEVICE === 'iphone') Object.assign(opts, {
+    userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 '
+             + '(KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
+    deviceScaleFactor: 3, isMobile: true, hasTouch: true,
+  });   // viewport height stays tall so every card is inside one capture
   // Firefox has no mobile emulation mode; it gets the narrow viewport only.
   if (width < 700 && engine !== 'firefox') Object.assign(opts, { isMobile: true, hasTouch: true });
   const ctx = await browser.newContext(opts);

@@ -11,7 +11,7 @@ claim without a citation, a measurement, or an `UNVERIFIED` tag.
 | 2 | Does `prefers-reduced-motion` reach an SVG in secure animated mode? | **done** |
 | 3 | Alt text and accessibility across 10,782 images | **done** |
 | 4 | `profile-lint` — every measured rule as a checker | **done** |
-| 5 | Narrow the iOS unknown with an iPhone-emulated WebKit pass | todo |
+| 5 | Narrow the iOS unknown with an iPhone-emulated WebKit pass | **done** |
 
 ---
 
@@ -78,3 +78,8 @@ emulation* (touch, mobile user agent, device scale) is a closer proxy than the
 narrow desktop viewport used so far, and Playwright can do it. It won't close
 the question — it will shrink it, and the residue should be stated precisely
 rather than left blank.
+
+**Answer:** nothing changes under iPhone emulation — same 13 animating, same one
+WebKit exception, all three theme mechanisms working. What remains genuinely
+unknown: iOS Low Power Mode, the GitHub mobile apps' native renderers, and real
+3× rasterisation. See [research/IOS.md](research/IOS.md).
