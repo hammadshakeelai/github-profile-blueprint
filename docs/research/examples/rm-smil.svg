@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="600" height="120" role="img" aria-label="A square that slides using SMIL, with a reduced-motion rule that does not apply to it">
+  <style>
+    .bg { fill: #0d1117 } .fg { fill: #e6edf3 } .dot { fill: #f778ba }
+    /* The same guard, which CSS cannot apply to a SMIL animation. */
+    @media (prefers-reduced-motion: reduce) { .dot { animation: none } }
+  </style>
+  <rect class="bg" width="600" height="120" rx="12"/>
+  <text class="fg" x="24" y="40" font-family="ui-monospace, monospace" font-size="22">SMIL, same guard</text>
+  <rect class="dot" x="24" y="60" width="120" height="40" rx="8">
+    <animate attributeName="x" values="24;444;24" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</svg>

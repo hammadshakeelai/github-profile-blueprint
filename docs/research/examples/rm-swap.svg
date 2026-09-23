@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="600" height="120" role="img" aria-label="A moving square that is replaced by a still one when the viewer asks for reduced motion">
+  <style>
+    .bg { fill: #0d1117 } .fg { fill: #e6edf3 } .dot { fill: #3fb950 }
+    .still { display: none }
+    /* CSS can't stop SMIL, but it can hide the layer running it and show a
+       still frame instead. The animation keeps playing, unseen. */
+    @media (prefers-reduced-motion: reduce) {
+      .motion { display: none } .still { display: inline }
+    }
+  </style>
+  <rect class="bg" width="600" height="120" rx="12"/>
+  <text class="fg" x="24" y="40" font-family="ui-monospace, monospace" font-size="22">SMIL, swapped for a still frame</text>
+  <g class="motion">
+    <rect class="dot" x="24" y="60" width="120" height="40" rx="8">
+      <animate attributeName="x" values="24;444;24" dur="4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g class="still"><rect class="dot" x="234" y="60" width="120" height="40" rx="8"/></g>
+</svg>
