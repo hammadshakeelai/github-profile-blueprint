@@ -12,7 +12,7 @@ claim without a citation, a measurement, or an `UNVERIFIED` tag.
 | 3 | Alt text and accessibility across 10,782 images | **done** |
 | 4 | `profile-lint` — every measured rule as a checker | **done** |
 | 5 | Narrow the iOS unknown with an iPhone-emulated WebKit pass | **done** |
-| 6 | Can a `<picture>` source be gated on **width**? | todo |
+| 6 | Can a `<picture>` source be gated on **width**? | **done** |
 | 7 | Package profile-lint so other people can run it | todo |
 | 8 | A five-minute real-device checklist | todo |
 
