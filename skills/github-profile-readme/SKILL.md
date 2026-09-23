@@ -60,14 +60,28 @@ effective_px = F × (R / W)          F_min = target_px × W / R
 a 1200-wide viewBox that means **F ≥ 43 units** for phone legibility — far
 larger than it looks in a design tool, and why most banners fail.
 
-Three ways out, in order:
+Four ways out, in order:
 
 1. **Shrink the viewBox, not the type.** Design at roughly the real display
    width. A 600-unit viewBox needs only F ≥ 21.4; the arithmetic stops fighting
-   you.
+   you. Simplest, one file per theme, and enough for most designs.
 2. **Cut the text.** A name and one line beats four lines nobody can read. Put
    the detail in markdown, where it reflows.
-3. **Accept desktop-only** for one decorative line, deliberately — never for the
+3. **Draw it twice and gate on width** — verified working in all three engines:
+
+   ```html
+   <picture>
+     <source media="(max-width: 600px)" srcset=".../card-phone.svg">
+     <img src=".../card.svg" alt="…" width="900">
+   </picture>
+   ```
+
+   A 900-unit desktop canvas *and* a 309-unit phone canvas where 13 units is
+   13px. This removes the compromise, at the cost of multiplying files (width ×
+   theme × motion) — so generate them, never hand-maintain them. Note the
+   `<img>` fallback is what any renderer ignoring `<source>` gets, including
+   the GitHub mobile apps. `docs/research/WIDTH-GATED.md`.
+4. **Accept desktop-only** for one decorative line, deliberately — never for the
    name.
 
 **Enforce it in code.** A generator should refuse to emit an SVG whose smallest

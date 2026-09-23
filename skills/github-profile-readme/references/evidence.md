@@ -48,6 +48,9 @@ highest-value rule in this skill.
 90% of illegible cards are legible at their native width and fail only after
 shrinking into the 309px column. 10% are too small on any device.
 
+- This is now avoidable without compromise: a `<source media="(max-width:
+  600px)">` can serve a phone-scale drawing, verified in three engines
+  (`docs/research/WIDTH-GATED.md`).
 - Hand-made cards fail **more** than generator output: **63% vs 37%**. People
   drawing their own panels choose wide canvases with small type.
 - By service: lowlighter/metrics 83%, github-profile-summary-cards 60%,

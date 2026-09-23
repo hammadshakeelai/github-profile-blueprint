@@ -37,6 +37,14 @@ theme from inside an image.
 Prefer `<picture>` anyway: it is what the survey's profiles use (80 to 7), and
 one theme per file is easier to verify than one file with two states.
 
+## Media-gated `<picture>` sources
+
+GitHub's sanitizer keeps the `media` attribute, and the host page evaluates it,
+so a `<source>` can select a file by **viewport width** as well as by theme —
+verified serving a phone-specific SVG at 390px and a desktop one at 1280px in
+all three engines (`docs/research/WIDTH-GATED.md`). Combined with theme and
+reduced motion, the first matching source wins, so order most-specific first.
+
 ## Reduced motion
 
 `@media (prefers-reduced-motion: reduce)` **never applies inside an SVG
