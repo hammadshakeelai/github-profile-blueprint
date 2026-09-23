@@ -86,22 +86,30 @@ GitHub and measured: all seven images load, the smallest text on a phone is
 ## Open tracks
 
 The plan's six phases are done; [docs/TRACKS.md](docs/TRACKS.md) carries what
-they left open. Two answered so far, both correcting something previously
-believed:
+they left open. Six answered so far, three of them correcting something this
+repository had previously asserted:
 
 - **Relative `srcset` does resolve on profile pages** — 33 of 33 live profiles
   checked. The claim that it fails, which this repo had been repeating, is
   false. [RELATIVE-SRCSET.md](docs/research/RELATIVE-SRCSET.md)
+- **`prefers-reduced-motion` never reaches an SVG** in any of the three engines,
+  so the 369 surveyed files that guard their animation do nothing. Gating a
+  `<picture>` source works instead.
+  [REDUCED-MOTION.md](docs/research/REDUCED-MOTION.md)
 - **A third of text-bearing cards can't be reached by a screen reader**, and
   nothing inside an SVG — `<title>`, `aria-label`, `role` — crosses into the
   page's accessibility tree. [ALT-TEXT.md](docs/research/ALT-TEXT.md)
 - **`profile-lint`** runs all thirteen measured rules against any profile in a
-  minute, and reproduces the survey's rates on a re-sample.
-  [PROFILE-LINT.md](docs/research/PROFILE-LINT.md)
-- **`prefers-reduced-motion` never reaches an SVG** in any of the three engines,
-  so the 369 surveyed files that guard their animation do nothing. Gating a
-  `<picture>` source works instead, and the profile now does.
-  [REDUCED-MOTION.md](docs/research/REDUCED-MOTION.md)
+  minute and reproduces the survey's rates on a re-sample; validating it caught
+  two bugs in itself. [PROFILE-LINT.md](docs/research/PROFILE-LINT.md)
+- **Width-gated `<picture>` sources work**, so the survey's central trade-off —
+  a desktop canvas *or* phone legibility — is a choice, not a constraint.
+  [WIDTH-GATED.md](docs/research/WIDTH-GATED.md)
+- **iPhone emulation changes nothing**, which shrinks the iOS unknown to three
+  things only a real device can answer. [IOS.md](docs/research/IOS.md)
+
+Still open: packaging the linter for use outside this checkout, and the
+[five-minute phone check](docs/research/PHONE-CHECK.md), which needs a phone.
 
 ## What the technique catalogue verified
 
