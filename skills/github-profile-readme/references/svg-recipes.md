@@ -156,4 +156,4 @@ below, `alt=""` is correct and better than a redundant description.
 | `@import url(fonts.googleapis...)` | Blocked by CSP, silent fallback |
 | `<image href="https://...">` inside SVG | External ref, blocked |
 | Inline `<svg>` in markdown | Removed by sanitizer |
-| `prefers-color-scheme` inside the SVG | Does not see host theme; use `<picture>` |
+| `prefers-color-scheme` inside the SVG | Works — verified in three engines. Follows the OS, not the GitHub theme setting, as `<picture>` also does |

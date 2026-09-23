@@ -86,9 +86,11 @@ Since size range is constrained, lean on:
 
 ## Colour
 
-- Design **two files**, dark and light, and serve with `<picture>`. Do not try to
-  adapt inside one SVG — in secure animated mode the SVG cannot read the host
-  page's theme.
+- Design **two files**, dark and light, and serve with `<picture>`. A media
+  query inside a single SVG does work — verified in Chromium, Firefox and
+  WebKit — but it keys off the same `prefers-color-scheme` signal, so it buys
+  nothing and is harder to check. Neither mechanism can read GitHub's own theme
+  setting; both follow the viewer's OS.
 - Check contrast at the *rendered* size. Thin type at 11px needs more contrast
   than the same type at 60px; WCAG AA (4.5:1) is a floor, not a target, for
   supporting text.

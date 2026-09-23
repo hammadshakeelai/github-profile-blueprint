@@ -1,187 +1,190 @@
 ---
 name: github-profile-readme
-description: Use when designing, building, reviewing or debugging a GitHub profile README (the username/username repo) or any README banner, hero image, stats card, or generated SVG asset. Covers the measured rendering constraints that decide whether a design actually works — content widths, mobile legibility math, which SVG features survive, font loading, Camo vs raw asset routing, and cache behaviour — plus CI patterns for self-updating profiles. Trigger on "profile README", "README banner", "hero image", "github profile", "readme svg", "profile stats card", or when a banner "looks tiny/blurry/wrong on mobile".
+description: Use when designing, building, reviewing or debugging a GitHub profile README (the username/username repo) or any README banner, hero image, stats card, or generated SVG asset. Built on a survey of 446 real profiles and capability captures in three browser engines — it covers what actually breaks (dead image services, phone-illegible SVG text, table layouts), the measured container widths and legibility math, which SVG features survive GitHub's renderer, theme switching, cache timing, and how to verify a design instead of guessing. Trigger on "profile README", "README banner", "hero image", "github profile", "readme svg", "profile stats card", or when a banner "looks tiny/blurry/wrong on mobile".
 ---
 
 # GitHub Profile README Engineering
 
-Most profile-README advice is aesthetic. The things that actually break a profile
-are dimensional and infrastructural, and they are measurable. This skill leads
-with the measurements.
+Most profile-README advice is aesthetic and unsourced. This skill is built from
+measurement: 446 real profiles surveyed with every image fetched and every
+layout measured, and every rendering claim captured in Chromium, Firefox and
+WebKit inside GitHub's own page.
 
-## The three numbers that decide everything
+Two reference files carry the evidence. Read the relevant one before asserting
+anything:
 
-Measured directly from rendered DOM on github.com (September 2026), profile
-README container (`.js-profile-readme article.markdown-body`):
+- [`references/evidence.md`](references/evidence.md) — what 446 profiles do, and
+  the four ways they fail, with rates.
+- [`references/platform-facts.md`](references/platform-facts.md) — what renders,
+  per engine, plus widths, cache timing and asset routing.
 
-| Viewport | README content width |
+If a claim appears in neither, say it is unverified. Fluent writing that sounds
+researched is the failure mode this skill exists to prevent.
+
+## Start here: the four failures
+
+Measured across the survey. Check any new profile against these before
+designing anything.
+
+| Failure | Rate in the wild | The rule that avoids it |
+|---|---|---|
+| A broken image on the page | **41%** | Commit every image to the repo. Committed images load 99% of the time; the public github-readme-stats instance loads **0%** and is still embedded in 24% of profiles. |
+| SVG text illegible on a phone | **55%** of 1,730 cards | Run the legibility formula below on every card, not just the banner. 90% of failures are legible at full size and die only in the 309px column. |
+| Badge wall | **42%** of profiles | Badges are not information. Fifteen shields read as noise and each is a Camo fetch. |
+| No dark/light | 80% don't | Two files behind `<picture>`. |
+
+Hand-made cards fail the phone **more** than generator output (63% vs 37%) —
+being the designer is not protection, it is the risk.
+
+## The three numbers
+
+| Viewport | README column |
 |---|---|
 | 1920px desktop | **846px** |
 | 1280px laptop | **831px** |
 | 390px phone | **309px** |
 
-Images are hard-capped to the container: a 854px-natural image renders at 846px.
-
-**309px is the number that kills banners.** Nearly every profile banner in the
-wild is designed at 1200px+ and is illegible on a phone. Check it first.
+Images are hard-capped to the column. **309px is the number that kills
+banners.**
 
 ## The legibility formula — apply before drawing anything
 
-An SVG banner scales as a unit. Text does not stay put; it shrinks with the
-viewBox. For text drawn at size `F` in a viewBox of width `W`, rendered into a
-container of width `R`:
+An SVG scales as a unit; text shrinks with the viewBox. For text at size `F` in
+a viewBox of width `W`, rendered into a column of width `R`:
 
 ```
-effective_px = F × (R / W)
+effective_px = F × (R / W)          F_min = target_px × W / R
 ```
 
-Solve for the minimum size that stays legible (`11px` is the floor for
-supporting text; `13px` for anything that must be read):
+11px is the floor for supporting text, 13px for anything that must be read. For
+a 1200-wide viewBox that means **F ≥ 43 units** for phone legibility — far
+larger than it looks in a design tool, and why most banners fail.
 
-```
-F_min = target_px × W / R
-```
+Three ways out, in order:
 
-Worked, for a 1200-wide viewBox:
+1. **Shrink the viewBox, not the type.** Design at roughly the real display
+   width. A 600-unit viewBox needs only F ≥ 21.4; the arithmetic stops fighting
+   you.
+2. **Cut the text.** A name and one line beats four lines nobody can read. Put
+   the detail in markdown, where it reflows.
+3. **Accept desktop-only** for one decorative line, deliberately — never for the
+   name.
 
-| Target | Desktop (R=846) | Mobile (R=309) |
-|---|---|---|
-| 11px legible | F ≥ 16 | F ≥ **43** |
-| 13px comfortable | F ≥ 19 | F ≥ **51** |
+**Enforce it in code.** A generator should refuse to emit an SVG whose smallest
+text would fall below the floor; a working example is `check()` in
+`tools/direction/build.py`. A rule you have to remember is a rule you will
+forget on the last card.
 
-So in a 1200-unit viewBox, **every piece of text must be ≥43 units** or it is
-unreadable on a phone. That is much larger than it looks in a design tool, and it
-is why most banners fail.
+**SVG does not need 2× dimensions for retina.** It is resolution independent.
+The viewBox is a coordinate system, not a resolution — that advice is for
+PNG/JPG, and following it is what produces 2400px viewBoxes with 20px type.
 
-Three ways out, in order of preference:
+## Layout: markdown reads, SVG sets atmosphere
 
-1. **Shrink the viewBox, not the type.** A 900-unit viewBox needs only F ≥ 32 for
-   mobile legibility. Design at roughly the real display width and the ratio stops
-   fighting you.
-2. **Cut the text.** A banner with a name and one line beats a banner with four
-   lines of unreadable detail. Move detail into markdown below, where it reflows.
-3. **Accept desktop-only** for one decorative line, deliberately — and never for
-   the name or role.
+Real text reflows on a phone; an image cannot. Every sentence a visitor must
+read belongs in markdown; the SVG carries identity.
 
-**SVG banners do not need 2× dimensions for retina.** SVG is resolution
-independent; it renders sharp at any scale. The common "export at 2× for retina"
-advice applies to PNG/JPG only. For SVG the viewBox is a *coordinate system*, not
-a resolution — only the ratio above matters. Getting this wrong is what leads
-people to 2400px viewBoxes with 20px type.
+**Do not lay out with tables.** 21% of profiles put images in tables, and on a
+phone GitHub either crushes the cards — 640px cards measured at **76px** — or
+scrolls the table sideways. One column, stacked, always.
+
+**The only interaction available is a link.** Scripts and hover are blocked
+inside the image, but wrapping a `<picture>` in an `<a>` makes an entire panel a
+tap target — the largest control a README can have. Use it instead of faking
+interactivity.
+
+## What survives inside the image
+
+Referencing an SVG via `<img>` or `![]()` puts the browser in the SVG spec's
+**secure animated mode**: declarative animation runs, everything interactive or
+external does not. Verified identically in all three engines.
+
+| | |
+|---|---|
+| SMIL, CSS `@keyframes`, masks, stroke-dash, `textPath`, filters | **all animate, all engines** |
+| `gradientTransform` animation | **WebKit never animates it** — animate `x1`/`x2` or stop offsets |
+| `<script>`, event handlers, hover, tooltips | blocked |
+| `@import`ed web fonts | blocked |
+| External `<image>` href | blocked — and Chromium **paints a broken-image icon** |
+| Inline `<svg>` in markdown | stripped by the sanitizer |
 
 ## Fonts: your web font is not loading
 
-An SVG referenced as an image cannot *load* anything external: `@import`,
-`<link>`, and `@font-face` pointing at a URL are all blocked. So a declaration
-like `font-family: 'JetBrains Mono', monospace` only renders as JetBrains Mono
-for viewers who **already have it installed**. Everyone else silently gets the
-next font in the stack — with no error.
+An SVG referenced as an image cannot load anything external, so
+`font-family: 'JetBrains Mono', monospace` renders as JetBrains Mono only for
+viewers who already have it installed. Everyone else silently gets the next
+entry — with no error. The stack is therefore the design decision, not the first
+name in it.
 
-That makes the stack itself the design decision. Keep the preferred face first
-(it costs nothing and rewards viewers who have it), then real system fonts, so
-the fallback is deliberate rather than whatever the browser defaults to.
+- **Design for the fallback stack**, e.g. `'JetBrains Mono', ui-monospace,
+  SFMono-Regular, Menlo, Consolas, monospace`. (`ui-monospace` is the real
+  token; `-apple-system-ui-monospace` is not valid CSS.)
+- **Embed a subset as base64** for full fidelity — subset aggressively, a whole
+  font is 100KB+. 13 surveyed profiles do this.
+- **Convert text to paths** for a wordmark. Perfect, unsearchable, and painful
+  to regenerate.
 
-Options:
-
-- **Design for the fallback stack.** Simplest and most robust:
-  `'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace` or
-  `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif`. Accept
-  per-platform variation. Note `ui-monospace` is the real token;
-  `-apple-system-ui-monospace` is not valid CSS and is ignored.
-- **Embed the font as base64.** Subset the glyphs you actually use, base64 a
-  WOFF2, inline it in an `@font-face` inside the SVG's `<style>`. Full fidelity,
-  but a full font is 100KB+ — subset aggressively or the file balloons.
-- **Convert text to paths.** Perfect fidelity, no font dependency. Costs you
-  selectable/searchable text and makes edits require a re-render. Good for a
-  wordmark, bad for anything generated.
-
-## What survives when an SVG is referenced as an image
-
-Referencing an SVG via `<img>` or markdown `![]()` puts the browser in the SVG
-spec's **secure animated mode**. This is browser behaviour, not a GitHub policy:
-
-| Feature | Survives? |
-|---|---|
-| SMIL animation (`<animate>`, `animateMotion`) | **Yes** |
-| CSS `@keyframes` inside the SVG | **Yes** |
-| `<script>`, event handlers | No |
-| Hover, click, tooltips, interactivity | No |
-| External font / stylesheet / image refs | No |
-| Inline `<svg>` pasted into markdown | Stripped by sanitizer |
-
-So: animation yes, interaction no. Anything needing interactivity must be faked —
-usually a link wrapping the image, or GitHub Issues as the input channel.
-
-## Asset routing: repo-relative vs external
-
-Verified on live rendered DOM:
-
-- **Repo-relative** (`./assets/banner.svg`) → rewritten to
-  `github.com/{owner}/{repo}/raw/{branch}/{path}`. **Not Camo-proxied.**
-  Cache-Control `max-age=300` (5 min) on branch HEAD.
-- **External** (`https://some-service/card.svg`) → proxied through
-  `camo.githubusercontent.com` with an HMAC-SHA1 digest URL, cached aggressively.
-
-Consequences:
-
-- Committed assets update within ~5 minutes. Predictable. Prefer them.
-- External services are cached hard and can serve stale content long after the
-  origin changes. Bust with a changing query param (it changes the Camo digest,
-  forcing a re-fetch), or send `Cache-Control: no-cache, no-store, must-revalidate`
-  from the origin.
-- External services are also a liveness dependency: a rate-limited or down
-  third party shows a broken image on your profile. Generate and commit instead
-  wherever you can.
-- On the **profile** page, relative paths inside `<picture><source srcset>` can
-  fail to resolve because the base URL lacks the repo slug. Use absolute
-  `raw.githubusercontent.com` URLs inside `<picture>`; relative paths are fine for
-  plain `<img>`.
+Because the face varies per viewer, never let a layout depend on exact text
+width. Where it must — a typing effect, a right-aligned label — use `textLength`
+so the glyphs are forced into the space you reserved.
 
 ## Dark and light
 
 ```html
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="<absolute-raw-url>/banner-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="<absolute-raw-url>/banner-light.svg">
-  <img alt="<describe the banner, don't say 'banner'>" src="<absolute-raw-url>/banner-dark.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/OWNER/REPO/main/assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/OWNER/REPO/main/assets/banner-light.svg">
+  <img alt="describe the content, not the word banner" src="https://raw.githubusercontent.com/OWNER/REPO/main/assets/banner-dark.svg" width="600">
 </picture>
 ```
 
-Do not try to do this with CSS media queries *inside* one SVG — in secure
-animated mode the SVG cannot read the host page's colour scheme reliably. Two
-files and `<picture>` is the pattern that works.
+All three theme mechanisms work — `<picture>`, the legacy `#gh-dark-mode-only`
+fragments, and `@media` inside the SVG. The real caveat is that every one of
+them follows `prefers-color-scheme`, i.e. the viewer's **operating system**, not
+their GitHub theme setting; nothing inside an image can read GitHub's theme.
+Prefer `<picture>` because one theme per file is easy to verify.
+
+Use absolute `raw.githubusercontent.com` URLs in `srcset` — correct on both repo
+and profile pages, so the resolution question never arises.
 
 ## Process
 
-1. **Measure the target first.** 846 desktop / 309 mobile. Write down the viewBox
-   you will use and run the legibility formula before drawing.
-2. **Decide generated vs static.** Generated (CI-built SVG committed to the repo)
-   only if something genuinely changes. Static otherwise — a cron that rewrites
-   identical bytes is pure noise.
-3. **Build for the fallback font** unless you are embedding a subset.
-4. **Verify at 309px** before shipping. Render it small and try to read it.
-5. **Check idempotency** if generated: run the generator twice with no input
-   change and diff. Non-deterministic output (timestamps, dict order, random ids)
-   means a commit every run, forever.
+1. **Measure the target first.** 846 / 309. Write down the viewBox, run the
+   formula, and only then draw.
+2. **Design the first frame as the finished composition.** Anything that starts
+   at `opacity="0"` and animates in is invisible to every static renderer — and
+   was caught doing exactly that, at phone width, during this research.
+3. **Commit every asset.** Generated and committed, never rented.
+4. **Decide generated vs static honestly.** CI only if a value genuinely
+   changes; a cron rewriting identical bytes is noise. If generated, run it
+   twice with no input change and diff — non-deterministic output (timestamps,
+   dict order, random ids) means a commit every run, forever.
+5. **Verify on GitHub, not locally.** Push to a branch, open the rendered page,
+   and measure: each image's rendered width, its smallest text × (width ÷
+   viewBox), both schemes, 390px and 1280px. Local preview shows you neither the
+   sanitizer, nor the column width, nor a broken image.
+6. **Wait five minutes.** `max-age=300`: a pushed change takes ~302s to appear on
+   a branch URL. Half of "my SVG didn't update" is this.
 
 ## Anti-patterns
 
-- A 1200px+ viewBox with sub-40 type — illegible on mobile, the single most
-  common failure.
-- Badge walls. Fifteen shields.io badges read as noise and each is a Camo fetch.
-- Fake metrics. Invented "99.8% reliability" or seeded guestbook entries with
-  `@octocat` read as dishonest to anyone who looks closely, and are worse than no
-  metrics.
-- Claims that outrun the evidence ("formally verified Raft") — the profile is
-  read by people who will ask about them in an interview.
-- `<script>` or `onclick` in SVG — silently stripped, wasted effort.
-- Third-party stats services on the critical path of your first impression.
-- Cron every 6h on content that changes monthly.
+- A 1200px+ viewBox with sub-40 type — the most common failure there is.
+- Third-party image services on the critical path of a first impression.
+- Badge walls; fake metrics; claims that outrun the evidence. All three read as
+  dishonest to exactly the people who look closely.
+- Tables used for layout.
+- `<script>` or `onclick` in an SVG — stripped, always.
+- Copying a stat card because it is popular. The most-copied one has been dead
+  for months and its repository metadata still says "active".
 
 ## References
 
-- `references/measured-constraints.md` — the raw measurements, method, and how to
-  re-measure when GitHub changes its layout.
-- `references/banner-craft.md` — composition, type scale, and the legibility
-  worksheet.
-- `references/svg-recipes.md` — copy-paste SVG patterns verified to render.
+- [`references/evidence.md`](references/evidence.md) — the survey: rates, per-service liveness, technique counts.
+- [`references/platform-facts.md`](references/platform-facts.md) — per-engine capability, widths, cache timing, routing.
+- [`references/measured-constraints.md`](references/measured-constraints.md) — raw measurements and how to re-measure when GitHub changes.
+- [`references/banner-craft.md`](references/banner-craft.md) — composition, type scale, legibility worksheet.
+- [`references/svg-recipes.md`](references/svg-recipes.md) — copy-paste patterns verified to render.
+
+A worked end-to-end example — design rules, six generated cards, and the
+measurement confirming 11.9px smallest text on a phone — is
+[`docs/PROFILE.md`](../../docs/PROFILE.md), built by `tools/profile/build.py`.

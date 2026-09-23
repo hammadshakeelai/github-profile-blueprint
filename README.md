@@ -18,7 +18,7 @@ branch.
 | 3 · Capability matrix — Chromium, Firefox and WebKit, phone and desktop, dark and light | **done** |
 | 4 · Design direction — three rendered concepts, one chosen | **done** |
 | 5 · Build the profile | **done** |
-| 6 · Fold everything back into the skill | next |
+| 6 · Fold everything back into the skill | **done** |
 
 Plan: [docs/PLAN-V2.md](docs/PLAN-V2.md)
 
@@ -90,6 +90,7 @@ checked on GitHub's real renderer at desktop and phone width, dark and light:
 docs/
   PLAN-V2.md                 the plan
   survey/                    Phase 1: findings, shortlist, tables, screenshots, data
-skills/github-profile-readme/  the skill — measured constraints, banner craft, SVG recipes
+skills/github-profile-readme/  the skill — the survey's evidence, per-engine facts, craft, recipes
+profile/                     the built profile README and its SVGs
 tools/survey/                the survey tooling; everything re-runs from here
 ```

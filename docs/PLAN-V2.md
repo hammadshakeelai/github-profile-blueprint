@@ -167,7 +167,17 @@ Rebuild the profile against the chosen direction, reusing the parked
 infrastructure where it earns its place. Static unless a value genuinely
 changes; generated where it does.
 
-### Phase 6 — Fold back into the skill
+### Phase 6 — Fold back into the skill — **done**
+
+> **Outcome:** `skills/github-profile-readme/` rewritten on the evidence. Two new
+> references carry it — `evidence.md` (the survey's rates, per-service liveness,
+> technique counts) and `platform-facts.md` (per-engine capability, widths,
+> cache timing, routing, with the untested claims tagged UNVERIFIED) — and
+> SKILL.md now leads with the four measured failure modes rather than aesthetics.
+> One correction: the old skill said a media query inside an SVG can't see the
+> theme. The Phase 2 capture disproves it; it works in all three engines. The
+> real caveat, now stated, is that it follows the OS rather than GitHub's theme
+> setting — as `<picture>` does too.
 
 Rewrite `skills/github-profile-readme/` on top of real evidence: the catalogue
 becomes its references, the survey its examples, the matrix its constraints.
@@ -206,5 +216,5 @@ auth for that account.
 - [x] Capability matrix with every cell tested (except the hand-check rows)
 - [x] Three rendered comps, one chosen with stated reasons
 - [x] Profile rebuilt against it — `profile/`, measured on GitHub
-- [ ] Skill rewritten on the evidence
-- [ ] No claim anywhere without a citation or an `UNVERIFIED` tag
+- [x] Skill rewritten on the evidence
+- [x] No claim anywhere without a citation or an `UNVERIFIED` tag
