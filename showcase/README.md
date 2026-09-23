@@ -138,7 +138,9 @@ flowchart TD
 
 GitHub renders LaTeX, so the rule every panel here obeys can be stated exactly rather than described. For text drawn at size $F$ in a viewBox of width $W$, rendered into a column of width $R$:
 
-$$\text{effective px} = F \times \frac{R}{W} \qquad\Longrightarrow\qquad F_{\min} = \text{target} \times \frac{W}{R}$$
+$$\text{effective px} = F \times \frac{R}{W}$$
+
+$$F_{\min} = \text{target} \times \frac{W}{R}$$
 
 A phone gives a README $R = 309$px. At $W = 600$ units, an 11px floor means every label must be at least $21.4$ units — which is why nothing on this page is drawn small.
 

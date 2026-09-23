@@ -308,8 +308,11 @@ def readme(d: dict, projects: list[dict]) -> str:
       "than described. For text drawn at size $F$ in a viewBox of width $W$, rendered into a "
       "column of width $R$:")
     A("")
-    A("$$\\text{effective px} = F \\times \\frac{R}{W} \\qquad\\Longrightarrow\\qquad "
-      "F_{\\min} = \\text{target} \\times \\frac{W}{R}$$")
+    # Two display blocks rather than one: GitHub's math does not wrap, and the
+    # single line ran off the right edge of a phone.
+    A(r"$$\text{effective px} = F \times \frac{R}{W}$$")
+    A("")
+    A(r"$$F_{\min} = \text{target} \times \frac{W}{R}$$")
     A("")
     A("A phone gives a README $R = 309$px. At $W = 600$ units, an 11px floor means every label "
       "must be at least $21.4$ units — which is why nothing on this page is drawn small.")

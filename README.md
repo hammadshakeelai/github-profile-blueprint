@@ -55,6 +55,20 @@ dark and light.
 - **A pushed change takes about five minutes to appear** (the CDN serves the
   old file for `max-age=300`); a commit-pinned URL is fresh in seconds.
 
+## Two profiles built from the findings
+
+- [`profile/`](profile) — the restrained one, chosen in
+  [DIRECTION.md](docs/DIRECTION.md): a window header, six project windows, then
+  markdown. Smallest text on a phone, measured: **11.9px**.
+- [`showcase/`](showcase/README.md) — the maximalist counterpart, built to test
+  whether ambition and legibility can coexist. 58 generated panels with
+  dark/light/phone/still variants, width- and motion-gated `<picture>` sources,
+  Mermaid, LaTeX, alerts, footnotes — every number from the GitHub API, nothing
+  rented, and it passes `profile-lint` clean.
+
+The survey found nobody who was both. That was the gap; these two occupy
+opposite ends of it.
+
 ## The design direction
 
 [docs/DIRECTION.md](docs/DIRECTION.md) — three concepts built from real
