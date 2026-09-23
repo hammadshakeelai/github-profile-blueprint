@@ -1,0 +1,1630 @@
+{
+ "sampled": 79,
+ "fired": {
+  "phone-illegible!error": 39,
+  "unguarded-motion": 41,
+  "broken-image!error": 34,
+  "dead-service!error": 31,
+  "broken-image": 34,
+  "no-theme": 61,
+  "badge-wall": 36,
+  "dead-service": 31,
+  "phone-illegible": 47,
+  "missing-alt": 20,
+  "hidden-first-frame": 14,
+  "missing-alt!error": 20,
+  "image-table!error": 14,
+  "image-table": 14,
+  "dead-motion-guard": 3,
+  "external-ref": 1,
+  "webkit-gradient": 1
+ },
+ "by_cohort": {
+  "curated": {
+   "no-theme": 28,
+   "broken-image": 10,
+   "broken-image!error": 10,
+   "dead-service!error": 8,
+   "image-table!error": 2,
+   "image-table": 2,
+   "badge-wall": 15,
+   "dead-service": 8,
+   "phone-illegible!error": 2,
+   "phone-illegible": 4,
+   "unguarded-motion": 1
+  },
+  "search": {
+   "phone-illegible!error": 37,
+   "unguarded-motion": 40,
+   "broken-image!error": 24,
+   "dead-service!error": 23,
+   "broken-image": 24,
+   "no-theme": 33,
+   "badge-wall": 21,
+   "dead-service": 23,
+   "phone-illegible": 43,
+   "missing-alt": 20,
+   "hidden-first-frame": 14,
+   "missing-alt!error": 20,
+   "image-table!error": 12,
+   "image-table": 12,
+   "dead-motion-guard": 3,
+   "external-ref": 1,
+   "webkit-gradient": 1
+  }
+ },
+ "cohort_sizes": {
+  "curated": 30,
+  "search": 50
+ },
+ "rows": [
+  {
+   "user": "hoangprohigher",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 13,
+    "badges": 8,
+    "broken": 2,
+    "alt": {
+     "absent": 3,
+     "ok": 1,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "Dhyanesh006",
+   "cohort": "search",
+   "rules": [
+    "hidden-first-frame",
+    "missing-alt",
+    "missing-alt!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 29,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "ok": 22,
+     "empty": 1,
+     "filename": 6
+    }
+   }
+  },
+  {
+   "user": "garimasingh128",
+   "cohort": "curated",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 2,
+    "badges": 0,
+    "broken": 1,
+    "alt": {
+     "absent": 2
+    }
+   }
+  },
+  {
+   "user": "itgoyo",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "image-table",
+    "image-table!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 38,
+    "badges": 29,
+    "broken": 19,
+    "alt": {
+     "absent": 1,
+     "ok": 8
+    }
+   }
+  },
+  {
+   "user": "umair-aziz025",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 14,
+    "badges": 11,
+    "broken": 0,
+    "alt": {
+     "absent": 1,
+     "filename": 1,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "dhruvdabur",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 24,
+    "badges": 23,
+    "broken": 0,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "KevCui",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 1,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "absent": 1
+    }
+   }
+  },
+  {
+   "user": "MeowDump",
+   "cohort": "search",
+   "rules": [
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 1,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "d4rkn3m3s1s",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 42,
+    "badges": 31,
+    "broken": 3,
+    "alt": {
+     "ok": 5,
+     "absent": 5,
+     "empty": 1
+    }
+   }
+  },
+  {
+   "user": "abhisheknaiidu",
+   "cohort": "curated",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 2,
+    "badges": 1,
+    "broken": 1,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "Vinayak-Khavare",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme",
+    "phone-illegible",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 13,
+    "badges": 7,
+    "broken": 2,
+    "alt": {
+     "ok": 4,
+     "absent": 2
+    }
+   }
+  },
+  {
+   "user": "RK1905101",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme",
+    "phone-illegible"
+   ],
+   "stats": {
+    "images": 11,
+    "badges": 5,
+    "broken": 3,
+    "alt": {
+     "absent": 4,
+     "ok": 2
+    }
+   }
+  },
+  {
+   "user": "adamalston",
+   "cohort": "curated",
+   "rules": [
+    "phone-illegible",
+    "phone-illegible!error"
+   ],
+   "stats": {
+    "images": 2,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "ok": 2
+    }
+   }
+  },
+  {
+   "user": "Mr-IR0k-oo1",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "hidden-first-frame",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 19,
+    "badges": 15,
+    "broken": 0,
+    "alt": {
+     "ok": 4
+    }
+   }
+  },
+  {
+   "user": "ZeeshanHaider16",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error"
+   ],
+   "stats": {
+    "images": 25,
+    "badges": 21,
+    "broken": 1,
+    "alt": {
+     "absent": 4
+    }
+   }
+  },
+  {
+   "user": "Dakshinde130",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "hidden-first-frame",
+    "image-table",
+    "image-table!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 78,
+    "badges": 55,
+    "broken": 0,
+    "alt": {
+     "ok": 18,
+     "absent": 5
+    }
+   }
+  },
+  {
+   "user": "moshfiqrony",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 1,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "peterthehan",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall"
+   ],
+   "stats": {
+    "images": 6,
+    "badges": 6,
+    "broken": 0,
+    "alt": {}
+   }
+  },
+  {
+   "user": "AlexMartinFR",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 0
+   }
+  },
+  {
+   "user": "matyo91",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 83,
+    "badges": 42,
+    "broken": 0,
+    "alt": {
+     "ok": 3,
+     "filename": 38
+    }
+   }
+  },
+  {
+   "user": "Ryyn-Sd",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 5,
+    "badges": 0,
+    "broken": 5,
+    "alt": {
+     "absent": 2,
+     "ok": 2,
+     "empty": 1
+    }
+   }
+  },
+  {
+   "user": "ShahriarShafin",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 14,
+    "badges": 12,
+    "broken": 2,
+    "alt": {
+     "ok": 2
+    }
+   }
+  },
+  {
+   "user": "antonprafanto",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "missing-alt",
+    "missing-alt!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 60,
+    "badges": 56,
+    "broken": 0,
+    "alt": {
+     "ok": 3,
+     "absent": 1
+    }
+   }
+  },
+  {
+   "user": "AliKHaliliT",
+   "cohort": "search",
+   "rules": [
+    "dead-motion-guard",
+    "hidden-first-frame",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 8,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "ok": 8
+    }
+   }
+  },
+  {
+   "user": "HasanKhan05",
+   "cohort": "search",
+   "rules": [
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 14,
+    "badges": 7,
+    "broken": 0,
+    "alt": {
+     "ok": 7
+    }
+   }
+  },
+  {
+   "user": "demartini",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 6,
+    "badges": 5,
+    "broken": 0,
+    "alt": {
+     "absent": 1
+    }
+   }
+  },
+  {
+   "user": "ad956",
+   "cohort": "search",
+   "rules": [
+    "image-table",
+    "image-table!error",
+    "no-theme",
+    "phone-illegible"
+   ],
+   "stats": {
+    "images": 20,
+    "badges": 9,
+    "broken": 0,
+    "alt": {
+     "ok": 11
+    }
+   }
+  },
+  {
+   "user": "vbriand",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "no-theme",
+    "phone-illegible"
+   ],
+   "stats": {
+    "images": 25,
+    "badges": 24,
+    "broken": 0,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "omkarrr88",
+   "cohort": "search",
+   "rules": [
+    "missing-alt",
+    "missing-alt!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 60,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "ok": 58,
+     "filename": 2
+    }
+   }
+  },
+  {
+   "user": "zingimmick",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 7,
+    "badges": 1,
+    "broken": 1,
+    "alt": {
+     "generic": 1,
+     "ok": 3,
+     "absent": 2
+    }
+   }
+  },
+  {
+   "user": "Israel5",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "phone-illegible",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 34,
+    "badges": 14,
+    "broken": 11,
+    "alt": {
+     "absent": 10,
+     "ok": 9,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "hgunay",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 20,
+    "badges": 15,
+    "broken": 1,
+    "alt": {
+     "absent": 5
+    }
+   }
+  },
+  {
+   "user": "0xPacman",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error"
+   ],
+   "stats": {
+    "images": 15,
+    "badges": 13,
+    "broken": 0,
+    "alt": {
+     "ok": 1,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "stephenajulu",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 0
+   }
+  },
+  {
+   "user": "conifercone",
+   "cohort": "search",
+   "rules": [
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 5,
+    "badges": 1,
+    "broken": 0,
+    "alt": {
+     "ok": 1,
+     "filename": 1,
+     "absent": 2
+    }
+   }
+  },
+  {
+   "user": "omersayak",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "hidden-first-frame",
+    "missing-alt",
+    "missing-alt!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 18,
+    "badges": 7,
+    "broken": 9,
+    "alt": {
+     "ok": 6,
+     "absent": 5
+    }
+   }
+  },
+  {
+   "user": "rednafi",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 0
+   }
+  },
+  {
+   "user": "rishavanand",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 5,
+    "badges": 5,
+    "broken": 0,
+    "alt": {}
+   }
+  },
+  {
+   "user": "jayvdb",
+   "cohort": "search",
+   "rules": [
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 26,
+    "badges": 11,
+    "broken": 0,
+    "alt": {
+     "absent": 11,
+     "ok": 1,
+     "empty": 3
+    }
+   }
+  },
+  {
+   "user": "murthy0x05",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 30,
+    "badges": 29,
+    "broken": 0,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "hedythedev",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 0
+   }
+  },
+  {
+   "user": "openulteo",
+   "cohort": "search",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 0
+   }
+  },
+  {
+   "user": "KelviNosse",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 19,
+    "badges": 10,
+    "broken": 2,
+    "alt": {
+     "ok": 1,
+     "absent": 7,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "prateek-chaubey",
+   "cohort": "search",
+   "rules": [
+    "missing-alt",
+    "missing-alt!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 5,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "absent": 5
+    }
+   }
+  },
+  {
+   "user": "C9-LinkRs",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "no-theme",
+    "phone-illegible"
+   ],
+   "stats": {
+    "images": 12,
+    "badges": 11,
+    "broken": 0,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "SuperSupeng",
+   "cohort": "curated",
+   "rules": [
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 1,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "DVT3004",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "phone-illegible",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 28,
+    "badges": 14,
+    "broken": 6,
+    "alt": {
+     "ok": 10,
+     "absent": 4
+    }
+   }
+  },
+  {
+   "user": "athul",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 0
+   }
+  },
+  {
+   "user": "gitkrypton18",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "hidden-first-frame",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 66,
+    "badges": 47,
+    "broken": 1,
+    "alt": {
+     "absent": 14,
+     "ok": 5
+    }
+   }
+  },
+  {
+   "user": "moepoi",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 13,
+    "badges": 10,
+    "broken": 2,
+    "alt": {
+     "absent": 3
+    }
+   }
+  },
+  {
+   "user": "moertel",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 14,
+    "badges": 11,
+    "broken": 0,
+    "alt": {
+     "ok": 3
+    }
+   }
+  },
+  {
+   "user": "hk4crprasad",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "image-table",
+    "image-table!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 32,
+    "badges": 13,
+    "broken": 8,
+    "alt": {
+     "ok": 5,
+     "absent": 13,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "Twisuki",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "missing-alt",
+    "missing-alt!error",
+    "phone-illegible",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 32,
+    "badges": 19,
+    "broken": 2,
+    "alt": {
+     "absent": 8,
+     "ok": 4,
+     "empty": 1
+    }
+   }
+  },
+  {
+   "user": "thmsgbrt",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "image-table",
+    "image-table!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 50,
+    "badges": 43,
+    "broken": 3,
+    "alt": {
+     "absent": 6,
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "swaraj54",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 19,
+    "badges": 10,
+    "broken": 1,
+    "alt": {
+     "ok": 5,
+     "absent": 4
+    }
+   }
+  },
+  {
+   "user": "ali-novruz",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "hidden-first-frame",
+    "image-table",
+    "image-table!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 51,
+    "badges": 41,
+    "broken": 3,
+    "alt": {
+     "ok": 6,
+     "absent": 3,
+     "empty": 1
+    }
+   }
+  },
+  {
+   "user": "erogluyusuf",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "image-table",
+    "image-table!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 17,
+    "badges": 0,
+    "broken": 1,
+    "alt": {
+     "ok": 13,
+     "absent": 4
+    }
+   }
+  },
+  {
+   "user": "BryanCPineda",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 24,
+    "badges": 0,
+    "broken": 8,
+    "alt": {
+     "ok": 23,
+     "absent": 1
+    }
+   }
+  },
+  {
+   "user": "syrashid",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 4,
+    "badges": 4,
+    "broken": 0,
+    "alt": {}
+   }
+  },
+  {
+   "user": "sepahead",
+   "cohort": "search",
+   "rules": [
+    "dead-motion-guard",
+    "hidden-first-frame",
+    "image-table",
+    "image-table!error",
+    "phone-illegible",
+    "phone-illegible!error"
+   ],
+   "stats": {
+    "images": 106,
+    "badges": 22,
+    "broken": 0,
+    "alt": {
+     "ok": 82,
+     "absent": 1,
+     "filename": 1
+    }
+   }
+  },
+  {
+   "user": "ChungZH",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 1,
+    "badges": 1,
+    "broken": 0,
+    "alt": {}
+   }
+  },
+  {
+   "user": "Richard117297",
+   "cohort": "search",
+   "rules": [
+    "hidden-first-frame",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 70,
+    "badges": 14,
+    "broken": 0,
+    "alt": {
+     "absent": 13,
+     "ok": 30,
+     "generic": 1,
+     "empty": 11,
+     "filename": 1
+    }
+   }
+  },
+  {
+   "user": "LeoSousaJesus",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 60,
+    "badges": 52,
+    "broken": 0,
+    "alt": {
+     "filename": 1,
+     "ok": 7
+    }
+   }
+  },
+  {
+   "user": "rusty-sj",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 17,
+    "badges": 15,
+    "broken": 2,
+    "alt": {
+     "ok": 2
+    }
+   }
+  },
+  {
+   "user": "mokkapps",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 10,
+    "badges": 7,
+    "broken": 1,
+    "alt": {
+     "ok": 3
+    }
+   }
+  },
+  {
+   "user": "zackkrida",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 1,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "ok": 1
+    }
+   }
+  },
+  {
+   "user": "leo-lem",
+   "cohort": "search",
+   "rules": [
+    "dead-motion-guard",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 3,
+    "badges": 2,
+    "broken": 0,
+    "alt": {
+     "absent": 1
+    }
+   }
+  },
+  {
+   "user": "anjiqing",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 7,
+    "badges": 1,
+    "broken": 1,
+    "alt": {
+     "ok": 6
+    }
+   }
+  },
+  {
+   "user": "karthik5033",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "external-ref",
+    "hidden-first-frame",
+    "image-table",
+    "image-table!error",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 77,
+    "badges": 45,
+    "broken": 0,
+    "alt": {
+     "ok": 19,
+     "absent": 12,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "comdotlinux",
+   "cohort": "search",
+   "rules": [
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 7,
+    "badges": 0,
+    "broken": 0,
+    "alt": {
+     "absent": 7
+    }
+   }
+  },
+  {
+   "user": "DhruvBhatia0",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "image-table",
+    "image-table!error",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 10,
+    "badges": 0,
+    "broken": 1,
+    "alt": {
+     "ok": 6,
+     "filename": 2,
+     "absent": 2
+    }
+   }
+  },
+  {
+   "user": "rafi0101",
+   "cohort": "curated",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "no-theme"
+   ],
+   "stats": {
+    "images": 43,
+    "badges": 35,
+    "broken": 7,
+    "alt": {
+     "absent": 8
+    }
+   }
+  },
+  {
+   "user": "praphulln19",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "hidden-first-frame",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 29,
+    "badges": 26,
+    "broken": 0,
+    "alt": {
+     "filename": 1,
+     "ok": 2
+    }
+   }
+  },
+  {
+   "user": "Doctor-wu",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "image-table",
+    "image-table!error",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 59,
+    "badges": 12,
+    "broken": 8,
+    "alt": {
+     "absent": 39,
+     "ok": 7,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "shanraisshan",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "hidden-first-frame",
+    "image-table",
+    "image-table!error",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion",
+    "webkit-gradient"
+   ],
+   "stats": {
+    "images": 74,
+    "badges": 39,
+    "broken": 0,
+    "alt": {
+     "ok": 6,
+     "absent": 26,
+     "filename": 2,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "Dhruv-Khant-26",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "hidden-first-frame",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 15,
+    "badges": 1,
+    "broken": 4,
+    "alt": {
+     "ok": 13,
+     "empty": 1
+    }
+   }
+  },
+  {
+   "user": "raklaptudirm",
+   "cohort": "curated",
+   "rules": [
+    "no-theme"
+   ],
+   "stats": {
+    "images": 0
+   }
+  },
+  {
+   "user": "ChaitanyaJhindal",
+   "cohort": "search",
+   "rules": [
+    "badge-wall",
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "hidden-first-frame",
+    "image-table",
+    "image-table!error",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 65,
+    "badges": 52,
+    "broken": 4,
+    "alt": {
+     "ok": 12,
+     "generic": 1
+    }
+   }
+  },
+  {
+   "user": "anshumanjadiya1102",
+   "cohort": "search",
+   "rules": [
+    "broken-image",
+    "broken-image!error",
+    "dead-service",
+    "dead-service!error",
+    "image-table",
+    "image-table!error",
+    "missing-alt",
+    "missing-alt!error",
+    "no-theme",
+    "phone-illegible",
+    "phone-illegible!error",
+    "unguarded-motion"
+   ],
+   "stats": {
+    "images": 134,
+    "badges": 26,
+    "broken": 20,
+    "alt": {
+     "absent": 43,
+     "ok": 48,
+     "generic": 8,
+     "filename": 1,
+     "empty": 8
+    }
+   }
+  }
+ ]
+}
