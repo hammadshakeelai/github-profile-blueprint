@@ -107,6 +107,7 @@ external does not. Verified identically in all three engines.
 | `@import`ed web fonts | blocked |
 | External `<image>` href | blocked — and Chromium **paints a broken-image icon** |
 | Inline `<svg>` in markdown | stripped by the sanitizer |
+| `@media (prefers-reduced-motion)` inside the SVG | **never applies** — gate a `<picture>` source instead |
 
 ## Fonts: your web font is not loading
 
@@ -160,15 +161,19 @@ that file exists — it is what any client ignoring `<source>` fetches.
    at `opacity="0"` and animates in is invisible to every static renderer — and
    was caught doing exactly that, at phone width, during this research.
 3. **Commit every asset.** Generated and committed, never rented.
-4. **Decide generated vs static honestly.** CI only if a value genuinely
+4. **Respect reduced motion where the page can see it.** A guard inside the SVG
+   does nothing; a `<source media="(prefers-reduced-motion: reduce)">` pointing
+   at a still file works in all three engines. Best of all, design so the still
+   frame is the whole composition and the question is moot.
+5. **Decide generated vs static honestly.** CI only if a value genuinely
    changes; a cron rewriting identical bytes is noise. If generated, run it
    twice with no input change and diff — non-deterministic output (timestamps,
    dict order, random ids) means a commit every run, forever.
-5. **Verify on GitHub, not locally.** Push to a branch, open the rendered page,
+6. **Verify on GitHub, not locally.** Push to a branch, open the rendered page,
    and measure: each image's rendered width, its smallest text × (width ÷
    viewBox), both schemes, 390px and 1280px. Local preview shows you neither the
    sanitizer, nor the column width, nor a broken image.
-6. **Wait five minutes.** `max-age=300`: a pushed change takes ~302s to appear on
+7. **Wait five minutes.** `max-age=300`: a pushed change takes ~302s to appear on
    a branch URL. Half of "my SVG didn't update" is this.
 
 ## Anti-patterns

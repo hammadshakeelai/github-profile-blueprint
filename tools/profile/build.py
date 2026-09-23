@@ -60,16 +60,26 @@ def write_pair(stem: str, make) -> None:
         (ASSETS / f"{stem}-{theme}.svg").write_text(text, encoding="utf-8")
 
 
-def picture(base: str, stem: str, alt: str) -> str:
-    return (f'<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="{base}/{stem}-dark.svg">\n'
-            f'  <source media="(prefers-color-scheme: light)" srcset="{base}/{stem}-light.svg">\n'
-            f'  <img src="{base}/{stem}-dark.svg" alt="{escape(alt)}" width="600">\n</picture>')
+def picture(base: str, stem: str, alt: str, still: str | None = None) -> str:
+    """A themed <picture>. With `still`, a viewer who has asked for less motion
+    gets that file instead — a guard inside the SVG would do nothing
+    (docs/research/REDUCED-MOTION.md). The first matching source wins, so the
+    reduced-motion pair is listed first."""
+    src = []
+    if still:
+        src += [f'  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)"'
+                f' srcset="{base}/{still}-dark.svg">',
+                f'  <source media="(prefers-reduced-motion: reduce)" srcset="{base}/{still}-light.svg">']
+    src += [f'  <source media="(prefers-color-scheme: dark)" srcset="{base}/{stem}-dark.svg">',
+            f'  <source media="(prefers-color-scheme: light)" srcset="{base}/{stem}-light.svg">']
+    return ("<picture>\n" + "\n".join(src)
+            + f'\n  <img src="{base}/{stem}-dark.svg" alt="{escape(alt)}" width="600">\n</picture>')
 
 
 def build(content: dict) -> None:
     projects = {p["name"]: p for g in content["groups"] for p in g["projects"]}
 
-    def header(p):
+    def header(p, motion=True):
         thesis = wrap(content["thesis"], 26, W - 64, 0.52)
         lines = "".join(f'<text x="32" y="{168 + i * 36}" font-family="{SANS}" font-size="26" '
                         f'fill="{p["muted"]}">{escape(t)}</text>' for i, t in enumerate(thesis))
@@ -77,14 +87,20 @@ def build(content: dict) -> None:
         cursor_y = 168 + 36 * (len(thesis) - 1)
         inner = (f'<text x="32" y="124" font-family="{SANS}" font-size="52" font-weight="800" '
                  f'fill="{p["text"]}">{escape(content["name"])}</text>{lines}'
-                 # the only motion on the page: a caret at the end of the last line
+                 # The only motion on the page: a caret at the end of the last
+                 # line. A reduced-motion guard inside the file would do nothing
+                 # (docs/research/REDUCED-MOTION.md), so the still twin is a
+                 # separate file chosen by a <picture> source.
                  f'<rect x="{32 + len(thesis[-1]) * 26 * 0.52 + 8:.0f}" y="{cursor_y - 20}" width="11" height="26" '
-                 f'fill="{p["accent"]}"><animate attributeName="opacity" values="1;0" dur="1.1s" '
-                 f'repeatCount="indefinite" calcMode="discrete"/></rect>')
+                 f'fill="{p["accent"]}">'
+                 + ('<animate attributeName="opacity" values="1;0" dur="1.1s" '
+                    'repeatCount="indefinite" calcMode="discrete"/>' if motion else '')
+                 + '</rect>')
         return svg(h, window(p, f'{content["handle"]}.github.io', inner, h),
                    f'{content["name"]} — {content["thesis"]}')
 
     write_pair("header", header)
+    write_pair("header-still", lambda p: header(p, motion=False))
 
     stems = {}
     for name in FEATURED:
@@ -107,7 +123,8 @@ def build(content: dict) -> None:
         write_pair(stem, card)
 
     def readme(base: str) -> str:
-        md = [picture(base, "header", f'{content["name"]} — {content["thesis"]}'), "",
+        md = [picture(base, "header", f'{content["name"]} — {content["thesis"]}',
+                      still="header-still"), "",
               "Everything here runs in a browser tab. Tap a window to open the real thing.", ""]
         for name in FEATURED:
             proj = projects[name]

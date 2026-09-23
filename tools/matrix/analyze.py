@@ -133,6 +133,16 @@ def write_markdown(results: dict) -> None:
         f"{results[e].get('1280-light', {}).get('images', {}).get('theme-aware.svg', {}).get('in_svg_scheme', '?')}"
         for e in ENGINES) + " |")
 
+    # Track 2's result is measured by its own fixture (tools/research/, written
+    # up in docs/research/REDUCED-MOTION.md); carried here because this is the
+    # page people read for "does X work".
+    L += ["", "## Reduced motion", "",
+          "`@media (prefers-reduced-motion: reduce)` **never applies inside an SVG "
+          "referenced as an image** — none of the three engines. A `<picture>` source "
+          "gated on it does work, in all three, because the host page evaluates the "
+          "query and GitHub's sanitizer keeps the attribute. "
+          "Method and counts: [docs/research/REDUCED-MOTION.md](research/REDUCED-MOTION.md)."]
+
     L += ["", "## Boundary tests", "", head, sep]
     def fmt(v, yes, no):
         return "—" if v is None else ("inconsistent" if v == "inconsistent" else (yes if v else no))

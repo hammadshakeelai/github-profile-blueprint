@@ -1,4 +1,6 @@
 <picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/profile/assets/header-still-dark.svg">
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/profile/assets/header-still-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/profile/assets/header-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/profile/assets/header-light.svg">
   <img src="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/profile/assets/header-dark.svg" alt="Hammad Shakeel — Things that run in a browser tab — whole operating systems, games, and retrieval research." width="600">

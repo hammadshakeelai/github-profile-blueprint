@@ -37,6 +37,26 @@ theme from inside an image.
 Prefer `<picture>` anyway: it is what the survey's profiles use (80 to 7), and
 one theme per file is easier to verify than one file with two states.
 
+## Reduced motion
+
+`@media (prefers-reduced-motion: reduce)` **never applies inside an SVG
+referenced as an image** — Chromium, Firefox and WebKit alike. It is dead code,
+and 369 files across 26 surveyed profiles contain it. `prefers-color-scheme`
+applies in exactly the same position, which is what makes the mistake so easy.
+
+What works is gating a `<picture>` source, which the host page evaluates and
+GitHub's sanitizer preserves:
+
+```html
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset=".../banner-still.svg">
+  <img src=".../banner.svg" alt="…" width="600">
+</picture>
+```
+
+Verified serving the still file in all three engines. Full method:
+[`docs/research/REDUCED-MOTION.md`](../../../docs/research/REDUCED-MOTION.md).
+
 ## Blocked, and how the failure looks
 
 | | Chromium | Firefox | WebKit |

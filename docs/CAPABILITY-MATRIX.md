@@ -32,6 +32,10 @@ Every cell was checked by loading `docs/techniques/GALLERY.md` inside GitHub's r
 | `#gh-dark-mode-only` / `#gh-light-mode-only` | dark → light | dark → light | dark → light |
 | `@media` inside the SVG | dark → light | dark → light | dark → light |
 
+## Reduced motion
+
+`@media (prefers-reduced-motion: reduce)` **never applies inside an SVG referenced as an image** — none of the three engines. A `<picture>` source gated on it does work, in all three, because the host page evaluates the query and GitHub's sanitizer keeps the attribute. Method and counts: [docs/research/REDUCED-MOTION.md](research/REDUCED-MOTION.md).
+
 ## Boundary tests
 
 | | Chromium | Firefox | WebKit (Safari's engine) |
