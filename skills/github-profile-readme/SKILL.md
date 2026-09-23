@@ -204,6 +204,20 @@ that file exists — it is what any client ignoring `<source>` fetches.
 - Copying a stat card because it is popular. The most-copied one has been dead
   for months and its repository metadata still says "active".
 
+## Check it mechanically
+
+Every rule above is implemented in `tools/lint/profile_lint.py` in this
+repository — broken images, dead services, phone legibility, table layout, alt
+text, dead motion guards, blocked features, first-frame visibility:
+
+```
+python tools/lint/profile_lint.py <username>
+```
+
+It reproduces the survey's rates when re-run over the surveyed profiles
+(`docs/research/PROFILE-LINT.md`), and exits 1 on any error-level finding, so it
+can gate a workflow. It judges whether a page *works*, never whether it's good.
+
 ## References
 
 - [`references/evidence.md`](references/evidence.md) — the survey: rates, per-service liveness, technique counts.

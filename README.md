@@ -78,6 +78,12 @@ believed:
 - **Relative `srcset` does resolve on profile pages** — 33 of 33 live profiles
   checked. The claim that it fails, which this repo had been repeating, is
   false. [RELATIVE-SRCSET.md](docs/research/RELATIVE-SRCSET.md)
+- **A third of text-bearing cards can't be reached by a screen reader**, and
+  nothing inside an SVG — `<title>`, `aria-label`, `role` — crosses into the
+  page's accessibility tree. [ALT-TEXT.md](docs/research/ALT-TEXT.md)
+- **`profile-lint`** runs all thirteen measured rules against any profile in a
+  minute, and reproduces the survey's rates on a re-sample.
+  [PROFILE-LINT.md](docs/research/PROFILE-LINT.md)
 - **`prefers-reduced-motion` never reaches an SVG** in any of the three engines,
   so the 369 surveyed files that guard their animation do nothing. Gating a
   `<picture>` source works instead, and the profile now does.
@@ -107,4 +113,6 @@ docs/
 skills/github-profile-readme/  the skill — the survey's evidence, per-engine facts, craft, recipes
 profile/                     the built profile README and its SVGs
 tools/survey/                the survey tooling; everything re-runs from here
+tools/lint/                  profile-lint — every measured rule, runnable
+tools/research/              the open-track investigations
 ```

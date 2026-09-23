@@ -10,7 +10,7 @@ claim without a citation, a measurement, or an `UNVERIFIED` tag.
 | 1 | Does a relative `srcset` resolve on a profile page? | **done** |
 | 2 | Does `prefers-reduced-motion` reach an SVG in secure animated mode? | **done** |
 | 3 | Alt text and accessibility across 10,782 images | **done** |
-| 4 | `profile-lint` — every measured rule as a checker | todo |
+| 4 | `profile-lint` — every measured rule as a checker | **done** |
 | 5 | Narrow the iOS unknown with an iPhone-emulated WebKit pass | todo |
 
 ---
@@ -65,6 +65,10 @@ dead-service embeds, `<script>` in an SVG, animation that starts from
 `opacity="0"`. A checker that runs all of it against any profile turns the
 research into something reusable, and the 446-profile corpus is a ready-made
 validation set — the rates it reports should reproduce the survey's.
+
+**Built:** `tools/lint/profile_lint.py`, thirteen rules, validated on 79 sampled
+profiles and calibrated against the shortlist. The validation caught two bugs in
+the linter. See [research/PROFILE-LINT.md](research/PROFILE-LINT.md).
 
 ## 5 · Narrow the iOS unknown
 
