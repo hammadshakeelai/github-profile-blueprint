@@ -16,8 +16,8 @@ branch.
 | 1 · Survey — 446 real profiles, their images, and the generators behind them | **done** |
 | 2 · Technique catalogue — each technique with real users and a verified example | **done** |
 | 3 · Capability matrix — Chromium, Firefox and WebKit, phone and desktop, dark and light | **done** |
-| 4 · Design direction — three rendered concepts, one chosen | in progress |
-| 5 · Build the profile | |
+| 4 · Design direction — three rendered concepts, one chosen | **done** |
+| 5 · Build the profile | next |
 | 6 · Fold everything back into the skill | |
 
 Plan: [docs/PLAN-V2.md](docs/PLAN-V2.md)
@@ -54,6 +54,14 @@ dark and light.
   a broken-image icon, Firefox and WebKit draw nothing.
 - **A pushed change takes about five minutes to appear** (the CDN serves the
   old file for `max-age=300`); a commit-pinned URL is fresh in seconds.
+
+## The design direction
+
+[docs/DIRECTION.md](docs/DIRECTION.md) — three concepts built from real
+projects, rendered by GitHub at both widths in both schemes, one chosen:
+**every project is a browser window you can tap into**, because everything here
+runs in a browser tab. Nothing in the 446 surveyed profiles looks like it, and
+it uses the only interaction a README has — a link — as the whole mechanic.
 
 ## What the technique catalogue verified
 

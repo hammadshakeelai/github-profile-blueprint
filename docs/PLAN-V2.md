@@ -135,7 +135,13 @@ WebKit findings already made.
 
 **Deliverable:** `docs/CAPABILITY-MATRIX.md`, with method so it can be re-run.
 
-### Phase 4 — Design direction
+### Phase 4 — Design direction — **done**
+
+> **Outcome:** `docs/DIRECTION.md` and three generated comps, each rendered by
+> GitHub and captured at 1280px and 390px in both schemes. Chose C · Tabs — the
+> profile as a stack of browser windows, each linking to a live demo — with A's
+> markdown discipline for everything below the cards. All three obey the same
+> evidence-derived rules, so switching the pick is a rebuild, not a restart.
 
 Only now. Three distinct concepts, each a real comp rendered at both widths, not
 a description:
@@ -191,7 +197,7 @@ auth for that account.
 - [x] Technique catalogue where each entry cites a real user and has a verified
       minimal example
 - [x] Capability matrix with every cell tested (except the hand-check rows)
-- [ ] Three rendered comps, one chosen with stated reasons
+- [x] Three rendered comps, one chosen with stated reasons
 - [ ] Profile rebuilt against it
 - [ ] Skill rewritten on the evidence
 - [ ] No claim anywhere without a citation or an `UNVERIFIED` tag
