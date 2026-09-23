@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309 116" width="309" height="116" role="img" aria-label="The moving file, served when reduced motion is not requested">
+  <rect width="309" height="116" rx="10" fill="#0d1117" stroke="#30363d"/>
+<text x="16" y="36" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#58a6ff">MOTION file served</text><text x="16" y="66" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#8b949e">Reduce Motion is off, or ignored</text>  <rect x="16" y="82" width="70" height="20" rx="6" fill="#58a6ff"><animate attributeName="x" values="16;223;16" dur="3s" repeatCount="indefinite"/></rect>
+</svg>

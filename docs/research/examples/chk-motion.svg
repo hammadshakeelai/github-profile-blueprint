@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309 116" width="309" height="116" role="img" aria-label="A blue bar sweeping left and right if animation is running">
+  <rect width="309" height="116" rx="10" fill="#0d1117" stroke="#30363d"/>
+<text x="16" y="34" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" fill="#e6edf3">Is this bar moving?</text>  <rect x="16" y="52" width="70" height="26" rx="6" fill="#58a6ff"><animate attributeName="x" values="16;223;16" dur="3s" repeatCount="indefinite"/></rect><text x="16" y="100" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" fill="#8b949e">moving = animation runs</text>
+</svg>

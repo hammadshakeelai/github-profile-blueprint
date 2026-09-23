@@ -14,7 +14,7 @@ claim without a citation, a measurement, or an `UNVERIFIED` tag.
 | 5 | Narrow the iOS unknown with an iPhone-emulated WebKit pass | **done** |
 | 6 | Can a `<picture>` source be gated on **width**? | **done** |
 | 7 | Package profile-lint so other people can run it | todo |
-| 8 | A five-minute real-device checklist | todo |
+| 8 | A five-minute real-device checklist | **built — needs a phone** |
 
 ---
 
@@ -113,3 +113,9 @@ Track 5 left three things emulation cannot answer: iOS Low Power Mode, the
 GitHub mobile apps' native renderers, and real 3x rasterisation. All three are
 answerable by one person with a phone in a few minutes, if the gallery is laid
 out so each answer is a yes/no you can read off. Build that page.
+
+**Built:** [research/PHONE-CHECK.md](research/PHONE-CHECK.md) — five cards, each
+drawn in a 309-unit canvas so it obeys the rule it tests, with a table to fill
+in. It cannot be completed from this machine; it needs someone to open it on a
+phone, in the browser and in the GitHub app, with Low Power Mode and Reduce
+Motion toggled.
