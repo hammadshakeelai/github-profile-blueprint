@@ -126,7 +126,8 @@ def build_assets(d: dict, projects: list[dict]) -> None:
                                          ("Assembly", "deep"), ("three.js", "accent"),
                                          ("PyTorch", "hot"), ("Linux", "go")]))
     write("languages", lambda p: P.languages(p, d["languages"][:6]))
-    write("rhythm", lambda p: P.rhythm(p, d["months"]))
+    write("rhythm", lambda p: P.rhythm(p, last_months(d["months"], 24),
+                                       title="Repository activity, last 24 months"))
     write("gauges", lambda p: P.gauges(p, [
         ("repositories", d["repos"], 100, "accent"),
         ("live demos", d["pages_sites"], 40, "go"),
@@ -167,6 +168,20 @@ def build_assets(d: dict, projects: list[dict]) -> None:
 MARQUEE = ["Alpine Linux in a tab", "v86", "WebAssembly", "8086 assembly", "DOSBox",
            "three.js", "procedural oceans", "Pac-Man in vanilla JS", "RAG", "page-level citations",
            "PyTorch", "eval harnesses", "Win32 in the browser"]
+
+
+def last_months(months: list[list], n: int) -> list[tuple[str, int]]:
+    """The last n calendar months as a continuous run, zeros filled in. The API
+    only reports months that saw a push, and drawing those side by side would
+    imply a density that isn't there."""
+    have = {m: c for m, c in months}
+    now = datetime.now()
+    out = []
+    for i in range(n - 1, -1, -1):
+        y, m = divmod((now.year * 12 + now.month - 1) - i, 12)
+        key = f"{y:04d}-{m + 1:02d}"
+        out.append((key, have.get(key, 0)))
+    return out
 
 
 def months_between(iso: str) -> int:

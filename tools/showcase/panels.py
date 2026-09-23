@@ -196,7 +196,17 @@ def languages(p, data: list[tuple[str, int]], width: int = W) -> str:
 # --------------------------------------------------------------------------- #
 # 4 · Build rhythm — a real heatmap of repository activity by month
 # --------------------------------------------------------------------------- #
-def rhythm(p, months: list[tuple[str, int]], width: int = W) -> str:
+def rhythm(p, months: list[tuple[str, int]], width: int = W,
+           title: str = "Repository activity") -> str:
+    """months must be a *continuous* run of ("YYYY-MM", count) — every month in
+    the range, zeros included. Plotting only the months that had activity puts
+    a 2018 bucket next to a 2025 one and reads as a lie about the timeline."""
+    keys = [m for m, _ in months]
+    if keys != sorted(keys) or any(
+            (int(b[:4]) * 12 + int(b[5:7])) - (int(a[:4]) * 12 + int(a[5:7])) != 1
+            for a, b in zip(keys, keys[1:])):
+        raise SystemExit("rhythm(): months must be continuous and in order; "
+                         f"got {keys[:3]}…{keys[-1:]}")
     cols = len(months)
     cell = min(30, (width - 48) // max(cols, 1))
     peak = max((n for _, n in months), default=1) or 1
@@ -217,10 +227,12 @@ def rhythm(p, months: list[tuple[str, int]], width: int = W) -> str:
             cells += (f'<path d="M{x} {54 + cell + 4} L{x} {54 + cell + 12}" '
                       f'stroke="{p["line"]}" stroke-width="2"/>'
                       + text(x + 4, 54 + cell + 34, label[:4], 22, p["muted"], canvas=width))
-    body = (card(p, width, h) + text(24, 36, "Repository activity by month", 24, p["text"], 700, canvas=width)
+    body = (card(p, width, h) + text(24, 36, title, 24, p["text"], 700, canvas=width)
             + cells)
+    peak_month = max(months, key=lambda m: m[1])
     return svg(width, h, body,
-               "Heatmap of repository activity per month, brighter where more repositories moved")
+               f"{title}: a heatmap of {len(months)} months from {months[0][0]} to "
+               f"{months[-1][0]}, busiest in {peak_month[0]} with {peak_month[1]} repositories")
 
 
 # --------------------------------------------------------------------------- #
