@@ -113,12 +113,12 @@ def picture(stem: str, alt: str, width: int = 600, phone: str | None = None,
 
 
 def build_assets(d: dict, projects: list[dict]) -> None:
-    name, tagline = "Hammad Shakeel", "operating systems, games and retrieval — in a browser tab"
+    name, tagline = "Hammad Shakeel", "operating systems · games · retrieval"
 
     write("hero", lambda p: P.hero(p, name, tagline))
     write("hero-still", lambda p: P.hero(p, name, tagline, motion=False))
-    write("hero-phone", lambda p: P.hero(p, name, "OSes, games and retrieval, in a tab", width=P.PHONE))
-    write("hero-phone-still", lambda p: P.hero(p, name, "OSes, games and retrieval, in a tab",
+    write("hero-phone", lambda p: P.hero(p, name, "OSes · games · retrieval", width=P.PHONE))
+    write("hero-phone-still", lambda p: P.hero(p, name, "OSes · games · retrieval",
                                                motion=False, width=P.PHONE))
 
     write("chips", lambda p: P.chips(p, [("Python", "accent"), ("TypeScript", "hot"),

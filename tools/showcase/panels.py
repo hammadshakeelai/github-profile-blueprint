@@ -111,6 +111,10 @@ def hero(p, name: str, line: str, motion: bool = True, width: int = W) -> str:
     # character without depending on the viewer's font metrics.
     typed = escape(line)
     tw = width - 64
+    if len(line) * small * 0.6 > tw:        # mono, so 0.6 em is a safe estimate
+        raise SystemExit(f"hero tagline too long for a {width}-unit canvas at the "
+                         f"legibility floor: {line!r} needs "
+                         f"{len(line) * small * 0.6:.0f} of {tw} units")
     steps = 26
     reveal = (f'<animate attributeName="width" dur="2.6s" fill="freeze" calcMode="discrete" '
               f'keyTimes="{";".join(f"{i / steps:.3f}" for i in range(steps + 1))}" '
