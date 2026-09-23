@@ -1,0 +1,765 @@
+{
+ "data": {
+  "images": [
+   {
+    "fragment": null,
+    "kind": "committed",
+    "media": "(prefers-color-scheme: dark)",
+    "url": "https://raw.githubusercontent.com/owner/owner/main/assets/e-dark.svg",
+    "via": "source",
+    "width": null,
+    "width_pct": false
+   },
+   {
+    "fragment": null,
+    "kind": "committed",
+    "media": "(max-width: 600px)",
+    "url": "https://raw.githubusercontent.com/owner/owner/main/assets/e-phone.svg",
+    "via": "source",
+    "width": null,
+    "width_pct": false
+   },
+   {
+    "fragment": null,
+    "kind": "third-party",
+    "media": null,
+    "url": "https://example.com/c.svg",
+    "via": "img",
+    "width": 400.0,
+    "width_pct": false
+   },
+   {
+    "fragment": null,
+    "kind": "committed",
+    "media": null,
+    "url": "https://raw.githubusercontent.com/owner/owner/main/assets/d.svg",
+    "via": "img",
+    "width": 100.0,
+    "width_pct": true
+   },
+   {
+    "fragment": null,
+    "kind": "committed",
+    "media": null,
+    "url": "https://raw.githubusercontent.com/owner/owner/main/assets/e.svg",
+    "via": "img",
+    "width": 600.0,
+    "width_pct": false
+   },
+   {
+    "fragment": null,
+    "kind": "third-party",
+    "media": null,
+    "url": "https://img.shields.io/badge/a-b-blue",
+    "via": "img",
+    "width": null,
+    "width_pct": false
+   },
+   {
+    "fragment": null,
+    "kind": "committed",
+    "media": null,
+    "url": "https://raw.githubusercontent.com/owner/owner/main/assets/a.svg",
+    "via": "markdown",
+    "width": null,
+    "width_pct": false
+   },
+   {
+    "fragment": null,
+    "kind": "committed",
+    "media": null,
+    "url": "https://raw.githubusercontent.com/owner/owner/main/b.png",
+    "via": "markdown",
+    "width": null,
+    "width_pct": false
+   },
+   {
+    "fragment": "gh-dark-mode-only",
+    "kind": "committed",
+    "media": null,
+    "url": "https://raw.githubusercontent.com/owner/owner/main/assets/f.svg",
+    "via": "markdown",
+    "width": null,
+    "width_pct": false
+   }
+  ],
+  "resolve": {
+   "./b.png": [
+    "https://raw.githubusercontent.com/owner/owner/main/b.png",
+    "committed"
+   ],
+   "/absolute/c.svg": [
+    "https://raw.githubusercontent.com/owner/owner/main/absolute/c.svg",
+    "committed"
+   ],
+   "assets/a.svg": [
+    "https://raw.githubusercontent.com/owner/owner/main/assets/a.svg",
+    "committed"
+   ],
+   "https://example.com/d.svg": [
+    "https://example.com/d.svg",
+    "third-party"
+   ],
+   "https://raw.githubusercontent.com/owner/owner/main/e.svg": [
+    "https://raw.githubusercontent.com/owner/owner/main/e.svg",
+    "committed"
+   ]
+  },
+  "signals": {
+   "fragment_theme": true,
+   "picture_theme": true
+  },
+  "svg": {
+   "docs/research/examples/chk-floor.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 309.0,
+    "max_font": 20.0,
+    "min_font": 7.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 194.0,
+    "vb_w": 309.0
+   },
+   "docs/research/examples/chk-motion.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 309.0,
+    "max_font": 20.0,
+    "min_font": 15.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 116.0,
+    "vb_w": 309.0
+   },
+   "docs/research/examples/chk-rm-motion.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 309.0,
+    "max_font": 22.0,
+    "min_font": 14.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 116.0,
+    "vb_w": 309.0
+   },
+   "docs/research/examples/chk-rm-still.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 309.0,
+    "max_font": 22.0,
+    "min_font": 14.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 116.0,
+    "vb_w": 309.0
+   },
+   "docs/research/examples/chk-theme-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 309.0,
+    "max_font": 30.0,
+    "min_font": 15.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 110.0,
+    "vb_w": 309.0
+   },
+   "docs/research/examples/chk-theme-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 309.0,
+    "max_font": 30.0,
+    "min_font": 15.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 110.0,
+    "vb_w": 309.0
+   },
+   "docs/research/examples/rm-css.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 22.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [
+     "css-keyframes"
+    ],
+    "vb_h": 120.0,
+    "vb_w": 600.0
+   },
+   "docs/research/examples/rm-motion.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 22.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 120.0,
+    "vb_w": 600.0
+   },
+   "docs/research/examples/rm-smil.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 22.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 120.0,
+    "vb_w": 600.0
+   },
+   "docs/research/examples/rm-still.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 22.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 120.0,
+    "vb_w": 600.0
+   },
+   "docs/research/examples/rm-swap.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 22.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 120.0,
+    "vb_w": 600.0
+   },
+   "docs/research/examples/w-desktop.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 900.0,
+    "max_font": 64.0,
+    "min_font": 26.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 252.0,
+    "vb_w": 900.0
+   },
+   "docs/research/examples/w-phone.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 309.0,
+    "max_font": 30.0,
+    "min_font": 13.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 86.0,
+    "vb_w": 309.0
+   },
+   "docs/techniques/examples/bars.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 30.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/css-keyframes.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 30.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "css-keyframes",
+     "stroke-draw"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/gauge.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 40.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil",
+     "stroke-draw"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/glow.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 56.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "blur-glow",
+     "filter",
+     "smil"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/gradient-shimmer.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 56.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "gradient",
+     "smil"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/gradient-transform.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 56.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "gradient",
+     "smil"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/grain.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 44.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "clip-path",
+     "filter",
+     "gradient"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/mask-reveal.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 52.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "gradient",
+     "mask",
+     "smil"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/particles.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 24.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/smil-draw.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 44.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil",
+     "stroke-draw"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/smil-motion.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 24.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/stroke-draw.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 24.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "css-keyframes",
+     "stroke-draw"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/terminal.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 24.0,
+    "min_font": 20.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 260.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/test-external-font.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 30.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 160.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/test-external-image.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 40.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 160.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/test-foreign-object.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 18.0,
+    "min_font": 18.0,
+    "size_method": "tree",
+    "techniques": [
+     "foreign-object"
+    ],
+    "vb_h": 160.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/test-script.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 36.0,
+    "size_method": "tree",
+    "techniques": [
+     "script"
+    ],
+    "vb_h": 160.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/textpath.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 30.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil",
+     "text-path"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/theme-aware.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 44.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "theme-aware-svg"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/theme-fragment-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 34.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 160.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/theme-fragment-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 34.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 160.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/theme-picture-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 34.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 160.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/theme-picture-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 34.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 160.0,
+    "vb_w": 600.0
+   },
+   "docs/techniques/examples/typing.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 44.0,
+    "min_font": 24.0,
+    "size_method": "tree",
+    "techniques": [
+     "clip-path",
+     "smil"
+    ],
+    "vb_h": 220.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/header-dark.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 52.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 304.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/header-light.svg": {
+    "animated": true,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 52.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [
+     "smil"
+    ],
+    "vb_h": 304.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/header-still-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 52.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 304.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/header-still-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 52.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 304.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-doomsdayin8086-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 246.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-doomsdayin8086-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 246.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-linuxweb-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-linuxweb-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-paklegalbench-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-paklegalbench-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-personalrag-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-personalrag-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-retromuseum-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-retromuseum-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-tidebreaker-dark.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   },
+   "profile/assets/tab-tidebreaker-light.svg": {
+    "animated": false,
+    "has_text": true,
+    "intrinsic_w": 600.0,
+    "max_font": 36.0,
+    "min_font": 22.0,
+    "size_method": "tree",
+    "techniques": [],
+    "vb_h": 214.0,
+    "vb_w": 600.0
+   }
+  }
+ },
+ "sha": "53ed4ff02e11de7b"
+}
