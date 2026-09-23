@@ -17,8 +17,8 @@ branch.
 | 2 · Technique catalogue — each technique with real users and a verified example | **done** |
 | 3 · Capability matrix — Chromium, Firefox and WebKit, phone and desktop, dark and light | **done** |
 | 4 · Design direction — three rendered concepts, one chosen | **done** |
-| 5 · Build the profile | next |
-| 6 · Fold everything back into the skill | |
+| 5 · Build the profile | **done** |
+| 6 · Fold everything back into the skill | next |
 
 Plan: [docs/PLAN-V2.md](docs/PLAN-V2.md)
 
@@ -62,6 +62,12 @@ projects, rendered by GitHub at both widths in both schemes, one chosen:
 **every project is a browser window you can tap into**, because everything here
 runs in a browser tab. Nothing in the 446 surveyed profiles looks like it, and
 it uses the only interaction a README has — a link — as the whole mechanic.
+
+## The profile
+
+[docs/PROFILE.md](docs/PROFILE.md) — built in [`profile/`](profile), rendered by
+GitHub and measured: all seven images load, the smallest text on a phone is
+11.9px, one column, both schemes. Ready to copy into the profile repository.
 
 ## What the technique catalogue verified
 
