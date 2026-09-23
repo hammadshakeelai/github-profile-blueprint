@@ -1,0 +1,66 @@
+{
+ "text_cards_by_class": {
+  "descriptive": 1446,
+  "generic": 84,
+  "absent": 765,
+  "empty": 189,
+  "filename": 43
+ },
+ "profiles": 439,
+ "unreachable": 7,
+ "content_images": 6610,
+ "by_class": {
+  "descriptive": 3173,
+  "generic": 137,
+  "absent": 2258,
+  "empty": 653,
+  "filename": 389
+ },
+ "badge_images": {
+  "absent": 893,
+  "empty": 116,
+  "descriptive": 3501,
+  "filename": 4,
+  "generic": 14
+ },
+ "by_cohort": {
+  "curated": {
+   "absent": 1000,
+   "descriptive": 740,
+   "generic": 27,
+   "filename": 228,
+   "empty": 386
+  },
+  "search": {
+   "descriptive": 2433,
+   "generic": 110,
+   "absent": 1258,
+   "empty": 267,
+   "filename": 161
+  }
+ },
+ "profiles_by_coverage": {
+  "curated": {
+   "some described": 84,
+   "all described": 38,
+   "none described": 32
+  },
+  "search": {
+   "some described": 149,
+   "none described": 29,
+   "all described": 63
+  }
+ },
+ "examples": {
+  "descriptive": [
+   "10ishk: Stack orbit: Python, TypeScript, Rust, React, FastAPI, Express, SQLite, PyTorch, OpenCV, YOLOv8, and Tauri",
+   "Abdullah3010: Abdullah Mohamed \u2014 Senior Software Engineer",
+   "Abdullah3010: BTC storefront home: gold and silver collections, delivery region and language pickers, product categories and",
+   "Abdullah3010: BTC gift collections carousel with item counts, and a best-sellers row of gold ingots and card boxes priced in",
+   "Abdullah3010: BTC coins category grid: gold coins with weights, live EGP prices and add-to-cart buttons, plus a filter contr",
+   "Abdullah3010: IMOX discover tab: a category rail beside grids of shoes, women",
+   "Abdullah3010: YOLO HR module: a searchable employee list with per-row role assignment.",
+   "Abdullah3010: YOLO appointment details: tabs for overview, services, medical record and payment over a patient"
+  ]
+ }
+}
