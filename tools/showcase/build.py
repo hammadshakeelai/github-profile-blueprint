@@ -143,7 +143,7 @@ def build_assets(d: dict, projects: list[dict]) -> None:
         ("cmd", "./paklegalbench --eval"),
         ("warn", "statute retrieval: harness measuring"),
     ]))
-    write("orbit", lambda p: P.orbit(p, [["core"], ["Python", "TypeScript", "C++"],
+    write("orbit", lambda p: P.orbit(p, [["Python", "TypeScript", "C++"],
                                          ["Linux", "WebAssembly", "three.js", "RAG", "x86"]]))
     write("timeline", lambda p: P.timeline(p, title=None, events=[
         (d["first_repo"], "first repository pushed"),
@@ -336,7 +336,7 @@ def readme(d: dict, projects: list[dict]) -> str:
 
     A("## The stack")
     A("")
-    A(picture("orbit", "Concentric rings of technologies orbiting a centre labelled core"))
+    A(picture("orbit", "Two rings of technologies orbiting a centre labelled core: Python, TypeScript and C++ inside; Linux, WebAssembly, three.js, RAG and x86 outside"))
     A("")
     A(picture("marquee", "A scrolling ticker of technologies", still="marquee-still"))
     A("")

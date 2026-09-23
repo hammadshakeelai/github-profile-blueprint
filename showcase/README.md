@@ -168,7 +168,7 @@ npm install && npm run dev        # Alpine userspace, in a tab, home folder pers
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/showcase/assets/orbit-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/showcase/assets/orbit-light.svg">
-  <img alt="Concentric rings of technologies orbiting a centre labelled core" src="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/showcase/assets/orbit-dark.svg" width="600">
+  <img alt="Two rings of technologies orbiting a centre labelled core: Python, TypeScript and C++ inside; Linux, WebAssembly, three.js, RAG and x86 outside" src="https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/v2/research/showcase/assets/orbit-dark.svg" width="600">
 </picture>
 
 <picture>

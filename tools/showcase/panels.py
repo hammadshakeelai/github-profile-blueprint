@@ -280,7 +280,7 @@ def orbit(p, rings: list[list[str]], width: int = W) -> str:
     # by the longest label's width — otherwise the outermost words are clipped.
     size = max(20, floor_for(width))
     longest = max((len(l) for ring in rings for l in ring), default=6)
-    margin = 18 + longest * size * 0.58
+    margin = 18 + longest * size * 0.58 / 2     # centred, so half a label each side
     outer = max(70.0, width / 2 - margin)
     inner = min(52.0, outer)
     step = (outer - inner) / max(len(rings) - 1, 1)
@@ -298,7 +298,7 @@ def orbit(p, rings: list[list[str]], width: int = W) -> str:
             # The ring carries each label around it; an inner group turns the
             # opposite way at the same rate so the word stays upright all the
             # way round, instead of going over on its head at the far side.
-            label_svg = text(10, 6, label, 20, p["text"], 600, canvas=width)
+            label_svg = text(0, 26, label, 20, p["text"], 600, anchor="middle", canvas=width)
             if ri == 0:
                 body.append(
                     f'<g transform="rotate({start} {cx} {cy})">'
@@ -316,8 +316,8 @@ def orbit(p, rings: list[list[str]], width: int = W) -> str:
                     f'from="{-start} 0 0" to="{-start - 360} 0 0" dur="{dur}s" '
                     f'repeatCount="indefinite"/>{label_svg}</g>'
                     f'</g></g>')
-    body.append(f'<circle cx="{cx}" cy="{cy}" r="34" fill="{p["bg"]}" stroke="{p["accent"]}"/>')
-    body.append(text(cx, cy + 8, "stack", 22, p["accent"], 700, anchor="middle", canvas=width))
+    body.append(f'<circle cx="{cx}" cy="{cy}" r="26" fill="{p["bg"]}" stroke="{p["accent"]}"/>')
+    body.append(text(cx, cy + 7, "core", 22, p["accent"], 700, anchor="middle", canvas=width))
     return svg(width, h, "".join(body),
                "Concentric rings of technologies orbiting a centre labelled stack: "
                + "; ".join(", ".join(r) for r in rings))
