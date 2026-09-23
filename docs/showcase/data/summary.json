@@ -1,0 +1,283 @@
+{
+ "generated_from": "GitHub REST API",
+ "user": {
+  "login": "hammadshakeelai",
+  "public_repos": 87,
+  "followers": 216,
+  "created_at": "2024-09-27T16:44:52Z"
+ },
+ "repos": 87,
+ "pages_sites": 28,
+ "languages": [
+  [
+   "Jupyter Notebook",
+   17
+  ],
+  [
+   "Python",
+   14
+  ],
+  [
+   "TypeScript",
+   12
+  ],
+  [
+   "JavaScript",
+   11
+  ],
+  [
+   "HTML",
+   8
+  ],
+  [
+   "C++",
+   4
+  ],
+  [
+   "Makefile",
+   1
+  ],
+  [
+   "Java",
+   1
+  ],
+  [
+   "PowerShell",
+   1
+  ],
+  [
+   "C",
+   1
+  ],
+  [
+   "Batchfile",
+   1
+  ]
+ ],
+ "size_kb": 3100800,
+ "months": [
+  [
+   "2018-09",
+   1
+  ],
+  [
+   "2025-05",
+   4
+  ],
+  [
+   "2025-07",
+   1
+  ],
+  [
+   "2025-08",
+   5
+  ],
+  [
+   "2025-10",
+   1
+  ],
+  [
+   "2025-12",
+   1
+  ],
+  [
+   "2026-01",
+   4
+  ],
+  [
+   "2026-02",
+   3
+  ],
+  [
+   "2026-03",
+   2
+  ],
+  [
+   "2026-04",
+   10
+  ],
+  [
+   "2026-05",
+   9
+  ],
+  [
+   "2026-06",
+   5
+  ],
+  [
+   "2026-07",
+   7
+  ],
+  [
+   "2026-08",
+   4
+  ],
+  [
+   "2026-09",
+   30
+  ]
+ ],
+ "first_repo": "2024-10-03",
+ "newest": [
+  {
+   "name": "T-rex",
+   "desc": "",
+   "pages": true,
+   "lang": "JavaScript",
+   "url": "https://github.com/hammadshakeelai/T-rex",
+   "created": "2026-09-23"
+  },
+  {
+   "name": "prompt-engineering-mastery",
+   "desc": "The Definitive Prompt Engineering Encyclopedia: Core Foundations, Reasoning Architectures, Frontier Models (o1/R1), Prog",
+   "pages": false,
+   "lang": "HTML",
+   "url": "https://github.com/hammadshakeelai/prompt-engineering-mastery",
+   "created": "2026-09-22"
+  },
+  {
+   "name": "github-profile-blueprint",
+   "desc": "Research blueprint and autonomous engine for advanced GitHub profile READMEs: SVG generation, CI telemetry, Camo behavio",
+   "pages": false,
+   "lang": "Python",
+   "url": "https://github.com/hammadshakeelai/github-profile-blueprint",
+   "created": "2026-09-20"
+  },
+  {
+   "name": "Machine-Learning",
+   "desc": "Machine-Learning",
+   "pages": false,
+   "lang": "Jupyter Notebook",
+   "url": "https://github.com/hammadshakeelai/Machine-Learning",
+   "created": "2026-09-20"
+  },
+  {
+   "name": "web-game-link",
+   "desc": "Using GPT-6 Astra,  Emm Tee built PaperRoute, a Paperboy-style 3D browser game.",
+   "pages": false,
+   "lang": null,
+   "url": "https://github.com/hammadshakeelai/web-game-link",
+   "created": "2026-09-20"
+  },
+  {
+   "name": "terminal-tictactoe",
+   "desc": "Windows Terminal styled Tic-Tac-Toe web demo running Python code with auto-execution and GitHub Pages hosting",
+   "pages": true,
+   "lang": "TypeScript",
+   "url": "https://github.com/hammadshakeelai/terminal-tictactoe",
+   "created": "2026-09-20"
+  },
+  {
+   "name": "cuda-course",
+   "desc": "im learnong it",
+   "pages": false,
+   "lang": null,
+   "url": "https://github.com/hammadshakeelai/cuda-course",
+   "created": "2026-09-20"
+  },
+  {
+   "name": "system-design-and-architecture",
+   "desc": "i am Learning how to design large-scale systems. Prep for the system design interview.",
+   "pages": false,
+   "lang": "Makefile",
+   "url": "https://github.com/hammadshakeelai/system-design-and-architecture",
+   "created": "2026-09-20"
+  },
+  {
+   "name": "isospectral-sort",
+   "desc": "Continuous Dynamical, Lie-Algebraic, and Soliton Sorting Systems in Python",
+   "pages": true,
+   "lang": "Python",
+   "url": "https://github.com/hammadshakeelai/isospectral-sort",
+   "created": "2026-09-19"
+  },
+  {
+   "name": "retro-win32-arcade-web",
+   "desc": "\ud83d\udd79\ufe0f Retro Win32 Arcade & Web Showcase - Play enhanced Next-Gen games and original C++ Win32 GUI classics directly in your",
+   "pages": true,
+   "lang": "C++",
+   "url": "https://github.com/hammadshakeelai/retro-win32-arcade-web",
+   "created": "2026-09-19"
+  },
+  {
+   "name": "notes-app",
+   "desc": "iOS & Android notes app for uni: lecture recording, transcription and AI study tools",
+   "pages": false,
+   "lang": "Python",
+   "url": "https://github.com/hammadshakeelai/notes-app",
+   "created": "2026-09-18"
+  },
+  {
+   "name": "archbtw",
+   "desc": "A real Arch Linux, running in your browser: archlinux32 in v86, resumed from a snapshot at a shell full of toys. I use A",
+   "pages": true,
+   "lang": "TypeScript",
+   "url": "https://github.com/hammadshakeelai/archbtw",
+   "created": "2026-09-16"
+  },
+  {
+   "name": "pacman",
+   "desc": "Playable Pac-Man in vanilla JavaScript and HTML5 canvas. No dependencies, no build step. Classic 28x31 board, four ghost",
+   "pages": true,
+   "lang": "JavaScript",
+   "url": "https://github.com/hammadshakeelai/pacman",
+   "created": "2026-09-16"
+  },
+  {
+   "name": "Tidebreaker",
+   "desc": "\ud83c\udf05 Fast golden-hour boat regatta on a procedural low-poly ocean. Race three AI skippers and your own ghost through five t",
+   "pages": true,
+   "lang": "JavaScript",
+   "url": "https://github.com/hammadshakeelai/Tidebreaker",
+   "created": "2026-09-15"
+  },
+  {
+   "name": "Boat-Chase",
+   "desc": "\ud83d\udea4 Original 3D boat chase game in the browser: outrun the Coast Guard, Cartel and Skull Cove pirates through island canal",
+   "pages": true,
+   "lang": "JavaScript",
+   "url": "https://github.com/hammadshakeelai/Boat-Chase",
+   "created": "2026-09-15"
+  },
+  {
+   "name": "tidal-rush",
+   "desc": "Tidal Rush: Paradise GP, the GPT-6 Astra kart racer, full-screen with nothing else on the page",
+   "pages": true,
+   "lang": "HTML",
+   "url": "https://github.com/hammadshakeelai/tidal-rush",
+   "created": "2026-09-15"
+  },
+  {
+   "name": "accounting-harness",
+   "desc": "Autonomous Neuro-Symbolic Accounting Harness & Deterministic Audit Engine. Enforces the 9 Dimensions of Accounting Truth",
+   "pages": true,
+   "lang": "Python",
+   "url": "https://github.com/hammadshakeelai/accounting-harness",
+   "created": "2026-09-13"
+  },
+  {
+   "name": "LinuxWeb",
+   "desc": "Real Alpine Linux in your browser tab, with your home folder saved automatically.",
+   "pages": true,
+   "lang": "TypeScript",
+   "url": "https://github.com/hammadshakeelai/LinuxWeb",
+   "created": "2026-09-13"
+  },
+  {
+   "name": "RetroMuseum",
+   "desc": "Run real Linux and retro operating systems in your browser: a client-side workstation and cyber lab built on the v86 Web",
+   "pages": true,
+   "lang": "TypeScript",
+   "url": "https://github.com/hammadshakeelai/RetroMuseum",
+   "created": "2026-09-12"
+  },
+  {
+   "name": "PersonalRag",
+   "desc": "Privacy-first ChatPDF x NotebookLM hybrid: chat with your PDFs using contextual chunking, hybrid BM25 + dense retrieval ",
+   "pages": true,
+   "lang": "TypeScript",
+   "url": "https://github.com/hammadshakeelai/PersonalRag",
+   "created": "2026-09-10"
+  }
+ ]
+}
