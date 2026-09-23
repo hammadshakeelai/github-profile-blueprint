@@ -26,6 +26,10 @@ featured is the `FEATURED` list in that script.
 - **One animation on the page**: the caret after the header's last line, an
   `opacity` `calcMode="discrete"` blink. Nothing else moves, and the first frame
   of every file is the finished composition.
+- **A still header for reduced motion.** Track 2 found that a guard *inside* an
+  SVG never applies, so the still version is a separate file chosen by a
+  `<picture>` source the host page can evaluate
+  ([REDUCED-MOTION.md](research/REDUCED-MOTION.md)).
 - **`view source` instead of `▶ open in a tab`** on the one project with no live
   demo, so the card never promises something that isn't there.
 
@@ -41,6 +45,7 @@ but pointing at this repo) at 390px and 1280px in both schemes —
 | Rendered width on a phone | 324px in the blob column (a profile page's is 309px) |
 | Smallest text on a phone | **11.9px** — above the 11px floor, and 11.3px if scaled to 309px |
 | Dark and light | both render; `<picture>` picks the right file |
+| Reduced motion | all four combinations correct: the still header is served to a viewer who asked for less motion, in both schemes |
 | Layout on a phone | one column, no sideways scroll, no table |
 
 The survey's headline failure — 55% of cards illegible at phone width — does not

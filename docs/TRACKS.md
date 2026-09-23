@@ -8,7 +8,7 @@ claim without a citation, a measurement, or an `UNVERIFIED` tag.
 | # | Track | Status |
 |---|---|---|
 | 1 | Does a relative `srcset` resolve on a profile page? | **done** |
-| 2 | Does `prefers-reduced-motion` reach an SVG in secure animated mode? | todo |
+| 2 | Does `prefers-reduced-motion` reach an SVG in secure animated mode? | **done** |
 | 3 | Alt text and accessibility across 10,782 images | todo |
 | 4 | `profile-lint` — every measured rule as a checker | todo |
 | 5 | Narrow the iOS unknown with an iPhone-emulated WebKit pass | todo |
@@ -39,8 +39,11 @@ rendered by the host browser, so it plausibly does, but plausible is not
 measured. Two parts: run it through the three-engine harness, and count how many
 of the 1,506 bespoke SVGs guard their animation at all.
 
-If it works, it belongs in the skill as a rule, not a nicety: an animated
-profile is one of the few pages a reader can't stop.
+**Answer:** it does not reach the SVG at all — in any engine — so the 369 files
+that guard their animation are doing nothing. A `<picture>` source gated on the
+query does work, because the host page evaluates it.
+See [research/REDUCED-MOTION.md](research/REDUCED-MOTION.md). Now applied to the
+built profile and written into the skill.
 
 ## 3 · Alt text and accessibility
 

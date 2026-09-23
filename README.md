@@ -69,6 +69,20 @@ it uses the only interaction a README has — a link — as the whole mechanic.
 GitHub and measured: all seven images load, the smallest text on a phone is
 11.9px, one column, both schemes. Ready to copy into the profile repository.
 
+## Open tracks
+
+The plan's six phases are done; [docs/TRACKS.md](docs/TRACKS.md) carries what
+they left open. Two answered so far, both correcting something previously
+believed:
+
+- **Relative `srcset` does resolve on profile pages** — 33 of 33 live profiles
+  checked. The claim that it fails, which this repo had been repeating, is
+  false. [RELATIVE-SRCSET.md](docs/research/RELATIVE-SRCSET.md)
+- **`prefers-reduced-motion` never reaches an SVG** in any of the three engines,
+  so the 369 surveyed files that guard their animation do nothing. Gating a
+  `<picture>` source works instead, and the profile now does.
+  [REDUCED-MOTION.md](docs/research/REDUCED-MOTION.md)
+
 ## What the technique catalogue verified
 
 Every technique found in the survey, rebuilt as an original minimal example and
