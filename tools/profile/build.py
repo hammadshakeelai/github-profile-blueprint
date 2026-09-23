@@ -49,7 +49,7 @@ def window(p: dict, url: str, inner: str, h: int) -> str:
 def host_of(project: dict) -> str:
     target = project["demo"] or project["repo"]
     host = target.split("//", 1)[1].rstrip("/")
-    return host if len(host) <= 30 else host[:29] + "…"
+    return host if len(host) <= 40 else host[:39] + "…"
 
 
 def write_pair(stem: str, make) -> None:
