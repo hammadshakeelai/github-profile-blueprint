@@ -2422,4 +2422,28 @@ strips others; which is which was read back from the rendered page.
 
 ## Verified
 
-_Filled in after publishing — see below._
+Read back from this page as github.com rendered it (Chromium, 1280px, September
+2026), by querying the DOM and then looking at a screenshot — an iframe existing
+doesn't prove the diagram inside it parsed.
+
+| Exhibit | Result |
+|---|---|
+| ASCII STL model | **renders** — an interactive viewer (`viewscreen.githubusercontent.com/markdown/stl`) with rotate, zoom and a solid/wireframe toggle |
+| GeoJSON map | **renders** — pannable map with coloured markers; nearby points cluster |
+| Mermaid `mindmap`, `timeline`, `pie` | **all three render** |
+| LaTeX display maths | **renders** |
+| Alerts — NOTE, TIP, IMPORTANT, WARNING, CAUTION | **all five render** |
+| Footnotes, `<kbd>`, task lists, `<details>` | **render** |
+
+**Inline HTML** — of the nine rare tags on the probe line, eight survive:
+`<ruby>`/`<rt>`/`<rp>`, `<ins>`, `<del>`, `<sup>`, `<sub>`, `<samp>`, `<var>`,
+`<mark>` and `<q>` all render. **`<abbr>` is stripped** (its text stays, the tag and
+its tooltip go).
+
+Two things we got wrong on the first attempt, both worth knowing:
+
+- **GitHub's STL viewer is Y-up.** A model built Z-up (the usual CAD and 3D-print
+  convention) appears lying on its back. Swap the axes when you export.
+- **Backslashes in generated LaTeX** — our generator let the `\t` in `\text` and the
+  `\f` in `\frac` become a tab and a form-feed, and GitHub rendered
+  "exttargetimesrac". Write maths with raw strings.
