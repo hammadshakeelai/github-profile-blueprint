@@ -116,6 +116,19 @@ HTML_IMG = re.compile(r"<img\b([^>]*)>", re.I)
 ATTR = re.compile(r"""(\w[\w-]*)\s*=\s*["']([^"']*)["']""")
 
 
+# A <picture> names its variants by suffix — banner-phone-still-dark.svg and
+# banner.svg are one card, described once on the <img>.
+VARIANT = re.compile(r"[-_](dark|light|still|phone|mobile|m|desktop|wide|sm|lg)(?=[-_.]|$)", re.I)
+
+
+def variant_stem(url: str) -> str:
+    stem = re.sub(r"[?#].*$", "", url).rsplit("/", 1)[-1].rsplit(".", 1)[0]
+    prev = None
+    while prev != stem:                      # strip stacked suffixes
+        prev, stem = stem, VARIANT.sub("", stem)
+    return stem.lower()
+
+
 def alt_map(md: str) -> dict[str, str]:
     """src (as written) -> alt. extract_images() doesn't keep alt text."""
     out = {m.group(2).split("#")[0]: m.group(1) for m in MD_IMG.finditer(md)}
@@ -229,9 +242,9 @@ def lint(target: str, md: str, owner: str, repo: str, branch: str,
     # to the variants so they aren't reported as undescribed.
     for o in imgs:
         if o.get("via") == "source" and o.get("alt") is None:
-            stem = re.sub(r"[-_](dark|light|still)", "", Path(o["url"]).stem, flags=re.I)
+            stem = variant_stem(o["url"])
             for c in imgs:
-                if c.get("via") in ("img", "markdown") and c.get("alt") and                    re.sub(r"[-_](dark|light|still)", "", Path(c["url"]).stem, flags=re.I) == stem:
+                if c.get("via") in ("img", "markdown") and c.get("alt") and                    variant_stem(c["url"]) == stem:
                     o["alt"] = c["alt"]
                     break
     check_markdown(md, rep, signals)
