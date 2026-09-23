@@ -44,11 +44,16 @@ def skyline() -> str:
         keys.append(f"{y:04d}-{m:02d}")
         y, m = (y, m - 1) if m > 1 else (y - 1, 12)
     keys.reverse()
-    tris = box(-1, -1, 0, len(keys) * 3 + 1, 4, 0.6)                 # plinth
+    # Two rows of twelve — one row per year, months left to right — so the model
+    # reads as a calendar and frames well in the viewer. A single row of 24 is a
+    # thin strip the viewer shrinks to a sliver.
+    tris = box(-1.5, -1.5, 0, 12 * 3 + 0.5, 2 * 5 + 0.5, 0.8)          # plinth
     peak = max(counts.get(k, 0) for k in keys) or 1
     for i, k in enumerate(keys):
-        h = 0.6 + 14 * counts.get(k, 0) / peak
-        tris += box(i * 3, 0.5, 0.6, i * 3 + 2, 2.5, h)
+        col, row = i % 12, i // 12
+        h = 0.8 + 12 * counts.get(k, 0) / peak
+        x, y = col * 3, (1 - row) * 5          # older year at the back
+        tris += box(x, y, 0.8, x + 2.2, y + 3.4, h)
     lines = ["solid skyline"]
     for n, (a, b, c) in tris:
         lines += [f"  facet normal {n[0]} {n[2]} {-n[1]}", "    outer loop",
