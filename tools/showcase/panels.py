@@ -276,11 +276,19 @@ def terminal(p, lines: list[tuple[str, str]], width: int = W) -> str:
 # 6 · Orbit — labels riding circular paths (animateMotion + textPath)
 # --------------------------------------------------------------------------- #
 def orbit(p, rings: list[list[str]], width: int = W) -> str:
-    h = 330
+    # A label sits outside its node, so the rings have to stop short of the card
+    # by the longest label's width — otherwise the outermost words are clipped.
+    size = max(20, floor_for(width))
+    longest = max((len(l) for ring in rings for l in ring), default=6)
+    margin = 18 + longest * size * 0.58
+    outer = max(70.0, width / 2 - margin)
+    inner = min(52.0, outer)
+    step = (outer - inner) / max(len(rings) - 1, 1)
+    h = int(2 * outer + 2 * size + 48)
     cx, cy = width / 2, h / 2
     body = [card(p, width, h)]
     for ri, labels in enumerate(rings):
-        r = 62 + ri * 52
+        r = inner + ri * step
         dur = 26 + ri * 9
         body.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{p["line"]}" '
                     f'stroke-dasharray="3 7"/>')
@@ -318,22 +326,31 @@ def orbit(p, rings: list[list[str]], width: int = W) -> str:
 # --------------------------------------------------------------------------- #
 # 7 · Timeline — a line that draws itself, with real dated milestones
 # --------------------------------------------------------------------------- #
-def timeline(p, events: list[tuple[str, str]], width: int = W) -> str:
-    h = 90 + len(events) * 66
+def timeline(p, events: list[tuple[str, str]], width: int = W,
+             title: str | None = "How it went") -> str:
+    """`events` are (when, what). Rows are measured from the wrapped text, not
+    assumed, so a two-line entry can't collide with the next one."""
+    size = max(21, floor_for(width))
+    wrapped = [wrap(what, size, width - 96) [:2] for _, what in events]
+    rowh = [34 + 26 * len(w) + 22 for w in wrapped]
+    h = (34 if title else 8) + sum(rowh) + 24
     x = 40
-    body = [card(p, width, h), text(24, 38, "How it went", 24, p["text"], 700)]
-    y0, y1 = 64, h - 24
+    body = [card(p, width, h)]
+    if title:
+        body.append(text(24, 38, title, 24, p["text"], 700, canvas=width))
+    y0, y1 = (64 if title else 26), h - 24
     body.append(f'<path d="M{x} {y0} L{x} {y1}" stroke="{p["accent"]}" stroke-width="3" '
                 f'fill="none" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0">'
                 f'<animate attributeName="stroke-dashoffset" values="1;0" dur="1.6s" '
                 f'fill="freeze" begin="0s"/></path>')
-    for i, (when, what) in enumerate(events):
-        y = y0 + 34 + i * 66
+    y = y0 + 20
+    for (when, _), lines, rh in zip(events, wrapped, rowh):
         body.append(f'<circle cx="{x}" cy="{y}" r="8" fill="{p["bg"]}" stroke="{p["accent"]}" '
                     f'stroke-width="3"/>')
-        body.append(text(x + 24, y - 4, when, 19, p["hot"], 700, family=MONO, canvas=width))
-        for j, ln in enumerate(wrap(what, 21, width - x - 56)[:2]):
-            body.append(text(x + 24, y + 22 + j * 24, ln, 21, p["text"], canvas=width))
+        body.append(text(x + 24, y - 4, when, size, p["hot"], 700, family=MONO, canvas=width))
+        for j, ln in enumerate(lines):
+            body.append(text(x + 24, y + 24 + j * 26, ln, size, p["text"], canvas=width))
+        y += rh
     return svg(width, h, "".join(body),
                "Timeline: " + "; ".join(f"{w} {t}" for w, t in events))
 
@@ -433,5 +450,9 @@ def quote(p, line: str, source: str, width: int = W) -> str:
             f'<animate attributeName="stroke-dashoffset" values="1;0" dur="1s" fill="freeze"/></path>']
     for i, ln in enumerate(lines):
         body.append(text(48, 52 + i * 36, ln, 27, p["text"], 600, canvas=width))
-    body.append(text(48, h - 20, source, 19, p["muted"], family=MONO, canvas=width))
+    # Monospace attribution, truncated to the card rather than run off its edge.
+    ssize = max(19, floor_for(width))
+    budget = int((width - 72) / (ssize * 0.60))
+    body.append(text(48, h - 20, source if len(source) <= budget else source[:budget - 1] + "…",
+                     ssize, p["muted"], family=MONO, canvas=width))
     return svg(width, h, "".join(body), f"Quote: {line} — {source}")

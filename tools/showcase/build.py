@@ -145,7 +145,7 @@ def build_assets(d: dict, projects: list[dict]) -> None:
     ]))
     write("orbit", lambda p: P.orbit(p, [["core"], ["Python", "TypeScript", "C++"],
                                          ["Linux", "WebAssembly", "three.js", "RAG", "x86"]]))
-    write("timeline", lambda p: P.timeline(p, [
+    write("timeline", lambda p: P.timeline(p, title=None, events=[
         (d["first_repo"], "first repository pushed"),
         ("2025", "whole operating systems compiled to run in a browser tab"),
         ("2026", "games and 3D — three.js, procedural oceans, arcade ports"),
@@ -156,7 +156,7 @@ def build_assets(d: dict, projects: list[dict]) -> None:
     write("marquee-still", lambda p: P.marquee(p, MARQUEE, motion=False))
     write("quote", lambda p: P.quote(
         p, "Nobody in 446 surveyed profiles was both visually ambitious and legible on a phone.",
-        "docs/survey/FINDINGS.md — the gap this page aims at"))
+        "docs/survey/FINDINGS.md"))
     write("wave", lambda p: P.wave(p))
     write("wave-still", lambda p: P.wave(p, motion=False))
 
