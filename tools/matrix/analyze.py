@@ -110,7 +110,7 @@ def write_markdown(results: dict) -> None:
         "",
         "Every cell was checked by loading `docs/techniques/GALLERY.md` inside GitHub's rendered page "
         "in each engine, at 1280px and 390px, in dark and light schemes, and scoring it with the same "
-        "code used for the Chrome verification: eight frames 0.8s apart for animation, pixel reads for "
+        "code used for the Chrome verification: eight frames 0.73s apart for animation, pixel reads for "
         "the boundary tests. WebKit is Safari's rendering engine; it is not iOS Safari or the GitHub "
         "mobile app, which are covered by the manual checks at the end.",
         "",

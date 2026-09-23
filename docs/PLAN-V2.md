@@ -119,7 +119,15 @@ components.
 **Deliverable:** `docs/techniques/` — one file per family, each with a working
 minimal example verified to render.
 
-### Phase 3 — Platform capability matrix
+### Phase 3 — Platform capability matrix — **done**
+
+> **Outcome:** `docs/CAPABILITY-MATRIX.md`, generated from captures in
+> Chromium 153, Firefox 155 and WebKit 26.6 (Safari's engine), each at 1280px
+> and 390px in both schemes, scored by the same code as the Chrome pass. Found
+> one real engine difference — WebKit never animates `gradientTransform` — and
+> measured update latency: ~302s on a branch URL, ~5s commit-pinned. iOS Safari
+> and the GitHub mobile apps can't be driven from here, so the matrix ends with
+> a by-hand checklist for them.
 
 Extend the existing measurements into a single table: desktop web, mobile web,
 GitHub mobile app, light, dark. Each cell tested, not assumed. Absorbs the
@@ -182,7 +190,7 @@ auth for that account.
       442 (phone) and 441 (desktop); the 20 shortlisted also screenshotted
 - [x] Technique catalogue where each entry cites a real user and has a verified
       minimal example
-- [ ] Capability matrix with every cell tested
+- [x] Capability matrix with every cell tested (except the hand-check rows)
 - [ ] Three rendered comps, one chosen with stated reasons
 - [ ] Profile rebuilt against it
 - [ ] Skill rewritten on the evidence

@@ -15,8 +15,8 @@ branch.
 |---|---|
 | 1 · Survey — 446 real profiles, their images, and the generators behind them | **done** |
 | 2 · Technique catalogue — each technique with real users and a verified example | **done** |
-| 3 · Capability matrix — desktop / mobile web / GitHub app × dark / light, tested | next |
-| 4 · Design direction — three rendered concepts, one chosen | |
+| 3 · Capability matrix — Chromium, Firefox and WebKit, phone and desktop, dark and light | **done** |
+| 4 · Design direction — three rendered concepts, one chosen | in progress |
 | 5 · Build the profile | |
 | 6 · Fold everything back into the skill | |
 
@@ -40,6 +40,20 @@ Full detail with numbers in [docs/survey/FINDINGS.md](docs/survey/FINDINGS.md).
 
 The fifteen standout profiles, and what to take from each:
 [docs/survey/SHORTLIST.md](docs/survey/SHORTLIST.md).
+
+## What works where
+
+[docs/CAPABILITY-MATRIX.md](docs/CAPABILITY-MATRIX.md) — every technique tested
+in Chromium, Firefox and WebKit (Safari's engine), at phone and desktop width,
+dark and light.
+
+- **Everything animates in every engine — with one exception.** WebKit never
+  animates `gradientTransform`; animate the gradient's `x1`/`x2` or its stop
+  offsets instead.
+- **External images are blocked everywhere, but differently**: Chromium paints
+  a broken-image icon, Firefox and WebKit draw nothing.
+- **A pushed change takes about five minutes to appear** (the CDN serves the
+  old file for `max-age=300`); a commit-pinned URL is fresh in seconds.
 
 ## What the technique catalogue verified
 

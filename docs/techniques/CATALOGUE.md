@@ -11,6 +11,8 @@ it, a minimal pattern, and what was verified on GitHub's real renderer.
 - **Verified** means loaded — and, where it applies, seen animating — inside
   GitHub's rendered page at 1280px and 390px, dark and light, by
   `tools/techniques/verify.py`. Full grid: [VERIFIED.md](VERIFIED.md).
+  Chromium, Firefox and WebKit side by side:
+  [CAPABILITY-MATRIX.md](../CAPABILITY-MATRIX.md).
 
 The ground rule behind all of it: an SVG in a README is displayed as an image,
 which browsers run in *secure animated mode* — declarative animation runs;
@@ -174,16 +176,25 @@ design).
 The most common technique of all. Static fills, and animated shimmer.
 
 ```svg
-<linearGradient id="shine" x1="0" x2="1">
+<linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
   <stop offset="0.45" stop-color="#8b949e"/><stop offset="0.5" stop-color="#fff"/>
   <stop offset="0.55" stop-color="#8b949e"/>
-  <animateTransform attributeName="gradientTransform" type="translate"
-                    values="-1 0;1 0" dur="2.6s" repeatCount="indefinite"/>
+  <animate attributeName="x1" values="-300;300" dur="2.6s" repeatCount="indefinite"/>
+  <animate attributeName="x2" values="0;600"    dur="2.6s" repeatCount="indefinite"/>
 </linearGradient>
 ```
 
 Example: [`gradient-shimmer.svg`](examples/gradient-shimmer.svg) · **Verified:
-renders and animates.**
+renders and animates in Chromium, Firefox and WebKit.**
+
+- **Don't animate `gradientTransform`.** It's the obvious approach and the one
+  most tutorials show, but **WebKit — Safari's engine — never animates it** in
+  an SVG image, on text or on shapes: in a 45-frame capture the highlight stayed
+  frozen in every frame, while Chromium and Firefox moved. Animating the
+  gradient's `x1`/`x2` (above) or its stop `offset`s works in all three.
+  The frozen version is kept as
+  [`gradient-transform.svg`](examples/gradient-transform.svg) so the capability
+  matrix records the difference.
 
 ---
 
@@ -361,22 +372,23 @@ Examples: [`theme-picture-*.svg`](examples/),
 
 - **Embedded raster — 23 profiles** (base64 PNG/JPEG inside the SVG, e.g. an
   avatar in a card). Works; median file **69.9 KB**, 22× a plain bespoke SVG.
-- **External `<image href="https://…">` is blocked** — and not silently.
-  Verified: Chrome draws its broken-image icon in place of the image, covering
-  whatever was beneath it. Never reference external images from inside an SVG;
-  embed them or leave them out.
+- **External `<image href="https://…">` is blocked in every engine** — but
+  not uniformly. Chromium draws its broken-image icon in place of the image,
+  covering whatever was beneath; Firefox and WebKit draw nothing. Never
+  reference external images from inside an SVG; embed them or leave them out.
 
 ## `<foreignObject>` — 32 profiles
 
-HTML and CSS inside an SVG. **Verified rendering in Chrome** — flexbox, rounded
-backgrounds and web-safe fonts all drew. Mostly reaches profiles through one
+HTML and CSS inside an SVG. **Verified rendering in Chromium, Firefox and
+WebKit** — flexbox, rounded backgrounds and system fonts all drew. Mostly reaches profiles through one
 generator: [jstrieb/github-stats](https://github.com/jstrieb/github-stats)
 builds its cards this way (committed by
 [MacroPower](https://github.com/MacroPower) and others). Hand-made use:
 [YoraiLevi/card-dark-0.svg](https://github.com/YoraiLevi/YoraiLevi/blob/master/assets/card-dark-0.svg).
 
-- Safari has a long history of `foreignObject` bugs inside images. Until Phase
-  3 tests it there, treat it as Chrome-verified only.
+- Safari has a long history of `foreignObject` bugs inside images. Desktop
+  WebKit 26.6 renders this example correctly; iOS Safari and the GitHub mobile
+  apps are untested.
 
 ## Interaction
 
@@ -406,8 +418,9 @@ another SVG (3).
 
 ## Limits
 
-- Verified in Chrome only, signed out, at two widths. Safari, Firefox and the
-  GitHub mobile apps are Phase 3.
+- Verified signed out, at two widths, in Chromium, Firefox and desktop WebKit.
+  iOS Safari and the GitHub mobile apps can't be driven from here; the
+  capability matrix ends with a checklist for checking them by hand.
 - A committed copy of a service's output can pass as "bespoke" in the usage
   counts when the tool leaves no signature (one profile commits cached service
   cards under `assets/auto/`).

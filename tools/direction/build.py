@@ -137,16 +137,23 @@ def comp_b(c: dict) -> None:
                 f'<circle cx="28" cy="26" r="7" fill="#ff5f57"/><circle cx="50" cy="26" r="7" fill="#febc2e"/>'
                 f'<circle cx="72" cy="26" r="7" fill="#28c840"/>',
                 f'<text x="100" y="33" font-family="{MONO}" font-size="22" fill="{p["muted"]}">hammad@web</text>']
+        # The first frame is the whole composition. Nothing starts hidden and
+        # waits for an animation to reveal it: anything that shows an SVG's
+        # first frame (a slow load, a restarted image, a static renderer) would
+        # otherwise show an empty panel. Motion only adds — a blinking cursor.
         for i, r in enumerate(rows):
             y = 84 + i * 36
             colour = p["text"] if i else p["ok"]
-            # settle once: each line appears in turn, then everything stays
-            body.append(f'<text x="28" y="{y}" font-family="{MONO}" font-size="22" fill="{colour}" opacity="0">'
-                        f'{r if i else escape(r)}<set attributeName="opacity" to="1" begin="{0.25 + i * 0.28:.2f}s" fill="freeze"/></text>')
+            body.append(f'<text x="28" y="{y}" font-family="{MONO}" font-size="22" fill="{colour}">'
+                        f'{r if i else escape(r)}</text>')
         ready_y = 84 + len(rows) * 36 + 8
+        ready = "ready — every system runs in a browser tab"
         body.append(f'<text x="28" y="{ready_y}" font-family="{MONO}" font-size="22" font-weight="700" '
-                    f'fill="{p["ok"]}" opacity="0">ready — every system runs in a browser tab'
-                    f'<set attributeName="opacity" to="1" begin="{0.25 + len(rows) * 0.28:.2f}s" fill="freeze"/></text>')
+                    f'fill="{p["ok"]}">{ready}</text>')
+        cursor_x = 28 + len(ready) * 22 * 0.6 + 6
+        body.append(f'<rect x="{cursor_x:.0f}" y="{ready_y - 18}" width="12" height="22" fill="{p["ok"]}">'
+                    f'<animate attributeName="opacity" values="1;0" dur="1s" repeatCount="indefinite" '
+                    f'calcMode="discrete"/></rect>')
         return svg(H, "".join(body), "Boot log listing the systems, each marked ok")
 
     H = 84 + 7 * 36 + 8 + 40

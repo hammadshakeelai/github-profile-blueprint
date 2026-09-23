@@ -1,0 +1,2202 @@
+{
+ "chromium": {
+  "1280-dark": {
+   "version": null,
+   "container": 861,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0061,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0242,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0037,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0213,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0178,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0324,
+     "animates": true
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0075,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0067,
+     "animates": true
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0781,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0257,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0569,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0198,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0256,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0456,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "dark",
+     "bg_rgb": [
+      13,
+      17,
+      23
+     ]
+    },
+    "theme-picture-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 browser draws a broken-image icon",
+     "green_share": 0.117,
+     "placeholder_share": 0.183
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.3
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  },
+  "1280-light": {
+   "version": null,
+   "container": 861,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0061,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0266,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0041,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0298,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0145,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0054,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0072,
+     "animates": true
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0802,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.023,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.057,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.024,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0139,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0396,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "light",
+     "bg_rgb": [
+      255,
+      255,
+      255
+     ]
+    },
+    "theme-picture-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 browser draws a broken-image icon",
+     "green_share": 0.117,
+     "placeholder_share": 0.183
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.3
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  },
+  "390-dark": {
+   "version": null,
+   "container": 324,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0063,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0287,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.004,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0323,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0182,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0445,
+     "animates": true
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0038,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0034,
+     "animates": true
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0414,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0298,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0645,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0219,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0164,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0492,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "dark",
+     "bg_rgb": [
+      13,
+      17,
+      23
+     ]
+    },
+    "theme-picture-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 browser draws a broken-image icon",
+     "green_share": 0.116,
+     "placeholder_share": 0.189
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.3
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  },
+  "390-light": {
+   "version": null,
+   "container": 324,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0063,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0283,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0043,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0345,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.01,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0386,
+     "animates": true
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.005,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0071,
+     "animates": true
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0519,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0271,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0692,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0192,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0138,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0617,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "light",
+     "bg_rgb": [
+      255,
+      255,
+      255
+     ]
+    },
+    "theme-picture-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 browser draws a broken-image icon",
+     "green_share": 0.116,
+     "placeholder_share": 0.189
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.3
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324.0,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  }
+ },
+ "firefox": {
+  "1280-dark": {
+   "version": null,
+   "container": 861,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0061,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0254,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0039,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0323,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0105,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0072,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0065,
+     "animates": true
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0758,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.025,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0526,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0186,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0212,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0555,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "dark",
+     "bg_rgb": [
+      13,
+      17,
+      23
+     ]
+    },
+    "theme-picture-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 nothing drawn",
+     "green_share": 0.0,
+     "placeholder_share": 0.96
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.302
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  },
+  "1280-light": {
+   "version": null,
+   "container": 861,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.006,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0266,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0038,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0313,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0122,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0048,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0041,
+     "animates": true
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0638,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0235,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0566,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0162,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0167,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.066,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "light",
+     "bg_rgb": [
+      255,
+      255,
+      255
+     ]
+    },
+    "theme-picture-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 nothing drawn",
+     "green_share": 0.0,
+     "placeholder_share": 0.96
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.302
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  },
+  "390-dark": {
+   "version": null,
+   "container": 324,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0064,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.027,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0042,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.024,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0156,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0052,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0032,
+     "animates": true
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0393,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0245,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0604,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0215,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0107,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0084,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "dark",
+     "bg_rgb": [
+      13,
+      17,
+      23
+     ]
+    },
+    "theme-picture-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 nothing drawn",
+     "green_share": 0.0,
+     "placeholder_share": 0.973
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.296
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  },
+  "390-light": {
+   "version": null,
+   "container": 324,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0064,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0261,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.004,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0349,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0252,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0525,
+     "animates": true
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0038,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0031,
+     "animates": true
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0728,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0197,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0641,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0201,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0109,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0437,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "light",
+     "bg_rgb": [
+      255,
+      255,
+      255
+     ]
+    },
+    "theme-picture-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 nothing drawn",
+     "green_share": 0.0,
+     "placeholder_share": 0.973
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.296
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  }
+ },
+ "webkit": {
+  "1280-dark": {
+   "version": null,
+   "container": 861,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0061,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0251,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0041,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0307,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0084,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0032,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0509,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.02,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.053,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0179,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0233,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0522,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "dark",
+     "bg_rgb": [
+      13,
+      17,
+      23
+     ]
+    },
+    "theme-picture-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 nothing drawn",
+     "green_share": 0.0,
+     "placeholder_share": 0.969
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.298
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  },
+  "1280-light": {
+   "version": null,
+   "container": 861,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0061,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0264,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0037,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0289,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0019,
+     "animates": false
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0047,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0575,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0154,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0568,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0122,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0168,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0403,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "light",
+     "bg_rgb": [
+      255,
+      255,
+      255
+     ]
+    },
+    "theme-picture-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 nothing drawn",
+     "green_share": 0.0,
+     "placeholder_share": 0.969
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.298
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 600,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  },
+  "390-dark": {
+   "version": null,
+   "container": 324,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0062,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0247,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0041,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0226,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0156,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0043,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0773,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0238,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0624,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0201,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0039,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0588,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "dark",
+     "bg_rgb": [
+      13,
+      17,
+      23
+     ]
+    },
+    "theme-picture-dark.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": false,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "theme-fragment-light.svg": {
+     "loaded": false,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      13,
+      17,
+      23
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "loaded",
+     "green_share": 0.0,
+     "placeholder_share": 0.019
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.0
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": false
+    }
+   }
+  },
+  "390-light": {
+   "version": null,
+   "container": 324,
+   "images": {
+    "smil-motion.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0063,
+     "animates": true
+    },
+    "css-keyframes.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0156,
+     "animates": true
+    },
+    "particles.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0039,
+     "animates": true
+    },
+    "stroke-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0352,
+     "animates": true
+    },
+    "smil-draw.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0096,
+     "animates": true
+    },
+    "glow.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0281,
+     "animates": true
+    },
+    "grain.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "gradient-shimmer.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0044,
+     "animates": true
+    },
+    "gradient-transform.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "mask-reveal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0652,
+     "animates": true
+    },
+    "typing.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0279,
+     "animates": true
+    },
+    "textpath.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0648,
+     "animates": true
+    },
+    "terminal.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0201,
+     "animates": true
+    },
+    "gauge.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0141,
+     "animates": true
+    },
+    "bars.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0399,
+     "animates": true
+    },
+    "theme-aware.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "in_svg_scheme": "light",
+     "bg_rgb": [
+      255,
+      255,
+      255
+     ]
+    },
+    "theme-picture-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "theme-fragment-dark.svg": {
+     "loaded": true,
+     "shown": false,
+     "rendered_w": 0
+    },
+    "theme-fragment-light.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false
+    },
+    "test-script.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "script_ran": false,
+     "panel_rgb": [
+      26,
+      127,
+      55
+     ]
+    },
+    "test-external-image.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "external_image": "blocked \u2014 nothing drawn",
+     "green_share": 0.0,
+     "placeholder_share": 0.942
+    },
+    "test-external-font.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "web_font_loaded": false,
+     "title_span": 0.296
+    },
+    "test-foreign-object.svg": {
+     "loaded": true,
+     "shown": true,
+     "rendered_w": 324,
+     "changed": 0.0,
+     "animates": false,
+     "foreign_object_rendered": true
+    }
+   }
+  }
+ }
+}

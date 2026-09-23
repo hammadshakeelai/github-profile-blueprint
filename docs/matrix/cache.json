@@ -1,0 +1,25 @@
+{
+ "measured_at": "2026-09-21T18:45:55+00:00",
+ "branch_url": "https://raw.githubusercontent.com/hammadshakeelai/github-profile-blueprint/probe/cache/cache-probe.svg",
+ "poll_every_seconds": 10,
+ "rounds": [
+  {
+   "token": "t0-4aa9f9d1",
+   "sha": "14e483bc51d191ea41077b5964f1d1c046208daf",
+   "warm_cache_control": "max-age=300",
+   "warm_x_cache": "MISS",
+   "branch_url_seconds": 302.2,
+   "pinned_url_seconds": 5.9,
+   "polls": 29
+  },
+  {
+   "token": "t1-f0aa81eb",
+   "sha": "1ca9afce28d57e9eef95cf1efb9e3c84065b43c6",
+   "warm_cache_control": "max-age=300",
+   "warm_x_cache": "HIT",
+   "branch_url_seconds": 303.2,
+   "pinned_url_seconds": 4.8,
+   "polls": 29
+  }
+ ]
+}
