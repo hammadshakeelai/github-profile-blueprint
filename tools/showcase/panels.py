@@ -131,7 +131,9 @@ def hero(p, name: str, line: str, motion: bool = True, width: int = W) -> str:
             + text(32, 88 * k + 20, name, big, p["text"], 800, canvas=width)
             + f'<clipPath id="tc"><rect x="32" y="{110 * k + 12}" height="{small * 1.6}" width="{tw if not motion else 0}">{reveal}</rect></clipPath>'
             + f'<g clip-path="url(#tc)">{text(32, 128 * k + 24, typed, small, p["muted"], family=MONO, canvas=width)}</g>'
-            + f'<rect x="32" y="{110 * k + 14}" width="{small * 0.5:.0f}" height="{small * 1.2:.0f}" '
+            # The caret belongs after the last character, not on top of the first.
+            + f'<rect x="{32 + len(line) * drawn * 0.6 + 6:.0f}" y="{110 * k + 14}" '
+              f'width="{drawn * 0.5:.0f}" height="{drawn * 1.2:.0f}" '
               f'fill="{p["hot"]}" opacity="1">{caret}</rect>')
     return svg(width, h, body, f"{name} — {line}")
 
