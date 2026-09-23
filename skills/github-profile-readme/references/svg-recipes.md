@@ -49,8 +49,10 @@ At desktop (R=846, scale 0.94) → 60px / 32px / 30px.
 </picture>
 ```
 
-Absolute raw URLs inside `<picture>`: relative `srcset` can fail to resolve on
-the profile page, where the base URL has no repo slug.
+Absolute raw URLs inside `<picture>` because they are unambiguous everywhere —
+not because relative ones break. Relative `srcset` resolves correctly on profile
+pages; that was checked on 33 live profiles
+(`docs/research/RELATIVE-SRCSET.md`).
 
 ## Ambient motion that does not irritate
 

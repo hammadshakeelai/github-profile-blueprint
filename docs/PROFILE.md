@@ -11,12 +11,13 @@ featured is the `FEATURED` list in that script.
 
 ## Decisions made while building
 
-- **Absolute `raw.githubusercontent.com` URLs, not relative paths.** A repo page
-  resolves relative `srcset` fine — the comps prove it — but a profile page
-  resolves against a different base, and the archived research reports it
-  failing there. Untested by me: I won't edit a live profile to find out, and an
-  absolute URL is correct in both places, so the question doesn't need
-  answering.
+- **Absolute `raw.githubusercontent.com` URLs, not relative paths.** The reason
+  given when this was built — that a profile page can't resolve a relative
+  `srcset` — turned out to be false; Track 1 checked 33 live profiles that use
+  relative paths and all 33 resolve correctly
+  ([RELATIVE-SRCSET.md](research/RELATIVE-SRCSET.md)). The choice stands on
+  weaker but real grounds: one URL that works identically in a repo README, a
+  profile README and anywhere the markdown is quoted.
 - **Six cards, not thirteen.** The cap comes from DIRECTION; the other seven
   projects are markdown list items, which reflow and cost nothing.
 - **The whole card is the link.** An SVG can't be clicked inside on GitHub, but

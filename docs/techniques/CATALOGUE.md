@@ -348,8 +348,10 @@ Examples: [`theme-picture-*.svg`](examples/),
   set GitHub's theme differently from their OS. That case needs a signed-in
   test and is open for Phase 3 — the verification here was signed out, where
   GitHub follows the OS and the two agree.
-- On the profile page itself, relative `srcset` paths can fail to resolve; use
-  absolute `raw.githubusercontent.com` URLs there.
+- Relative `srcset` paths **do** resolve on the profile page — verified on 33
+  live profiles, `docs/research/RELATIVE-SRCSET.md`. Absolute
+  `raw.githubusercontent.com` URLs remain the safer default for portability, not
+  for correctness.
 
 ---
 

@@ -144,8 +144,13 @@ them follows `prefers-color-scheme`, i.e. the viewer's **operating system**, not
 their GitHub theme setting; nothing inside an image can read GitHub's theme.
 Prefer `<picture>` because one theme per file is easy to verify.
 
-Use absolute `raw.githubusercontent.com` URLs in `srcset` — correct on both repo
-and profile pages, so the resolution question never arises.
+Use absolute `raw.githubusercontent.com` URLs in `srcset` — identical in a repo
+README, a profile README and anywhere else the markdown is read. Relative paths
+also resolve correctly on profile pages (33 of 33 live profiles checked), so
+don't treat someone else's relative srcset as a bug.
+
+Point the `<img>` fallback at the variant you'd rather have seen, and make sure
+that file exists — it is what any client ignoring `<source>` fetches.
 
 ## Process
 

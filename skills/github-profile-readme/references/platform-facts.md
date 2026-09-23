@@ -87,11 +87,16 @@ fresh in seconds but has to be rewritten into the README on every update.
 - **Third-party** → proxied through `camo.githubusercontent.com` under an
   HMAC-SHA1 digest, cached hard. You cannot hand-construct or warm a Camo URL.
 
-- **UNVERIFIED:** that relative paths inside `<picture><source srcset>` fail to
-  resolve on a *profile* page. Reported by earlier research, not reproduced
-  here, and not worth testing on someone's live profile. Absolute
-  `raw.githubusercontent.com` URLs are correct in both contexts, so use them and
-  the question never arises.
+- **Relative paths inside `<picture><source srcset>` resolve correctly on
+  profile pages.** Earlier research claimed they fail; 33 live profiles that use
+  them were loaded and 33 served the declared file
+  (`docs/research/RELATIVE-SRCSET.md`). Absolute `raw.githubusercontent.com`
+  URLs are still the better default — identical in every context, and portable
+  if the markdown is viewed elsewhere — but a relative path is not a bug.
+- Set the `<img>` fallback to the variant you would rather have seen, and make
+  sure that file exists: it is what any client ignoring `<source>` will fetch. A
+  surveyed profile pointed its fallback at a light file and served it, broken,
+  on a dark page.
 
 ## Not testable from a desktop — check by hand
 
