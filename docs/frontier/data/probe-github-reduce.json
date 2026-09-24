@@ -1,0 +1,292 @@
+{
+ "chromium": {
+  "anim.avif": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "anim.gif": {
+   "decodes": true,
+   "wrapped": true,
+   "animates": false
+  },
+  "anim.png": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "anim.webp": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "embed-avif.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "embed-gif.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "embed-png.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "embed-webp.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "lighting-diffuse-distant-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-diffuse-distant.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-distant-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-distant.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-moving-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-moving.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true,
+   "lit": true
+  },
+  "lighting-specular-point-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-point.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-spot-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-spot.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  }
+ },
+ "firefox": {
+  "anim.avif": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "anim.gif": {
+   "decodes": true,
+   "wrapped": true,
+   "animates": false
+  },
+  "anim.png": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "anim.webp": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "embed-avif.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "embed-gif.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "embed-png.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "embed-webp.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-diffuse-distant-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-diffuse-distant.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-distant-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-distant.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-moving-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-moving.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true,
+   "lit": true
+  },
+  "lighting-specular-point-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-point.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-spot-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-spot.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  }
+ },
+ "webkit": {
+  "anim.avif": {
+   "decodes": false,
+   "wrapped": false
+  },
+  "anim.gif": {
+   "decodes": true,
+   "wrapped": true,
+   "animates": false
+  },
+  "anim.png": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "anim.webp": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "embed-avif.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "embed-gif.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "embed-png.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "embed-webp.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true
+  },
+  "lighting-diffuse-distant-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-diffuse-distant.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-distant-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-distant.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-moving-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-moving.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": true,
+   "lit": true
+  },
+  "lighting-specular-point-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-point.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  },
+  "lighting-specular-spot-control.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false
+  },
+  "lighting-specular-spot.svg": {
+   "decodes": true,
+   "wrapped": false,
+   "animates": false,
+   "lit": true
+  }
+ }
+}
