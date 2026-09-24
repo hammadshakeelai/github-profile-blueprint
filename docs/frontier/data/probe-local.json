@@ -1,0 +1,179 @@
+{
+ "chromium": {
+  "anim.avif": {
+   "decodes": true,
+   "animates": true
+  },
+  "anim.gif": {
+   "decodes": true,
+   "animates": true
+  },
+  "anim.png": {
+   "decodes": true,
+   "animates": true
+  },
+  "anim.webp": {
+   "decodes": true,
+   "animates": true
+  },
+  "embed-avif.svg": {
+   "decodes": true,
+   "animates": true
+  },
+  "embed-gif.svg": {
+   "decodes": true,
+   "animates": true
+  },
+  "embed-png.svg": {
+   "decodes": true,
+   "animates": true
+  },
+  "embed-webp.svg": {
+   "decodes": true,
+   "animates": true
+  },
+  "lighting-diffuse-distant.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-distant.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-moving.svg": {
+   "decodes": true,
+   "animates": true,
+   "applied": true
+  },
+  "lighting-specular-point.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-spot.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  }
+ },
+ "firefox": {
+  "anim.avif": {
+   "decodes": true,
+   "animates": true
+  },
+  "anim.gif": {
+   "decodes": true,
+   "animates": true
+  },
+  "anim.png": {
+   "decodes": true,
+   "animates": true
+  },
+  "anim.webp": {
+   "decodes": true,
+   "animates": true
+  },
+  "embed-avif.svg": {
+   "decodes": true,
+   "animates": false
+  },
+  "embed-gif.svg": {
+   "decodes": true,
+   "animates": false
+  },
+  "embed-png.svg": {
+   "decodes": true,
+   "animates": false
+  },
+  "embed-webp.svg": {
+   "decodes": true,
+   "animates": false
+  },
+  "lighting-diffuse-distant.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-distant.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-moving.svg": {
+   "decodes": true,
+   "animates": true,
+   "applied": true
+  },
+  "lighting-specular-point.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-spot.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  }
+ },
+ "webkit": {
+  "anim.avif": {
+   "decodes": false,
+   "animates": null
+  },
+  "anim.gif": {
+   "decodes": true,
+   "animates": true
+  },
+  "anim.png": {
+   "decodes": true,
+   "animates": true
+  },
+  "anim.webp": {
+   "decodes": true,
+   "animates": true
+  },
+  "embed-avif.svg": {
+   "decodes": true,
+   "animates": false
+  },
+  "embed-gif.svg": {
+   "decodes": true,
+   "animates": true
+  },
+  "embed-png.svg": {
+   "decodes": true,
+   "animates": true
+  },
+  "embed-webp.svg": {
+   "decodes": true,
+   "animates": true
+  },
+  "lighting-diffuse-distant.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-distant.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-moving.svg": {
+   "decodes": true,
+   "animates": true,
+   "applied": true
+  },
+  "lighting-specular-point.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  },
+  "lighting-specular-spot.svg": {
+   "decodes": true,
+   "animates": false,
+   "applied": true
+  }
+ }
+}
