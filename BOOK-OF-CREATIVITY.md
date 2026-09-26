@@ -1,8 +1,8 @@
 # THE BOOK OF CREATIVITY — GitHub Profile README Research, Complete
 
-> **One document to rule them all.** Every finding from the 446-profile survey, the technique catalogue, the three-engine capability matrix, the Profile README Book, the two built profiles, all AI work across every branch, 19 freshly-hunted live profiles, and 99 generators/tools with embed code — assembled by script from seven parallel research agents.
+> **One document to rule them all.** Every finding from the 446-profile survey, the technique catalogue, the three-engine capability matrix, the Profile README Book, the two built profiles, all AI work across every branch, 39 freshly-hunted live profiles in two waves, a verbatim motion-code deep-dive, and 99 generators/tools with embed code — assembled by script from nine parallel research agents.
 >
-> Assembled: 2026-09-26 · Branch: `helper/side-person_opencode` · Source parts: `opencode-research/parts/01..07-*.md` · Upstream: https://github.com/hammadshakeelai/github-profile-blueprint
+> Assembled: 2026-09-26 · Branch: `helper/side-person_opencode` · Source parts: `opencode-research/parts/01..09-*.md` · Upstream: https://github.com/hammadshakeelai/github-profile-blueprint
 
 ## Table of Contents
 
@@ -13,6 +13,8 @@
 - [Part 05 — All AI Work Across Every Branch (archive/v1, research/claude, antigravity, v2/research, probe/cache)](#part-05-all-ai-work-across-every-branch-archivev1-researchclaude-antigravity-v2research-probecache) — `05-claude-branches.md` (35.4 KB)
 - [Part 06 — Fresh External Research: Standout Profile READMEs Found Live (2026)](#part-06-fresh-external-research-standout-profile-readmes-found-live-2026) — `06-external-profiles.md` (46.7 KB)
 - [Part 07 — The Generator & Toolkit Ecosystem (embed code, alive/dead status)](#part-07-the-generator-toolkit-ecosystem-embed-code-alivedead-status) — `07-tools-generators-creativity.md` (45.2 KB)
+- [Part 08 — Fresh External Research, Wave 2: Motion-First Standout Profiles (2026)](#part-08-fresh-external-research-wave-2-motion-first-standout-profiles-2026) — `08-external-profiles-wave2.md` (49.6 KB)
+- [Part 09 — Motion Deep-Dive: Real Animation Code That Runs in GitHub READMEs](#part-09-motion-deep-dive-real-animation-code-that-runs-in-github-readmes) — `09-motion-deep-dive.md` (52.4 KB)
 
 ---
 
@@ -6195,6 +6197,1779 @@ humans don't clobber it:
 
 *Probed 2026-09-26 against the endpoints listed; survey figures from
 `docs/survey/GENERATORS.md`, `docs/survey/TOOLS.md`, `docs/survey/FINDINGS.md`.*
+
+---
+
+# Part 08 — Fresh External Research, Wave 2: Motion-First Standout Profiles (2026)
+
+**Research date:** 2026-09-26
+**Method:** Every profile below was fetched live during this session from `raw.githubusercontent.com/<user>/<user>/<branch>/README.md`, probing `main` first and falling back to `master` (two profiles here live on `master`). All code blocks are verbatim from those raw files — not from memory, not from screenshots. Each username was checked against the dedupe lists before inclusion.
+
+**Scope note:** 20 new profiles, all confirmed absent from both dedupe sources. Ratings are out of 5 and are argued across craft, motion, originality, and phone impact — with an explicit bias toward motion-first work (kinetic typography, isometric/generative art, animated terminals, pixel art, blueprint/technical layouts, SMIL/CSS animation) over plain stat cards.
+
+**Already covered — do not re-cover:**
+
+- `docs/survey/SHORTLIST.md`: ayxn07, ashfordeOU, JGit705, JConfessor, SergiGTAr, brandon-fryslie, marcizhu, 10ishk, SimarBhatiaSB7, adamalston, XxMasterepicxX, Dhyanesh006, getaudra, sepahead, atiketmunna, erogluyusuf, codeSTACKr, BrunnerLivio, nihalsheikh, JackLuciano, plus template family (umang-eng, harkirat-data, aniketpitre).
+- `opencode-research/parts/06-external-profiles.md` (wave 1): tholman, ethomson, trueberryless, platane, Andrew6rant, chef0111, RayhanADev, JasonEtco, warengonzaga, sw-yx, nikolalsvk, Carol42, KasRoudra, eagleanurag, nilutpolkashyap, onemohrtime, PrincessAkira, 8bithemant, seuthootDev.
+- Dropped from candidate mining as already-known or not profiles: DenverCoder1, peterthehan, simonw, halfrost, spiderpig86, khalby786, Ileriayo, and the template/tool authors below.
+
+**Important filter applied:** many search hits are *tools or templates* rather than profile READMEs (terminal-generators, banner-APIs, stats services). A tool only counts here if the author's own `USER/USER` profile demonstrably uses the thing it made — that self-hosting test is what separates a standout profile from a landing page.
+
+---
+
+## Index
+
+| # | Profile | Category | Rating | Why it made the cut |
+|---|---------|----------|--------|---------------------|
+| 1 | [t1seo](https://github.com/t1seo) | 3D / generative-art | 4.5/5 | A walkable 3D calendar village grown from your contributions, with WASD navigation and day/night SVGs |
+| 2 | [williamzujkowski](https://github.com/williamzujkowski) | terminal-style / generated SVG | 4.5/5 | Self-built `svg-terminal` renders a *living* scrolling terminal, 20 daily themes, proper reduced-motion fallback |
+| 3 | [lennystepn-hue](https://github.com/lennystepn-hue) | pixel-art / arcade | 4/5 | Whole profile is arcade attract-mode art, nightly regenerated from `profile.config.json`, drawn from a hand-built 5×7 font |
+| 4 | [okturan](https://github.com/okturan) | generative-art / game | 4/5 | Tower-defense battle animated *over* the contribution graph — big commit days are towers firing at bugs |
+| 5 | [ryanpolasky](https://github.com/ryanpolasky) | code-editor theme | 4/5 | Entire profile as one VS Code window: header, about, skills, stats, status bar — all as local SVGs |
+| 6 | [prsdx](https://github.com/prsdx) | pixel pet / kinetic | 4/5 | Author of YourTomo: a pixel cat reacting to real activity plus an isometric cat-city contribution map |
+| 7 | [WJZ-P](https://github.com/WJZ-P) | isometric / bilingual | 4/5 | CommitCraft Minecraft-style isometric stat banners and a whole contribution map, self-hosted on a Worker |
+| 8 | [Luc0-0](https://github.com/Luc0-0) | terminal / blueprint | 4/5 | `whoami`-style code block, hand-made SVG cursor "still typing…", custom SVG buttons, live systems status card |
+| 9 | [VARDHAMANPATEL23](https://github.com/VARDHAMANPATEL23) | arcade / structured | 4/5 | Git Invaders (Space Invaders) contribution graph as hero; Python "SYSTEM IDENTITY" dict; numbered project sections |
+| 10 | [GermanAndresLopez](https://github.com/GermanAndresLopez) | terminal + generated SVG | 4/5 | Own animated-stats terminal (`whoami → neofetch → languages → uptime → exit`), self-owned banner/stack SVGs, snake |
+| 11 | [BerkaySevinc](https://github.com/BerkaySevinc) | fully-generated SVG set | 3.5/5 | Every band — header, typing, divider, stats, langs, footer — is a self-owned SVG, wrapped in `PROFILE:START/END` |
+| 12 | [viochris](https://github.com/viochris) | ASCII portrait / motion stack | 3.5/5 | Responsive 4-way `ascii-portrait` SVG (desktop/mobile × dark/light) plus snake, 3D isometric, isocalendar |
+| 13 | [OstinUA](https://github.com/OstinUA) | animated GIF / card tooling | 3.5/5 | Owns the readme-SVG tool org; animated ASCII GIF, CSS donut, bengo cards, 8-bit footer GIF |
+| 14 | [Christophe1997](https://github.com/Christophe1997) | generative / data-story | 3.5/5 | Commit-history.com embed + own "Token Profile" card tracking AI token spend as a profile artifact |
+| 15 | [abir2afridi](https://github.com/abir2afridi) | animated banner / collage | 3/5 | Own `github-animatedbanner` API in the hero, icon8 GIF section headers, skillicons, waving footer |
+| 16 | [m3hrab](https://github.com/m3hrab) | generative-art / constellation | 3/5 | Contribution year drawn as a star constellation — brightness = intensity, lines = streaks |
+| 17 | [saroo98](https://github.com/saroo98) | hero SVG / typographic | 3/5 | Self-owned `saro-hero.svg` + `saro-divider.svg`, quad-line typing SVG, deliberately curated GIF accents |
+| 18 | [DhanushNehru](https://github.com/DhanushNehru) | animated dividers / kinetic | 3/5 | Own ScribeSVG typing render; animated divider GIF used as the profile's only section separator, six times |
+| 19 | [Spectrewolf8](https://github.com/Spectrewolf8) | isometric | 3/5 | Self-deployed isometric 3D contribution graph (~160 users) as the hero — eat-your-own-dogfood tooling |
+| 20 | [NissonCX](https://github.com/NissonCX) | capsule-render / bilingual | 2.5/5 | Borderline: localized (zh) profile with fading capsule header and GIF table — kinetic type but little originality |
+
+**Category coverage:** 3D/generative (1, 4, 16), terminal (2, 8, 10), pixel/arcade (3, 6, 9), isometric (7, 19), code-editor (5), fully-generated SVG sets (10, 11), ASCII/portrait (12), card tooling (13, 14), banner APIs (15), typographic (17), divider motion (18), capsule-render (20).
+
+---
+
+## 1. t1seo — A walkable 3D calendar village grown from your contributions — **4.5/5**
+
+- Profile: https://github.com/t1seo
+- Raw README: https://raw.githubusercontent.com/t1seo/t1seo/main/README.md
+
+**What it is:** The hero is an SVG "sky village" generated from the author's GitHub contribution history across four seasons, served light/dark via `<picture>`. Clicking it opens a real 3D tour of the *same* village (WASD to walk, Q/E to turn, drag to look), seeded from a checked-in `maeul-in-the-sky.snapshot.json`. There's a "SVG studio" to customize it, and an archive `<details>` preserving earlier landscape and island experiments. This is the most ambitious contribution-graph reinterpretation in either wave — it treats your commit history as a place you can walk through.
+
+```html
+<a href="https://t1seo.github.io/maeul-in-the-sky/tour/?snapshot=https%3A%2F%2Fraw.githubusercontent.com%2Ft1seo%2Ft1seo%2Fmain%2Fmaeul-in-the-sky.snapshot.json" aria-label="Walk inside this Calendar village in 3D">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./maeul-in-the-sky-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./maeul-in-the-sky-light.svg">
+  <img src="./maeul-in-the-sky-dark.svg" alt="My animated sky village, grown from GitHub contributions across four seasons" width="100%">
+</picture>
+</a>
+```
+
+```markdown
+Click the picture to walk inside this same village in 3D. Use WASD to walk, Q/E to turn in place, and drag to look around. Click the map to jump to another part of the village.
+```
+
+```markdown
+[🚶 Walk inside this village](https://t1seo.github.io/maeul-in-the-sky/tour/?snapshot=…) · [☀️ Day](…maeul-in-the-sky-light.svg) · [🌙 Night](…maeul-in-the-sky-dark.svg) · [🌿 Customize in the SVG studio](https://t1seo.github.io/maeul-in-the-sky/)
+```
+
+**Rating 4.5/5.** Craft: the static SVG, the 3D snapshot and the day/night variants all derive from one dataset — a coherent system, not a gimmick. Motion: the *interaction* is the motion (a first-person walk), which reads brilliantly and makes the flat SVG a teaser rather than the whole show. Originality: nothing else in this survey is a navigable 3D world of your own commit calendar. Phone: the walk needs a keyboard, so mobile gets the SVG only — hence not a 5. The archived experiments in `<details>` are a bonus sign of a tinkerer's profile.
+
+**Style tags:** `3d-walkable`, `generative`, `contribution-graph-reimagined`, `day-night-variant`, `picture-responsive`, `snapshot-json`, `self-built-tooling`
+
+---
+
+## 2. williamzujkowski — A living animated terminal with live data and 20 rotating themes — **4.5/5**
+
+- Profile: https://github.com/williamzujkowski
+- Raw README: https://raw.githubusercontent.com/williamzujkowski/williamzujkowski/main/README.md
+
+**What it is:** The hero is `./src/terminal.svg` — a scrolling terminal animation built by the author's own `svg-terminal` generator (48 blocks, zero runtime deps). It refreshes every 6 hours with live weather, live GitHub stats, language breakdown and a rotating dad joke, and rotates its theme daily through 20 OKLCH/WCAG-AAA palettes. A `terminal-static.svg` is served *only* under `prefers-reduced-motion: reduce` — a textbook accessibility pattern almost nobody implements. The page below mixes a /now-style link row, a blog list between `BLOG-POST-LIST` markers, and a clean project table.
+
+```html
+<picture>
+  <source srcset="./src/terminal-static.svg" media="(prefers-reduced-motion: reduce)">
+  <img src="./src/terminal.svg" alt="Animated terminal showing William's GitHub profile — security engineer, multi-agent AI builder, homelabber, dad-joke connoisseur" width="100%">
+</picture>
+```
+
+```html
+<em>This terminal is <strong>alive</strong> — a scrolling session that refreshes every 6 hours with live weather, live GitHub stats + language breakdown, and a rotating dad joke. The theme rotates daily through 20 palettes.
+<br>Built with <a href="https://github.com/williamzujkowski/svg-terminal">svg-terminal</a> (48 blocks, zero runtime deps). Set <code>prefers-reduced-motion</code> and you get the static version automatically.</em>
+```
+
+```markdown
+<!-- BLOG-POST-LIST:START -->
+- [Two Processes, One Page Cache: Testing Shared State Before Blaming the VM](…)
+…
+<!-- BLOG-POST-LIST:END -->
+```
+
+**Rating 4.5/5.** Craft: a purpose-built SVG terminal generator with deterministic CI builds and AA-rated palettes — engineering-grade. Motion: constant, but content-bearing (live data scrolls in), not decoration. Originality: dogfooded tooling plus the reduced-motion twin is rare. Phone: an SVG terminal scales to full width and stays legible. Loses half a point only because the surrounding prose is conventional and the hero is one big raster-ish block.
+
+**Style tags:** `animated-terminal`, `self-built-generator`, `live-data-refresh`, `20-theme-rotation`, `reduced-motion-fallback`, `dogfooding`, `oklch`
+
+---
+
+## 3. lennystepn-hue — Arcade attract-mode pixel art, regenerated nightly from config — **4/5**
+
+- Profile: https://github.com/lennystepn-hue
+- Raw README: https://raw.githubusercontent.com/lennystepn-hue/lennystepn-hue/main/README.md
+
+**What it is:** The entire profile is generated from `profile.config.json` by a nightly GitHub Action into hand-drawn pixel SVGs: `hero.svg`, `player.svg` (a level/score card), `stack.svg` (a "Loadout"), `select.svg` (a project select screen), `grid.svg`, `footer.svg`. The copy commits to the bit — a `**▶ PLAY**` project row, "Attract mode", a footer crediting a reusable `attract-mode` template, and an honest colophon: the art is drawn pixel by pixel from a hand-built 5×7 font with no image editor involved.
+
+```html
+<!--
+  This file is generated. Edit profile.config.json (or scripts/) and run
+  `npm run build`. Hand edits here are overwritten by the nightly workflow.
+  See SETUP.md to use this as a template for your own profile.
+-->
+```
+
+```html
+<img src="assets/player.svg" alt="Player card: level 23, score 1456, active on 76 days in the last year" width="900">
+```
+
+```markdown
+**▶ PLAY** &nbsp;&nbsp; [`schichtplaner`](…) · [`openclippy`](…) · [`butlr-openclaw-platform`](…) · [`clawshield`](…) · [`inkpreview`](…) · [`agentcheck`](…)
+```
+
+```html
+<sub>Every number above is real, and re-rendered from the GitHub API each night by a
+workflow in this repository. The artwork is drawn pixel by pixel from a hand-built
+5×7 font, with no image editor involved.</sub>
+```
+
+**Rating 4/5.** Craft: the 5×7 font pipeline and config-driven regeneration are genuinely built, and the alt text carries the data for screen readers and no-JS. Motion: "attract mode" is an *aesthetic* of motion (arcade idling) rather than literal animation — the SVGs are static but read as a paused game screen. Originality: high; the arcade metaphor is carried through copy, layout and file names. Phone: full-width SVGs, excellent. Loses a point because the actual pixels don't move.
+
+**Style tags:** `pixel-art`, `arcade-attract-mode`, `config-generated`, `nightly-action`, `hand-built-font`, `template-reusable`, `alt-text-rich`
+
+---
+
+## 4. okturan — Tower-defense battle animated over your contribution graph — **4/5**
+
+- Profile: https://github.com/okturan
+- Raw README: https://raw.githubusercontent.com/okturan/okturan/main/README.md
+
+**What it is:** Okan's own `github-blocks` tool turns public GitHub data into contribution-graph art. The centerpiece is `lane-defense.svg`: a tower-defense game staged on the contribution graph where big commit days are towers firing lasers at invading bugs, regenerated daily, dark/light aware. Around it: generated `profile-stats.svg`/`profile-languages.svg`, `profile-facts.svg` ("500 indexed public default-branch non-merge commits"), and anime cards from a MyAnimeList workflow. Text is plain but precise — DirWiz, CropSize, TinyVoice, Foljapp, claude-statusblocks, epoch-td.
+
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/okturan/okturan/output/lane-defense.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/okturan/okturan/output/lane-defense-light.svg">
+  <img alt="Tower defense battle animated over Okan's contribution graph: big commit days are towers firing lasers at invading bugs; a fresh battle is generated daily" src="https://raw.githubusercontent.com/okturan/okturan/output/lane-defense.svg">
+</picture>
+```
+
+```markdown
+**[github-blocks](https://github.com/okturan/github-blocks)** — An SVG generator that turns public GitHub data into contribution graph art and profile cards. The cards on this profile come from it.
+```
+
+```html
+<img alt="Recent public coding habits from 500 indexed public default-branch non-merge commits" src="https://raw.githubusercontent.com/okturan/okturan/output/profile-facts.svg">
+```
+
+**Rating 4/5.** Craft: everything visual is generated by the author's own tool — complete dogfooding loop. Motion: the battle is animated and *data-driven* (your commits decide the towers), which is the best kind of profile animation. Originality: lane-defense-over-contributions is a first in this survey. Phone: full-width SVG, dark/light handled. Loses on prose: the profile's text is competent but flat, and the anime cards add requests without much payoff.
+
+**Style tags:** `generative`, `game-over-data`, `contribution-graph-reimagined`, `dark-light-variant`, `self-hosted-output-branch`, `dogfooding`, `daily-regeneration`
+
+---
+
+## 5. ryanpolasky — The whole profile as one VS Code window — **4/5**
+
+- Profile: https://github.com/ryanpolasky
+- Raw README: https://raw.githubusercontent.com/ryanpolasky/ryanpolasky/main/README.md
+
+**What it is:** Five full-width images and one service call compose a single editor window: `header.svg` (title bar), `about.svg`, `skills.svg`, a stats render from the author's own RyMe.md service (`ryme.md/api/render/code-github-stats`), and `footer.svg` as the status bar. There is literally no prose in the README — the design *is* the content. Code-editor skeuomorphism executed end-to-end.
+
+```html
+<img src="https://raw.githubusercontent.com/ryanpolasky/ryanpolasky/main/header.svg" width="100%" alt="Code Editor">
+
+<img src="https://raw.githubusercontent.com/ryanpolasky/ryanpolasky/main/about.svg" width="100%" alt="Code Markdown">
+
+<img src="https://raw.githubusercontent.com/ryanpolasky/ryanpolasky/main/skills.svg" width="100%" alt="Code Stack">
+
+<img src="https://ryme.md/api/render/code-github-stats?u=ryanpolasky&bg=1e1e1e&fg=d4d4d4&accent=569cd6&muted=6a737d&loop=0" width="100%" alt="Code GitHub">
+
+<img src="https://raw.githubusercontent.com/ryanpolasky/ryanpolasky/main/footer.svg" width="100%" alt="Code Status Bar">
+```
+
+**Rating 4/5.** Craft: the VS Code theme is consistent across five assets — borders, accents (`#569cd6`), muted greys all match. Motion: the stats endpoint carries `loop=0`, so there *is* animation capability in the service, though the window itself is static. Originality: editor-window profiles exist, but composing it entirely from self-hosted SVGs with a status-bar footer is disciplined. Phone: five stacked full-width images are safe. Loses for having zero accessible text and zero links — beautiful but a dead end for crawlers and screen readers.
+
+**Style tags:** `code-editor-skeuomorphism`, `vscode-theme`, `svg-suite`, `self-hosted-service`, `zero-prose`, `status-bar-footer`
+
+---
+
+## 6. prsdx — YourTomo's pixel cat and an isometric cat-city contribution map — **4/5**
+
+- Profile: https://github.com/prsdx
+- Raw README: https://raw.githubusercontent.com/prsdx/prsdx/main/README.md
+
+**What it is:** The author of the YourTomo GitHub Action uses his own product twice: `dist/pet.svg` is "neko", a pixel cat that reacts to real GitHub activity (dark/light variants), and `dist/isocat.svg` renders his contribution year as an isometric city with a kitty hopping along the weekly peaks, regenerated every 6 hours. Between them: a rotating quote typing-SVG and standard generated stats. The closing line owns the whole conceit honestly.
+
+```html
+<img alt="neko - a pixel cat that reacts to my real GitHub activity" src="https://raw.githubusercontent.com/prsdx/prsdx/main/dist/pet.svg" width="100%">
+```
+
+```markdown
+- 🐙 Author of **YourTomo** — an open-source **GitHub Action** (TypeScript · Bun); the pixel cat on this very profile
+```
+
+```html
+<img alt="my real contribution year as an isometric city with a kitty hopping along the weekly peaks - regenerated every 6h" src="https://raw.githubusercontent.com/prsdx/prsdx/main/dist/isocat.svg" width="100%">
+```
+
+```markdown
+*the cat above is **neko** — both visuals are powered by [YourTomo](https://github.com/prsdx/YourTomo), a zero-dependency state machine I built that renders my real activity to animated SVG every 6h. if neko is grumpy, that is on me.*
+```
+
+**Rating 4/5.** Craft: two distinct art directions (pixel pet, isometric city) from one state machine; dark/light handled everywhere. Motion: animated SVG driven by real activity — the cat literally reflects your week. Originality: pet-as-API is a known idea; pet *plus* isometric-cat-city is not. Phone: both full-width. Loses for the massive badge wall (a full screen of shields before content) and the quote ticker's novelty wearing thin.
+
+**Style tags:** `pixel-pet`, `isometric`, `activity-driven-svg`, `dark-light-variant`, `dogfooding`, `6h-regeneration`, `kinetic-quote`
+
+---
+
+## 7. WJZ-P — CommitCraft: Minecraft-style isometric stat banners and a contribution map — **4/5**
+
+- Profile: https://github.com/WJZ-P
+- Raw README: https://raw.githubusercontent.com/WJZ-P/WJZ-P/main/README.md (bilingual, links `README.en.md`)
+
+**What it is:** Everything visual comes from the author's own CommitCraft service on a Cloudflare Worker: seven isometric Minecraft-style stat banners (commits, stars, PRs, issues, followers, repos, merged PRs), a "Player Passport" card, per-repo isometric cards, and a full-width `api/map/wjz-p.svg` contribution map described as turning the heatmap into a "Minecraft 风格的等距像素世界" (Minecraft-style isometric pixel world). The page opens with a capsule-render header and a moe-counter, and carries an openly personal, bilingual voice — including a wistful Chinese New Year comment hidden in an HTML comment.
+
+```html
+<a href="https://commit-craft.wjz-p.workers.dev/"><img src="https://commit-craft.wjz-p.workers.dev/api/banner/wjz-p/commits.svg" alt="Commits" height="300" /></a>
+<a href="https://commit-craft.wjz-p.workers.dev/"><img src="https://commit-craft.wjz-p.workers.dev/api/banner/wjz-p/stars.svg" alt="Stars" height="300" /></a>
+… (prs / issues / followers / repos / merged)
+```
+
+```html
+<a href="https://commit-craft.wjz-p.workers.dev/">
+  <img src="https://commit-craft.wjz-p.workers.dev/api/map/wjz-p.svg" alt="CommitCraft Contribution Map" width="100%" />
+</a>
+```
+
+```markdown
+<em>由 <a href="https://github.com/WJZ-P/CommitCraft">CommitCraft</a> 生成 —— 将你的 GitHub 贡献热力图变成 Minecraft 风格的等距像素世界 🌍</em>
+```
+
+**Rating 4/5.** Craft: an entire self-hosted isometric asset family, consistently themed. Motion: the banners animate (they're generated SVG loops) and the map is the payoff. Originality: Minecraft-isometric-as-a-stat-language, plus bilingual warmth most profiles lack. Phone: banners at `height=300` stack fine. Loses for the broken-ish quoted `<div>` stats block near the bottom and general section sprawl.
+
+**Style tags:** `isometric`, `minecraft-pixel`, `self-hosted-api`, `contribution-map`, `bilingual-cn-en`, `moe-counter`, `capsule-render`
+
+---
+
+## 8. Luc0-0 — Terminal `whoami`, hand-made SVG cursor, live systems card — **4/5**
+
+- Profile: https://github.com/Luc0-0
+- Raw README: https://raw.githubusercontent.com/Luc0-0/Luc0-0/main/README.md
+
+**What it is:** A two-column profile: left is a fenced `user/role/stack/status` block, a hand-authored `./header/blink_cursor.svg` blinking cursor with "still typing…", bio, and custom SVG buttons (`portfolio.svg`, `linkedin.svg`, `email.svg`); right is a point-cloud `hero.png` portrait. Below: signature-project cards as custom SVGs (including **GodProfile**, the author's own MCP server that turns markdown into live profile pages), an `OSS_ORGS` marker block, `live_systems.svg` showing real uptime/latency of three services, a contribution snake, and a `LAST_UPDATED` marker. Every asset is self-owned under `./header/`.
+
+```html
+```
+ user   : nipun sujesh
+ role   : ai/ml engineer · full-stack developer
+ stack  : python · pytorch · react · typescript
+ status : building in public
+```
+
+<img src="./header/blink_cursor.svg" width="9" height="13" alt="animated cursor" /> <sub>still typing…</sub>
+```
+
+```html
+<img src="./header/live_systems.svg" height="148" alt="Live status of Serenity, Pragati, and Uni-Verse — pinged daily, real uptime and latency" />
+```
+
+```html
+<img src="./header/building_uniVerse.svg" alt="Currently building: Uni-Verse — honest, on-the-record platform for college life, built with Next.js and Supabase. Waitlist now open at uni-verse.co.in" width="100%" />
+```
+
+**Rating 4/5.** Craft: unusually coherent — one accent color (`#CC4631`) on near-black (`#0d0d0d`) across badges, cards, buttons. Motion: the blinking cursor and live systems card are small but *meaningful* motion. Originality: the point-cloud portrait plus a real `whoami` block is a strong blueprint-flavored combination; GodProfile being dogfooded here matters. Phone: the 52/48 two-column table degrades acceptably. Loses a point for relying on images where text would do.
+
+**Style tags:** `terminal-whoami`, `blueprint-technical`, `hand-made-svg-cursor`, `custom-svg-buttons`, `live-status-card`, `contribution-snake`, `marker-comments`
+
+---
+
+## 9. VARDHAMANPATEL23 — Git Invaders hero + Python SYSTEM IDENTITY — **4/5**
+
+- Profile: https://github.com/VARDHAMANPATEL23
+- Raw README: https://raw.githubusercontent.com/VARDHAMANPATEL23/VARDHAMANPATEL23/main/README.md
+
+**What it is:** A rigorously sectioned profile: boxed `╔═╗`-style comment dividers, a self-owned `assets/header.svg`/`footer.svg`, a typing-SVG line, then `◈ SYSTEM IDENTITY` as a literal Python dict, `◈ ACTIVE PROJECTS [4 DEPLOYED]` with numbered `PROJECT 01 — …` entries, and the hero flourish: a Git Invaders (Space Invaders) contribution graph rendered from an `output` branch. Commented-out stats blocks show deliberate restraint.
+
+```python
+vardhaman = {
+    "location"   : "India 🇮🇳",
+    "timezone"   : "UTC +05:30",
+    "interests"  : ["IoT", "Computer Vision", "Linux Systems", "AI/ML", "Automation"],
+    "current"    : "Building things that blur the line between software and hardware",
+    "philosophy" : "If it runs on Linux, I'll hack it."
+}
+```
+
+```markdown
+### ◈ &nbsp;ACTIVE PROJECTS &nbsp;`[4 DEPLOYED]`
+```
+
+```html
+<img width="100%" src="https://raw.githubusercontent.com/VARDHAMANPATEL23/VARDHAMANPATEL23/refs/heads/output/git-invader-orange-dark.svg" alt="Git Invaders contribution graph" />
+```
+
+**Rating 4/5.** Craft: the section system (◈ + boxed comments + numbered projects) is disciplined and reusable. Motion: Git Invaders animates — a literal game over your graph — plus the typing SVG. Originality: the Python dict and `[4 DEPLOYED]` chrome give it a blueprint/schematic voice that stands out. Phone: full-width hero, clean stacks. Loses for a lot of badge noise inside each project block and the header/footer SVGs being the only place the purple theme lives.
+
+**Style tags:** `arcade`, `contribution-graph-reimagined`, `python-dict-bio`, `sectioned-blueprint`, `numbered-projects`, `output-branch-render`, `boxed-comments`
+
+---
+
+## 10. GermanAndresLopez — Animated stats terminal + self-owned SVG banner system — **4/5**
+
+- Profile: https://github.com/GermanAndresLopez
+- Raw README: https://raw.githubusercontent.com/GermanAndresLopez/GermanAndresLopez/main/README.md
+
+**What it is:** A tight, dark/blue (`#007AFF`) profile: `assets/banner.svg` hero, a `terminal-readme-github-stats` embed whose commands literally script a session (`whoami → neofetch → languages → uptime → exit`) at `typingSpeed=80` with `art=photo`, a typing SVG, `assets/stack.svg`, standard stats cards, and a dark/light contribution snake. The author owns the banner and stack SVGs locally.
+
+```html
+<img src="https://terminal-readme-github-stats.vercel.app/api/stats?username=GermanAndresLopez&theme=material&headerStyle=mac&art=photo&typingSpeed=80&hostname=github.com&commands=whoami%2Cneofetch%2Clanguages%2Cuptime%2Cexit" alt="GitHub Stats Terminal" />
+```
+
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GermanAndresLopez/GermanAndresLopez/output/github-contribution-grid-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/GermanAndresLopez/GermanAndresLopez/output/github-contribution-grid-snake.svg" alt="Contribution snake animation" />
+</picture>
+```
+
+```markdown
+### 🚀 Featured Projects
+*A few things I've built.*
+```
+
+**Rating 4/5.** Craft: cohesive single-accent system, self-owned SVGs, snake with dark/light handling. Motion: the scripted terminal session is genuinely kinetic and tells a mini-story (a real command sequence). Originality: the command-script parameter is the interesting bit — most people paste one default URL. Phone: terminal embed scales well. Loses a point because the rest (badge row, stats trio, markdown project table) is standard 2024-profile fare.
+
+**Style tags:** `animated-terminal`, `scripted-commands`, `self-owned-svg`, `snake-dark-light`, `single-accent`, `typing-svg`
+
+---
+
+## 11. BerkaySevinc — Every band is a self-generated SVG — **3.5/5**
+
+- Profile: https://github.com/BerkaySevinc
+- Raw README: https://raw.githubusercontent.com/BerkaySevinc/BerkaySevinc/main/README.md
+
+**What it is:** The README is nearly pure markup orchestration: `assets/header.svg`, `typing.svg`, `divider.svg` (used five times as the only separator), `stats.svg`, `langs.svg`, labeled badge groups, `contribution-snake.svg`, `footer.svg` — all self-owned — wrapped in `<!-- PROFILE:START -->` / `<!-- PROFILE:END -->` markers for programmatic updates. Zero prose; the assets carry everything.
+
+```html
+<!-- PROFILE:START -->
+<img src="assets/header.svg" width="100%"/>
+<img src="assets/typing.svg" width="100%"/>
+<img src="assets/divider.svg" width="100%"/>
+…
+<img src="assets/contribution-snake.svg" width="100%"/>
+<img src="assets/footer.svg" width="100%"/>
+<!-- PROFILE:END -->
+```
+
+```html
+<div align="center">
+  <img src="assets/labels/lang.svg"/><br>
+  <img src="assets/badges/csharp.svg">
+  <img src="assets/badges/javascript.svg">
+  …
+</div>
+```
+
+**Rating 3.5/5.** Craft: impressive that *everything* is a local SVG — no third-party stat hosts at all — and the `PROFILE` markers signal a build pipeline. Motion: typing SVG + snake give it movement. Originality: moderate; it's a well-executed "SVG-only" discipline rather than a new idea. Phone: perfect full-width stacking. Loses for zero text: like ryanpolasky, it's invisible to search, screen readers and anyone who blocks images.
+
+**Style tags:** `fully-generated-svg`, `svg-only`, `divider-motif`, `profile-markers`, `no-third-party-hosts`, `badge-labels`
+
+---
+
+## 12. viochris — Responsive 4-way ASCII portrait + a full motion stack — **3.5/5**
+
+- Profile: https://github.com/viochris
+- Raw README: https://raw.githubusercontent.com/viochris/viochris/main/README.md
+
+**What it is:** Standard capsule-render/typing-SVG furniture at the top, but the standout is a hand-managed `ascii-portrait/agent-console-*.svg` served through **four** `<picture>` sources — `(min-width: 769px)` × dark/light and `(max-width: 768px)` × dark/light — an ASCII console portrait that adapts to both viewport and theme. Then it stacks an unusually deep motion toolbox: contribution snake, `profile-3d-contrib` isometric (dark rainbow / light green), a `metrics.plugin.isocalendar.svg`, activity graph, and trophies. The body is a very long structured project catalogue.
+
+```html
+<picture>
+  <source media="(min-width: 769px) and (prefers-color-scheme: dark)" srcset="…/agent-console-ffa7a121-dark.svg">
+  <source media="(min-width: 769px) and (prefers-color-scheme: light)" srcset="…/agent-console-ffa7a121-light.svg">
+  <source media="(max-width: 768px) and (prefers-color-scheme: dark)" srcset="…/agent-console-ffa7a121-mobile-dark.svg">
+  <source media="(max-width: 768px) and (prefers-color-scheme: light)" srcset="…/agent-console-ffa7a121-mobile-light.svg">
+  <img src="…/agent-console-ffa7a121-light.svg" alt="ASCII Portrait Animation" width="100%">
+</picture>
+```
+
+```html
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Hi%20there,%20I'm%20Vio!%20👋&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35" width="100%"/>
+```
+
+**Rating 3.5/5.** Craft: the 4-way responsive portrait is the most technically considered `<picture>` usage in this wave. Motion: capsule `fadeIn`, typing, snake, 3D isometric, isocalendar — a lot, if fairly stock. Originality: the ASCII portrait is the only bespoke asset; everything else is popular off-the-shelf. Phone: the responsive portrait proves the point. Loses on bloat — the README is enormous (50+ project rows, WakaTime dumps) and dilutes the motion.
+
+**Style tags:** `ascii-portrait`, `responsive-picture-4way`, `capsule-render-fadein`, `motion-stack`, `snake`, `3d-isometric`, `isocalendar`, `long-form`
+
+---
+
+## 13. OstinUA — Animated GIFs from the author's own readme-SVG tool org — **3.5/5**
+
+- Profile: https://github.com/OstinUA
+- Raw README: https://raw.githubusercontent.com/OstinUA/OstinUA/main/README.md
+
+**What it is:** Ostin maintains the `readme-SVG` org (ascii-text-generator, typing-generator, custom-badge-generator, wave-divider-generator, profile-bengo, Issues-heroes-badge) and wires its outputs into his own profile: an animated ASCII GIF hero, a commented-out CSS donut SVG, linked badge generators, an `issues-heroes-badge` live card, two "bengo" game-style cards, a project table, and an 8-bit footer GIF. Layout is a two-column `<table>` with capsule-render rules under headings.
+
+```html
+<a href="https://github.com/readme-SVG/ascii-text-generator">
+  <img src="https://raw.githubusercontent.com/OstinUA/Image-storage/main/readme/OstinUA_github_readme_v7.gif"/>
+</a>
+```
+
+```html
+<a href="https://github.com/readme-SVG/readme-SVG-profile-bengo">
+  <img src="https://readme-svg-profile-bengo.vercel.app/api/card?user=OstinUA&badge=1" width="495" alt="GitHub Stats"/>
+</a>
+```
+
+```html
+[![OstinUA 8bit](https://raw.githubusercontent.com/OstinUA/Image-storage/main/readme/OstinUA_8bit.gif)](https://github.com/OstinUA)
+```
+
+**Rating 3.5/5.** Craft: consistent `#3e80ed` accent, tools genuinely his own, GIFs self-hosted in an `Image-storage` repo. Motion: several animated GIFs plus live card endpoints. Originality: the bengo cards and the sheer number of *working* generator tools are notable, but the composition still reads as badge-collage. Phone: tables and full-width GIFs hold up. Loses for sprawl and commented-out dead code left in the source.
+
+**Style tags:** `animated-gif`, `self-built-tooling`, `ascii-text`, `card-generators`, `capsule-rules`, `8bit-footer`, `badge-collage`
+
+---
+
+## 14. Christophe1997 — Token Profile: your AI spend as a profile artifact — **3.5/5**
+
+- Profile: https://github.com/Christophe1997
+- Raw README: https://raw.githubusercontent.com/Christophe1997/Christophe1997/main/README.md
+
+**What it is:** Minimal: a commit-history.com embed (dark/light aware) plus the author's own **token-profile** — a `<details>` block whose summary is a live financial statement about his AI usage ("Tokens: 1.3B (-69%) Cost: $455.01 (-66%) Streak: 4 days") with a generated `card-light/dark.svg` underneath. It's a 2026-native idea: treating LLM consumption as a first-class, self-tracked public metric, like a streak graph but for token burn.
+
+```html
+<details open>
+<summary>Token Profile — Tokens: 1.3B (-69%)   Cost: $455.01 (-66%)   Streak: 4 days</summary>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset=".token-profile/card-dark.svg"><img src=".token-profile/card-light.svg" alt="Token Profile — last 30 days. Tokens: 1.3B (-69%)   Cost: $455.01 (-66%). Streak: 4 days." width="100%"></picture>
+
+Generated by [token-profile](https://github.com/Christophe1997/token-profile)
+
+</details>
+```
+
+```html
+<a href="https://commit-history.com/Christophe1997">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://commit-history.com/embed/Christophe1997?theme=dark" />
+    <img alt="Christophe1997's commit history" src="https://commit-history.com/embed/Christophe1997" />
+  </picture>
+</a>
+```
+
+**Rating 3.5/5.** Craft: tidy, self-generated, marker-delimited (`token-profile:start/end`). Motion: commit-history's embed animates; the card is static. Originality: the *token* framing is the most 2026 idea in this wave — an AI-native stat that nobody else shows. Phone: full-width, fine. Loses because the profile is only two elements; there's almost no design beyond the idea.
+
+**Style tags:** `data-story`, `ai-native-metrics`, `commit-history-embed`, `details-disclosure`, `dark-light-variant`, `self-generated`, `minimal`
+
+---
+
+## 15. abir2afridi — Own animated-banner API in the hero, GIF section headers — **3/5**
+
+- Profile: https://github.com/abir2afridi
+- Raw README: https://raw.githubusercontent.com/abir2afridi/abir2afridi/main/README.md
+
+**What it is:** The hero calls the author's own `github-animatedbanner.vercel.app` with a tuned parameter string (`preset=space&pattern=checker&text=Abir&fontSize=78&animation=fadeIn`), followed by a typing SVG, and then a dense collage: tables of about/focus/what-I-do, skillicons rows, activity graph, trophy cards, project table, and every section heading prefixed with an animated icons8 GIF (verified badge, heart balloon, services, github, layers, plant). Capsule-render waving footer. The page ends with an unusual "This repository is protected" notice.
+
+```html
+<img src="https://github-animatedbanner.vercel.app/api/banner?preset=space&pattern=checker&text=Abir&fontSize=78&animation=fadeIn&desc=Welcome+to+my+profile&descFontSize=22&descColor=%23c3ad0f"/>
+```
+
+```html
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=3F8CFF&center=true&vCenter=true&width=600&lines=Crafting+High-Performance+Android+Apps;Architecting+Scalable+Cloud+Solutions;Innovating+with+AI+and+System+Design;Turning+Complex+Problems+into+Simple+Code" alt="Typing SVG" />
+```
+
+```markdown
+### <img src="…/service/services.gif" width="35"/> **Tech Stack**
+```
+
+**Rating 3/5.** Craft: organized tables, consistent placement — but visually loud. Motion: plenty (banner animation, typing, many GIFs), though most is stock. Originality: the parameterized own-API hero is the credit; the rest is a maximalist template. Phone: tables and skillicons wrap acceptably. Loses for request weight (a dozen+ GIF endpoints) and the odd copyright/permission footer.
+
+**Style tags:** `animated-banner-api`, `gif-section-headers`, `skillicons`, `typing-svg`, `capsule-footer`, `dogfooding`, `maximalist`
+
+---
+
+## 16. m3hrab — Contribution year as a star constellation — **3/5**
+
+- Profile: https://github.com/m3hrab (README lives on `master`)
+- Raw README: https://raw.githubusercontent.com/m3hrab/m3hrab/master/README.md
+
+**What it is:** A restrained monochrome (black/white badges) profile with one bespoke piece: `constellation.svg`, which plots the year's contributions as a star map — brightness encodes commit intensity, lines connect streaks — served dark/light from an `output` branch, with a poetic caption. Above it, a dark/light-aware typing SVG inside a `<picture>` (the typing SVG itself changes text color for theme).
+
+```html
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/m3hrab/m3hrab/output/constellation-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/m3hrab/m3hrab/output/constellation.svg">
+  <img alt="A constellation map of GitHub contributions, where each star is a day and brighter stars mean more commits" src="https://raw.githubusercontent.com/m3hrab/m3hrab/output/constellation-dark.svg">
+</picture>
+
+<sub>Every star is a day of work. Brightness is intensity, lines are streaks.</sub>
+```
+
+```html
+<source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com/?…&color=FFFFFF&…&lines=Backend+Software+Engineer;Python+%C2%B7+Django+%C2%B7+FastAPI;Building+systems+that+scale+cleanly">
+<source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com/?…&color=111111&…">
+```
+
+**Rating 3/5.** Craft: the constellation generator is a genuine idea, well-captioned and theme-aware; everything else is deliberately plain. Motion: the map itself is static (it's a still star chart), the typing SVG moves. Originality: high for the single asset. Phone: perfect — it's one image. Loses because beyond the constellation there's little design system: generic badges, standard copy.
+
+**Style tags:** `generative-art`, `constellation-map`, `theme-aware-typing`, `output-branch-render`, `monochrome`, `captioned-data-art`
+
+---
+
+## 17. saroo98 — Self-owned hero and divider SVGs, quad-line typing, curated GIF accents — **3/5**
+
+- Profile: https://github.com/saroo98
+- Raw README: https://raw.githubusercontent.com/saroo98/saroo98/main/README.md
+
+**What it is:** A narrow, deliberate profile: an anime illustration beside `assets/saro-hero.svg`, a four-line typing SVG that states the practice ("Building practical software / Defensive research for real networks / Local-first tools for hard contexts / Publishing systems with memory"), and `assets/saro-divider.svg` as a repeated full-width rule between a tiny animated cat GIF and a keyboard-signature GIF. Everything visual is self-owned under `./assets/`.
+
+```html
+<img src="./assets/saro-hero.svg" width="72%" alt="Saro / saroo98 profile hero: defensive research, local tooling, and publishing systems" />
+```
+
+```html
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=21&pause=1200&color=7DD3FC&center=true&vCenter=true&width=900&lines=Building+practical+software;Defensive+research+for+real+networks;Local-first+tools+for+hard+contexts;Publishing+systems+with+memory" alt="Typing animation: Building practical software, defensive research for real networks, local-first tools for hard contexts, publishing systems with memory" />
+```
+
+```html
+<img src="./assets/saro-divider.svg" width="100%" alt="" />
+```
+
+**Rating 3/5.** Craft: the restraint is the craft — one accent (`#7DD3FC`), self-made SVGs, real alt text. Motion: typing + two small GIFs; the divider itself is static. Originality: the quad-line practice statement is a good writing move more than a visual one. Phone: clean stacking. Loses for thinness — a stats card and profile-views badge are the only other substance, and the default GitHub comment scaffold is still sitting in the file.
+
+**Style tags:** `hero-svg`, `divider-motif`, `typographic-practice-lines`, `curated-gifs`, `self-owned-assets`, `minimal`, `alt-text-rich`
+
+---
+
+## 18. DhanushNehru — ScribeSVG typing render + the animated divider as a motif — **3/5**
+
+- Profile: https://github.com/DhanushNehru (README lives on `master`)
+- Raw README: https://raw.githubusercontent.com/DhanushNehru/DhanushNehru/master/README.md
+
+**What it is:** The hero is a call to the author's own **ScribeSVG** service (a readme-typing-svg alternative): three lines of kinetic copy, center-aligned, rendered by his own app. Below, `assets/animated-divider.gif` is used *six* times as the profile's only section separator — a deliberate rhythm device. The rest is long-form: article lists between `MEDIUM-BLOG-LIST` markers, YouTube embeds between marker comments, stats, Holopin/community badges.
+
+```markdown
+[![Typing SVG](https://scribesvg.vercel.app/api/render?lines=Tech+Autodidact,+Engineer,+Programmer;Loves+to+solve+technology+problems+by+code;Likes+to+build+scalable%2C+secure+applications&font=Fira+Code&size=24&color=36bcf7&center=true&width=700&height=50)](https://github.com/DhanushNehru/ScribeSVG)
+```
+
+```html
+<picture>
+  <img src="https://github.com/DhanushNehru/DhanushNehru/blob/master/assets/animated-divider.gif" align="center"  width="100%" alt="Animated Divider Image">
+</picture>
+```
+
+**Rating 3/5.** Craft: the divider-as-only-separator is a real editorial decision; ScribeSVG is dogfooded with a credit link. Motion: typing render + always-on divider GIF — but the divider repeats so often it becomes wallpaper, and the GIF re-loads six times. Originality: moderate; ScribeSVG is a typing-SVG clone. Phone: fine, heavy. Loses for bloat (YouTube tables, article dumps) and `blob/master` image URLs that don't render as raw SVG/GIF reliably in all contexts.
+
+**Style tags:** `kinetic-typing`, `self-built-service`, `animated-divider-motif`, `marker-comments`, `long-form`, `master-branch`
+
+---
+
+## 19. Spectrewolf8 — Self-deployed isometric 3D contribution graph — **3/5**
+
+- Profile: https://github.com/Spectrewolf8
+- Raw README: https://raw.githubusercontent.com/Spectrewolf8/Spectrewolf8/main/README.md
+
+**What it is:** Almost the entire visual is one embed: `isometric-contributions-spectrewolf8.onrender.com/api/graph` — the author's own deployment of his isometric-3D-graphs project (≈160 users), rendering his year as an isometric grid with stats, dark theme, credited. The text around it is plain but characterful: he names the projects he's proud of (an RL autodriver in Unity, an ASCII video player in PyQt5, the isometric graphs themselves).
+
+```html
+<img width="700" src="https://isometric-contributions-spectrewolf8.onrender.com/api/graph?username=spectrewolf8&theme=dark&stats=true&credit=true"></img>
+```
+
+```markdown
+- ✨ You can check out some of my other ambitious projects here:
+  - [Isometric 3D GitHub Contribution Graphs](https://github.com/Spectrewolf8/GitHub-Contributions-Isometric-3D-Graphs-Embed) which now has ~160 users and growing. <sup>(the graph above was made by it)</sup>
+```
+
+**Rating 3/5.** Craft: the isometric graph is good and self-hosted (own Render instance, not the public service). Motion: the graph is a static render — pretty, not moving. Originality: moderate; isometric-contributions as a concept predates this, but deploying and crediting your own instance is the right move. Phone: `width=700` fixed attribute can overflow narrow screens. Loses for being a single image plus prose — no design system at all.
+
+**Style tags:** `isometric`, `contribution-graph-reimagined`, `self-hosted-instance`, `dogfooding`, `minimal`, `fixed-width-embed`
+
+---
+
+## 20. NissonCX — Localized capsule-render profile with GIF table — **2.5/5**
+
+- Profile: https://github.com/NissonCX
+- Raw README: https://raw.githubusercontent.com/NissonCX/NissonCX/main/README.md
+
+**What it is:** A Chinese-language (zh) student profile: a capsule-render waving header with `animation=fadeIn` reading "你好，我是 NissonCX 👋" plus a personalized `desc`, an animated Fluent-emoji laptop GIF, a two-cell `<table>` of Giphy loops (TypeScript learning / coding cat), standard shields, and a closing "保持好奇心，继续造轮子！" (Stay curious, keep building wheels) with a contact GIF.
+
+```html
+<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&customColorList=2,15,22,25,28&text=你好，我是%20NissonCX%20👋&fontSize=60&fontAlignY=40&animation=fadeIn&desc=一个热衷于技术细节的“全干”摸鱼王&descAlignY=65" alt="NissonCX Header" />
+```
+
+```markdown
+### 💡 “保持热爱，折腾不止，把每一个技术细节发掘到极致！”
+```
+
+```html
+<td width="50%"><div align="center"><img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" width="100" alt="Learning GIF"/><br/><b>TypeScript & Node.js</b>…
+```
+
+**Rating 2.5/5.** Craft: the header's gradient stops and desc positioning are tuned with care, and the voice is warm and specific (Barça, LinuxDo, a campus football run). Motion: capsule `fadeIn` plus third-party Giphy loops — all off-the-shelf. Originality: low; this is the common localized template family. Phone: fine. Loses points for hotlinked Giphy (link rot risk), heavy bilingual mismatch for non-zh readers, and no bespoke assets.
+
+**Style tags:** `capsule-render-fadein`, `bilingual-zh-en`, `giphy-gifs`, `localized-template`, `animated-emoji`
+
+---
+
+## What's new in 2026 profiles (vs. the older archetype)
+
+Comparing these 20 against the older "stats-card" archetype (and wave 1 in Part 06), several shifts are genuinely new:
+
+1. **The profile is now a build artifact, not a document.** The strongest 2026 profiles are *generated*: `profile.config.json` + nightly Action (lennystepn-hue), an `output` branch rendering SVGs on a schedule (okturan, m3hrab, VARDHAMANPATEL23, Luc0-0), `PROFILE:START/END` marker regions (BerkaySevinc, Luc0-0, Christophe1997), or config-in → SVG-out pipelines (williamzujkowski's `svg-terminal`, t1seo's snapshot JSON). "Hand-edit the README" is increasingly wrong; the README is an artifact with a source of truth behind it.
+
+2. **Dogfooding became the credibility signal.** The wave-1 pattern "I made the tool this profile uses" is now table stakes at the top: `svg-terminal` (williamzujkowski), `github-blocks` (okturan), YourTomo (prsdx), CommitCraft (WJZ-P), GodProfile (Luc0-0), ScribeSVG (DhanushNehru), RyMe.md (ryanpolasky), readme-SVG (OstinUA), the isometric-graph instance (Spectrewolf8), `attract-mode` (lennystepn-hue), token-profile (Christophe1997). A generic stats URL now reads as *less* credible than a self-hosted one.
+
+3. **Contribution graphs became scenes, not heatmaps.** Beyond wave 1's snake (platane) and Game of Life (ethomson), 2026 adds: a walkable 3D village (t1seo), a lane-defense game where commit days are towers (okturan), Space Invaders (VARDHAMANPATEL23), an isometric Minecraft world (WJZ-P), a cat hopping weekly peaks (prsdx), a star constellation (m3hrab), an isometric cat-city (prsdx again). The heatmap itself is now considered boring; the graph is a canvas for a *narrative*.
+
+4. **Motion got accessibility treatment.** The `prefers-reduced-motion` twin (williamzujkowski's `terminal-static.svg`) and viewport-aware `<picture>` sets (viochris's 4-source ASCII portrait) are new hygiene standards. Theme-awareness is now expected: nearly every bespoke SVG in this wave ships a dark *and* light variant.
+
+5. **AI-era metrics arrived.** Christophe1997's Token Profile (tokens, dollar cost, streak) is the first profile stat that couldn't have existed before LLMs — and it's framed with the same grammar as contribution streaks. Expect more "AI usage as public stat" patterns.
+
+6. **The collage is losing to the system.** The older archetype stacks shields.io badges, three stat cards, a snake and an activity graph (see abir2afridi, viochris, DhanushNehru — the wave's lower-rated entries). The wave's high scorers each pick *one* strong visual language (terminal, arcade, isometric, editor window, constellation) and hold a single accent color across every asset. Restraint, not accumulation, is what now reads as expensive.
+
+7. **Localized profiles form their own template family.** zh-language profiles (WJZ-P, NissonCX) lean on capsule-render + moe-counter + Giphy in a recognizable pattern; WJZ-P breaks out of it via CommitCraft, NissonCX does not. Same dynamics as the umang-eng/harkirat-data family in SHORTLIST.md, different culture.
+
+**Gaps / honest limitations:** Everything here was verified by raw README fetch, not by rendering — animation *quality* (frame rate, easing, whether an SVG actually loops) is inferred from source and alt text. Fixed-width embeds (Spectrewolf8's `width=700`) and 404-prone branches (profiles defaulting to `master` rather than `main`) were the two most common mobile/rot issues noticed. Several top-rated profiles (t1seo, ryanpolasky, BerkaySevinc) trade all text for images — a real accessibility and SEO cost that the ratings above call out.
+
+---
+
+# Part 09 — Motion Deep-Dive: Real Animation Code That Runs in GitHub READMEs
+
+This part is code, not opinion. Every snippet below was pulled verbatim from a **live profile
+SVG** fetched on 2026-09-26 (`raw.githubusercontent.com`) or from this repo's own verified
+examples in `docs/techniques/examples/`. Nothing here is invented; where a pattern was adapted
+into a recipe, it says so.
+
+**The ground rule** (`docs/techniques/CATALOGUE.md:17-20`): an SVG in a README is displayed as
+an image, which browsers run in *secure animated mode* — declarative animation runs; scripts,
+interaction and external resources don't. So "animation works here" means: SMIL `<animate>`,
+CSS `@keyframes` inside `<style>`, `stroke-dashoffset` drawing, masks, clip paths — all of it
+runs. JavaScript does not, and neither does anything you can touch.
+
+**How the ratings work.** Each technique gets a `/5` for *reuse value*, not beauty:
+
+| Score | Meaning |
+|---|---|
+| **5/5** | Runs in all three engines, compact, adapts without surgery |
+| **4/5** | Runs everywhere but needs tuning (file size, phone legibility, data) |
+| **3/5** | Works, but fragile — Safari caveats, illegible at 390px, or heavy |
+| **2/5** | Marginal — keep only if you can't get the effect any other way |
+
+**Source key.** Files fetched this session and cached locally carry their GitHub URL at each
+entry. Repo-internal examples (`gauge.svg`, `bars.svg`, …) are marked *repo-verified* — they
+were captured frame-by-frame in Chromium, Firefox and WebKit (`docs/CAPABILITY-MATRIX.md:11-25`).
+
+---
+
+## 1. The baseline: what may move, and what never will
+
+Before the techniques, the four hard edges every recipe below respects — all measured, not
+assumed (`docs/CAPABILITY-MATRIX.md`):
+
+| Check | Result | Line |
+|---|---|---|
+| SMIL, CSS keyframes, stroke-draw, glow, masks, typing, textPath, gauges, bars, particles, terminal | ✓ animate in Chromium, Firefox **and** WebKit | 11–25 |
+| `gradientTransform` animation | ✓ Chromium, ✓ Firefox, **WebKit: no motion** | 16 |
+| `<script>` inside the SVG | blocked in all three | 43 |
+| External `<image>` / `@import` web font | blocked in all three | 44–46 |
+| `@media (prefers-reduced-motion: reduce)` inside the SVG | **never applies** — none of the engines | 37 |
+| Anything interactive (hover, click) | impossible — "Nothing inside an SVG image is interactive" (`CATALOGUE.md:397`) | — |
+| Push → visible delay | ~5 minutes (CDN `max-age=300`); commit-pinned URL ~5s | 57 |
+
+Two of these bite in the wild. Several real profile SVGs ship
+`@media (prefers-reduced-motion: reduce)` blocks — umang-eng, ayxn, krishna, sepahead, skymly
+all do — and **on GitHub those blocks are dead weight**: the query never reaches an image-context
+SVG. Keep them anyway (they're free, and the file works correctly if you reuse it on a real
+website), but never let them be the only thing standing between a visitor and your animation.
+
+---
+
+## 2. Typewriter / typing
+
+### 2.1 TextPath length-grow typing (the `readme-typing-svg` family) — 4/5
+
+The most-copied typing effect on GitHub (`CATALOGUE.md:227` — 87 profiles via
+DenverCoder1's `readme-typing-svg`, plus hand-rolled copies). Mechanism: a `<path>` whose `d`
+grows left-to-right with SMIL, text rides it with `<textPath>`, so letters appear one at a time
+like a cursor is typing them. Multi-line versions chain the animations by ID —
+`begin="0s;d2.end"` — line 2 starts when line 3's loop ends, and the whole block repeats.
+
+Verbatim, 3-line cycle — `https://github.com/liss-bot/liss-bot/blob/main/intro.svg`:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 450 50" style="background-color: #00000000;" width="450px" height="50px">
+  <path id="path0">
+    <!-- Single line -->
+    <animate id="d0" attributeName="d" begin="0s;d2.end" dur="5000ms" fill="remove"
+             values="m0,25 h0 ; m0,25 h450 ; m0,25 h450 ; m0,25 h0"
+             keyTimes="0;0.8;0.8;1"/>
+  </path>
+  <text font-family="&quot;monospace&quot;, monospace" fill="#C4045D" font-size="20"
+        dominant-baseline="auto" x="0%" text-anchor="start">
+    <textPath xlink:href="#path0">Hello 👋</textPath>
+  </text>
+  <path id="path1">
+    <animate id="d1" attributeName="d" begin="d0.end" dur="5000ms" fill="remove"
+             values="m0,25 h0 ; m0,25 h450 ; m0,25 h450 ; m0,25 h0"
+             keyTimes="0;0.8;0.8;1"/>
+  </path>
+  <text font-family="&quot;monospace&quot;, monospace" fill="#C4045D" font-size="20"
+        dominant-baseline="auto" x="0%" text-anchor="start">
+    <textPath xlink:href="#path1">I'm @Liss-Bot...</textPath>
+  </text>
+  <path id="path2">
+    <animate id="d2" attributeName="d" begin="d1.end" dur="5000ms" fill="remove"
+             values="m0,25 h0 ; m0,25 h450 ; m0,25 h450 ; m0,25 h0"
+             keyTimes="0;0.8;0.8;1"/>
+  </path>
+  <text font-family="&quot;monospace&quot;, monospace" fill="#C4045D" font-size="20"
+        dominant-baseline="auto" x="0%" text-anchor="start">
+    <textPath xlink:href="#path2">and I'm automating things</textPath>
+  </text>
+</svg>
+```
+
+The `values` quartet is the trick: grow → hold (80% of the duration is readable) → snap shut →
+restart. `fill="remove"` snaps the path back to zero between cycles so the line clears instead of
+ghosting. The same pattern appears in single-line form with `fill="freeze"` in
+`rroy233`, `happyren-name.svg` and `ankit-bye.svg` (3-line outro chain, same `begin="…end"` idiom).
+
+- **Runs on:** SMIL — Chromium, Firefox, WebKit (all ✓ animate).
+- **Gotchas:** the path `h450` must be at least as long as your text at its font size, or the tail
+  clips; `letter-spacing` inflates text beyond the path; emoji (👋) render but shift metrics
+  between engines — put them mid-line, not at the clip edge.
+- **Rating:** 4/5 — the workhorse, but the path length is hand-tuned per string.
+
+### 2.2 CSS width-clip typing with `steps()` — 4/5
+
+Pure CSS alternative: a `width: 0 → 715px` keyframe on a wrapper, quantized by
+`steps(65, end)` so width jumps one character at a time; a sibling cursor rect rides the same
+step count and a separate `blink` flickers it. sepahead runs **three lines in sequence** off one
+15s master timeline by splitting the percentage space (0–33% / 33–66% / 66–100%).
+
+Verbatim (trimmed to line 1 of 3) — `https://github.com/sepahead/sepahead/blob/main/assets/hero-light.svg`:
+
+```css
+.role-cur { visibility: hidden; fill: #1f2328; }
+.sweep { transform: translateX(0); animation: sweep 3.2s linear infinite; }
+@keyframes sweep { from { transform: translateX(-100px); } to { transform: translateX(620px); } }
+@keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+
+.seq1 { animation: seq1 15s linear infinite; }
+.type1 { animation: type1 15s steps(65, end) infinite; }
+.cur1 { animation: cursor1 15s steps(65, end) infinite, blink 1s steps(1) infinite; }
+@keyframes seq1 {
+  0%, 0% { opacity: 0; }
+  0.0667%, 30.6667% { opacity: 1; }
+  32.6667%, 100% { opacity: 0; }
+}
+@keyframes type1 {
+  0%, 0% { width: 0; }
+  12%, 32.6667% { width: 715px; }
+  33.2667%, 100% { width: 0; }
+}
+@keyframes cursor1 {
+  0%, 0% { visibility: hidden; transform: translateX(-715px); }
+  0.0667% { visibility: visible; transform: translateX(-715px); }
+  12%, 30.6667% { visibility: visible; transform: translateX(0); }
+  32.6667%, 100% { visibility: hidden; transform: translateX(0); }
+}
+```
+
+- **Runs on:** CSS keyframes in SVG — all three engines ✓.
+- **Gotchas:** `steps(N)` N must equal the character count of your string (65 above, 70 on line 3
+  — they recount per line); the wrapper needs `overflow: hidden; white-space: nowrap;` and an
+  inline-block display for `width` to clip; font metrics change the pixel width, so measure with
+  the actual font.
+- **Rating:** 4/5 — no SMIL dependency, but every new string re-tunes three numbers.
+
+### 2.3 Line-by-line discrete reveal (SMIL, no clip) — 4/5
+
+The cheapest "typing" that still reads as boot text: each line is a `<text>` with `opacity="0"`
+and an `<animate>` that fires at a later `begin`, `fill="freeze"` so it stays. From
+`gitbanner.svg` (`https://github.com/…/gitbanner.svg`), three lines at 0.5s / 1.2s / 1.9s:
+
+```svg
+<text x="20" y="130" font-family="monospace" font-size="12" fill="#6272a4" opacity="0">
+  <tspan x="20" dy="0">Initializing profile data...</tspan>
+  <animate attributeName="opacity" values="0;1" begin="0.5s" dur="0.3s" fill="freeze" />
+</text>
+<!-- next line: begin="1.2s" … then begin="1.9s" -->
+```
+
+- **Runs on:** SMIL — all three engines.
+- **Gotchas:** nothing animates back — reload replays the whole sequence from the top (that's
+  usually what you want for a boot screen); the lines are static afterwards, so this is the
+  zero-cost option for phone layouts.
+- **Rating:** 4/5.
+
+---
+
+## 3. Blinking cursor — 5/5
+
+Two bytes of keyframes power most cursors on GitHub. ayxn's card, verbatim (entire `<style>`):
+
+```css
+@keyframes blink{50%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+.nudge{animation:nudge 1.4s ease-in-out infinite}
+@keyframes flow{to{stroke-dashoffset:-8}}
+.flow{stroke-dasharray:4 4;animation:flow .8s linear infinite}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+```
+
+The same file's `.nudge` (a 5px horizontal twitch) and `.flow` (dashed line marching via
+`stroke-dashoffset: -8` on a `4 4` dash) ride along — three ambient micro-motions in one line
+each. sepahead composes `blink 1s steps(1) infinite` *onto* the cursor's travel animation as a
+second `animation` value (see §2.2 `.cur1`).
+
+- **Runs on:** CSS — all three engines.
+- **Gotchas:** `steps(1)` matters — without it the default `ease` makes a slow crossfade instead
+  of a snap. The reduced-motion block here is inert on GitHub (§1).
+- **Rating:** 5/5 — smallest effect-per-byte in the whole catalogue.
+
+---
+
+## 4. Entrance choreography & stagger
+
+### 4.1 CSS class delays — draw, rise, fade — 5/5
+
+umang-eng's header is the cleanest entrance system found in the wild: three verbs
+(`.draw`, `.rise`, `.fade`) plus a delay ladder `.a1…a6`, and every element declares verb +
+delay as two classes. Verbatim from
+`https://raw.githubusercontent.com/umang-eng/umang-eng/main/assets/header-v1.svg`:
+
+```css
+.draw { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 1.4s cubic-bezier(.6,0,.2,1) forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.rise { opacity: 0; animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+@keyframes rise { from { opacity:0;transform:translateY(12px); } to { opacity:1;transform:translateY(0); } }
+.fade { opacity: 0; animation: fade .7s ease forwards; }
+@keyframes fade { to { opacity: 1; } }
+.a1{animation-delay:.2s} .a2{animation-delay:.5s} .a3{animation-delay:.9s} .a4{animation-delay:1.2s} .a5{animation-delay:1.4s} .a6{animation-delay:1.7s}
+```
+
+Used inline as `<line class="draw a1" …/>`, `<g class="rise a2">…</g>`, `<g class="fade a3">…</g>`:
+
+```svg
+<line class="draw a1" x1="48" y1="58" x2="952" y2="58" stroke="var(--rule)" stroke-width="1"/>
+<g class="rise a2">
+  <text fill="var(--bone)" class="mono" x="46" y="176" font-size="72" letter-spacing="-2">Umang Bhut</text>
+</g>
+<g class="fade a3">
+  <text fill="var(--muted)" class="mono" x="48" y="214" font-size="19">Aspiring Data Scientist / AI-ML Engineer — Ahmedabad, India.</text>
+</g>
+```
+
+Two extras worth stealing: custom properties + `@media (prefers-color-scheme: dark)` to re-theme
+the same file (35 profiles do this, `CATALOGUE.md:332`), and a rotating highlight
+(`.rot` with staggered delays `.r1…r4` on a 12s loop) that pops different footer labels in turn.
+
+- **Runs on:** CSS — all three engines. `forwards` holds the end state.
+- **Gotchas:** `stroke-dasharray: 1000` must exceed the line's real length (or use
+  `pathLength` — §5); delays are absolute, so a long ladder (here up to 1.7s) delays the whole
+  card's completeness — keep the tail under ~2s for READMEs.
+- **Rating:** 5/5 — the reference pattern for entrance sequences.
+
+### 4.2 One-shot SMIL fade with `fill="freeze"` — 4/5
+
+jorex-glow fades three text blocks in, staggered by `begin`, and *stays* (SMIL's equivalent of
+`forwards`). Verbatim from `https://raw.githubusercontent.com/Jorexdev/Jorexdev/main/img/jorex-glow-v7.svg`:
+
+```svg
+<text x="493" y="68" font-family="'DM Sans', sans-serif" font-size="46" font-weight="700"
+      fill="#ffffff" text-anchor="end" opacity="0">Hola, soy
+  <animate attributeName="opacity" from="0" to="1" dur="1s" fill="freeze"/>
+</text>
+<text x="450" y="106" font-family="'DM Mono', monospace" font-size="13"
+      fill="#A3B067" letter-spacing="2" text-anchor="middle" opacity="0">// software analyst · divulgador · speaker
+  <animate attributeName="opacity" from="0" to="1" dur="1s" begin="0.6s" fill="freeze"/>
+</text>
+```
+
+JackLuciano's header does the same with an entrance *sequence* — height grows, opacity fades,
+`stroke-dashoffset` draws, all with staggered `begin` and `fill="freeze"` — plus 20 SMIL
+animations total in one file.
+
+- **Runs on:** SMIL — all three engines.
+- **Gotchas:** SMIL has no `forwards`; `fill="freeze"` *is* the hold — omit it and the element
+  snaps back to its first value when the animation ends.
+- **Rating:** 4/5.
+
+### 4.3 rise / ping / route / pop — 4/5
+
+JGit705's hero, verbatim (entire `<style>`), from
+`https://raw.githubusercontent.com/jgit705/jgit705/main/assets/hero.svg`:
+
+```css
+.rise{animation:rise 1s cubic-bezier(.16,1,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.6s ease-out infinite}
+@keyframes ping{0%{opacity:.75;transform:scale(1)}80%,100%{opacity:0;transform:scale(3.4)}}
+.route{stroke-dasharray:1;stroke-dashoffset:0;animation:route 1.6s cubic-bezier(.65,0,.35,1) both}
+@keyframes route{from{stroke-dashoffset:1}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop .7s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.2)}}
+```
+
+Note `.route`'s use of `pathLength="1"` (declared on the element, `CATALOGUE.md:298` mentions
+the `pathLength="100"` gauge variant): dash maths collapse to fractions — offset `1` = fully
+hidden, `0` = fully drawn, no measuring. And `both` covers both directions of the hold, so
+`rise`/`pop` stay at their end state without an explicit `forwards`.
+
+- **Runs on:** CSS — all three engines (this file was captured across engines).
+- **Gotchas:** any CSS `transform: scale()` on an SVG element needs
+  `transform-box: fill-box; transform-origin: center` or it scales from the SVG origin and flies
+  off-canvas (`CATALOGUE.md:79`: "…orbits instead of spinning").
+- **Rating:** 4/5.
+
+---
+
+## 5. Line drawing (stroke-dash reveal) — 5/5
+
+The signature effect of the genre — 93 profiles (`CATALOGUE.md:104`). Mechanics: set
+`stroke-dasharray` = path length, `stroke-dashoffset` = same, then animate offset → 0. umang's
+`.draw` (§4.1) is the canonical CSS form; JGit705's `.route` (§4.3) is the `pathLength` form.
+The repo-verified SMIL form, from `docs/techniques/examples/smil-draw.svg` (✓ all engines):
+
+```svg
+<path d="M20 60 C 60 10, 140 10, 180 60" fill="none" stroke="#3fb950" stroke-width="3"
+      stroke-dasharray="240" stroke-dashoffset="240">
+  <animate attributeName="stroke-dashoffset" from="240" to="0" dur="2s"
+           begin="0.2s" fill="freeze" repeatCount="1"/>
+</path>
+```
+
+And the perpetual variant — a dashed line *marching*, not drawing — is ayxn's `.flow`
+(`stroke-dasharray:4 4; animation: flow .8s linear infinite` with `to{stroke-dashoffset:-8}`,
+§3): negative offsets travel toward the path start.
+
+- **Runs on:** CSS and SMIL — all three engines ✓ (`stroke-draw.svg`, `smil-draw.svg`).
+- **Gotchas:** measure the path or set `pathLength`; loops need `repeatCount="indefinite"` /
+  `infinite`; animated `stroke-dashoffset` on a *filter output* is the one Safari flake to watch
+  in complex files — test the gallery on a real device (`docs/CAPABILITY-MATRIX.md:65`).
+- **Rating:** 5/5.
+
+---
+
+## 6. Orbit & rotate — 5/5
+
+Three rings, three speeds, one moon each — SMIL `animateTransform type="rotate"` on a wrapping
+`<g>`, circle offset to `cx=120 cy=0`. Verbatim from JackLuciano's header
+(`https://raw.githubusercontent.com/jackluciano/jackluciano/main/assets/header.svg`):
+
+```svg
+<!-- right-side orbit motif -->
+<g transform="translate(810,150)" filter="url(#hsoft)">
+  <ellipse rx="120" ry="120" fill="none" stroke="#ffb454" stroke-opacity=".12"/>
+  <ellipse rx="84"  ry="84"  fill="none" stroke="#ff7a5c" stroke-opacity=".12"/>
+  <ellipse rx="48"  ry="48"  fill="none" stroke="#ffd9a0" stroke-opacity=".12"/>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
+    <circle cx="120" cy="0" r="3.5" fill="#ffb454"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="16s" repeatCount="indefinite"/>
+    <circle cx="84" cy="0" r="3" fill="#ff7a5c"/>
+  </g>
+  <!-- third: from="120" to="480", dur="9s" -->
+</g>
+```
+
+Because the rotate is on the wrapper `<g>` (which carries no other transform), the parent's
+`translate(810,150)` keeps the rotation centered on the motif — no `transform-box` needed, which
+is exactly why SMIL orbits survive where naive CSS `transform: rotate()` spins the whole card
+around the top-left corner.
+
+- **Runs on:** SMIL — all three engines (the CSS route needs
+  `transform-box: fill-box; transform-origin: center`, `CATALOGUE.md:79`).
+- **Gotchas:** three different durations is the trick — equal durations look mechanical; keep
+  periods ≥ 9s so a screenshot never looks "stuck mid-orbit".
+- **Rating:** 5/5.
+
+---
+
+## 7. Scroll, marquee & travelling pulses
+
+### 7.1 Seamless wave scroll — 5/5
+
+An over-drawn path (drawn from `-1200` to `2400` — twice the viewBox past each edge) translates
+one full wavelength per loop, and a gradient mask fades both ends so the seam never shows.
+Verbatim from `https://github.com/10ishk/10ishk/blob/main/assets/wave.svg`:
+
+```svg
+<defs>
+  <linearGradient id="waveFade" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#8b8b8b" stop-opacity="0" />
+    <stop offset="15%"  stop-color="#8b8b8b" stop-opacity="0.7" />
+    <stop offset="50%"  stop-color="#8b8b8b" stop-opacity="0.9" />
+    <stop offset="85%"  stop-color="#8b8b8b" stop-opacity="0.7" />
+    <stop offset="100%" stop-color="#8b8b8b" stop-opacity="0" />
+  </linearGradient>
+  <mask id="waveMask">
+    <rect x="0" y="0" width="1200" height="40" fill="url(#waveFade)" />
+  </mask>
+</defs>
+<g mask="url(#waveMask)">
+  <path d="M -1200 20 C -1150 5, -1050 5, -1000 20 C … 2250 35, 2350 35, 2400 20"
+        fill="none" stroke="#8b8b8b" stroke-width="1.5" stroke-linecap="round">
+    <animateTransform attributeName="transform" type="translate" values="0 0; 1200 0"
+                      dur="6s" repeatCount="indefinite" />
+  </path>
+</g>
+```
+
+`translate` by exactly one motif period (1200 units here) makes the loop invisible; the mask is
+what keeps it from hard-cutting at the viewBox edge.
+
+- **Runs on:** SMIL — all three engines.
+- **Gotchas:** `values="0 0; 1200 0"` must equal the path's repeating period exactly, or the wave
+  jumps; masks animate fine but add a layer — at 390px keep the stroke ≥1.5px or it aliases.
+- **Rating:** 5/5.
+
+### 7.2 Goo wave-strip marquee — 4/5
+
+dhiru-banner stacks three `<use>` copies of one wave path, each on a different clock
+(`3s`, `5s reverse`, `7s` at 30% opacity), and pushes them through a gooey
+`feGaussianBlur + feColorMatrix` filter so the drops merge like liquid. Verbatim
+(excerpts, `https://github.com/dhiru001/dhiru001`-style banner; local copy
+`motion/dhiru-banner.svg`):
+
+```css
+.gooeff { filter: url(#goo); }
+.wave { animation: wave 3s linear; animation-iteration-count: infinite; fill: #4447e3; }
+#wave2 { animation-duration:5s; animation-direction: reverse; opacity: .6 }
+#wave3 { animation-duration: 7s; opacity:.3; }
+@keyframes wave { to {transform: translateX(-100%);} }
+.drop { animation: drop 8.2s linear infinite normal;
+        transform: translateY(25px); transform-box: fill-box; transform-origin: 50% 100%; }
+.drop3 { animation-delay: -2s; animation-duration: 5.4s; }   /* negative delay = already mid-flight */
+@keyframes drop {
+  0%   { transform: translateY(25px); }
+  30%  { transform: translateY(-10px) scale(.1); }
+  30.001% { transform: translateY(25px) scale(1); }
+  70%  { transform: translateY(25px); }
+  100% { transform: translateY(-15px) scale(.1); }
+}
+```
+
+```svg
+<use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
+<use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
+<g class="gooeff" filter="url(#goo)">
+  <circle class="drop drop1" cx="95" cy="2" r="8.8"/>
+  <!-- …more drops, each reusing .drop1–.drop6 delay classes -->
+  <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1"/>
+</g>
+```
+
+Two honest notes on this file: it also ships `rect.headerRect:hover { fill: yellow; }` and
+`.wave:hover` — **dead code on GitHub** (§16) — and its filter ends with `<xfeBlend …>`, a typo
+for `<feBlend>`; the goo still renders because `feMerge` carries the result.
+
+- **Runs on:** CSS + SMIL mix — all three engines; the goo filter costs the most.
+- **Gotchas:** negative `animation-delay` is the standard way to desync a marquee so it isn't
+  obviously looping; `transform-box: fill-box` again (§4.3); `translateX(-100%)` on a `<use>`
+  refers to the *use's* bbox, not the parent — keep tiles wider than the gap.
+- **Rating:** 4/5 — striking, but the filter is the heaviest thing you can put in a README SVG.
+
+### 7.3 Falling columns (matrix rain) — 4/5
+
+Every column is the same `<rect>`-trail translated at its own speed with a **negative `begin`**
+so columns start at different phases — no CSS needed. Verbatim excerpt from
+`matrix-banner.svg` (69KB, `Platane`-adjacent contribution banners):
+
+```svg
+<g>
+  <animateTransform attributeName="transform" type="translate"
+                    values="-512 0;0 0" dur="6.4s" repeatCount="indefinite" begin="-1.7s"/>
+  <!-- …one per column: dur 6–10s, begin "-X.XXs" -->
+</g>
+```
+
+- **Runs on:** SMIL — all three engines. Same desync idiom as §7.2, in SMIL form.
+- **Gotchas:** one element per column inflates the file fast (that banner is 69KB); prefer
+  `<use>` + `pattern` where possible.
+- **Rating:** 4/5.
+
+### 7.4 Travelling pulse / highlight sweep — 5/5
+
+Two real profiles do the same thing: a bright segment races along a rail and *holds off-screen*
+between passes, using `keyTimes` to carve "move, then park". Karthik's divider, verbatim
+(`https://raw.githubusercontent.com/karthik5033/karthik5033/main/assets/custom-divider.svg`):
+
+```svg
+<rect x="0" y="6" width="800" height="2" fill="#21262d" rx="1"/>
+<g filter="url(#glowY)">
+  <rect x="-150" y="6" width="150" height="2" fill="url(#gradY)" rx="1">
+    <animate attributeName="x" values="-150;800;800" keyTimes="0;0.5;1"
+             dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="0" cy="7" r="2" fill="#FFFFFF">
+    <animate attributeName="cx" values="0;950;950" keyTimes="0;0.5;1"
+             dur="3s" repeatCount="indefinite"/>
+  </circle>
+</g>
+<!-- second rail, right-to-left, offset in time: begin="1.5s" -->
+<g filter="url(#glowB)">
+  <rect x="800" y="6" width="150" height="2" fill="url(#gradB)" rx="1">
+    <animate attributeName="x" values="800;-150;-150" keyTimes="0;0.5;1"
+             dur="3s" repeatCount="indefinite" begin="1.5s"/>
+  </rect>
+  …
+</g>
+```
+
+The twin pulse — same file, opposite direction, `begin="1.5s"` — turns two one-way runs into a
+criss-cross. omkarrr88's "About Me" rule does the sliding-highlight variant with an opacity
+gate so the bar fades in and out at the ends:
+
+```svg
+<rect x="166.0" y="27.0" width="60" height="2" rx="1" fill="#7aa2f7" opacity="0.45">
+  <animate attributeName="x" from="166.0" to="840.0" dur="4.5s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0.45;0.45;0" keyTimes="0;0.15;0.75;1"
+           dur="4.5s" repeatCount="indefinite"/>
+</rect>
+```
+
+- **Runs on:** SMIL — all three engines. This is also the WebKit-safe way to animate gradients:
+  move the *shape* (or the `x1`/`x2` gradient attrs), never `gradientTransform` (§10).
+- **Gotchas:** `keyTimes` must have the same count as `values` and always start at 0 and end at 1;
+  the "park" trick (`…;800;800`) is what stops a pulse from visibly wrapping.
+- **Rating:** 5/5 — the most re-usable single animation in this part.
+
+---
+
+## 8. Glitch — 3/5
+
+The chromatic-aberration look: three stacked copies of the same text — red, blue (and green) —
+each jittering `x`/`y`/`opacity` on its own clock, offset so the RGB channels tear apart.
+Verbatim from `gitbanner.svg`:
+
+```svg
+<text x="400" y="100" font-family="Impact, Haettenschweiler, Arial Narrow Bold, sans-serif"
+      font-size="38" text-anchor="middle" fill="#ff5555" opacity="0.5">
+  Welcome to {Username}'s Github Profile
+  <animate attributeName="x" values="400;402;397;403;400" dur="0.5s" begin="3.5s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="100;98;102;97;100" dur="0.35s" begin="3.5s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0.5;0.0;0.6;0.0;0.5" dur="0.25s" begin="3.5s" repeatCount="indefinite"/>
+</text>
+<!-- Blue glitch layer: fill="#8be9fd", same animate pattern -->
+<!-- Green layer: fill="#50fa7b" -->
+```
+
+The `values` array returns to its start value, so the jitter loops without drift; the three
+different durations (0.5 / 0.35 / 0.25s) guarantee the layers rarely align.
+
+- **Runs on:** SMIL — all three engines.
+- **Gotchas:** **phone legibility** — jittering text at 390px is where screenshots break down;
+  keep the base layer crisp at full opacity and let only the ghosts flicker; `begin="3.5s"`
+  delays the whole gag until the boot sequence (§2.3) finishes.
+- **Rating:** 3/5 — works everywhere, but it's the effect most likely to read as "broken image".
+
+---
+
+## 9. Glow pulse — 4/5
+
+90 profiles use glow (`CATALOGUE.md:132`). The strongest form animates the *blur radius
+itself* — a breathing halo. jorex-glow, verbatim:
+
+```svg
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+  <feGaussianBlur in="SourceGraphic" result="blur">
+    <animate attributeName="stdDeviation" values="2;9;2" dur="2.4s" repeatCount="indefinite"/>
+  </feGaussianBlur>
+  <feMerge>
+    <feMergeNode in="blur"/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+```
+
+Applied as `<text … fill="#A3B067" filter="url(#glow)">`. The cheaper sibling — a radar ping —
+is JGit705's `.ping` (§4.3): scale one ring to 3.4× while fading it out. krishna-hero does the
+same idea by animating the geometry directly in CSS keyframes:
+
+```css
+.ring{animation:ring 3.2s ease-out infinite}
+@keyframes ring{0%{r:5;opacity:.85}70%{r:17;opacity:0}100%{r:17;opacity:0}}
+.core{animation:core 3.2s ease-in-out infinite}
+@keyframes core{0%,100%{opacity:.5}50%{opacity:1}}
+```
+
+- **Runs on:** SMIL `stdDeviation` — all three engines (this file was verified live). The CSS
+  `r: 5 → 17` form animates a geometry property; it works in Chromium/Firefox — **verify on a
+  real device before shipping** (WebKit has history with CSS geometry animation; the tested
+  safe route is SMIL `<animate attributeName="r">`).
+- **Gotchas:** animated blur is the single most expensive op in an SVG — one filtered element per
+  card, not per glyph; `filter` region (`x/y/width/height`) must be widened as above or the glow
+  clips to the bbox.
+- **Rating:** 4/5.
+
+---
+
+## 10. Gradient shimmer — 4/5
+
+Gradients are the most common technique of all — 130 profiles (`CATALOGUE.md:174`) — and the
+WebKit rule decides *how* you animate them: **don't touch `gradientTransform`**
+(`CAPABILITY-MATRIX.md:16` — "WebKit: no motion"; `CATALOGUE.md:190`). Three sanctioned routes,
+all in real files:
+
+1. **Animate the geometry that uses the gradient** (karthik's travelling pulse, §7.4 — the
+   gradient rides a rect that moves).
+2. **Animate the gradient's own coordinates** — gitbanner's metal sheen, verbatim:
+
+```svg
+<linearGradient id="metalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%"  stop-color="#ffffff" stop-opacity="0.9"/>
+  <stop offset="70%" stop-color="#a0a0a0" stop-opacity="0.9"/>
+  <stop offset="100%" stop-color="#808080" stop-opacity="0.7"/>
+  <animate attributeName="y1" values="0%;15%;0%;10%;0%" dur="6s" repeatCount="indefinite"/>
+  <animate attributeName="y2" values="100%;85%;100%;90%;100%" dur="6s" repeatCount="indefinite"/>
+</linearGradient>
+```
+
+3. **Animate gradient stops / the gradient's `x1`/`x2`** — the repo's `gradient-shimmer.svg`
+   (✓ all engines) and Karthik's glow rects (`fill="url(#gradY)"` sliding, §7.4).
+
+A shimmer sheen, repo-verified minimal form:
+
+```svg
+<rect width="100%" height="40" fill="#161b22"/>
+<rect width="100%" height="40" fill="url(#sheen)">
+  <animate attributeName="x" values="-200;900" dur="3.2s" repeatCount="indefinite"/>
+</rect>
+<!-- #sheen: linearGradient x1=0 x2=1 with a transparent→white→transparent band -->
+```
+
+- **Runs on:** SMIL attribute animation of `x1`/`x2`/`y1`/`y2`/stops — all three engines;
+  `gradientTransform` — Chromium and Firefox only.
+- **Gotchas:** two `<rect>`s (base + sheen) is cheaper than a `filter`; sheen width ~15–20% of
+  the card or it reads as a full flash.
+- **Rating:** 4/5 — high impact, one hard WebKit constraint.
+
+---
+
+## 11. Particle drift — 4/5
+
+Ambient particles = one shape, many clones, phase-shifted. krishna-hero's travelling dot is the
+clearest real example — a single CSS keyframe path with opacity gates at both ends so it fades
+in, walks the route, fades out, repeats. Verbatim:
+
+```css
+.dot{animation:trav 5.4s linear infinite}
+@keyframes trav{
+  0%{transform:translate(420px,62px);opacity:0}
+  7%{opacity:1}
+  24%{transform:translate(527px,62px)}
+  46%{transform:translate(634px,110px)}
+  68%{transform:translate(741px,166px)}
+  92%{transform:translate(838px,110px);opacity:1}
+  100%{transform:translate(838px,110px);opacity:0}
+}
+```
+
+Desync comes from delay classes (`.a1…`/negative `animation-delay`, §7.2) or, in SMIL, from
+**negative `begin` values** — `begin="-3.7s"` starts an animation partway through its first
+cycle, which is how the repo's `particles.svg` (✓ all engines) staggers ~20 sparkles with one
+definition. The repo's `grain.svg` (film grain, ✓ static) covers the static cousin — note that
+"✓" with no "animates" in the matrix means it renders but doesn't move.
+
+- **Runs on:** CSS and SMIL — all three engines.
+- **Gotchas:** clone-count drives size — 10–20 particles is the sweet spot; use `<use>` of one
+  `<circle>` to keep the DOM small; give every particle a different duration (6.4s, 7.1s, 9.3s)
+  so the field never pulses in unison.
+- **Rating:** 4/5.
+
+---
+
+## 12. Snake / contribution art — 5/5
+
+Generated by Actions, everywhere: the snake game alone is 65 profiles, plus lowlighter/metrics
+(17), 3D contribution graphs (12), pacman (5) (`CATALOGUE.md:316-319`). Platane/snk is the
+canonical one — a ~100KB fully declarative SVG where **three parallel CSS keyframe families**
+share one 104,500ms clock. Verbatim excerpts from the live output
+(`https://raw.githubusercontent.com/Platane/snk/output/user-contribution-grid.svg`-style path,
+fetched this session as `motion/snake.svg`):
+
+```css
+/* the head: every keyframe is a cell coordinate, timed to when it eats */
+.s{shape-rendering:geometricPrecision;fill:var(--cs);
+   animation:none linear 104500ms infinite}
+@keyframes s0{
+  0%,99.9%{transform:translate(0px,-16px)}
+  0.1%{transform:translate(0px,0px)}
+  0.19%{transform:translate(-16px,0px)}
+  0.38%{transform:translate(-16px,32px)}
+  0.48%,88.52%{transform:translate(0px,32px)}
+  …}                                /* hundreds of stops = the path */
+
+/* each body segment: scales in on X the moment it's "grown" */
+.u{transform-origin:0 0;transform:scale(0,1);
+   animation:none linear 104500ms infinite}
+@keyframes u0{0.09%{transform:scale(0.000,1)}
+  0.11%,0.47%{transform:scale(0.011,1)}
+  0.49%,0.56%{transform:scale(0.022,1)}
+  …}
+
+/* each grid cell: flashes its contribution color when eaten, then rests */
+.c.c0{fill:var(--c1);animation-name:c0}
+@keyframes c0{0.09%{fill:var(--c1)}0.11%,100%{fill:var(--ce)}}
+.c.c1{fill:var(--c3);animation-name:c1}
+@keyframes c1{88.41%{fill:var(--c3)}88.43%,100%{fill:var(--ce)}}
+```
+
+The `.c` family is the contribution heatmap itself: resting cells are `--ce`, and each cell's
+keyframe flashes its real level (`--c1`…`--c4`) exactly when the head passes over it. That's why
+the snake "eats" your year.
+
+- **Runs on:** CSS keyframes in SVG — all three engines ✓ (the matrix's `css-keyframes.svg`
+  covers the mechanism; snk output is the 65-profile production version).
+- **Gotchas:** file size (~100KB) is fine for an `<img>` but never inline it; it's a scheduled
+  Action + committed output branch (survives because it's committed — survey: 93% live,
+  Part 07); **phone legibility is the weak point** — contribution detail collapses under 390px,
+  so treat it as decoration, not data.
+- **Rating:** 5/5 — the highest-impact generated motion on the platform.
+
+---
+
+## 13. Gauges, meters & bars — 4/5
+
+### 13.1 Gauge sweep — 4/5
+
+`pathLength="100"` turns the dash length into the value itself — offset goes from 100 (empty) to
+`(100 − value)` (filled), so percentages are the code (`CATALOGUE.md:298`). Repo-verified
+`gauge.svg`, ✓ animates in all three engines:
+
+```svg
+<circle cx="60" cy="60" r="46" fill="none" stroke="#e6edf3" stroke-opacity=".15"
+        stroke-width="10" pathLength="100"
+        stroke-dasharray="100" stroke-dashoffset="100">
+  <animate attributeName="stroke-dashoffset" from="100" to="12"
+           dur="1.6s" begin="0.3s" fill="freeze" repeatCount="1"/>
+</circle>
+<!-- offset 12 = 88% filled; last 0.3s of the sweep carries an ease-out if you add calcMode="spline" -->
+```
+
+Server-telemetry gauges (itguyo's `docs/book/03-dictionary.md` family) use exactly this. The
+streak-stats cards found in real profiles (rroy-streak) do the pop-in instead:
+`.currstreak { animation: scale-in … }` on `font-size` — a number that *jumps* to its final size
+rather than counting.
+
+### 13.2 Bars chart — 4/5
+
+Bars rising with a staggered `begin`, animating `height` **and** `y` together (SVG rects grow
+downward from `y`, so both must move). Repo-verified `bars.svg`, ✓ all engines; used by sepahead
+and JConfessor (`CATALOGUE.md:300-307`):
+
+```svg
+<rect x="20" y="90" width="24" height="10" fill="#3fb950">
+  <animate attributeName="height" from="0" to="70" dur="0.9s" begin="0.2s"
+           fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+  <animate attributeName="y"     from="90" to="20" dur="0.9s" begin="0.2s"
+           fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+</rect>
+<!-- next bar: begin="0.35s" … -->
+```
+
+- **Gotchas:** real data means a generator + workflow; commit the output rather than rent a
+  service — hosted chart services are among the most broken embeds (Part 07); at 390px bars
+  under ~6px wide read as noise.
+- **Rating:** 4/5 each — solid, but real numbers need a build step.
+
+---
+
+## 14. Terminal boot & dot-matrix — 4/5
+
+Two related motifs. **Terminal:** staged opacity lines (§2.3) plus a caret that blinks (§3) —
+gitbanner is the full worked example (boot lines at 0.5/1.2/1.9s, then the glitch title at 3.5s).
+Repo-verified `terminal.svg` ✓ animates in all three engines; JGit705's "line-by-line discrete
+opacity" style is the hand-made variant. **Dot matrix:** krishna-hero's ring/core keyframes
+(§9) pulse individual nodes; `matrix-banner.svg` (§7.3) is the full falling-columns treatment;
+`krishMeow/Animated-Terminal-GitHub-Profile` generates the dot-matrix banner as a tool.
+
+```css
+/* caret — reuse of §3 */
+@keyframes blink{50%{opacity:0}}
+.caret{animation:blink 1s steps(1) infinite}
+```
+
+- **Runs on:** CSS + SMIL — all three engines.
+- **Gotchas:** staged timelines (`begin="1.9s"`) mean a fresh reload replays the show — good for
+  a boot screen, bad if you want content readable *immediately*; put any static essentials at
+  `begin="0s"`.
+- **Rating:** 4/5.
+
+---
+
+## 15. Waveform & path morphing — 3/5
+
+SMIL can morph a path — animate `d` between two shapes of identical command structure. The only
+*verified* shape-morph in the wild samples here is the typing family itself (§2.1's
+`h0 → h450` grow/hold/shrink, plus dhiru-banner's `#nameTyping` path that grows `h0`→`h100` to
+reveal text). A true wave/blob morph — one `<path>` cycling between two silhouettes — **was not
+found in any live profile SVG in this pass**. The synthesized recipe below is the honest form
+(SMIL supports it; it just isn't a house style yet):
+
+```svg
+<!-- RECIPE (synthesized, not observed in the wild): morph a wave between two states -->
+<path id="wave" fill="none" stroke="#3fb950" stroke-width="2"
+      d="M0,20 Q30,5 60,20 T120,20 T180,20 T240,20">
+  <animate attributeName="d" dur="4s" repeatCount="indefinite"
+           calcMode="spline"
+           values="M0,20 Q30,5 60,20 T120,20 T180,20 T240,20;
+                   M0,20 Q30,35 60,20 T120,20 T180,20 T240,20;
+                   M0,20 Q30,5 60,20 T120,20 T180,20 T240,20"
+           keyTimes="0;0.5;1" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+</path>
+```
+
+- **Runs on:** SMIL `d` animation — all three engines support SMIL; **test the spline timing on
+  WebKit** before shipping (the matrix verifies SMIL motion, not every `calcMode` combination).
+- **Gotchas:** both `values` paths must have the *same command sequence and count* or the morph
+  is undefined; 10ishk's translating-wave approach (§7.1) achieves the "living wave" look with
+  zero morph risk and is the better default.
+- **Rating:** 3/5 — real capability, no real precedent yet.
+
+---
+
+## 16. Hover effects — the honest negative — n/a
+
+**There is no hover in a README SVG.** `docs/techniques/CATALOGUE.md:397`: "Nothing inside an
+SVG image is interactive." The README embeds the file as an `<img>`, browsers run it in secure
+animated mode, and pointer events never reach the document — `pointer-events` cannot save you.
+
+The wild still ships the mistake. dhiru-banner, fetched this session, contains:
+
+```css
+rect.headerRect:hover { fill: yellow; fill-opacity: 50%; }
+.wave:hover { fill: #5457ff; }
+.drop:hover { fill: #C9FFE5; }
+```
+
+All three rules are **dead on GitHub** — they only fire if the same file is opened directly in a
+browser tab. Do not copy this. What profiles use instead (per the catalogue): entrance
+animation (§4), ambient loops (§7), and *sequenced* reveals (§2/§14) — motion that happens by
+itself, because nothing will ever happen to it.
+
+---
+
+## 17. Family-by-family scorecard
+
+The seventeen families this part was asked to cover, with what was actually found:
+
+| Family | Found in the wild? | Best real example | Rating |
+|---|---|---|---|
+| Typewriter / typing | ✓ | liss-bot, sepahead, rroy233 (§2) | 4/5 |
+| Snake / contribution | ✓ | Platane/snk, 65 profiles (§12) | 5/5 |
+| Line-draw | ✓ | umang `.draw`, JGit705 `.route` (§5) | 5/5 |
+| Gauge / meter sweep | ✓ | `gauge.svg` repo-verified, itguyo gauges (§13.1) | 4/5 |
+| Orbit / rotate | ✓ | JackLuciano triple orbit (§6) | 5/5 |
+| Marquee / scroll | ✓ | 10ishk wave, dhiru goo strip, matrix rain (§7.1–7.3) | 5/5 |
+| Glitch | ✓ | gitbanner RGB layers (§8) | 3/5 |
+| Number ticker (no JS) | **✗ none found** | — (see §18) | n/a |
+| Gradient shimmer | ✓ | gitbanner metal `y1/y2`, karthik sheen (§10) | 4/5 |
+| Particle drift | ✓ | krishna `.trav`, `particles.svg` (§11) | 4/5 |
+| Waveform / morph | partial | typing-path morph only (§15) | 3/5 |
+| Progress bars | ✓ | `bars.svg`, stroke-dash progress (§5, §13.2) | 4/5 |
+| Blinking cursor | ✓ | ayxn `.blink`, sepahead `.cur1` (§3) | 5/5 |
+| Hover effects | **✗ impossible** | dead `:hover` in dhiru-banner (§16) | n/a |
+| Entrance / stagger | ✓ | umang `.a1…a6`, jorex `fill="freeze"` (§4) | 5/5 |
+| TextPath cycling | ✓ | liss-bot `begin="0s;d2.end"` chain (§2.1) | 4/5 |
+| Dot-matrix / halftone pulse | ✓ | krishna `.ring`/`.core`, matrix rain (§9, §7.3, §14) | 4/5 |
+
+---
+
+## 18. What was NOT found (the gaps, stated plainly)
+
+1. **A number ticker without JavaScript.** Two search passes and 20+ fetched files produced zero
+   examples of digits counting up inside a README SVG. The reason is structural: neither SMIL nor
+   CSS keyframes can change *text content* — `<text>` is immutable, so "counting" would need one
+   `<text>` per digit value toggled by discrete opacity (a synthesized hack, cheap enough to write
+   but never seen in use). Every live "counting number" is either generated server-side
+   (github-readme-stats counters, streak-stats) or browser-side JS (which GitHub strips). The
+   closest real thing: streak-stats' `.currstreak` scale-in pop (§13.1).
+2. **A true text/badge marquee.** Scrolling loops exist (§7.1–7.3), but no profile ships a
+   repeating strip of badges or names crossing the frame — the "marquee" family in practice is
+   waves, rules and rain, not text.
+3. **Hover / click / focus / drag.** Impossible by construction (§16).
+4. **`prefers-reduced-motion` doing anything on GitHub.** Inert (`CAPABILITY-MATRIX.md:37`);
+   five real files ship the block anyway (umang, ayxn, krishna, sepahead, skymly) — harmless
+   copy-paste from website habits.
+5. **A live orbit done in CSS.** Orbits in the wild are SMIL `animateTransform` (§6); the CSS
+   route works but every real file reached for SMIL first — presumably because `transform-origin`
+   on SVG elements is a known footgun.
+6. **`observatory.svg` (adamalston.com) as an animation example.** Fetched expecting orbits;
+   it's static — zero `<animate>`, zero `@keyframes`. Dropped, and worth knowing: some
+   "orbital-looking" profile art is just a well-drawn still.
+7. **Any JS-based SVG animation library as usable.** `oubenruing/svg-text-animate` surfaced in
+   search — it generates SVGs animated by embedded scripts, which GitHub blocks
+   (`CAPABILITY-MATRIX.md:43`). Generator-only, never paste its output.
+
+---
+
+## 19. The 2026 distribution of styles
+
+What profiles actually run, from the catalogue's survey counts
+(`docs/techniques/CATALOGUE.md`, section headers verified this session):
+
+| Technique | Profiles | Family |
+|---|--:|---|
+| Gradients | 130 | §10 shimmer / static |
+| SMIL animation | 129 | §2–§14 |
+| CSS `@keyframes` in SVG | 101 | §3–§12 |
+| Clip paths | 90 | §4/§5 reveals |
+| Stroke-dash line drawing | 93 | §5 |
+| Glow | 90 | §9 |
+| Typing (readme-typing-svg) | 87 | §2.1 |
+| `<picture>` + theme | 80 | theme switching |
+| Masks | 28 | §7.1 |
+| In-SVG `@media (prefers-color-scheme)` | 35 | §4.1 |
+| `<foreignObject>` | 32 | risky — WebKit inconsistent |
+| Text on a path | 12 | §2.1 |
+| snk snake | 65 | §12 |
+| lowlighter/metrics | 17 | generated |
+| 3D contribution graphs | 12 | generated |
+| pacman | 5 | generated |
+
+Reading it: **SMIL and CSS keyframes are near-tied as the substrate** (129 vs 101 — most files
+use both, as §7.2 and §10 show), gradients are the default dressing (130), and the "wow"
+techniques split cleanly into two schools —
+
+- **Hand-made, small, always-on** — entrance stagger, typing, line-draw, pulse sweeps. Tens of
+  bytes to a few KB, authored in an editor, reused as templates. Sections 2–7, 9, 13–14 of this
+  part.
+- **Generated, large, scheduled** — snk (65), metrics (17), 3D graphs (12), pacman (5). Produced
+  by a GitHub Action that commits the SVG, which is why they survive (93% live, Part 07) and why
+  they're the worst on phones (metrics: 83% of its cards illegible at 390px).
+
+The ecosystem around them keeps growing on the *tool* side: `Platane/snk` for snakes,
+`lowlighter/metrics` for everything, `krishMeow/Animated-Terminal-GitHub-Profile` for dot-matrix
+banners, `rootlinux/github-profile-svg-banner` and `cemdenizexe/github-readme-svg-hero-prompt`
+for SMIL banner templates, `ryanpolasky/ryme.md` as a browser-only banner builder (its output is
+a file you commit — the tool never has to stay up), plus `readme-typing-svg` (87 profiles) and
+`capsule-render` for typed/animated banners. Common denominator: **they all emit declarative
+SVG**, because that's the only thing GitHub renders.
+
+And the two rules every 2026 file obeys without exception: no `gradientTransform` (WebKit shows
+a frozen frame), and nothing interactive (it's an image).
+
+---
+
+## 20. Recipes — effect, code, gotchas
+
+Adapted from the real files above; each is paste-ready for a committed `.svg` in your profile
+repo. All are declarative — they run in the secure animated box.
+
+### R1 — Blinking cursor (from §3)
+
+```svg
+<text x="10" y="30" font-family="monospace" font-size="20" fill="#3fb950">$ git push</text>
+<rect class="caret" x="118" y="14" width="10" height="20" fill="#3fb950"/>
+<style>
+@keyframes blink{50%{opacity:0}}
+.caret{animation:blink 1s steps(1) infinite}
+</style>
+```
+
+**Gotchas:** `steps(1)` for a snap, not a fade. Position the rect by measuring your text —
+monospace widths vary slightly across engines; add 2px of slack.
+
+### R2 — Typewriter line (from §2.2)
+
+```svg
+<style>
+.type{display:inline-block;overflow:hidden;white-space:nowrap;
+      width:0;animation:type 3s steps(24,end) infinite alternate}
+@keyframes type{to{width:288px}}
+</style>
+<text x="10" y="30" font-family="monospace" font-size="20" fill="#c0caf5">
+  <tspan class="type">building things that ship</tspan><tspan class="caret">▍</tspan>
+</text>
+```
+
+**Gotchas:** `steps` count = char count (24); width = chars × measured advance (288 = 24 × 12).
+Wrap in a `<foreignObject>`-free structure — this is plain SVG `text` with a clipped `tspan`
+container; test phone width before committing.
+
+### R3 — Staggered entrance (from §4.1)
+
+```svg
+<style>
+.draw{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 1.2s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.rise{opacity:0;animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.a1{animation-delay:.15s}.a2{animation-delay:.45s}.a3{animation-delay:.75s}
+</style>
+<line class="draw a1" x1="20" y1="40" x2="580" y2="40" stroke="#30363d"/>
+<text class="rise a2" x="20" y="90" font-size="32" fill="#e6edf3">Your Name</text>
+<text class="rise a3" x="20" y="120" font-size="16" fill="#8b949e">your tagline</text>
+```
+
+**Gotchas:** `dasharray` ≥ line length; keep the ladder under ~2s total; both `forwards` holds
+the end state (or use `both`).
+
+### R4 — Gauge to 88% (from §13.1)
+
+```svg
+<circle cx="60" cy="60" r="46" fill="none" stroke="#e6edf3" stroke-opacity=".15" stroke-width="10"
+        pathLength="100" stroke-dasharray="100" stroke-dashoffset="100">
+  <animate attributeName="stroke-dashoffset" from="100" to="12" dur="1.6s"
+           begin="0.3s" fill="freeze" repeatCount="1"/>
+</circle>
+<text x="60" y="66" text-anchor="middle" font-size="20" fill="#3fb950">88%</text>
+```
+
+**Gotchas:** `pathLength="100"` is the whole trick — offset = 100 − percent; rotate the circle
+(`transform="rotate(-90 60 60)"`) if you want the sweep to start at 12 o'clock.
+
+### R5 — Travelling pulse on a rule (from §7.4)
+
+```svg
+<rect x="0" y="20" width="600" height="2" fill="#21262d"/>
+<rect x="-120" y="18" width="120" height="6" rx="3" fill="url(#sheen)">
+  <animate attributeName="x" values="-120;600;600" keyTimes="0;0.5;1"
+           dur="3s" repeatCount="indefinite"/>
+</rect>
+<!-- linearGradient #sheen: x1=0% x2=100%, stops transparent → #3fb950 → transparent -->
+```
+
+**Gotchas:** `keyTimes` parked at the end (`…;600;600`) prevents the visible wrap; animate `x`
+on the shape, never `gradientTransform` (WebKit freezes — §10).
+
+### R6 — Phase-shifted particles (from §11)
+
+```svg
+<style>
+.spark{animation:trav 6s linear infinite}
+.a1{animation-delay:0s}.a2{animation-delay:-2.3s}.a3{animation-delay:-4.1s}
+@keyframes trav{
+  0%{transform:translate(0,0);opacity:0}
+  10%{opacity:1}
+  90%{opacity:1}
+  100%{transform:translate(160px,-40px);opacity:0}}
+</style>
+<circle class="spark a1" cx="40"  cy="60" r="2" fill="#ffd9a0"/>
+<circle class="spark a2" cx="180" cy="30" r="1.5" fill="#ffb454"/>
+<circle class="spark a3" cx="300" cy="70" r="2" fill="#ff7a5c"/>
+```
+
+**Gotchas:** negative delays = already mid-flight on first paint; 10–20 clones max; different
+durations per particle if you have more than three.
+
+### R7 — Orbit (from §6)
+
+```svg
+<g transform="translate(300,60)">
+  <circle r="40" fill="none" stroke="#ffb454" stroke-opacity=".15"/>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360"
+                      dur="14s" repeatCount="indefinite"/>
+    <circle cx="40" cy="0" r="3" fill="#ffb454"/>
+  </g>
+</g>
+```
+
+**Gotchas:** rotate a wrapper `<g>` with the satellite offset on `cx`/`cy` — then no
+`transform-box` needed; varied durations for multiple moons.
+
+### R8 — Seamless scrolling wave (from §7.1)
+
+```svg
+<mask id="fade"><rect width="600" height="40" fill="url(#g)"/></mask>
+<g mask="url(#fade)">
+  <path d="M-600 20 Q-525 6 -450 20 T-300 20 T-150 20 T0 20 T150 20 T300 20 T450 20 T600 20 T750 20 T900 20 T1050 20 T1200 20"
+        fill="none" stroke="#8b8b8b" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="translate" values="0 0;300 0"
+                      dur="5s" repeatCount="indefinite"/>
+  </path>
+</g>
+<!-- #g: horizontal gradient, opacity 0 → .9 → 0 at the edges -->
+```
+
+**Gotchas:** translate distance = exactly one wave period (300 = wavelength here, from `T`-command
+spacing); overdraw beyond both edges; the mask hides the seams.
+
+### R9 — Glitch title (from §8)
+
+```svg
+<g font-family="Impact, sans-serif" font-size="28" text-anchor="middle">
+  <text x="200" y="40" fill="#ff5555" opacity=".5">PROFILE</text>
+  <text x="200" y="40" fill="#8be9fd" opacity=".5">PROFILE
+    <animate attributeName="x" values="200;202;197;203;200" dur="0.5s" repeatCount="indefinite"/>
+  </text>
+  <text x="200" y="40" fill="#50fa7b" opacity=".4">PROFILE
+    <animate attributeName="y" values="40;42;38;41;40" dur="0.4s" repeatCount="indefinite"/>
+  </text>
+</g>
+```
+
+**Gotchas:** base layer static and crisp; ghosts only; test at 390px — jitter that reads as
+glitch on desktop reads as blur on a phone.
+
+### R10 — Terminal boot sequence (from §2.3 + §3)
+
+```svg
+<text x="10" y="20" font-family="monospace" font-size="13" fill="#8b949e" opacity="0">
+  $ loading profile…<animate attributeName="opacity" values="0;1" begin="0.3s" dur="0.3s" fill="freeze"/>
+</text>
+<text x="10" y="40" font-family="monospace" font-size="13" fill="#3fb950" opacity="0">
+  ✓ ready<tspan class="caret">▍</tspan>
+  <animate attributeName="opacity" values="0;1" begin="1.1s" dur="0.3s" fill="freeze"/>
+</text>
+```
+
+**Gotchas:** every `begin` is seconds from page load — the whole sequence replays on reload;
+put anything essential at `begin="0s"` so a screenshot at t=0 isn't empty.
+
+**All recipes, every time:** commit the SVG to your profile repo (branch URL updates in ~5 min —
+`CAPABILITY-MATRIX.md:57`; pin the commit hash for seconds); keep total file size < 30KB unless
+it's generated art; one filter per card; test on a phone before you call it done
+(`docs/survey/FINDINGS.md` phone column = 309px).
+
+---
+
+## 21. Sources
+
+**Fetched verbatim this session (2026-09-26, `raw.githubusercontent.com`, cached under
+`motion/`):**
+
+| File | Technique sections |
+|---|---|
+| `liss-bot/liss-bot` · `intro.svg` | §2.1 textPath typing chain |
+| `sepahead` · `assets/hero-light.svg` | §2.2 clip typing, §7.4 sweep |
+| `ayxn…` · `card.svg` | §3 blink / nudge / flow |
+| `umang-eng/umang-eng` · `assets/header-v1.svg` | §4.1 entrance, §1 theme |
+| `Jorexdev/Jorexdev` · `img/jorex-glow-v7.svg` | §4.2 fade, §9 glow pulse |
+| `jgit705` · `assets/hero.svg` | §4.3 rise/ping/route/pop |
+| JackLuciano · `assets/header.svg` | §6 orbit, §4.2 entrance |
+| `10ishk/10ishk` · `assets/wave.svg` | §7.1 scroll |
+| dhiru banner | §7.2 goo marquee, §16 dead hover |
+| `matrix-banner.svg` | §7.3 falling columns, §14 dot-matrix |
+| `karthik5033` · `assets/custom-divider.svg` | §7.4 pulse, §10 shimmer |
+| `omkarrr88` · `profile/section-about.svg` | §7.4 sliding highlight |
+| `gitbanner.svg` | §2.3 boot lines, §8 glitch, §10 metal gradient |
+| `krishna-hero.svg` | §9 ring/core, §11 travelling dot |
+| `Platane/snk` output (`snake.svg`) | §12 contribution snake |
+| `rroy-streak.svg`, `ankit-bye.svg`, `happyren-name.svg`, `skymly-header.svg`, `jconfessor-hero-dark.svg`, `krishna…` | supporting samples in §2, §10, §13.1 |
+| `observatory.svg` | §18 static — excluded |
+
+**Repo docs (ground truth):** `docs/CAPABILITY-MATRIX.md` (engine captures, boundary tests,
+reduced-motion, CDN timing), `docs/techniques/CATALOGUE.md` (usage counts, hover rule,
+gradientTransform rule, pathLength, orbits), `docs/techniques/examples/*.svg` (repo-verified
+gauge, bars, particles, stroke-draw, smil-draw, terminal, typing, textpath — all ✓ across three
+engines), `docs/survey/data/technique_exemplars.json`, `docs/survey/FINDINGS.md` (phone width),
+Part 07 (generator survival).
 
 ---
 
