@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#161b22" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="lit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0f6fc"/>
+      <stop offset="1" stop-color="#7ee787"/>
+    </linearGradient>
+    <clipPath id="win">
+      <rect x="304" y="118" width="192" height="72" rx="6"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="320" fill="#0d1117"/>
+  <rect width="800" height="320" fill="url(#grid)"/>
+
+  <text x="32" y="46" font-size="16" font-weight="700" letter-spacing="3" fill="#58a6ff">JS-FREE NUMBER TICKER</text>
+  <text x="32" y="70" font-size="12.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#7d8590">digit strips · animateTransform translate · spline settle · 0 javascript</text>
+
+  <rect x="296" y="110" width="208" height="88" rx="10" fill="#010409" stroke="#30363d"/>
+
+  <g clip-path="url(#win)">
+    <g>
+      <text x="336" y="174" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">0</text>
+      <text x="336" y="246" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">1</text>
+      <text x="336" y="318" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">2</text>
+      <text x="336" y="390" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">3</text>
+      <text x="336" y="462" font-size="64" font-weight="800" text-anchor="middle" fill="url(#lit)">4</text>
+      <text x="336" y="534" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">5</text>
+      <text x="336" y="606" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">6</text>
+      <text x="336" y="678" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">7</text>
+      <text x="336" y="750" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">8</text>
+      <text x="336" y="822" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">9</text>
+      <animateTransform attributeName="transform" type="translate" calcMode="spline"
+        keyTimes="0;0.7;1" keySplines="0.15 0.65 0.3 1;0 0 1 1"
+        values="0 0; 0 -288; 0 -288" dur="6s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" calcMode="discrete"
+        keyTimes="0;0.985;0.995" values="1;1;0"
+        dur="6s" begin="0s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <text x="400" y="174" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">0</text>
+      <text x="400" y="246" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">1</text>
+      <text x="400" y="318" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">2</text>
+      <text x="400" y="390" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">3</text>
+      <text x="400" y="462" font-size="64" font-weight="800" text-anchor="middle" fill="url(#lit)">4</text>
+      <text x="400" y="534" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">5</text>
+      <text x="400" y="606" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">6</text>
+      <text x="400" y="678" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">7</text>
+      <text x="400" y="750" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">8</text>
+      <text x="400" y="822" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">9</text>
+      <animateTransform attributeName="transform" type="translate" calcMode="spline"
+        keyTimes="0;0.7;1" keySplines="0.15 0.65 0.3 1;0 0 1 1"
+        values="0 0; 0 -288; 0 -288" dur="6s" begin="0.12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" calcMode="discrete"
+        keyTimes="0;0.985;0.995" values="1;1;0"
+        dur="6s" begin="0.12s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <text x="464" y="174" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">0</text>
+      <text x="464" y="246" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">1</text>
+      <text x="464" y="318" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">2</text>
+      <text x="464" y="390" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">3</text>
+      <text x="464" y="462" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">4</text>
+      <text x="464" y="534" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">5</text>
+      <text x="464" y="606" font-size="64" font-weight="800" text-anchor="middle" fill="url(#lit)">6</text>
+      <text x="464" y="678" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">7</text>
+      <text x="464" y="750" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">8</text>
+      <text x="464" y="822" font-size="64" font-weight="800" text-anchor="middle" fill="#8b949e">9</text>
+      <animateTransform attributeName="transform" type="translate" calcMode="spline"
+        keyTimes="0;0.7;1" keySplines="0.15 0.65 0.3 1;0 0 1 1"
+        values="0 0; 0 -432; 0 -432" dur="6s" begin="0.24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" calcMode="discrete"
+        keyTimes="0;0.985;0.995" values="1;1;0"
+        dur="6s" begin="0.24s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  <rect x="304" y="118" width="192" height="72" rx="6" fill="none" stroke="#30363d"/>
+
+  <text x="400" y="234" font-size="13" text-anchor="middle" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">profiles measured</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+    <rect x="32" y="272" width="86" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="75" y="288" text-anchor="middle" fill="#7ee787">loop 6s</text>
+    <rect x="126" y="272" width="112" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="182" y="288" text-anchor="middle" fill="#58a6ff">spline set</text>
+    <rect x="246" y="272" width="118" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="305" y="288" text-anchor="middle" fill="#d2a8ff">clip window</text>
+    <rect x="372" y="272" width="112" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="428" y="288" text-anchor="middle" fill="#ffa657">hide reset</text>
+  </g>
+</svg>
