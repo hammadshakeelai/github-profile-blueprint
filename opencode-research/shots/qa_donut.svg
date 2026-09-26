@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#161b22" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="320" fill="#0d1117"/>
+  <rect width="800" height="320" fill="url(#grid)"/>
+
+  <text x="32" y="46" font-size="16" font-weight="700" letter-spacing="3" fill="#58a6ff">SELF-DRAWING DONUT</text>
+  <text x="32" y="70" font-size="12.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#7d8590">stroke-dasharray arcs · staggered dashoffset · hide-on-reset · 0 javascript</text>
+
+  <g>
+    <g transform="rotate(-90 190 185)">
+      <circle cx="190" cy="185" r="76" fill="none" stroke="#58a6ff" stroke-width="24"
+        stroke-dasharray="171.68 500" stroke-dashoffset="171.68">
+        <animate attributeName="stroke-dashoffset" calcMode="linear"
+          values="171.68;0;0;171.68" keyTimes="0;0.18;0.93;1"
+          dur="7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g transform="rotate(43.2 190 185)">
+      <circle cx="190" cy="185" r="76" fill="none" stroke="#f778ba" stroke-width="24"
+        stroke-dasharray="100.05 500" stroke-dashoffset="100.05">
+        <animate attributeName="stroke-dashoffset" calcMode="linear"
+          values="100.05;0;0;100.05" keyTimes="0;0.30;0.93;1"
+          dur="7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g transform="rotate(122.4 190 185)">
+      <circle cx="190" cy="185" r="76" fill="none" stroke="#3fb950" stroke-width="24"
+        stroke-dasharray="119.16 500" stroke-dashoffset="119.16">
+        <animate attributeName="stroke-dashoffset" calcMode="linear"
+          values="119.16;0;0;119.16" keyTimes="0;0.42;0.93;1"
+          dur="7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <g transform="rotate(216 190 185)">
+      <circle cx="190" cy="185" r="76" fill="none" stroke="#e3b341" stroke-width="24"
+        stroke-dasharray="61.85 500" stroke-dashoffset="61.85">
+        <animate attributeName="stroke-dashoffset" calcMode="linear"
+          values="61.85;0;0;61.85" keyTimes="0;0.54;0.93;1"
+          dur="7s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    <animate attributeName="opacity" calcMode="discrete"
+      values="1;1;0" keyTimes="0;0.94;0.95" dur="7s" repeatCount="indefinite"/>
+  </g>
+
+  <text x="190" y="182" font-size="34" font-weight="800" text-anchor="middle" fill="#f0f6fc">446</text>
+  <text x="190" y="206" font-size="12" text-anchor="middle" fill="#7d8590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">profiles</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+    <rect x="372" y="112" width="14" height="14" rx="3" fill="#58a6ff"/>
+    <text x="396" y="124" fill="#e6edf3">shell <tspan fill="#7d8590">37%</tspan></text>
+    <rect x="372" y="152" width="14" height="14" rx="3" fill="#f778ba"/>
+    <text x="396" y="164" fill="#e6edf3">svg <tspan fill="#7d8590">22%</tspan></text>
+    <rect x="372" y="192" width="14" height="14" rx="3" fill="#3fb950"/>
+    <text x="396" y="204" fill="#e6edf3">css <tspan fill="#7d8590">26%</tspan></text>
+    <rect x="372" y="232" width="14" height="14" rx="3" fill="#e3b341"/>
+    <text x="396" y="244" fill="#e6edf3">misc <tspan fill="#7d8590">14%</tspan></text>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+    <rect x="560" y="112" width="94" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="607" y="128" text-anchor="middle" fill="#7ee787">dasharray</text>
+    <rect x="560" y="146" width="94" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="607" y="162" text-anchor="middle" fill="#58a6ff">stagger</text>
+    <rect x="560" y="180" width="128" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="624" y="196" text-anchor="middle" fill="#d2a8ff">rotate -90 start</text>
+    <rect x="560" y="214" width="118" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="619" y="230" text-anchor="middle" fill="#ffa657">hide on reset</text>
+    <rect x="560" y="248" width="94" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="607" y="264" text-anchor="middle" fill="#ff7b72">loop 7s</text>
+  </g>
+<script type="text/javascript"><![CDATA[
+(function(){
+  var T = 4000;
+  function seek(){
+    try { var s = document.documentElement; s.pauseAnimations(); s.setCurrentTime(T/1000); } catch(e){}
+    try { document.getAnimations().forEach(function(a){ a.pause(); a.currentTime = T; }); } catch(e){}
+  }
+  seek();
+  if (window.requestAnimationFrame) requestAnimationFrame(function(){ requestAnimationFrame(seek); });
+})();
+]]></script>
+</svg>

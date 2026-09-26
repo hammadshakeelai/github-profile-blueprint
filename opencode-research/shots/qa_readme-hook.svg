@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#161b22" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="slide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#58a6ff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#7ee787" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#010409" stop-opacity="1"/>
+      <stop offset="1" stop-color="#010409" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#010409" stop-opacity="0"/>
+      <stop offset="1" stop-color="#010409" stop-opacity="1"/>
+    </linearGradient>
+    <clipPath id="typer">
+      <rect x="64" y="70" height="72" width="0">
+        <animate attributeName="width" calcMode="spline" keyTimes="0;0.55;1"
+          keySplines="0 0 1 1;0 0 1 1" values="0;768;768"
+          dur="6s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="rule">
+      <rect x="64" y="180" width="940" height="12"/>
+    </clipPath>
+    <clipPath id="band">
+      <rect x="0" y="318" width="1200" height="64"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="400" fill="#0d1117"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
+    <rect x="64" y="34" width="286" height="28" rx="14" fill="#161b22" stroke="#30363d"/>
+    <text x="207" y="53" text-anchor="middle" fill="#7ee787">★ 9 parts · 277 visuals · 1 reel</text>
+  </g>
+
+  <g>
+    <g clip-path="url(#typer)">
+      <text x="64" y="126" font-size="52" font-weight="800" letter-spacing="-1" textLength="760"
+        lengthAdjust="spacingAndGlyphs" fill="#f0f6fc">GITHUB PROFILE BLUEPRINT</text>
+    </g>
+    <g>
+      <rect x="830" y="76" width="13" height="48" fill="#7ee787">
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.45;0.5;1"
+          dur="0.9s" repeatCount="indefinite" calcMode="discrete"/>
+      </rect>
+      <animateTransform attributeName="transform" type="translate" calcMode="spline"
+        keyTimes="0;0.55;1" keySplines="0 0 1 1;0 0 1 1"
+        values="-766 0; 0 0; 0 0" dur="6s" repeatCount="indefinite"/>
+    </g>
+    <animate attributeName="opacity" calcMode="discrete" values="1;1;0"
+      keyTimes="0;0.93;0.94" dur="6s" repeatCount="indefinite"/>
+  </g>
+
+  <text x="64" y="164" font-size="19" fill="#8b949e">446 profiles surveyed · 9-part research book · 30s motion reel · zero javascript</text>
+
+  <g clip-path="url(#rule)">
+    <rect x="64" y="183" width="940" height="4" fill="#21262d"/>
+    <rect x="64" y="183" width="160" height="4" fill="url(#slide)">
+      <animateTransform attributeName="transform" type="translate"
+        values="-224 0; 940 0" dur="4s" repeatCount="indefinite" calcMode="linear"/>
+    </rect>
+  </g>
+
+  <g>
+    <rect x="64" y="212" width="336" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
+    <circle cx="92" cy="240" r="5" fill="#58a6ff"/>
+    <text x="88" y="278" font-size="38" font-weight="800" fill="#f0f6fc">446</text>
+    <text x="88" y="296" font-size="12" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#7d8590">PROFILES SURVEYED</text>
+
+    <rect x="436" y="212" width="336" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
+    <circle cx="464" cy="240" r="5" fill="#f778ba"/>
+    <text x="460" y="278" font-size="38" font-weight="800" fill="#f0f6fc">277</text>
+    <text x="460" y="296" font-size="12" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#7d8590">BOOK VISUALS</text>
+
+    <rect x="808" y="212" width="336" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
+    <circle cx="836" cy="240" r="5" fill="#3fb950"/>
+    <text x="832" y="278" font-size="38" font-weight="800" fill="#f0f6fc">9</text>
+    <text x="832" y="296" font-size="12" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#7d8590">RESEARCH PARTS</text>
+  </g>
+
+  <g clip-path="url(#band)">
+    <rect x="0" y="318" width="1200" height="64" fill="#010409"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#e6edf3">
+      <g>
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; -1400 0" dur="20s" repeatCount="indefinite" calcMode="linear"/>
+        <text x="0" y="357" textLength="1400" lengthAdjust="spacing">41% broken images · 55% text under 11px · 90% mobile-caused · 42% badge soup · 54% use Actions · 20% theme switch · 24% dead stats · </text>
+        <text x="1400" y="357" textLength="1400" lengthAdjust="spacing">41% broken images · 55% text under 11px · 90% mobile-caused · 42% badge soup · 54% use Actions · 20% theme switch · 24% dead stats · </text>
+      </g>
+    </g>
+    <rect x="0" y="318" width="72" height="64" fill="url(#fadeL)"/>
+    <rect x="1128" y="318" width="72" height="64" fill="url(#fadeR)"/>
+    <rect x="0" y="318" width="1200" height="64" fill="none" stroke="#30363d"/>
+  </g>
+<script type="text/javascript"><![CDATA[
+(function(){
+  var T = 3500;
+  function seek(){
+    try { var s = document.documentElement; s.pauseAnimations(); s.setCurrentTime(T/1000); } catch(e){}
+    try { document.getAnimations().forEach(function(a){ a.pause(); a.currentTime = T; }); } catch(e){}
+  }
+  seek();
+  if (window.requestAnimationFrame) requestAnimationFrame(function(){ requestAnimationFrame(seek); });
+})();
+]]></script>
+</svg>

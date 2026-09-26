@@ -1,0 +1,451 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" aria-label="Profile Motion Reel: a 30-second looping SVG reel with seven scenes — typed terminal boot, kinetic type, orbit with gauges, scrolling ticker with stacked language bar, self-drawing timeline, growing defect bar chart, and an outro. Built with SMIL and CSS only, no scripts.">
+<title>PROFILE MOTION REEL — 7 scenes · 30s loop · smil + css · 0 script bytes</title>
+<defs>
+  <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+    <path d="M48 0H0V48" fill="none" stroke="#161b22" stroke-width="1"/>
+  </pattern>
+  <linearGradient id="progGrad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#3fb950"/>
+    <stop offset="0.5" stop-color="#58a6ff"/>
+    <stop offset="1" stop-color="#a371f7"/>
+  </linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#1f6feb"/>
+    <stop offset="0.35" stop-color="#a371f7"/>
+    <stop offset="0.7" stop-color="#f778ba"/>
+    <stop offset="1" stop-color="#1f6feb"/>
+    <animate attributeName="x1" values="0;1;0" keyTimes="0;0.5;1" dur="15s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="1;2;1" keyTimes="0;0.5;1" dur="15s" repeatCount="indefinite"/>
+  </linearGradient>
+
+  <clipPath id="cl1"><rect x="340" y="198" width="0" height="32">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.006;0.036;0.20;0.21;1" values="0;0;343;343;0;0"/>
+  </rect></clipPath>
+  <clipPath id="cl2"><rect x="340" y="258" width="0" height="32">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.038;0.070;0.20;0.21;1" values="0;0;370;370;0;0"/>
+  </rect></clipPath>
+  <clipPath id="cl3"><rect x="340" y="318" width="0" height="32">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.072;0.104;0.20;0.21;1" values="0;0;568;568;0;0"/>
+  </rect></clipPath>
+  <clipPath id="cl4"><rect x="340" y="378" width="0" height="32">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.106;0.136;0.20;0.21;1" values="0;0;541;541;0;0"/>
+  </rect></clipPath>
+  <clipPath id="subcl"><rect x="340" y="498" width="0" height="30">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.100;0.135;0.20;0.21;1" values="0;0;640;640;0;0"/>
+  </rect></clipPath>
+
+  <clipPath id="mq4"><rect x="60" y="240" width="1160" height="64" rx="12"/></clipPath>
+
+  <clipPath id="wipe7"><rect x="100" y="190" width="0" height="260">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.872;0.905;1" values="0;0;1080;1080"/>
+  </rect></clipPath>
+
+  <clipPath id="bc0"><rect x="620" y="561" width="176" height="600">
+    <animate attributeName="y" dur="30s" repeatCount="indefinite" keyTimes="0;0.724;0.740;0.87;0.88;1" values="561;561;419.6;419.6;561"/>
+  </rect></clipPath>
+  <clipPath id="bc1"><rect x="740" y="561" width="176" height="600">
+    <animate attributeName="y" dur="30s" repeatCount="indefinite" keyTimes="0;0.727;0.743;0.87;0.88;1" values="561;561;379.6;379.6;561"/>
+  </rect></clipPath>
+  <clipPath id="bc2"><rect x="860" y="561" width="176" height="600">
+    <animate attributeName="y" dur="30s" repeatCount="indefinite" keyTimes="0;0.730;0.746;0.87;0.88;1" values="561;561;416.6;416.6;561"/>
+  </rect></clipPath>
+  <clipPath id="bc3"><rect x="980" y="561" width="176" height="600">
+    <animate attributeName="y" dur="30s" repeatCount="indefinite" keyTimes="0;0.733;0.749;0.87;0.88;1" values="561;561;468.6;468.6;561"/>
+  </rect></clipPath>
+  <clipPath id="bc4"><rect x="1100" y="561" width="176" height="600">
+    <animate attributeName="y" dur="30s" repeatCount="indefinite" keyTimes="0;0.736;0.752;0.87;0.88;1" values="561;561;451.6;451.6;561"/>
+  </rect></clipPath>
+</defs>
+
+<rect width="1280" height="720" fill="#0d1117"/>
+<rect width="1280" height="720" fill="url(#grid)"/>
+
+<!-- ============ SCENE 01 — typed boot ============ -->
+<g opacity="1">
+  <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.142857;0.152857;0.99;1" values="1;1;0;0;1"/>
+  <rect width="1280" height="720" fill="#0d1117"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <circle cx="120" r="3" fill="#58a6ff" opacity="0.45">
+    <animate attributeName="cy" dur="30s" repeatCount="indefinite" keyTimes="0;0.153;0.9;1" values="680;180;180;680"/>
+  </circle>
+  <circle cx="1160" r="2.5" fill="#f778ba" opacity="0.4">
+    <animate attributeName="cy" dur="30s" repeatCount="indefinite" keyTimes="0;0.153;0.9;1" values="700;240;240;700"/>
+  </circle>
+  <circle cx="200" r="2" fill="#3fb950" opacity="0.35">
+    <animate attributeName="cy" dur="30s" repeatCount="indefinite" keyTimes="0;0.153;0.9;1" values="660;140;140;660"/>
+  </circle>
+  <circle cx="1080" r="3" fill="#d29922" opacity="0.4">
+    <animate attributeName="cy" dur="30s" repeatCount="indefinite" keyTimes="0;0.153;0.9;1" values="690;300;300;690"/>
+  </circle>
+  <circle cx="640" r="2.5" fill="#a371f7" opacity="0.35">
+    <animate attributeName="cy" dur="30s" repeatCount="indefinite" keyTimes="0;0.153;0.9;1" values="700;120;120;700"/>
+  </circle>
+
+  <rect x="300" y="170" width="760" height="280" rx="14" fill="#161b22" stroke="#30363d"/>
+  <circle cx="322" cy="192" r="6" fill="#f85149"/>
+  <circle cx="344" cy="192" r="6" fill="#d29922"/>
+  <circle cx="366" cy="192" r="6" fill="#3fb950"/>
+  <text x="390" y="197" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#8b949e">reel.sh — 7 scenes</text>
+
+  <g clip-path="url(#cl1)"><text x="340" y="222" textLength="343" lengthAdjust="spacingAndGlyphs" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#3fb950">&gt; ./reel --scenes 7 --loop!</text></g>
+  <g clip-path="url(#cl2)"><text x="340" y="282" textLength="370" lengthAdjust="spacingAndGlyphs" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#58a6ff"># PROFILE MOTION REEL v2026</text></g>
+  <g clip-path="url(#cl3)"><text x="340" y="342" textLength="568" lengthAdjust="spacingAndGlyphs" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#f0f6fc">446 profiles · 9 parts · 3 engines · no js!</text></g>
+  <g clip-path="url(#cl4)"><text x="340" y="402" textLength="541" lengthAdjust="spacingAndGlyphs" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#8b949e">everything below renders in a README img!</text></g>
+
+  <rect x="340" y="203" width="4" height="26" fill="#3fb950">
+    <animate attributeName="x" dur="30s" repeatCount="indefinite" keyTimes="0;0.006;0.036;0.038;0.070;0.072;0.104;0.106;0.136;0.140;0.30;1" values="340;340;683;340;710;340;908;340;881;340;340;340"/>
+    <animate attributeName="y" dur="30s" repeatCount="indefinite" keyTimes="0;0.006;0.036;0.038;0.070;0.072;0.104;0.106;0.136;0.140;0.30;1" values="203;203;203;263;263;323;323;383;383;203;203;203"/>
+    <animate attributeName="opacity" dur="1s" repeatCount="indefinite" keyTimes="0;0.35;0.45;0.85;0.95;1" values="1;1;0.15;0.15;1;1"/>
+  </rect>
+
+  <rect x="340" y="475" width="600" height="8" rx="4" fill="#21262d"/>
+  <rect x="340" y="475" width="0" height="8" rx="4" fill="#3fb950">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.006;0.134;0.17;0.175;1" values="0;0;600;600;0;0"/>
+  </rect>
+
+  <g clip-path="url(#subcl)"><text x="340" y="520" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#8b949e">smil + css + one svg · 0 script bytes · 30s loop</text></g>
+</g>
+
+<!-- ============ SCENE 02 — kinetic type ============ -->
+<g opacity="0">
+  <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.142857;0.152857;0.285714;0.295714;1" values="0;0;1;1;0;0"/>
+  <rect width="1280" height="720" fill="#0d1117"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <text x="640" y="150" text-anchor="middle" font-size="34" font-weight="700" letter-spacing="6" fill="#58a6ff">01 · KINETIC TYPE</text>
+
+  <text x="286" y="390" textLength="133" lengthAdjust="spacingAndGlyphs" font-size="160" font-weight="800" fill="#58a6ff" stroke="#58a6ff" stroke-width="0">M<animate attributeName="stroke-width" dur="30s" repeatCount="indefinite" keyTimes="0;0.154;0.165;0.176;1" values="0;0;9;0;0"/></text>
+  <text x="433" y="390" textLength="124" lengthAdjust="spacingAndGlyphs" font-size="160" font-weight="800" fill="#f778ba" stroke="#f778ba" stroke-width="0">O<animate attributeName="stroke-width" dur="30s" repeatCount="indefinite" keyTimes="0;0.170;0.181;0.192;1" values="0;0;9;0;0"/></text>
+  <text x="571" y="390" textLength="98" lengthAdjust="spacingAndGlyphs" font-size="160" font-weight="800" fill="#3fb950" stroke="#3fb950" stroke-width="0">T<animate attributeName="stroke-width" dur="30s" repeatCount="indefinite" keyTimes="0;0.186;0.197;0.208;1" values="0;0;9;0;0"/></text>
+  <text x="683" y="390" textLength="44" lengthAdjust="spacingAndGlyphs" font-size="160" font-weight="800" fill="#d29922" stroke="#d29922" stroke-width="0">I<animate attributeName="stroke-width" dur="30s" repeatCount="indefinite" keyTimes="0;0.202;0.213;0.224;1" values="0;0;9;0;0"/></text>
+  <text x="741" y="390" textLength="124" lengthAdjust="spacingAndGlyphs" font-size="160" font-weight="800" fill="#a371f7" stroke="#a371f7" stroke-width="0">O<animate attributeName="stroke-width" dur="30s" repeatCount="indefinite" keyTimes="0;0.218;0.229;0.240;1" values="0;0;9;0;0"/></text>
+  <text x="879" y="390" textLength="115" lengthAdjust="spacingAndGlyphs" font-size="160" font-weight="800" fill="#f0f6fc" stroke="#f0f6fc" stroke-width="0">N<animate attributeName="stroke-width" dur="30s" repeatCount="indefinite" keyTimes="0;0.234;0.245;0.256;1" values="0;0;9;0;0"/></text>
+
+  <line x1="286" y1="432" x2="994" y2="432" stroke="#21262d" stroke-width="2"/>
+  <text x="640" y="500" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="18" fill="#8b949e">six &lt;text&gt; nodes · stroke-width pulse · textLength locks the grid</text>
+</g>
+
+<!-- ============ SCENE 03 — orbit + gauges ============ -->
+<g opacity="0">
+  <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.285714;0.295714;0.428571;0.438571;1" values="0;0;1;1;0;0"/>
+  <rect width="1280" height="720" fill="#0d1117"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <text x="640" y="112" text-anchor="middle" font-size="22" font-weight="700" letter-spacing="4" fill="#a371f7">02 · ORBIT + GAUGES</text>
+
+  <circle cx="640" cy="350" r="185" fill="none" stroke="#30363d" stroke-width="3" stroke-dasharray="8 10">
+    <animate attributeName="stroke-dashoffset" dur="7.5s" repeatCount="indefinite" values="0;-36"/>
+  </circle>
+
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 640 350" to="360 640 350" dur="30s" repeatCount="indefinite"/>
+    <g transform="translate(640,165)"><g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="30s" repeatCount="indefinite"/><circle r="34" fill="#161b22" stroke="#58a6ff" stroke-width="2.5"/><text y="5" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f6fc">SVG</text></g></g>
+    <g transform="translate(815.9,292.8)"><g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="30s" repeatCount="indefinite"/><circle r="34" fill="#161b22" stroke="#f778ba" stroke-width="2.5"/><text y="5" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f6fc">SMIL</text></g></g>
+    <g transform="translate(748.7,499.7)"><g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="30s" repeatCount="indefinite"/><circle r="34" fill="#161b22" stroke="#3fb950" stroke-width="2.5"/><text y="5" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f6fc">CSS</text></g></g>
+    <g transform="translate(531.3,499.7)"><g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="30s" repeatCount="indefinite"/><circle r="34" fill="#161b22" stroke="#d29922" stroke-width="2.5"/><text y="5" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f6fc">MATH</text></g></g>
+    <g transform="translate(464.1,292.8)"><g><animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="30s" repeatCount="indefinite"/><circle r="34" fill="#161b22" stroke="#a371f7" stroke-width="2.5"/><text y="5" text-anchor="middle" font-size="13" font-weight="700" fill="#f0f6fc">TYPE</text></g></g>
+  </g>
+
+  <circle cx="640" cy="350" r="52" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="640" y="356" text-anchor="middle" font-size="16" font-weight="700" fill="#f0f6fc">ORBIT</text>
+
+  <g>
+    <circle cx="400" cy="600" r="44" fill="none" stroke="#21262d" stroke-width="12"/>
+    <circle cx="400" cy="600" r="44" fill="none" stroke="#58a6ff" stroke-width="12" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" transform="rotate(-90 400 600)">
+      <animate attributeName="stroke-dashoffset" dur="30s" repeatCount="indefinite" keyTimes="0;0.30;0.37;0.44;1" values="100;100;59;59;100"/>
+    </circle>
+    <text x="400" y="608" text-anchor="middle" font-size="22" font-weight="800" fill="#f0f6fc">41%</text>
+    <text x="400" y="668" text-anchor="middle" font-size="15" fill="#8b949e">broken images</text>
+  </g>
+  <g>
+    <circle cx="640" cy="600" r="44" fill="none" stroke="#21262d" stroke-width="12"/>
+    <circle cx="640" cy="600" r="44" fill="none" stroke="#f778ba" stroke-width="12" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" transform="rotate(-90 640 600)">
+      <animate attributeName="stroke-dashoffset" dur="30s" repeatCount="indefinite" keyTimes="0;0.30;0.37;0.44;1" values="100;100;45;45;100"/>
+    </circle>
+    <text x="640" y="608" text-anchor="middle" font-size="22" font-weight="800" fill="#f0f6fc">55%</text>
+    <text x="640" y="668" text-anchor="middle" font-size="15" fill="#8b949e">text &lt; 11px</text>
+  </g>
+  <g>
+    <circle cx="880" cy="600" r="44" fill="none" stroke="#21262d" stroke-width="12"/>
+    <circle cx="880" cy="600" r="44" fill="none" stroke="#d29922" stroke-width="12" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" transform="rotate(-90 880 600)">
+      <animate attributeName="stroke-dashoffset" dur="30s" repeatCount="indefinite" keyTimes="0;0.30;0.37;0.44;1" values="100;100;76;76;100"/>
+    </circle>
+    <text x="880" y="608" text-anchor="middle" font-size="22" font-weight="800" fill="#f0f6fc">24%</text>
+    <text x="880" y="668" text-anchor="middle" font-size="15" fill="#8b949e">dead stats</text>
+  </g>
+</g>
+
+<!-- ============ SCENE 04 — ticker + stacked bar ============ -->
+<g opacity="0">
+  <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.428571;0.438571;0.571429;0.581429;1" values="0;0;1;1;0;0"/>
+  <rect width="1280" height="720" fill="#0d1117"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <text x="640" y="150" text-anchor="middle" font-size="34" font-weight="700" letter-spacing="6" fill="#f778ba">03 · TICKER + STACKED BAR</text>
+  <text x="640" y="210" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" fill="#8b949e">one clipPath · two text copies · zero javascript</text>
+
+  <rect x="60" y="240" width="1160" height="64" rx="12" fill="#161b22" stroke="#30363d"/>
+  <g clip-path="url(#mq4)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-1240 0" dur="15s" repeatCount="indefinite"/>
+      <text x="76" y="279" textLength="1240" lengthAdjust="spacingAndGlyphs" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#8b949e">446 profiles measured · 41% broken images · 55% text under 11px · 42% badge soup · 54% use Actions · 20% theme switch ·</text>
+      <text x="1316" y="279" textLength="1240" lengthAdjust="spacingAndGlyphs" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="20" fill="#8b949e">446 profiles measured · 41% broken images · 55% text under 11px · 42% badge soup · 54% use Actions · 20% theme switch ·</text>
+    </g>
+  </g>
+
+  <text x="277" y="348" text-anchor="middle" font-size="15" font-weight="600" fill="#58a6ff">shell 37%</text>
+  <text x="625" y="348" text-anchor="middle" font-size="15" font-weight="600" fill="#f778ba">svg 22%</text>
+  <text x="905" y="348" text-anchor="middle" font-size="15" font-weight="600" fill="#3fb950">css 26%</text>
+  <text x="1140" y="348" text-anchor="middle" font-size="15" font-weight="600" fill="#d29922">misc 14%</text>
+  <rect x="60" y="360" width="1160" height="26" rx="6" fill="#21262d"/>
+  <rect x="60" y="360" width="0" height="26" rx="6" fill="#58a6ff">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.45;0.47;0.59;0.6;1" values="0;0;434;434;0;0"/>
+  </rect>
+  <rect x="500" y="360" width="0" height="26" rx="6" fill="#f778ba">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.458;0.478;0.59;0.6;1" values="0;0;251;251;0;0"/>
+  </rect>
+  <rect x="757" y="360" width="0" height="26" rx="6" fill="#3fb950">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.466;0.486;0.59;0.6;1" values="0;0;297;297;0;0"/>
+  </rect>
+  <rect x="1060" y="360" width="0" height="26" rx="6" fill="#d29922">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;0.474;0.494;0.59;0.6;1" values="0;0;160;160;0;0"/>
+  </rect>
+
+  <g opacity="0">
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.484;0.49;0.498;0.59;0.6;1" values="0;0;1;1;1;0;0"/>
+    <rect x="302" y="430" width="111" height="40" rx="20" fill="#161b22" stroke="#30363d"/>
+    <text x="357.5" y="455" text-anchor="middle" textLength="87" lengthAdjust="spacingAndGlyphs" font-size="15" fill="#8b949e">stroke pulse</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.491;0.497;0.505;0.59;0.6;1" values="0;0;1;1;1;0;0"/>
+    <rect x="431" y="430" width="120" height="40" rx="20" fill="#161b22" stroke="#30363d"/>
+    <text x="491" y="455" text-anchor="middle" textLength="96" lengthAdjust="spacingAndGlyphs" font-size="15" fill="#8b949e">pathLength=100</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.498;0.504;0.512;0.59;0.6;1" values="0;0;1;1;1;0;0"/>
+    <rect x="569" y="430" width="75" height="40" rx="20" fill="#161b22" stroke="#30363d"/>
+    <text x="606.5" y="455" text-anchor="middle" textLength="51" lengthAdjust="spacingAndGlyphs" font-size="15" fill="#8b949e">marquee</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.505;0.511;0.519;0.59;0.6;1" values="0;0;1;1;1;0;0"/>
+    <rect x="662" y="430" width="102" height="40" rx="20" fill="#161b22" stroke="#30363d"/>
+    <text x="713" y="455" text-anchor="middle" textLength="78" lengthAdjust="spacingAndGlyphs" font-size="15" fill="#8b949e">clip wipe</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.512;0.518;0.526;0.59;0.6;1" values="0;0;1;1;1;0;0"/>
+    <rect x="782" y="430" width="93" height="40" rx="20" fill="#161b22" stroke="#30363d"/>
+    <text x="828.5" y="455" text-anchor="middle" textLength="69" lengthAdjust="spacingAndGlyphs" font-size="15" fill="#8b949e">orbiting</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.519;0.525;0.533;0.59;0.6;1" values="0;0;1;1;1;0;0"/>
+    <rect x="893" y="430" width="84" height="40" rx="20" fill="#161b22" stroke="#30363d"/>
+    <text x="935" y="455" text-anchor="middle" textLength="60" lengthAdjust="spacingAndGlyphs" font-size="15" fill="#8b949e">grid bg</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.50;0.508;0.59;0.6;1" values="0;0;1;1;0;0"/>
+    <rect x="60" y="530" width="1160" height="64" rx="12" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+    <rect x="62" y="533" width="5" height="58" rx="2" fill="#f85149"/>
+    <text x="90" y="570" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#f0f6fc"><tspan fill="#f85149" font-weight="700">41%</tspan> of profiles show a broken image — a reel never does.</text>
+  </g>
+</g>
+
+<!-- ============ SCENE 05 — self-drawing timeline ============ -->
+<g opacity="0">
+  <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.571429;0.581429;0.714286;0.724286;1" values="0;0;1;1;0;0"/>
+  <rect width="1280" height="720" fill="#0d1117"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <text x="640" y="210" text-anchor="middle" font-size="18" font-weight="700" letter-spacing="4" fill="#3fb950">04 · SELF-DRAWING TIMELINE</text>
+  <text x="640" y="270" text-anchor="middle" font-size="40" font-weight="800" fill="#f0f6fc">PART 01 → PART 09</text>
+
+  <path d="M100 380H1180" fill="none" stroke="#30363d" stroke-width="4"/>
+  <path d="M100 380H1180" fill="none" stroke="#58a6ff" stroke-width="4" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1">
+    <animate attributeName="stroke-dashoffset" dur="30s" repeatCount="indefinite" keyTimes="0;0.585;0.665;0.90;1" values="1;1;0;0;1"/>
+  </path>
+
+  <g>
+    <circle cx="220" cy="380" r="0" fill="#0d1117" stroke="#58a6ff" stroke-width="3" opacity="0">
+      <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.605;0.611;0.619;0.90;1" values="0;0;20;16;16;0"/>
+      <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.604;0.605;0.619;0.90;1" values="0;0;1;1;1;0"/>
+    </circle>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.605;0.611;0.90;1" values="0;0;1;1;0"/>
+      <text x="220" y="425" text-anchor="middle" font-size="17" font-weight="700" fill="#f0f6fc">THE SURVEY</text>
+      <text x="220" y="448" text-anchor="middle" font-size="14" fill="#8b949e">part 01–02 · 446 profiles</text>
+    </g>
+  </g>
+  <g>
+    <circle cx="540" cy="380" r="0" fill="#0d1117" stroke="#58a6ff" stroke-width="3" opacity="0">
+      <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.622;0.628;0.636;0.90;1" values="0;0;20;16;16;0"/>
+      <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.621;0.622;0.636;0.90;1" values="0;0;1;1;1;0"/>
+    </circle>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.622;0.628;0.90;1" values="0;0;1;1;0"/>
+      <text x="540" y="425" text-anchor="middle" font-size="17" font-weight="700" fill="#f0f6fc">THE BLUEPRINT</text>
+      <text x="540" y="448" text-anchor="middle" font-size="14" fill="#8b949e">part 03–04 · book + builds</text>
+    </g>
+  </g>
+  <g>
+    <circle cx="860" cy="380" r="0" fill="#0d1117" stroke="#58a6ff" stroke-width="3" opacity="0">
+      <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.639;0.645;0.653;0.90;1" values="0;0;20;16;16;0"/>
+      <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.638;0.639;0.653;0.90;1" values="0;0;1;1;1;0"/>
+    </circle>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.639;0.645;0.90;1" values="0;0;1;1;0"/>
+      <text x="860" y="425" text-anchor="middle" font-size="17" font-weight="700" fill="#f0f6fc">BRANCHES + TOOLS</text>
+      <text x="860" y="448" text-anchor="middle" font-size="14" fill="#8b949e">part 05–07 · agents + gens</text>
+    </g>
+  </g>
+  <g>
+    <circle cx="1140" cy="380" r="0" fill="#0d1117" stroke="#58a6ff" stroke-width="3" opacity="0">
+      <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.662;0.668;0.676;0.90;1" values="0;0;20;16;16;0"/>
+      <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.661;0.662;0.676;0.90;1" values="0;0;1;1;1;0"/>
+    </circle>
+    <g opacity="0">
+      <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.662;0.668;0.90;1" values="0;0;1;1;0"/>
+      <text x="1140" y="425" text-anchor="middle" font-size="17" font-weight="700" fill="#f0f6fc">MOTION WAVE</text>
+      <text x="1140" y="448" text-anchor="middle" font-size="14" fill="#8b949e">part 08–09 · wave 2</text>
+    </g>
+  </g>
+</g>
+
+<!-- ============ SCENE 06 — defect bar chart ============ -->
+<g opacity="0">
+  <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.714286;0.724286;0.857143;0.867143;1" values="0;0;1;1;0;0"/>
+  <rect width="1280" height="720" fill="#0d1117"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <text x="60" y="150" font-size="18" font-weight="700" letter-spacing="3" fill="#d29922">05 · DEFECT CHART</text>
+  <text x="60" y="300" font-size="110" font-weight="800" fill="#f778ba">55%</text>
+  <text x="60" y="360" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#8b949e">of profiles make their largest text</text>
+  <text x="60" y="395" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#8b949e">smaller than 11px —</text>
+  <text x="60" y="430" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" font-weight="700" fill="#f0f6fc">90% of those failures are phone-caused.</text>
+  <text x="60" y="480" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#8b949e">Reads fine on desktop.</text>
+  <text x="60" y="515" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="22" fill="#8b949e">Fails on a 375px screen.</text>
+
+  <line x1="620" y1="560" x2="1250" y2="560" stroke="#30363d" stroke-width="1.5"/>
+
+  <g clip-path="url(#bc0)">
+    <rect x="644" y="441" width="112" height="119" fill="#1f6feb"/>
+    <polygon points="644,441 660,429 772,429 756,441" fill="#79c0ff"/>
+    <polygon points="756,441 772,429 772,548 756,560" fill="#388bfd"/>
+  </g>
+  <circle cx="700" cy="403" r="0" fill="#58a6ff">
+    <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.725;0.735;0.742;0.750;0.87;1" values="0;0;8;12;8;8;0"/>
+  </circle>
+  <text x="700" y="590" text-anchor="middle" font-size="14" font-weight="600" fill="#8b949e">img 41%</text>
+
+  <g clip-path="url(#bc1)">
+    <rect x="764" y="401" width="112" height="159" fill="#1f6feb"/>
+    <polygon points="764,401 780,389 892,389 876,401" fill="#79c0ff"/>
+    <polygon points="876,401 892,389 892,548 876,560" fill="#388bfd"/>
+  </g>
+  <circle cx="820" cy="363" r="0" fill="#f778ba">
+    <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.7295;0.7395;0.7465;0.7545;0.87;1" values="0;0;12;18;12;12;0"/>
+  </circle>
+  <text x="820" y="590" text-anchor="middle" font-size="14" font-weight="600" fill="#8b949e">text 55%</text>
+
+  <g clip-path="url(#bc2)">
+    <rect x="884" y="438" width="112" height="122" fill="#1f6feb"/>
+    <polygon points="884,438 900,426 1012,426 996,438" fill="#79c0ff"/>
+    <polygon points="996,438 1012,426 1012,548 996,560" fill="#388bfd"/>
+  </g>
+  <circle cx="940" cy="400" r="0" fill="#3fb950">
+    <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.734;0.744;0.751;0.759;0.87;1" values="0;0;9;13.5;9;9;0"/>
+  </circle>
+  <text x="940" y="590" text-anchor="middle" font-size="14" font-weight="600" fill="#8b949e">badge 42%</text>
+
+  <g clip-path="url(#bc3)">
+    <rect x="1004" y="490" width="112" height="70" fill="#1f6feb"/>
+    <polygon points="1004,490 1020,478 1132,478 1116,490" fill="#79c0ff"/>
+    <polygon points="1116,490 1132,478 1132,548 1116,560" fill="#388bfd"/>
+  </g>
+  <circle cx="1060" cy="452" r="0" fill="#d29922">
+    <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.7385;0.7485;0.7555;0.7635;0.87;1" values="0;0;5;7.5;5;5;0"/>
+  </circle>
+  <text x="1060" y="590" text-anchor="middle" font-size="14" font-weight="600" fill="#8b949e">stats 24%</text>
+
+  <g clip-path="url(#bc4)">
+    <rect x="1124" y="473" width="112" height="87" fill="#1f6feb"/>
+    <polygon points="1124,473 1140,461 1252,461 1236,473" fill="#79c0ff"/>
+    <polygon points="1236,473 1252,461 1252,548 1236,560" fill="#388bfd"/>
+  </g>
+  <circle cx="1180" cy="435" r="0" fill="#a371f7">
+    <animate attributeName="r" dur="30s" repeatCount="indefinite" keyTimes="0;0.743;0.753;0.760;0.768;0.87;1" values="0;0;6;9;6;6;0"/>
+  </circle>
+  <text x="1180" y="590" text-anchor="middle" font-size="14" font-weight="600" fill="#8b949e">cta 30%</text>
+
+  <text x="940" y="618" text-anchor="middle" font-size="14" fill="#8b949e">profile defects by category</text>
+</g>
+
+<!-- ============ SCENE 07 — outro ============ -->
+<g opacity="0">
+  <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.857143;0.867143;1" values="0;0;1;1"/>
+  <rect width="1280" height="720" fill="#0d1117"/>
+  <rect width="1280" height="720" fill="url(#sweep)" opacity="0.4"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+
+  <g clip-path="url(#wipe7)">
+    <text x="640" y="300" text-anchor="middle" font-size="96" font-weight="800" letter-spacing="2" fill="#f0f6fc">SHIP THE REEL</text>
+  </g>
+
+  <text x="640" y="400" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#f0f6fc" opacity="0">one svg · 30s loop · no scripts
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.905;0.915;1" values="0;0;1;1"/>
+  </text>
+  <text x="640" y="450" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="24" fill="#8b949e" opacity="0">smil + css keyframes + textLength
+    <animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.915;0.925;1" values="0;0;1;1"/>
+  </text>
+
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0;0;0 10;0 0" keyTimes="0;0.4;0.6;1" dur="2.5s" repeatCount="indefinite"/>
+    <path d="M620 510L640 532L660 510" fill="none" stroke="#f0f6fc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="640" y="650" text-anchor="middle" font-size="15" fill="#8b949e">github-profile-blueprint · parts 01–09 · assembled by opencode</text>
+</g>
+
+<!-- ============ HUD ============ -->
+<g>
+  <rect x="0" y="0" width="1280" height="90" fill="#0d1117" opacity="0.92"/>
+  <line x1="0" y1="90" x2="1280" y2="90" stroke="#21262d"/>
+  <rect x="0" y="676" width="1280" height="44" fill="#0d1117"/>
+  <line x1="0" y1="676" x2="1280" y2="676" stroke="#21262d"/>
+
+  <text x="30" y="40" font-size="19" font-weight="700" letter-spacing="2" fill="#f0f6fc">PROFILE MOTION REEL</text>
+  <text x="30" y="66" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">github-profile-blueprint · opencode-research · 30s loop</text>
+  <text x="1250" y="40" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" fill="#3fb950">smil · css · 0 script bytes</text>
+  <text x="1250" y="66" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8b949e">renders in &lt;img&gt;</text>
+
+  <text x="30" y="698" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#8b949e" opacity="0">01 boot<animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.015;0.019;0.1279;0.1319;1" values="0;0;1;1;0;0"/></text>
+  <text x="30" y="698" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#8b949e" opacity="0">02 type<animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.1579;0.1619;0.2707;0.2747;1" values="0;0;1;1;0;0"/></text>
+  <text x="30" y="698" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#8b949e" opacity="0">03 orbit<animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.3007;0.3047;0.4136;0.4176;1" values="0;0;1;1;0;0"/></text>
+  <text x="30" y="698" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#8b949e" opacity="0">04 ticker<animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.4436;0.4476;0.5564;0.5604;1" values="0;0;1;1;0;0"/></text>
+  <text x="30" y="698" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#8b949e" opacity="0">05 line<animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.5864;0.5904;0.6993;0.7033;1" values="0;0;1;1;0;0"/></text>
+  <text x="30" y="698" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#8b949e" opacity="0">06 stats<animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.7293;0.7333;0.8421;0.8461;1" values="0;0;1;1;0;0"/></text>
+  <text x="30" y="698" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" fill="#8b949e" opacity="0">07 ship<animate attributeName="opacity" dur="30s" repeatCount="indefinite" keyTimes="0;0.8721;0.8761;0.985;0.989;1" values="0;0;1;1;0;0"/></text>
+
+  <rect x="150" y="691" width="1100" height="14" rx="7" fill="#21262d"/>
+  <rect x="150" y="691" width="0" height="14" rx="7" fill="url(#progGrad)">
+    <animate attributeName="width" dur="30s" repeatCount="indefinite" keyTimes="0;1" values="0;1100"/>
+  </rect>
+  <rect x="307.1" y="691" width="2" height="14" fill="#0d1117"/>
+  <rect x="464.3" y="691" width="2" height="14" fill="#0d1117"/>
+  <rect x="621.4" y="691" width="2" height="14" fill="#0d1117"/>
+  <rect x="778.6" y="691" width="2" height="14" fill="#0d1117"/>
+  <rect x="935.7" y="691" width="2" height="14" fill="#0d1117"/>
+  <rect x="1092.9" y="691" width="2" height="14" fill="#0d1117"/>
+</g>
+<script type="text/javascript"><![CDATA[
+(function(){
+  var T = 14500;
+  function seek(){
+    try { var s = document.documentElement; s.pauseAnimations(); s.setCurrentTime(T/1000); } catch(e){}
+    try { document.getAnimations().forEach(function(a){ a.pause(); a.currentTime = T; }); } catch(e){}
+  }
+  seek();
+  if (window.requestAnimationFrame) requestAnimationFrame(function(){ requestAnimationFrame(seek); });
+})();
+]]></script>
+</svg>

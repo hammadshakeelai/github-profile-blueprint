@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#161b22" stroke-width="1"/>
+    </pattern>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M0 .5H4" stroke="#000000" stroke-opacity=".45" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7ee787" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#7ee787" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#7ee787" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.72">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <clipPath id="typer">
+      <rect x="112" y="184" height="22" width="0">
+        <animate attributeName="width" calcMode="spline" keyTimes="0;0.55;1"
+          keySplines="0 0 1 1;0 0 1 1" values="0;318;318"
+          dur="6s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="screen">
+      <rect x="80" y="96" width="640" height="150" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="320" fill="#0d1117"/>
+  <rect width="800" height="320" fill="url(#grid)"/>
+
+  <text x="32" y="46" font-size="16" font-weight="700" letter-spacing="3" fill="#58a6ff">SCANLINE CRT OVERLAY</text>
+  <text x="32" y="70" font-size="12.5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#7d8590">repeating pattern · sweep band · opacity flicker · clipPath typing · 0 js</text>
+
+  <rect x="80" y="96" width="640" height="150" rx="10" fill="#03110a" stroke="#30363d"/>
+
+  <g clip-path="url(#screen)">
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+      <text x="112" y="132" fill="#3fb950">&gt; render.svg --scanlines</text>
+      <text x="112" y="158" fill="#7ee787">[ok] 1280x720 · 0 script bytes</text>
+      <g clip-path="url(#typer)">
+        <text x="112" y="200" fill="#d2a8ff">the sweep keeps it alive_</text>
+      </g>
+    </g>
+
+    <g>
+      <rect x="80" y="96" width="640" height="150" fill="url(#scan)"/>
+      <animate attributeName="opacity" values="1;0.96;1;1" keyTimes="0;0.4;0.45;1"
+        dur="0.4s" repeatCount="indefinite"/>
+    </g>
+
+    <rect x="80" y="96" width="640" height="50" fill="url(#sweep)">
+      <animate attributeName="y" values="96;196;96" keyTimes="0;0.5;1"
+        dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="80" y="96" width="640" height="150" fill="url(#vig)"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+    <rect x="32" y="272" width="140" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="102" y="288" text-anchor="middle" fill="#7ee787">pattern 4px</text>
+    <rect x="180" y="272" width="104" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="232" y="288" text-anchor="middle" fill="#58a6ff">sweep 4s</text>
+    <rect x="292" y="272" width="94" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="339" y="288" text-anchor="middle" fill="#d2a8ff">flicker</text>
+    <rect x="394" y="272" width="106" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="447" y="288" text-anchor="middle" fill="#ffa657">vignette</text>
+    <rect x="508" y="272" width="94" height="24" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="555" y="288" text-anchor="middle" fill="#ff7b72">typer</text>
+  </g>
+<script type="text/javascript"><![CDATA[
+(function(){
+  var T = 4500;
+  function seek(){
+    try { var s = document.documentElement; s.pauseAnimations(); s.setCurrentTime(T/1000); } catch(e){}
+    try { document.getAnimations().forEach(function(a){ a.pause(); a.currentTime = T; }); } catch(e){}
+  }
+  seek();
+  if (window.requestAnimationFrame) requestAnimationFrame(function(){ requestAnimationFrame(seek); });
+})();
+]]></script>
+</svg>
