@@ -1,5 +1,7 @@
 # GitHub Profile README — research
 
+![GitHub Profile Blueprint — 446 profiles, 9 parts, 277 visuals](opencode-research/README-HOOK.svg)
+
 Evidence-first research into what makes an exceptional GitHub profile README:
 what the best ones do, what actually renders, what breaks, and why. It feeds a
 reusable skill and, eventually, a profile designed from the findings.
